@@ -9,64 +9,89 @@ documentation: ug
 
 # Blazor Charts Localization
 
-The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component supports localization, enabling you to adapt the UI elements such as labels, tooltips, legends, and other text-based content to different languages and cultures. Localization is an essential feature for building globally accessible applications, as it ensures that users can interact with charts in their preferred language and regional settings.
-Localization in Blazor components is handled through the common localization framework provided by Syncfusion. By configuring localization properly, you can display translated text for chart elements and ensure consistent formatting based on cultural preferences such as date formats, number formats, and currency symbols.
-To implement localization in the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic. This documentation provides detailed steps for configuring localization in your application, including setting up resource files, defining culture settings.
+The [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component supports localization, which enables you to adapt UI elements such as labels, tooltips, legends, and other text-based content to different languages and cultures. Localization is an essential feature for building globally accessible applications because it lets users interact with charts in their preferred language and regional settings.
 
-By applying localization, the chart component can automatically adapt to the selected culture. For example, date values displayed on the axis will follow the regional format, and numeric values will be shown with appropriate separators and symbols.
-In addition to text translation, localization also improves the user experience by aligning with regional expectations. For instance, decimal separators may vary between cultures (e.g., . vs ,), and date formats can differ significantly. Proper localization ensures that such variations are handled seamlessly within the chart.
+Localization in Syncfusion Blazor components is handled through the common [Syncfusion Blazor localization framework](https://blazor.syncfusion.com/documentation/common/localization). By configuring localization, you can display translated text for chart elements and ensure consistent formatting based on cultural preferences such as date formats, number formats, and currency symbols.
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+When localization is applied, the chart component automatically adapts to the selected culture. For example, date values displayed on the axis follow the regional format, and numeric values are shown with the appropriate separators and symbols. Decimal separators may vary between cultures (for example, `.` vs `,`), and date formats differ significantly (for example, `MM/dd/yyyy` vs `dd/MM/yyyy`); proper localization handles these variations seamlessly.
 
-### Key Benefits of Localization in Charts
+## Localize chart elements
 
-- Enhances accessibility for global users
-- Improves readability and clarity of data
-- Supports multiple cultures and languages
-- Enables accurate representation of region-specific formats
-- Provides a consistent user experience across applications
+N> The following steps summarize chart-specific localization. For complete setup, including resource file creation and culture registration, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic.
 
-### Localization can be particularly useful in the following scenarios:
+### 1. Register the localization services
 
+In `Program.cs`, add Syncfusion localization to the service collection and configure the supported cultures.
 
-- Chart-based dashboards for multinational teams
-In applications where charts are used to monitor KPIs across multiple regions, localization ensures that axis labels, legends, and tooltips are displayed in the user's preferred language and cultural format.
+```csharp
+// filepath: Program.cs
+using Syncfusion.Blazor;
+using Microsoft.AspNetCore.Localization;
 
+var builder = WebApplication.CreateBuilder(args);
 
-- Financial and analytical chart reporting
-Charts displaying revenue, profit, or financial trends require proper localization of currency symbols, decimal separators, and number formats to ensure accurate interpretation.
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
+var supportedCultures = new[] { "en-US", "fr-FR", "de-DE", "ja-JP" };
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    options.DefaultRequestCulture = new RequestCulture("en-US");
+    options.SupportedCultures = supportedCultures.Select(c => new CultureInfo(c)).ToList();
+    options.SupportedUICultures = supportedCultures.Select(c => new CultureInfo(c)).ToList();
+});
+```
 
-- E-commerce analytics charts
-Sales performance, customer trends, and region-based metrics are often visualized using charts. Localization helps present this data in region-specific formats, improving decision-making.
+### 2. Add the localization middleware
 
+```csharp
+// filepath: Program.cs
+// ...existing code...
+var app = builder.Build();
 
-- Time-series and date-driven charts
-Charts that display time-dependent data (such as daily, monthly, or yearly trends) benefit from localization by formatting date values according to regional standards (e.g., MM/dd/yyyy vs dd/MM/yyyy).
+app.UseRequestLocalization();
+// ...existing code...
+```
 
+### 3. Create a resource file for chart strings
 
-- Scientific and data-intensive visualizations
-Applications that rely on precise chart representations, such as research or engineering tools, require localized number formats and labeling for clarity and accuracy.
+Add a `.resx` file under `Resources/` named `Syncfusion.Blazor.Charts.{culture}.resx` (for example, `Syncfusion.Blazor.Charts.fr-FR.resx`) and provide translated values for each chart string.
 
+N> **Troubleshooting:** If translated text does not appear, verify that the `ResourcesPath` matches the folder containing your `.resx` files, that the resource file is named exactly `Syncfusion.Blazor.Charts.{culture}.resx`, and that the request culture is being applied (check `app.UseRequestLocalization()` is called before `app.UseRouting()`).
 
-- Educational and learning dashboards
-Charts representing student progress, performance metrics, or usage statistics can be localized to provide better accessibility for global learners.
+## Right-to-Left (RTL) rendering
 
+The chart supports right-to-left rendering for languages such as Arabic and Hebrew. Enable RTL by setting the chart's `EnableRtl` property to `true` and configuring the host page with a right-to-left text direction (set the document's direction to RTL, e.g., `<html dir="rtl" lang="ar">`).
 
-- Public sector and government data charts
-Charts used in dashboards for public data visualization must support regional languages and formats to ensure accessibility and compliance with localization standards.
+```cshtml
+@using Syncfusion.Blazor.Charts
 
+<SfChart Title="مبيعات المنطقة" EnableRtl="true">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartPrimaryYAxis />
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesData" XName="Region" YName="Amount" Type="ChartSeriesType.Column" />
+    </ChartSeriesCollection>
+</SfChart>
 
-- Real-time and monitoring charts
-Applications that display live data, such as system monitoring or stock market charts, require localized numeric and textual formats to enhance readability for global audiences.
+@code {
+    public class SalesInfo
+    {
+        public string Region { get; set; }
+        public double Amount { get; set; }
+    }
 
+    public List<SalesInfo> SalesData = new()
+    {
+        new SalesInfo { Region = "شمال", Amount = 45 },
+        new SalesInfo { Region = "جنوب", Amount = 32 },
+        new SalesInfo { Region = "شرق", Amount = 28 },
+        new SalesInfo { Region = "غرب", Amount = 51 }
+    };
+}
+```
 
-- Cross-platform and global applications
-Charts rendered in web and mobile applications need consistent localization behavior across devices and regions to maintain a unified user experience.
-
-
-- Right-to-Left (RTL) chart rendering scenarios
-Localization also supports RTL languages such as Arabic and Hebrew, ensuring proper alignment, layout, and readability of chart elements.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to learn about the available chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

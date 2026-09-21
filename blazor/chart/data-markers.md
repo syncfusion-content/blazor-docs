@@ -9,13 +9,11 @@ documentation: ug
 
 # Blazor Charts Data Markers
 
-[Data markers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html) are used to provide information about the data points in a series. Each data point can be adorned with a shape.
+[Data markers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html) are used to provide information about the data points in a series. Each data point can be adorned with a shape. Use markers to highlight key values, distinguish overlapping series, or make trends easier to read in dense charts.
 
 <!-- markdownlint-disable MD036 -->
 
 ## Markers
-
-<!-- markdownlint-disable MD036 -->
 
 Markers can be added to the points by enabling the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Visible) property to **true** of [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html).
 
@@ -31,7 +29,7 @@ Markers can be added to the points by enabling the [Visible](https://help.syncf
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double X { get; set; }
@@ -70,7 +68,7 @@ Markers can be assigned with different shapes such as [Rectangle](https://help.s
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double X { get; set; }
@@ -95,13 +93,13 @@ Markers can be assigned with different shapes such as [Rectangle](https://help.s
 
 ## Auto marker shape
 
-By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) is set to [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html#Syncfusion_Blazor_Charts_ChartShape_Auto). When **Auto** is set and marker is enabled in the chart at the same time, each series is rendered with a unique marker shape.
+By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) is set to [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html#Syncfusion_Blazor_Charts_ChartShape_Auto). When markers are enabled and `Shape` is left at the default `Auto`, each series is assigned a different shape automatically based on its series index.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart ID="container">    
+<SfChart>    
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTimeCategory" Format="yyyy"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
         <ChartSeries Name="Series1" DataSource="@ConsumerReports" XName="X" YName="Y1" Type="ChartSeriesType.Line">
@@ -129,7 +127,6 @@ By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncf
     public class ChartData
     {
         public DateTime X { get; set; }
-        public double Y { get; set; }
         public double Y1 { get; set; }
         public double Y2 { get; set; }
         public double Y3 { get; set; }
@@ -154,7 +151,7 @@ By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncf
 
 ## Images
 
-Apart from shapes, one can also add custom images to mark the data point using the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_ImageUrl) property by specifying [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html#Syncfusion_Blazor_Charts_ChartShape_Image) shape for marker.
+You can also use a custom image instead of a built-in shape by setting `Shape` to `ChartShape.Image` and providing the image path in the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_ImageUrl) property.
 
 ```cshtml
 
@@ -169,7 +166,7 @@ Apart from shapes, one can also add custom images to mark the data point using t
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double X { get; set; }
@@ -190,19 +187,17 @@ Apart from shapes, one can also add custom images to mark the data point using t
 
 ```
 
-![Blazor Chart with image marker shape](images/marker/blazor-line-chart-image-marker.webp)
+![Blazor Line Chart with Image Marker](images/marker/blazor-line-chart-image-marker.webp)
 
 ## Fill marker with series color
 
-Marker can be filled with the series color by setting [IsFilled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_IsFilled) property to **true** of [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html).
+Markers can be filled with the series color by setting the [IsFilled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_IsFilled) property to **true** on [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
             <ChartMarker Visible="true" Height="10" Width="10" IsFilled="true">
@@ -211,7 +206,7 @@ Marker can be filled with the series color by setting [IsFilled](https://help.sy
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double X { get; set; }
@@ -232,20 +227,17 @@ Marker can be filled with the series color by setting [IsFilled](https://help.sy
 
 ```
 
-![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-filled-marker.webp)
+![Blazor Line Chart with Filled Markers](images/marker/blazor-line-chart-filled-marker.webp)
 
 ## Customization
 
-Markers color can be customized using [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Fill) property and the border color and width can be customized based on the specified value in [ChartMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarkerBorder.html).
+The marker color can be customized using the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Fill) property, and the border color and width can be customized using [ChartMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarkerBorder.html).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
             <ChartMarker Visible="true" Height="10" Width="10" Fill="red">
@@ -255,7 +247,7 @@ Markers color can be customized using [Fill](https://help.syncfusion.com/cr/blaz
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public double X { get; set; }
@@ -276,11 +268,11 @@ Markers color can be customized using [Fill](https://help.syncfusion.com/cr/blaz
 
 ```
 
-![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-custom-marker.webp)
+![Blazor Line Chart with Custom Fill and Border Markers](images/marker/blazor-line-chart-custom-marker.webp)
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Combine markers with [data labels](./data-labels) to display the value of each point, or surface marker details on hover with the [tooltip](./tool-tip).
 
 ## See also
 
-* [Tooltip](./tool-tip)
 * [Legend](./legend)
+* [Getting started](./getting-started)

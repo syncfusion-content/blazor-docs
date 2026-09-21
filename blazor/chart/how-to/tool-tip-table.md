@@ -44,7 +44,7 @@ Construct a HTML table as per the requirement and place the implicit named param
     <Template>
         @{
             var data = context as ChartTooltipInfo;
-            <table border="5" bgcolor="lightblue">
+            <table style="border:5px solid black; background-color: lightblue">
                 <tr style="border: 1px solid black">
                     <td style="border: 1px solid black">Month: </td>
                     <td style="border: 1px solid black">@data.X</td>
@@ -77,7 +77,7 @@ When the mouse is moved over the chart series points, the tooltip is displayed i
         <Template>
             @{
                 var data = context as ChartTooltipInfo;
-                <table border="2" bgcolor="lightblue" cellpadding="5">
+                <table style="border:2px solid black; background-color: lightblue; padding:5px">
                     <tr style="border: .1px solid black">
                         <td style="border: 1px solid black">Month: </td>
                         <td style="border: 1px solid black"> @data.X</td>
@@ -118,4 +118,4 @@ When the mouse is moved over the chart series points, the tooltip is displayed i
 
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. Also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to see various chart types and how to represent time-dependent data, showing trends at equal intervals.

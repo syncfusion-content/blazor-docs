@@ -15,7 +15,7 @@ The axis associated with the series can be hidden by toggling the legend item of
 
 **Step 1:**
 
-Render a chart with three series and three axis using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) and [ChartAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxes.html) properties of the chart. Map each series to a measure axis using [YAxisName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YAxisName) property of the [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html).
+Render a chart with three series and three axes using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) and [`ChartAxes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxes.html). Map each series to a measure axis using the [`YAxisName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YAxisName) property of [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html).
 
 ```cshtml
 <SfChart>
@@ -38,7 +38,7 @@ Render a chart with three series and three axis using [ChartSeriesCollection](ht
 
 **Step 2:**
 
-In the [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html), configure the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to display the legend and the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property to enable legend item toggling to control the visibility of the associated series.
+In [`ChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html), set [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) to `true` to display the legend and [`ToggleVisibility`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) to `true` so legend-item clicks toggle the series — and as a side effect, the matching axis.
 
 ```cshtml
 <SfChart>
@@ -95,4 +95,11 @@ By clicking the legend items, one can now toggle the visibility of the associate
 }
 ```
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations, and explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to learn about various chart types and how to represent time-dependent data showing trends at equal intervals.
+
+## See also
+
+* [Axis customization](../axis-customization)
+* [Legend](../legend)
+* [Chart series](../chart-series)
+* [Multiple panes](../multiple-panes)

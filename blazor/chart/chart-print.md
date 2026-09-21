@@ -30,7 +30,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 <SfButton Id="button" Content="Print" @onclick="Print" IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code{
+@code {
 
     SfChart ChartObj;
 
@@ -62,13 +62,12 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ![Printing in Blazor Chart](images/getting-started/blazor-chart-printing.webp)
 
-### Print - Multiple Charts
+### Print Multiple Charts
 
-Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_PrintAsync_Microsoft_AspNetCore_Components_ElementReference_) method can be used to print all of the charts on a page by passing the element reference of the parent for all of the charts.
+The same [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_PrintAsync_Microsoft_AspNetCore_Components_ElementReference_) method can be used to print all of the charts on a page by passing the element reference of the parent for all of the charts. This sample demonstrates combining a column chart, a pie chart, and a spline area chart into a single printable layout.
 
 ```cshtml
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
 
@@ -165,7 +164,7 @@ Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
   </div>
 </div>
 
-@code{
+@code {
     private SfChart chartInstance;
     private ElementReference Element;
 
@@ -232,17 +231,17 @@ Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Chart - Print Multiple Charts](images/getting-started/blazor-chart-print-all-charts.webp)
-![Blazor Chart - Print Multiple Charts](images/getting-started/blazor-chart-print-all-charts2.webp)
+![Blazor Chart - Print Multiple Charts Combined View](images/getting-started/blazor-chart-print-all-charts.webp)
+![Blazor Chart - Print Multiple Charts Result](images/getting-started/blazor-chart-print-all-charts2.webp)
 
 ## Export
 
 Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF), [XLSX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_XLSX) or [CSV](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_CSV) format. The [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the file format and `FileName` specifies the name of the exported file. Both of these parameters are required input parameters for this method.
 
-The optional parameters for this method are,
-* `Orientation`: Specifies the portrait or landscape orientation in the PDF document.
-* `AllowDownload`: Set this parameter to **true** to enable the browser's download prompt to download the chart in the specified format, and **false** to get the chart as a `DataUrl` string.
-* `IsBase64`: Set this parameter to **true** to indicate that you want the exporting content in the form of a `base64` string. 
+The optional parameters for this method are:
+* `Orientation`: Specifies the portrait or landscape orientation in the PDF document (e.g., `PdfPageOrientation.Landscape`).
+* `AllowDownload`: Set this parameter to **true** to enable the browser's download prompt to download the chart in the specified format, and **false** to receive the chart as a `DataUrl` string.
+* `IsBase64`: Set this parameter to **true** to receive the exported content as a `base64` string in the `OnExportComplete` event.
 
 ```cshtml
 
@@ -261,7 +260,7 @@ The optional parameters for this method are,
 
 <SfButton Id="button" Content="Export" @onclick="Export" IsPrimary="true" CssClass="e-flat"></SfButton>
 
-@code{
+@code {
 
     SfChart ChartObj;
 
@@ -334,7 +333,7 @@ If you set `IsBase64` parameter to **true** while calling the [ExportAsync](http
 </div>
 
 
-@code{
+@code {
     private SfChart chartInstance;
     public string FileName { get; set; } = "Charts";
     public string Format { get; set; } = "{value} GW";
@@ -378,9 +377,12 @@ If you set `IsBase64` parameter to **true** while calling the [ExportAsync](http
 The [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_Exporting) event allows users to customize the exported chart before it is generated. The [ChartExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html) class provides the following options for customizing the exported chart:
 
 * `Cancel`: This property cancels the export process when set to **true**.
-* `Height`: This property specifies the height of the exported chart. When the value is changed, the chart's height is updated. It is not applicable for **XLSX** and **CSV** formats.
-* `Width`: This property specifies the width of the exported chart. Changing the value updates the chart's width. It is not applicable for **XLSX** and **CSV** formats.
-* `Workbook`: Represents the workbook generated during export, applicable only for **XLSX** and **CSV** formats.
+* `Height`: This property specifies the height of the exported chart. It is not applicable for **XLSX** and **CSV** formats.
+* `Width`: This property specifies the width of the exported chart. It is not applicable for **XLSX** and **CSV** formats.
+
+### Options applicable to XLSX and CSV formats
+
+* `Workbook`: Represents the workbook generated during export. Available only when `ExportType` is **XLSX** or **CSV**; for image and PDF formats, this property is **null**.
 
 ### Customizing the exported Excel documents
 
@@ -400,14 +402,13 @@ In the code example below, the chart is exported to Excel format. The exported E
     </button>
 </div>
 <div id="chart">
-    <SfChart @ref="@chartInstance" Title="Top 10 Countries Using Solar Power" Theme=" Syncfusion.Blazor.Theme.Tailwind3">
+    <SfChart @ref="@chartInstance" Title="Top 10 Countries Using Solar Power" Theme="Syncfusion.Blazor.Theme.Tailwind3">
         <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
         <ChartPrimaryXAxis Title="XaxisTitle" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1" LabelIntersectAction="@Label" LabelRotation="-45">
             <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
             <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
         </ChartPrimaryXAxis>
         <ChartPrimaryYAxis Minimum="0" Maximum="40" Interval="10" Title="Measurements (in Gigawatt)" LabelFormat="@Format">
-            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
             <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
             <ChartAxisMajorGridLines Width="2"></ChartAxisMajorGridLines>
             <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
@@ -484,7 +485,7 @@ In the code example below, the chart is exported to Excel format. The exported E
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdtRCVoMLHBfGP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> For more chart types and live demos, see the [Blazor Charts demo](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2). For installation and first-time setup, refer to the [Getting Started](./getting-started) page.
 
 ## See Also
 

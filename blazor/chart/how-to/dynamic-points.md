@@ -9,29 +9,30 @@ documentation: ug
 
 # How to Add Dynamic Points in Blazor Charts
 
-We can use chart mouse/touch events to dynamically add or remove points from an existing data source by clicking within the chart area. These events allow us to obtain the location of the current cursor as X and Y values in the event arguments. The point's X and Y values can then be updated with new data from the existing data source. To achieve dynamic points, follow the steps outlined below.
+This sample demonstrates how to add and remove points in a Blazor Chart at runtime. By handling the `ChartMouseClick` event, you can append a point based on the current cursor location and remove it when the user clicks on an existing marker.
 
 **Step 1**
 
 Add the [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event to the chart and add the event handler to that.
 
 
-``` cshtml
+```cshtml
 <SfChart>
-<ChartEvents ChartMouseClick="MouseClick"></ChartEvents>
-...
-<SfChart>
-@code{
+    <ChartEvents ChartMouseClick="MouseClick"></ChartEvents>
+    <!-- other chart configuration -->
+</SfChart>
+
+@code {
     public void MouseClick(ChartMouseEventArgs args)
     {
-    
+
     }
 }
 ```
 
-**Step 2**
+**Step 2: Add a point at the clicked location**
 
-Fetch the X-axis and Y-axis data of the currently clicked location from the [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event arguments, and then add points to the data source using the `AddToDataSource` method, as shown below.
+Read the X and Y values at the click position from the [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event args. `Math.Round` is used to normalize the floating-point values returned by the chart. Then add the point to the data source using the `AddToDataSource` helper, as shown below.
 
 ```cshtml
 public void MouseClick(ChartMouseEventArgs args)
@@ -48,63 +49,68 @@ public void MouseClick(ChartMouseEventArgs args)
         }
     }
 }
+
 public void AddToDataSource(object xValue, object yValue)
 {
-    MouseClickPoints.Add(new PointData() { X = Convert.ToDouble(xValue, null), Y = Convert.ToDouble(yValue, null) });
+    MouseClickPoints.Add(new PointData()
+    {
+        X = Convert.ToDouble(xValue, System.Globalization.CultureInfo.InvariantCulture),
+        Y = Convert.ToDouble(yValue, System.Globalization.CultureInfo.InvariantCulture)
+    });
 }
-``` 
-
-**Step 3**
-
-To remove a point from the existing chart data source, click on it. To do so, create a method `IsSamePoint` to check whether the point obtained from [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) already exists in the data source. If the point exists in the data source, it should be removed. 
-
 ```
-    public void MouseClick(ChartMouseEventArgs args)
+
+**Step 3: Remove a point by clicking on it**
+
+To remove an existing point, click on its marker. Implement an `IsSamePoint` helper that checks whether the point obtained from [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) is already present in the data source. If the point exists, remove it; otherwise, add the new point.
+
+```csharp
+public void MouseClick(ChartMouseEventArgs args)
+{
+    // ...previous X/Y extraction from args.AxisData...
+    bool isSamePoint;
+    if (MouseClickPoints.Count >= 1)
     {
-        ...
-                bool isSamePoint;
-                if (MouseClickPoints.Count >= 1)
-                {
-                    index = -1;
-                    isSamePoint = IsSamePoint();
-                    if (isSamePoint && MouseClickPoints.Count >= 1)
-                    {
-                        MouseClickPoints.RemoveAt(index);
-                    }
-                    else if (!isSamePoint)
-                    {
-                        AddToDataSource(xPoint, yPoint);
-                    }
-                }
-        ...
-    }
-    public bool IsSamePoint()
-    {
-        foreach (PointData item in MouseClickPoints)
+        index = -1;
+        isSamePoint = IsSamePoint();
+        if (isSamePoint && MouseClickPoints.Count >= 1)
         {
-            index = index + 1;
-            if (item.X == Convert.ToDouble(xPoint, null) &&
-                item.Y == Convert.ToDouble(yPoint, null))
-            {
-                return true;
-            }
+            MouseClickPoints.RemoveAt(index);
         }
-        return false;
+        else if (!isSamePoint)
+        {
+            AddToDataSource(xPoint, yPoint);
+        }
     }
+}
+
+public bool IsSamePoint()
+{
+    foreach (PointData item in MouseClickPoints)
+    {
+        index = index + 1;
+        if (item.X == Convert.ToDouble(xPoint, System.Globalization.CultureInfo.InvariantCulture) &&
+            item.Y == Convert.ToDouble(yPoint, System.Globalization.CultureInfo.InvariantCulture))
+        {
+            return true;
+        }
+    }
+    return false;
+}
 ```
 
-**Action**
+**Complete Example**
 
-The below code snippet illustrates a chart that allows users to add new data and update existing data source by clicking in the chart area. Additionally, clicking on an existing point will remove that data from the existing data source.
+The following code snippet shows a chart that lets users add new data and update the existing data source by clicking in the chart area. Clicking on an existing point removes that point from the data source.
 
-``` cshtml
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 
-<SfChart @ref="Chart">
+<SfChart>
     <ChartEvents ChartMouseClick="MouseClick"></ChartEvents>
-    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
-    <ChartPrimaryXAxis @ref="XAxis" ValueType="Syncfusion.Blazor.Charts.ValueType.Double" RangePadding="ChartRangePadding.Additional" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+    <ChartArea><ChartAreaBorder Color="transparent"></ChartAreaBorder></ChartArea>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Double" RangePadding="ChartRangePadding.Additional" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
         <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
     </ChartPrimaryXAxis>
     <ChartPrimaryYAxis>
@@ -120,21 +126,17 @@ The below code snippet illustrates a chart that allows users to add new data and
 </SfChart>
 @code {
 
-    SfChart? Chart;
-    ChartPrimaryXAxis? XAxis;
-    Theme Theme { get; set; }
-    public string Width { get; set; } = "90%";
     object xPoint, yPoint;
     int index;
-     
+
     public void MouseClick(ChartMouseEventArgs args)
     {
         if (args.AxisData.Count > 0)
         {
             if (args.AxisData.TryGetValue("PrimaryXAxis", out object xValue) && args.AxisData.TryGetValue("PrimaryYAxis", out object yValue))
             {
-                xPoint = Math.Round(Convert.ToDouble(xValue, null));
-                yPoint = Math.Round(Convert.ToDouble(yValue, null));
+                xPoint = Math.Round(Convert.ToDouble(xValue, System.Globalization.CultureInfo.InvariantCulture));
+                yPoint = Math.Round(Convert.ToDouble(yValue, System.Globalization.CultureInfo.InvariantCulture));
                 bool isSamePoint;
                 if (MouseClickPoints.Count >= 1)
                 {
@@ -163,7 +165,7 @@ The below code snippet illustrates a chart that allows users to add new data and
         foreach (PointData item in MouseClickPoints)
         {
             index = index + 1;
-            if (item.X == Convert.ToDouble(xPoint, null) && item.Y == Convert.ToDouble(yPoint, null))
+            if (item.X == Convert.ToDouble(xPoint, System.Globalization.CultureInfo.InvariantCulture) && item.Y == Convert.ToDouble(yPoint, System.Globalization.CultureInfo.InvariantCulture))
             {
                 return true;
             }
@@ -173,22 +175,26 @@ The below code snippet illustrates a chart that allows users to add new data and
 
     public void AddToDataSource(object xValue, object yValue)
     {
-        MouseClickPoints.Add(new PointData() { X = Convert.ToDouble(xValue, null), Y = Convert.ToDouble(yValue, null) });
+        MouseClickPoints.Add(new PointData()
+        {
+            X = Convert.ToDouble(xValue, System.Globalization.CultureInfo.InvariantCulture),
+            Y = Convert.ToDouble(yValue, System.Globalization.CultureInfo.InvariantCulture)
+        });
     }
 
     public class PointData
     {
-        public Nullable<double> X { get; set; }
-        public Nullable<double> Y { get; set; }
+        public double? X { get; set; }
+        public double? Y { get; set; }
     }
-    
+
     public List<PointData> MouseClickPoints = new List<PointData>
     {
-        new PointData { X= 12, Y= 19 },
-        new PointData { X= 26, Y= 25 },
-        new PointData { X= 45, Y= 15 },
-        new PointData { X= 78, Y= 24 },
-        new PointData { X= 90, Y= 35 }
+        new PointData { X = 12, Y = 19 },
+        new PointData { X = 26, Y = 25 },
+        new PointData { X = 45, Y = 15 },
+        new PointData { X = 78, Y = 24 },
+        new PointData { X = 90, Y = 35 }
     };
 }
 ```

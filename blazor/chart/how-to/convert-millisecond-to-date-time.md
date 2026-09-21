@@ -11,13 +11,13 @@ documentation: ug
 
 # How to Convert Milliseconds to DateTime in Blazor Charts
 
-Chart converts the datetime to milliseconds to calculate the bounds, so all events for datetime axis returns the value in milliseconds. For example, after zoom completion, the ranges for axis will be in the milliseconds. By using the [OnZoomEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event, you can convert millisecond value to date time format.
+The chart converts `DateTime` values to milliseconds internally when calculating axis ranges. As a result, axis range values returned through events such as `OnZoomEnd` are provided in milliseconds. You can use the [OnZoomEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event to retrieve the zoomed axis range and convert the millisecond values back to `DateTime`.
 
-To convert millisecond value to date time format, follow the given steps:
+To convert axis range values from milliseconds to `DateTime`, follow these steps:
 
 **Step 1**:
 
-Using `OnZoomEnd` event, you can get the axis range in milliseconds. By using the following code, you can get the equivalent date value.
+Using [OnZoomEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event, you can get the axis range in milliseconds. By using the following code, you can get the equivalent date value.
 
 ```cshtml
 <ChartEvents OnZoomEnd="RangeSelectionCompleted"></ChartEvents>

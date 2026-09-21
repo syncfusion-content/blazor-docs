@@ -11,9 +11,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-When data contains numeric values in both the lower order of magnitude (eg: 10<sup>-6</sup>) and the upper order of magnitude (eg: 10<sup>6</sup>), a logarithmic axis is highly useful in visualizing it.
+When data spans many orders of magnitude (e.g., 10<sup>-6</sup> to 10<sup>6</sup>), a logarithmic axis is highly useful for visualizing it on a single, readable scale.
 
-A detailed walkthrough for customizing the logarithmic axis is provided in the video below.
+Watch the video below for a walkthrough of the options covered in this article.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=_67hCchVOu4" %}
 
@@ -55,7 +55,9 @@ A detailed walkthrough for customizing the logarithmic axis is provided in the v
 
 ## Range
 
-The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties.
+The axis range is calculated automatically from the provided data. Use [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum) to override the range. The label spacing along the range is controlled by the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) property, which is covered separately in the [Logarithmic interval](#logarithmic-interval) section.
+
+N> A logarithmic axis requires strictly positive values. Set `Minimum` and `Maximum` to positive numbers; values of `0` or negative numbers are not rendered.
 
 ```cshtml
 
@@ -95,7 +97,9 @@ The axis range will be calculated automatically based on the provided data; howe
 
 ## Logarithmic base
 
-Logarithmic base can be customized using the [LogBase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LogBase) property of the axis. When the LogBase is 5, the axis values are 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> and so on.
+Logarithmic base can be customized using the [LogBase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LogBase) property of the axis. When `LogBase` is `2`, the axis values are 2<sup>-2</sup>, 2<sup>-1</sup>, 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup> and so on.
+
+N> `LogBase` must be greater than `1`.
 
 ```cshtml
 
@@ -135,7 +139,7 @@ Logarithmic base can be customized using the [LogBase](https://help.syncfusion.
 
 ## Logarithmic interval
 
-The interval can be customized using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) property of the logarithmic axis. When the logarithmic base is **10** and logarithmic interval is **2**, then the axis labels are placed at an interval of **10<sup>2</sup>**. The default value of the interval is **1**.
+The interval can be customized using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) property of the logarithmic axis. The interval is expressed as a multiplier of the base: when `LogBase` is `2` and `Interval` is `2`, the axis labels are placed at 2<sup>2</sup>, 2<sup>4</sup>, 2<sup>6</sup> and so on. The default value of the interval is `1`.
 
 ```cshtml
 
@@ -222,8 +226,8 @@ The table below shows the results of applying some commonly used label formats t
 <tr>
 <td><b>Label Value</b></td>
 <td><b>Label Format property value</b></td>
-<td><b>Result </b></td>
-<td><b>Description </b></td>
+<td><b>Result</b></td>
+<td><b>Description</b></td>
 </tr>
 <tr>
 <td>1000</td>
@@ -277,14 +281,16 @@ The table below shows the results of applying some commonly used label formats t
 
 ## Custom label format
 
-Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 200K.
+Axis also supports custom label formats using the `{value}` placeholder, which is replaced at render time with the actual axis label. For example, with `LabelFormat="${value}K"` a label value of `200` is rendered as `200K`.
 
 ```cshtml
+
+@using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>    
 
-    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" LabelFormat="${value}K" RangePadding="ChartRangePadding.Auto"/> 
+    <ChartPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic" LabelFormat="${value}K" RangePadding="ChartRangePadding.Auto"/>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Data" XName="XValue" YName="YValue" />        
@@ -313,10 +319,10 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHXRCVJgpHHeDg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Line Chart Logarithmic Axis with Custom Label Format](images/logarithmic-axis/blazor-line-chart-axis-custom-label-format.webp)" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
-
 ## See also
 
 * [Data label](./data-labels)
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)
+* [Numeric axis](./numeric-axis)
+* [Date-time axis](./date-time-axis)

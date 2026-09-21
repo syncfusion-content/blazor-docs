@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Charts Sorting
 
-Sorting enables you to sort data in ascending or descending order. To sort the chart based on the y-axis value, set **Y** to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property.
+Sorting arranges the chart data in ascending or descending order based on a chosen field. The [`ChartSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html) component's [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) accepts the name of any data-source field (for example, the y-value field such as **YValue**).
 
 ```cshtml
 
@@ -17,7 +17,7 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
 @using Syncfusion.Blazor.Data
 
 <SfChart Title="Sales History of Product X">
-    <ChartSorting PropertyName="Y" Direction="ListSortDirection.Ascending"></ChartSorting>
+    <ChartSorting PropertyName="YValue" Direction="ListSortDirection.Ascending"></ChartSorting>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -25,7 +25,7 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -50,9 +50,9 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
 
 ![Blazor Chart - Sorting by y-axis](images/sorting/sorting-yaxis-ascending.webp)
 
-## Sorting order
+## Sort direction
 
-By default, sorting is applied in **Ascending** order. The sorting order can be changed to descending by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property to **Descending** in [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
+By default, sorting is applied in **Ascending** order. Set the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property to **Descending** on [`ChartSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html) to reverse the order.
 
 ```cshtml
 
@@ -60,7 +60,7 @@ By default, sorting is applied in **Ascending** order. The sorting order can be 
 @using Syncfusion.Blazor.Data
 
 <SfChart Title="Sales History of Product X">
-    <ChartSorting PropertyName="X" Direction="ListSortDirection.Descending"></ChartSorting>
+    <ChartSorting PropertyName="YValue" Direction="ListSortDirection.Descending"></ChartSorting>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -68,7 +68,7 @@ By default, sorting is applied in **Ascending** order. The sorting order can be 
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -88,6 +88,7 @@ By default, sorting is applied in **Ascending** order. The sorting order can be 
         new ChartData { X= "MEX", YValue= 20, Profit = 5},
     };
 }
+
 ```
 
 ![Blazor Chart - Sort descending by y-axis](images/sorting/sorting-yaxis-descending.webp)
@@ -110,7 +111,7 @@ Data can also be sorted based on any field in the data source by passing the fie
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -137,6 +138,6 @@ Data can also be sorted based on any field in the data source by passing the fie
 
 ## See also
 
-* [Data label](./data-labels)
-* [Legend](./legend)
-* [Marker](./data-markers)
+* [Working with data](./working-with-data)
+* [Live chart](./live-chart)
+* [Dynamic points](./dynamic-points)

@@ -11,7 +11,9 @@ documentation: ug
 
 ## Histogram
 
-[Histogram Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/histogram-chart) can provide a visual display of large amounts of data that are difficult to understand in a tabular or spreadsheet form and it can be rendered by specifying the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [Histogram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Histogram).
+The [Histogram Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/histogram-chart) displays the distribution of large datasets by grouping values into bins and plotting the frequency of each bin. This makes it easier to analyze data that may be difficult to interpret in a tabular or spreadsheet format. To render a histogram series, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [Histogram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Histogram).
+
+N> **Troubleshooting:** If the chart is empty, verify that the data source is bound to a numeric `YName` field and that the X-axis `Minimum`/`Maximum` covers the data range. Each data value must be non-null and not `double.NaN`.
 
 ```cshtml
 
@@ -177,7 +179,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public void PointRender(PointRenderEventArgs args)
     {
-        args.Fill = args.Point.Y.ToString() == "2" ? "#E91E63" : "#3F51B5";
+        args.Fill = System.Convert.ToDouble(args.Point.Y) == 2 ? "#E91E63" : "#3F51B5";
     }
 
     public List<Data> ExamScores = new List<Data>
@@ -199,9 +201,21 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVdZHiozMuzKIBX?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=fluent2) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+## Series customization
+
+The following properties control how the histogram aggregates values into bins and renders them:
+
+* [BinInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BinInterval) - Sets the width of each bin along the X-axis. The default is `0`, which lets the chart choose an interval automatically.
+* [ShowNormalDistribution](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ShowNormalDistribution) - When `true`, overlays a normal distribution curve on the histogram. The default is `false`.
+* [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnWidth) - Sets the relative width of each column, from `0` to `1`. The default is `0.99` to remove the visual gap between bins.
+
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and explore the [Blazor Histogram Chart Example](https://blazor.syncfusion.com/demos/chart/histogram?theme=fluent2) to learn how the histogram aggregates values into bins.
 
 ## See also
 
+* [Box and whisker](./box-whisker)
+* [Scatter](./scatter)
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
+* [Data Marker](../data-markers)
+* [Legend](../legend)
