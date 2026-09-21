@@ -14,7 +14,7 @@ These APIs are frequently used to control size, styling, and layout behavior.
 | `Visible` | Shows or hides the component without destroying its state. | Sidebar, Toolbar, Card, Kanban, Scheduler, Progress Bar, Chip, FloatingActionButton, SpeedDial, Rating, Chart legend, data labels, and column/item models |
 | `Enabled` | Enables or disables user interaction with the component. | Button, Chip, Calendar, DatePicker, TimePicker, DateTimePicker, DateRangePicker, DropDownList, MultiSelect, AutoComplete, ListBox, ListView, RangeNavigator (period selector), Rich Text Editor, Splitter, TextBox, FileUpload, Dashboard Layout (panel) |
 | `Theme` | Applies a built-in theme such as Material, Bootstrap5, Fluent, Tailwind, or HighContrast. | Chart, Accumulation Chart, Bullet Chart, Sparkline, TreeMap, Maps, Image Editor, Linear Gauge, Circular Gauge, Chart Wizard, Stock Chart, 3D Chart |
-| `EnableRtl` | Enables right-to-left rendering to support Arabic, Hebrew, and other RTL languages. (Sankey uses `EnableRTL`.) | Chart, Accumulation Chart, 3D Chart, Bullet Chart, Sparkline, TreeMap, Maps, Scheduler, Kanban, DataGrid, Gantt Chart, TreeGrid, Pivot Table, ListView, Menu Bar, Toolbar, Sidebar, Splitter, Dashboard Layout, Rich Text Editor, Dialog, Progress Bar, Query Builder, Range Navigator, Toast, AI AssistView, Chat UI, Block Editor, Sankey, Calendar, DatePicker, TimePicker, DateTimePicker, DateRangePicker, AutoComplete, ComboBox, DropDownList, MultiSelect, Image Editor, Data Form |
+| `EnableRtl` | Enables right-to-left rendering to support Arabic, Hebrew, and other RTL languages. | Chart, Accumulation Chart, 3D Chart, Bullet Chart, Sparkline, TreeMap, Maps, Scheduler, Kanban, DataGrid, Gantt Chart, TreeGrid, Pivot Table, ListView, Menu Bar, Toolbar, Sidebar, Splitter, Dashboard Layout, Rich Text Editor, Dialog, Progress Bar, Query Builder, Range Navigator, Toast, AI AssistView, Chat UI, Block Editor, Sankey, Calendar, DatePicker, TimePicker, DateTimePicker, DateRangePicker, AutoComplete, ComboBox, DropDownList, MultiSelect, Image Editor, Data Form |
 
 ## 2) Common value and selection APIs
 
@@ -24,12 +24,12 @@ These APIs are widely used in input-style controls and interactive widgets.
 | --- | --- | --- |
 | `Value` | Gets or sets the current value and supports two-way binding through `@bind-Value`. | TextBox, NumericTextBox, DatePicker, ComboBox, DropDownList, AutoComplete, MultiSelect, RangeSlider, Rating, Rich Text Editor |
 | `Placeholder` | Shows hint text inside an input when no value is entered. | TextBox, ComboBox, DropDownList, AutoComplete, MultiSelect, DatePicker, TimePicker, DateTimePicker, DateRangePicker, MultiColumn ComboBox, NumericTextBox, InputMask, TextArea |
-| `AllowMultiSelection` | Enables selecting multiple items or nodes at once. | FileManager, TreeView, DropDownTree, 3D Chart (selection) |
+| `AllowMultiSelection` | Enables selecting multiple items or nodes at once. | FileManager, TreeView, DropDownTree |
 | `AllowSelection` | Enables or disables item, row, or data-point selection. | DataGrid, TreeGrid, Gantt Chart, Chart, Accumulation Chart, 3D Chart, HeatMap |
 | `AllowFiltering` | Enables the built-in filter UI, such as a filter bar or search box, to narrow down data. | DataGrid, TreeGrid, Gantt Chart, AutoComplete, ComboBox, DropDownList, MultiSelect, ListBox, MultiColumn ComboBox |
 | `ShowCheckBox` | Displays checkboxes in front of items or nodes for multi-item selection. | TreeView, ListView, TreeGrid (column), ListBox (selection settings), DropDownTree |
 | `AllowResizing` | Enables resizing of columns, panels, dialogs, or appointments by dragging. | DataGrid, TreeGrid, Gantt Chart, Dashboard Layout, Dialog, Scheduler (appointment resizing), FileManager (details view) |
-| `AllowDragAndDrop` | Enables dragging items, cards, nodes, or appointments between locations. | TreeView, Kanban, Scheduler, FileManager, Query Builder, Pivot Table (grouping bar), Kanban `SwimlaneSettings` |
+| `AllowDragAndDrop` | Enables dragging items, cards, nodes, or appointments between locations. | TreeView, Kanban, Scheduler, FileManager, Query Builder, Pivot Table |
 
 ## 3) Common data and binding APIs
 
@@ -40,9 +40,6 @@ These APIs help components connect to local collections or remote data sources.
 | `DataSource` | Binds the component to an `IEnumerable` collection or a `SfDataManager` for remote data. | Chart, Accumulation Chart, DataGrid, TreeGrid, Gantt Chart, Scheduler, Kanban, ListView, TreeView, Menu Bar, Breadcrumb, Maps, Stepper, FileManager, 3D Chart |
 | `Query` | Passes extra query options, such as filtering or sorting, to `DataManager`-based sources. | Chart, Accumulation Chart, DataGrid, TreeGrid, Gantt Chart, Kanban, Scheduler, ListView, Range Navigator, FileManager, Pivot Table |
 | `Fields` | Configures data field mappings such as ID, text, parent ID, and child fields. | ListView, TreeView, Menu Bar, Breadcrumb, Accordion, AutoComplete, ComboBox, DropDownList |
-| `TItem` | Specifies the data model type for generic components that use typed data binding. | DataGrid, TreeGrid, Gantt Chart, Scheduler, ListView, DropDownTree, FileManager, Stepper, Data Form |
-| `TValue` | Specifies the value type for generic components when it cannot be inferred from `DataSource`. | Scheduler, Card, DataGrid, TreeGrid, FileManager, Stepper, Radio Button, Toggle Switch, Calendar, DatePicker, TimePicker, DateTimePicker, DateRangePicker, NumericTextBox, RangeSlider |
-| `ID` | Sets a unique identifier for the component instance, required for `EnablePersistence`. | Maps, DataGrid, Scheduler, Sidebar, Splitter, Pivot Table, Dashboard Layout, Dialog |
 
 ## 4) Common interaction and event APIs
 
@@ -108,7 +105,6 @@ These methods often share the same name across components, mostly exposed as `As
 - Data-oriented controls often share `DataSource`, `Query`, and `Fields`.
 - Interaction-heavy components usually expose familiar event names such as `Created`, `Destroyed`, and `ValueChange`.
 - Grid family components (DataGrid, TreeGrid, Gantt Chart) have the highest API consistency, since sorting, filtering, grouping, resizing, and paging all use identical property names.
-- Sankey uses `EnableRTL` (all caps on TL) while every other component uses `EnableRtl`.
 
 ## Suggested use in documentation
 
