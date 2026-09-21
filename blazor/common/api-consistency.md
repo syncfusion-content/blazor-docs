@@ -1,17 +1,17 @@
 # Syncfusion Blazor Component API Consistency
 
-This document maps the common API names that appear across multiple Syncfusion Blazor components. It is intended to help new users recognize familiar property and event patterns when moving between components, so that knowledge of one component transfers naturally to the next. Each table groups APIs that are shared by several components and lists the purpose of each API so you know what it does before you look up the individual component documentation.
+This document lists common API names that appear across multiple Syncfusion Blazor components. It helps new users recognize familiar property and event patterns when moving between components, so knowledge from one component can be applied to another. Each table groups shared APIs and explains what each API does before you review the individual component documentation.
 
 ## 1) Common appearance and layout APIs
 
-These APIs are frequently used to control size, styling, and layout behavior.
+These APIs are commonly used to control size, styling, and layout behavior.
 
 | API name | Purpose | Components that commonly use it |
 | --- | --- | --- |
-| `CssClass` | Adds one or more custom CSS classes to the component's root element for custom styling. | Accordion, Button, Card, AppBar, Scheduler, Toolbar, Sidebar, ContextMenu, DropDownTree, Chat UI, AI AssistView |
+| `CssClass` | Adds one or more custom CSS classes to the component's root element for styling. | Accordion, Button, Card, AppBar, Scheduler, Toolbar, Sidebar, ContextMenu, DropDownTree, Chat UI, AI AssistView |
 | `Width` | Sets the component width as pixels or a percentage. | Chart, DataGrid, Gantt Chart, Diagram, Sidebar, Kanban, Stock Chart, Pivot Table, Splitter |
 | `Height` | Sets the component height as pixels or a percentage. | Chart, DataGrid, Gantt Chart, Diagram, Sidebar, Kanban, Stock Chart, Pivot Table, Splitter, TreeGrid |
-| `Visible` | Shows or hides the component without destroying its state. | Sidebar, Toolbar, Card, Kanban, Scheduler, Progress Bar, Chip, FloatingActionButton, SpeedDial, Rating, Chart legend, data labels, and column/item models |
+| `Visible` | Shows or hides the component without destroying its state. | Sidebar, Toolbar, Card, Kanban, Scheduler, Progress Bar, Chip, FloatingActionButton, SpeedDial, Rating, chart legend, data labels, and column/item models |
 | `Enabled` | Enables or disables user interaction with the component. | Button, Chip, Calendar, DatePicker, TimePicker, DateTimePicker, DateRangePicker, DropDownList, MultiSelect, AutoComplete, ListBox, ListView, RangeNavigator (period selector), Rich Text Editor, Splitter, TextBox, FileUpload, Dashboard Layout (panel) |
 | `Theme` | Applies a built-in theme such as Material, Bootstrap5, Fluent, Tailwind, or HighContrast. | Chart, Accumulation Chart, Bullet Chart, Sparkline, TreeMap, Maps, Image Editor, Linear Gauge, Circular Gauge, Chart Wizard, Stock Chart, 3D Chart |
 | `EnableRtl` | Enables right-to-left rendering to support Arabic, Hebrew, and other RTL languages. | Chart, Accumulation Chart, 3D Chart, Bullet Chart, Sparkline, TreeMap, Maps, Scheduler, Kanban, DataGrid, Gantt Chart, TreeGrid, Pivot Table, ListView, Menu Bar, Toolbar, Sidebar, Splitter, Dashboard Layout, Rich Text Editor, Dialog, Progress Bar, Query Builder, Range Navigator, Toast, AI AssistView, Chat UI, Block Editor, Sankey, Calendar, DatePicker, TimePicker, DateTimePicker, DateRangePicker, AutoComplete, ComboBox, DropDownList, MultiSelect, Image Editor, Data Form |
@@ -61,8 +61,8 @@ These APIs often control runtime behavior and user experience.
 
 | API name | Purpose | Components that commonly use it |
 | --- | --- | --- |
-| `Readonly` / `ReadOnly` | Makes the component display-only and prevents user modifications. | TextBox, NumericTextBox, DatePicker, ComboBox, DropDownList, AutoComplete, MultiSelect, RangeSlider, Rating, Block Editor, Rich Text Editor |
-| `Disabled` | Disables the component or an individual item so it ignores all interaction. | Button, ButtonGroup, CheckBox, Radio Button, Toggle Switch, FloatingActionButton, Speed Dial, Progress Button, Split Button, DropDownMenuItem, Accordion Item, ListView items |
+| `Readonly` | Makes the component display-only and prevents users from changing the value. | TextBox, NumericTextBox, DatePicker, ComboBox, DropDownList, AutoComplete, MultiSelect, RangeSlider, Rating, Block Editor, Rich Text Editor |
+| `Disabled` | Disables the component or an individual item so it ignores user interaction. | Button, ButtonGroup, CheckBox, Radio Button, Toggle Switch, FloatingActionButton, Speed Dial, Progress Button, Split Button, DropDownMenuItem, Accordion Item, ListView items |
 | `ShowClearButton` | Renders a clear button to reset the component value with one click. | TextBox, DropDownList, ComboBox, AutoComplete, DatePicker, TimePicker, DateTimePicker, DateRangePicker, MultiSelect, NumericTextBox, InputMask |
 | `AllowEditing` | Enables editing of records, cells, or annotations. | DataGrid (`GridEditSettings`), TreeGrid, Gantt Chart (`GanttEditSettings`), Kanban, Scheduler, FileManager |
 | `AllowSorting` | Enables sorting records by clicking column headers. | DataGrid, TreeGrid, Gantt Chart |
@@ -99,13 +99,9 @@ These methods often share the same name across components, mostly exposed as `As
 
 ## Notes for new users
 
-- Many Syncfusion Blazor components share the same property names even when the internal behavior differs.
-- The `Allow*` prefix enables a feature, `Enable*` switches runtime behavior on or off, and `Show*` toggles UI element visibility. Learning this one convention reveals dozens of APIs.
-- `CssClass`, `Width`, `Height`, `Enabled`, and `Visible` are good starting points when learning a new component.
+- Many Syncfusion Blazor components use the same property names, even when the underlying behavior is slightly different.
+- The `Allow*` prefix usually turns a feature on, `Enable*` usually controls a runtime behavior, and `Show*` usually makes a UI element visible. Learning these patterns makes many APIs easier to understand.
 - Data-oriented controls often share `DataSource`, `Query`, and `Fields`.
 - Interaction-heavy components usually expose familiar event names such as `Created`, `Destroyed`, and `ValueChange`.
-- Grid family components (DataGrid, TreeGrid, Gantt Chart) have the highest API consistency, since sorting, filtering, grouping, resizing, and paging all use identical property names.
-
-## Suggested use in documentation
-
-This page can be linked from component-specific guides to help readers quickly compare APIs across components and learn the common naming patterns.
+- Grid family components such as DataGrid, TreeGrid, and Gantt Chart often share the same API names for sorting, filtering, grouping, resizing, and paging.
+- When in doubt, check the component-specific API reference to confirm whether a property behaves the same way across components.
