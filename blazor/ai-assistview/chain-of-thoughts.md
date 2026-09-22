@@ -13,7 +13,7 @@ The AI AssistView supports rendering **Chain of Thoughts** (also called `Thinkin
 
 ## Types of response blocks
 
-A single response may contain `Thinking`, `Text`, and `Tool` blocks in the `blocks` array. The component renders them in the order they appear. Below are the available types of the response blocks.
+A single response may contain `ThinkingBlock`, `TextBlock`, and `Tool` items in the `Blocks` collection. The component renders them in the order they appear. The following block types are available.
 
 | Property | Description |
 |---|---|---|---|
@@ -23,9 +23,9 @@ A single response may contain `Thinking`, `Text`, and `Tool` blocks in the `bloc
 
 ## Configure the thinking block
  
-You can add a `ThinkingBlock` to the Blocks collection of an `AssistViewPrompt` or set it through args.Blocks in the `PromptRequested` event. This allows you to display reasoning steps, progress indicators, and contextual information before the response content.
+You can add a `ThinkingBlock` to the `Blocks` collection of an `AssistViewPrompt` or set it through `args.Blocks` in the `PromptRequested` event. This allows you to display reasoning steps, progress indicators, and contextual information before the response content.
 
-> When only `blocks` are provided (no `response` text), the component will render the blocks directly and skip the default text-response rendering path. When both `blocks` and `response` are provided, the blocks are rendered first followed by the response text.
+> When only `Blocks` are provided (without `Response` text), the component renders the blocks directly and skips the default text-response rendering path. When both `Blocks` and `Response` are provided, the blocks are rendered first, followed by the response text.
  
 | Property | Type | Default | Description |
 |---|---|---|---|
@@ -387,12 +387,12 @@ Use this to reflect real-time reasoning progress when streaming multi-step respo
 
 ## Configure thinking block template
  
-You can use the `ThinkingStageTemplate` property, to customize the thinking block rendering. The template receives a context object with the following properties:
+You can use the `ThinkingStageTemplate` tag, to customize the thinking block rendering. The template receives a context object with the following properties:
  
 | Context property | Type | Description |
 |---|---|---|
 | `Blocks` | `ThinkingBlock` | The full thinking block model. |
-| `BlockIndex` | `number` | Zero-based index of this block in the `blocks` array. |
+| `BlockIndex` | `number` | Zero-based index of this block in the `Blocks` collection. |
  
 ```cshtml
 
@@ -452,7 +452,7 @@ You can use the `ThinkingStageTemplate` property, to customize the thinking bloc
  
 ## Configure item template
 
-You can use the `ThinkingStageTemplate` property to add individual thinking stages inside the Timeline. This property applies to every stage item within all thinking blocks.
+You can use the `ThinkingStageTemplate` tag to add individual thinking stages inside the Timeline. This tag applies to every stage item within all thinking blocks.
 
 The template context for each stage item exposes:
 
