@@ -368,6 +368,7 @@ Replace the contents of **Pages/Home.razor** with the snippet below. It builds o
 
 {% endhighlight %}
 {% endtabs %}
+
 ![Syncfusion A2UI getting-started output](./images/ai-integration.png)
 
 ### Import the component styles
