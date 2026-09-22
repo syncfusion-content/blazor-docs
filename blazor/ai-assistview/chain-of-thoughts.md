@@ -103,7 +103,7 @@ You can add a `ThinkingBlock` to the Blocks collection of an `AssistViewPrompt` 
  
 ### Adding stages
  
-Each entry in the `stages` array represents a single reasoning step. Below are the list of available stages property.
+Each entry in the `Stages` array represents a single reasoning step. Below are the list of available stages property.
  
 | Property | Type | Description |
 |---|---|---|
@@ -115,7 +115,7 @@ Each entry in the `stages` array represents a single reasoning step. Below are t
  
 #### Adding stage status
  
-Each thinking stage will carry a `status` value that controls the visual indicator on its timeline dot:
+Each thinking stage will carry a `Status` value that controls the visual indicator on its timeline dot:
  
 - **`Completed`** — renders a check icon (`e-check`).
 - **`InProgress`** — renders an animated spinner.
@@ -387,7 +387,7 @@ Use this to reflect real-time reasoning progress when streaming multi-step respo
 
 ## Configure thinking block template
  
-You can use the `blockTemplate` property, to customize the thinking block rendering. The template receives a context object with the following properties:
+You can use the `ThinkingStageTemplate` property, to customize the thinking block rendering. The template receives a context object with the following properties:
  
 | Context property | Type | Description |
 |---|---|---|
@@ -448,18 +448,17 @@ You can use the `blockTemplate` property, to customize the thinking block render
 ```
 ![Blazor AI AssistView Block Template](./images/chain-of-thoughts-template.webp)
  
-> When `blockTemplate` is set, the default collapsible header, spinner, and Timeline rendering are completely replaced by your template. Collapse/expand behavior and spinner life cycle management must be handled within the template itself.
+> When `ThinkingStageTemplate` is set, the default collapsible header, spinner, and Timeline rendering are completely replaced by your template. Collapse/expand behavior and spinner life cycle management must be handled within the template itself.
  
 ## Configure item template
 
-You can use the `itemTemplate` property to add individual thinking stages inside the Timeline. This property applies to every stage item within all thinking blocks.
+You can use the `ThinkingStageTemplate` property to add individual thinking stages inside the Timeline. This property applies to every stage item within all thinking blocks.
 
 The template context for each stage item exposes:
 
 | Property | Description |
 |---|---|
-| `context` | Contains `Stage`, `IconCss`, and `Status` properties of the timeline stage item. |
-| `itemIndex` | Current item index in the timeline. |
+| `context` | Contains `Stages`, `IconCss`, and `Status` properties of the timeline stage item. |
  
 ```cshtml
 
