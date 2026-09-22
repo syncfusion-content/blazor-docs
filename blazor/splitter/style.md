@@ -20,13 +20,13 @@ Use the following CSS to customize the split bar properties.
 ```css
 /* default split bar color */
 .e-splitter .e-split-bar.e-split-bar-horizontal{
-   background: blue;
+   border: 1px solid red;
 }
 
 /* split bar color in hover and active state */
 .e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-hover,
 .e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-active {
-   background: green;
+   border: 1px solid yellow;
 }
 ```
 
@@ -35,13 +35,13 @@ Use the following CSS to customize the split bar properties.
 ```css
 /* default split bar color */
 .e-splitter .e-split-bar.e-split-bar-vertical {
-    background: blue;
+    border: 1px solid red;
 }
 
 /* split bar color in hover and active state */
 .e-splitter .e-split-bar.e-split-bar-vertical.e-split-bar-hover,
 .e-splitter .e-split-bar.e-split-bar-vertical.e-split-bar-active {
-    background: green;
+    border: 1px solid yellow;
 }
 ```
 
@@ -113,18 +113,18 @@ Use the following CSS to customize the split bar arrows.
 
 Use the following CSS to hide the resize handler in the split bar
 
-### Hide the horizontal split bar resize arrow
+### Hide the horizontal split bar resize handler
 
 ```CSS
 .e-splitter .e-split-bar.e-split-bar-horizontal .e-resize-handler {
-    display: none;
+    visibility: hidden;
 }
 ```
 
-### Hide the vertical split bar resize arrow
+### Hide the vertical split bar resize handler
 
 ```CSS
 .e-splitter .e-split-bar.e-split-bar-vertical .e-resize-handler {
-    display: none;
+    visibility: hidden;
 }
 ```

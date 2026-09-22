@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Menu Bar | Syncfusion
+title: Getting Started with Menu Bar in Blazor Web App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Menu Bar in a Blazor Web App with installation and setup steps.
 platform: Blazor
 control: Menu Bar
 documentation: ug
 ---
 
-# Getting Started with Blazor Menu Bar
+# Getting Started with Menu Bar in Blazor Web App
 
 This section explains how to include the [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
