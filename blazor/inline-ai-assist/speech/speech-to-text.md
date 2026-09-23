@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Speech To Text in Blazor Inline AI Assist | Syncfusion®
-description: Checkout and learn about Speech-to-Text configuration with Blazor Inline AI Assist component in Blazor Server App and Blazor Application.
+title: Speech-to-Text in Blazor Inline AI Assist | Syncfusion®
+description: Learn how to configure Speech-to-Text in the Blazor Inline AI Assist component to convert spoken input into prompts using the browser's Web Speech API.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
 ---
 
-# Speech To Text in Blazor Inline AI Assist
+# Speech-to-Text in Blazor Inline AI Assist
 
-The Blazor Inline AI Assist component integrates `Speech-to-Text` functionality through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This enables the conversion of spoken words into text using the device's microphone, allowing users to interact with the Inline AI Assist through voice input and submit prompts without typing.
+The Blazor Inline AI Assist component provides built-in Speech-to-Text support through the browser's [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API). This feature converts spoken words into text using the device's microphone, allowing users to enter prompts without typing. When content is selected, the recognized speech can be submitted as a prompt along with the selected content to provide contextual AI assistance.
 
 ## Prerequisites
 
@@ -21,21 +21,19 @@ Before integrating `Speech-to-Text`, ensure the following:
 2. The Inline AI Assist component is integrated with Azure OpenAI.
     - [Integration of Azure OpenAI With Blazor Inline AI Assist component](../ai-integrations/openai-integration.md)
 
-## Configure Speech-to-Text
+## Enable speech-to-text
 
-To enable Speech-to-Text functionality in the Blazor Inline AI Assist component, add the `<InlineAIAssistSpeechToText>` child tag with `Enable="true"` to the `<SfInlineAIAssist>` component.
+To enable the built-in Speech-to-Text functionality, add the `InlineAIAssistSpeechToText` child tag to the `SfInlineAIAssist` component and set the `Enable` property to `true`.
 
-The `<InlineAIAssistSpeechToText>` tag renders a microphone icon in the Inline AI Assist popup's built-in editor. When clicked, it listens to audio input from the device's microphone, transcribes spoken words into text using the browser's [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) API, and populates the prompt editor with the recognized text.
+Once enabled, a microphone icon appears in the Inline AI Assist popup's built-in editor. When the microphone is selected, the component captures audio from the device's microphone, converts speech into text using the browser's [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) API, and inserts the recognized text into the prompt editor.
 
-### Configuration Options
+## Configure speech recognition language
 
-* **[`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.InlineAIAssistSpeechToText.html#Syncfusion_Blazor_InteractiveChat_InlineAIAssistSpeechToText_Enable)**: Set to `true` to enable the Speech-to-Text feature in the Inline AI Assist popup.
-* **[`Language`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.InlineAIAssistSpeechToText.html#Syncfusion_Blazor_InteractiveChat_InlineAIAssistSpeechToText_Language)**: Specifies the language for speech recognition. For example:
+The [`Language`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.InlineAIAssistSpeechToText.html#Syncfusion_Blazor_InteractiveChat_InlineAIAssistSpeechToText_Language) property specifies the language used for speech recognition. Set it to a language code such as `en-US` for American English or `fr-FR` for French. If no language is specified, speech recognition uses the browser's default language setting.
 
-    * `en-US` for American English
-    * `fr-FR` for French
+## Enable interim results
 
-* **[`AllowInterimResults`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.InlineAIAssistSpeechToText.html#Syncfusion_Blazor_InteractiveChat_InlineAIAssistSpeechToText_AllowInterimResults)**: Set to `true` to receive real-time (interim) recognition results, or `false` to receive only final results.
+The [`AllowInterimResults`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.InlineAIAssistSpeechToText.html#Syncfusion_Blazor_InteractiveChat_InlineAIAssistSpeechToText_AllowInterimResults) property controls whether the prompt editor displays partial results while the user is speaking. Set it to `true` to show words as they are recognized in real time. Set it to `false` to update the prompt editor only after the speech recognition engine produces the final transcript.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -59,7 +57,10 @@ The `<InlineAIAssistSpeechToText>` tag renders a microphone icon in the Inline A
         @((MarkupString)editableContent)
     </div>
     <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" PromptRequested="OnPromptRequestAsync">
-		<InlineAIAssistSpeechToText Enable="true"></InlineAIAssistSpeechToText>
+		<InlineAIAssistSpeechToText Enable="true" Language="en-US" AllowInterimResults="true"></InlineAIAssistSpeechToText>
+        <InlineToolbar>
+                <InlineToolbarItem IconCss="e-icons e-inline-assist-speech-to-text"></InlineToolbarItem>
+        </InlineToolbar>
         <ResponseActions ItemSelect="OnItemSelectAsync"></ResponseActions>
     </SfInlineAIAssist>
 </div>
