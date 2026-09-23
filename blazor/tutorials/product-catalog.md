@@ -1787,6 +1787,8 @@ dotnet run
 
 ![Product Catalog sample output](./images/product-catalog-sample.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Product-catalog)
+
 ## See Also
 
 * [Build a order management dashboard in Blazor](./order-management-dashboard.md)

@@ -573,6 +573,8 @@ Use the DataGrid to present financial transactions, expense details, or revenue 
 
 Create an audit or compliance module where logs, verification records, or inspection results are displayed in the DataGrid. Auditors can filter records by period, status, or department and generate RDLC audit reports or compliance documentation. This simplifies audit workflows and ensures accurate, traceable report generation from validated data.
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/BlazorBoldReport-Grid)
+
 ## See also
 
 * [How to use the Bold Reports Report Viewer in a Blazor WebAssembly App](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-viewer/how-to/use-javascript-reportviewer-in-blazor-web-assembly-application/)
