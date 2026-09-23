@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Speech-to-Text in Blazor Inline AI Assist | Syncfusion®
-description: Learn how to configure Speech-to-Text in the Blazor Inline AI Assist component to convert spoken input into prompts using the browser's Web Speech API.
+description: Learn how to configure Speech-to-Text in the Blazor Inline AI Assist component, including language, button, tooltip, and interim result settings.
 platform: Blazor
 control: Inline AI Assist
 documentation: ug
@@ -29,13 +29,18 @@ Once enabled, a microphone icon appears in the Inline AI Assist popup's built-in
 
 ## Configure speech recognition language
 
-The [`Language`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.InlineAIAssistSpeechToText.html#Syncfusion_Blazor_InteractiveChat_InlineAIAssistSpeechToText_Language) property specifies the language used for speech recognition. Set it to a language code such as `en-US` for American English or `fr-FR` for French. If no language is specified, speech recognition uses the browser's default language setting.
+The [`Language`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Language) property specifies the language used for speech recognition. Set it to a language code such as `en-US` for American English or `fr-FR` for French. If no language is specified, speech recognition uses the browser's default language setting.
 
 ## Enable interim results
 
-The [`AllowInterimResults`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.InlineAIAssistSpeechToText.html#Syncfusion_Blazor_InteractiveChat_InlineAIAssistSpeechToText_AllowInterimResults) property controls whether the prompt editor displays partial results while the user is speaking. Set it to `true` to show words as they are recognized in real time. Set it to `false` to update the prompt editor only after the speech recognition engine produces the final transcript.
+The [`AllowInterimResults`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_AllowInterimResults) property controls whether the prompt editor displays partial results while the user is speaking. Set it to `true` to show words as they are recognized in real time. Set it to `false` to update the prompt editor only after the speech recognition engine produces the final transcript.
+
+## Speech-to-text events
+
+The speech-to-text functionality provides the `RecognitionStart` event when recognition starts, the `RecognitionStop` event when it stops, the `TranscriptChanged` event when the transcript is updated, and the `RecognitionError` event when an error occurs. The recognized transcript is inserted into the Inline AI Assist prompt area. When the prompt is submitted, both typed and speech-recognized input are available through the `Prompt` property of the `PromptRequestedEventArgs` argument.
 
 ```cshtml
+@using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Buttons
 
@@ -56,8 +61,8 @@ The [`AllowInterimResults`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     <div id="editableText" contenteditable="true">
         @((MarkupString)editableContent)
     </div>
-    <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" PromptRequested="OnPromptRequestAsync">
-		<InlineAIAssistSpeechToText Enable="true" Language="en-US" AllowInterimResults="true"></InlineAIAssistSpeechToText>
+        <SfInlineAIAssist @ref="inlineAssist" RelateTo="#summarizeButton" PromptRequested="OnPromptRequestAsync">
+		<InlineAIAssistSpeechToText Enable="true" Language="en-US" AllowInterimResults="true" RecognitionStart="OnRecognitionStart" RecognitionStop="OnRecognitionStop" TranscriptChanged="OnTranscriptChanged" RecognitionError="OnRecognitionError"></InlineAIAssistSpeechToText>
         <InlineToolbar>
                 <InlineToolbarItem IconCss="e-icons e-inline-assist-speech-to-text"></InlineToolbarItem>
         </InlineToolbar>
@@ -68,6 +73,26 @@ The [`AllowInterimResults`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     private SfInlineAIAssist inlineAssist = new SfInlineAIAssist();
     private string editableContent = @"<p>Inline AI Assist component provides intelligent text processing capabilities that enhance user productivity. It leverages advanced natural language processing to understand context and deliver precise suggestions. Users can seamlessly integrate AI-powered features into their applications.</p>
         <p>With real-time response streaming and customizable prompts, developers can create interactive experiences. The component supports multiple response modes including inline editing and popup-based interactions.</p>";
+    private string recognitionStatus = "Ready";
+    private string recognitionError = string.Empty;
+    private void OnRecognitionStart(SpeechRecognitionStartedEventArgs args)
+    {
+        recognitionStatus = "Listening";
+        recognitionError = string.Empty;
+    }
+    private void OnRecognitionStop(SpeechRecognitionStoppedEventArgs args)
+    {
+        recognitionStatus = "Stopped";
+    }
+    private void OnTranscriptChanged(TranscriptChangeEventArgs args)
+    {
+        recognitionStatus = "Transcript updated";
+    }
+    private void OnRecognitionError(SpeechRecognitionErrorEventArgs args)
+    {
+        recognitionStatus = "Error";
+        recognitionError = "Speech recognition failed.";
+    }
     private async Task OnPromptRequestAsync(PromptRequestedEventArgs args)
     {
         await Task.Delay(1000);
