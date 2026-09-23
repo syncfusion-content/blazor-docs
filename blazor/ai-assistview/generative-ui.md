@@ -13,9 +13,9 @@ The **Generative UI** feature in the Blazor AI AssistView enables you to render 
 
 ## Registering custom tools
 
-You can register custom tools in the AI AssistView by using the `ToolUIBlock` method. Each tool requires a unique name, a template for rendering, and an optional handler for interactive logic.
+You can render custom tools in the AI AssistView by using the `ToolUIBlock` tag. Each tool requires a unique name, a template for rendering, and an optional handler for interactive logic.
 
-> **Note:** When adding a tool block in a response, set `blockType` to `tool` and provide the registered tool name in `toolName`. The tool must be registered before it is referenced in a response.
+> **Note:** When adding a tool block in a response, set `BlockType` to `Tool` and provide the registered tool name in `ToolName`. The tool must be registered before it is referenced in a response.
 
 ### Example: Registering a tool
 
@@ -391,13 +391,13 @@ You can register custom tools in the AI AssistView by using the `ToolUIBlock` me
 
 ## Adding tools in AI responses
 
-To display a tool in the chat, return a response block with `blockType: tool` and the registered `toolName` from your AI or backend logic. You can combine tool blocks with text or other block types in the same response.
+To display a tool in the chat, return a response block with `BlockType` to `Tool` and the registered `ToolName` from your AI or backend logic. You can combine tool blocks with text or other block types in the same response.
 
 ## Configuring AI for generative UI responses
 
 Configure your AI service to return structured JSON blocks as shown above. This ensures that the AI AssistView can render both text and interactive tool blocks in the chat interface.
 
-> **Tip:** Always return a single `blocks` array in your AI response. Each block can be of type `text`, `tool`, or other supported types.
+> **Tip:** Always return a single `Blocks` array in your AI response. Each block can be of type `Text`, `Tool`, or other supported types.
 
 ### Example: Handling AI response in Blazor
 
