@@ -19,7 +19,7 @@ The package is built on top of the framework-agnostic `Syncfusion.A2UI.Core` run
 
 In short, the package converts chat-based agent responses into fully functional Blazor user interfaces without requiring manual component development.
 
-N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be published on NuGet. The package is feature-complete for the listed components, but the API, catalog ID, and validation schemas may evolve before the first stable release. **Syncfusion.A2UI.Core** and **Syncfusion.Blazor.A2UI** are both at `0.1.0-beta.0`. The **A2UI v0.9 wire format** is stable; minor additive changes (new components, new properties) are expected.
+N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be published on NuGet. The package is feature-complete for the listed components, but the API, catalog ID, and validation schemas may evolve before the first stable release. **Syncfusion.A2UI.Core** and **Syncfusion.Blazor.A2UI** are both at `preview`. The **A2UI v0.9 wire format** is stable; minor additive changes (new components, new properties) are expected.
 
 ## Prerequisites
 
@@ -42,9 +42,9 @@ The protocol specifies four message types — `createSurface`, `updateComponents
 
 The package provides the Syncfusion implementation of the rendering layer:
 
-- Ships a catalog of [more than 60 Syncfusion Blazor adapters](./supported-components) — every one is a real Syncfusion widget — plus the 18 A2UI primitives as HTML fall backs.
+- Ships a catalog of [more than 60 Syncfusion Blazor adapters](./supported-components) — every one is a real Syncfusion widget — plus the 18 A2UI primitives as HTML fallbacks.
 - Validates every message at runtime against the schemas bundled in `Syncfusion.A2UI.Core`, so malformed agent output is rejected with a clear `A2uiError` instead of failing silently.
-- Binds the data and user actions between Syncfusion widgets and the A2UI `DataModel` automatically. Every action dispatched by a Syncfusion adapter is wrapped in the v0.9 envelope `{ "event": { "name": "...", "context": { ... } } }` (see `Syncfusion.Blazor.A2UI.Adapter.EventDispatchHelper`).
+- Binds the data and user actions between Syncfusion widgets and the A2UI `DataModel` automatically. Every action dispatched by a Syncfusion adapter is wrapped in the v0.9 envelope `{ "event": { "name": "...", "context": { ... } } }` (see `Syncfusion.Blazor.A2UI.Adapter.EventDispatchHelper`); the surrounding `A2uiClientAction` that the surface emits carries `name`, `surfaceId`, `sourceComponentId`, `timestamp`, and `context` per the v0.9 spec.
 - Provides a `<SyncfusionA2UIProvider Surface="..." />` component that mounts the resulting surface with a built-in error boundary.
 
 ## Core concepts
@@ -57,20 +57,20 @@ Before diving into the end-to-end workflow, here are the terms used throughout t
 - **`SurfaceModel`**: An in-memory tree representation of every component, widget, and layout decision the agent has emitted for a given UI surface (`surfaceId`). Multiple surfaces can coexist inside one `SurfaceGroupModel`.
 - **`Catalog` / `BlazorSyncfusionCatalog`**: A registry that maps A2UI component names (for example, `SyncfusionDataGrid`, `SyncfusionChart`) to concrete renderer implementations. The package ships `Syncfusion.Blazor.A2UI.Catalog.BlazorSyncfusionCatalog` (catalog id `"syncfusion-a2ui-catalog"`) which aggregates the 18 basic schemas plus, when used with `AddA2UIWithSyncfusionComponents`, all Syncfusion-backed schemas in a single catalog.
 - **`CatalogRegistry`**: The container that holds one or more `Catalog` instances keyed by id.
-- **`DataModel`**: A reactive, signal-based key-value store (in `Syncfusion.A2UI.Core.State`) that backs A2UI bindings. Paths such as `${user.name}` resolve to values stored in the `DataModel` and update the rendered widgets automatically when those values change.
-- **`A2uiClientAction` / `OnAction`**: Every user interaction inside a Syncfusion surface is dispatched as an `A2uiClientAction` whose payload matches the v0.9 envelope. The agent receives it through the `actionHandler` passed to the `MessageProcessor` constructor.
+- **`DataModel`**: A reactive, signal-based key-value store (in `Syncfusion.A2UI.Core.State`) that backs A2UI bindings. Paths use the JSON Pointer shape — e.g. `{ "path": "/user/name" }` — and resolve to values stored in the `DataModel`. The rendered widgets update automatically when those values change.
+- **`A2uiClientAction` / `OnAction`**: Every user interaction inside a Syncfusion surface is dispatched as an `A2uiClientAction` whose payload matches the v0.9 envelope. The action is emitted on the surface's `OnAction` event and aggregated by `SurfaceGroupModel.OnAction`; your page subscribes via `Processor.Model.OnAction.Subscribe(...)`. The constructor-level `actionHandler` overload of `MessageProcessor` is the same callback attached at construction time.
 - **`<SyncfusionA2UIProvider>`**: A Blazor component (`Syncfusion.Blazor.A2UI.NodeView.SyncfusionA2UIProvider`) that takes a `SurfaceModel` and renders it as interactive Syncfusion components.
 
 ## How it works
 
-This loop repeats as long as the surface is active.
+This loop repeats as long as the surface is active. The example above shows the plain request/response flow (`message/send`); A2A also defines a streaming variant (`message/stream`) that the agent can use to emit partial surfaces token-by-token. The renderer processes each message as it arrives, so `message/stream` works without any host changes — see the [A2A spec](https://a2a-protocol.org/) for details.
 
-1. The user sends a prompt to an A2UI v0.9–compatible agent (any framework, any LLM).
+1. The user sends a prompt to an A2UI v0.9-compatible agent (any framework, any LLM) that speaks the A2A transport.
 2. The agent emits a stream of A2UI v0.9 messages.
 3. The host app passes them to a `MessageProcessor` resolved from DI. With Syncfusion widgets, the processor is registered by `builder.Services.AddA2UIWithSyncfusionComponents()` (singleton scope, combined `Syncfusion.A2UI.Core` + Syncfusion catalog). Plain / Blazor-only hosts can register a scoped processor with `AddA2UI()`.
 4. The processor validates each message, mutates the `SurfaceGroupModel`, and raises `OnSurfaceCreated` / `OnSurfaceUpdated` events. The page subscribes to those events and assigns the latest `SurfaceModel` to its `<SyncfusionA2UIProvider/>`.
 5. `<SyncfusionA2UIProvider Surface="surface" />` walks the model and renders every component with its Syncfusion adapter.
-6. The user interacts with the surface. The matching adapter wraps the interaction in the v0.9 event envelope and dispatches it through `SurfaceGroupModel.OnAction`. The host forwards that payload to the agent as a `message/send` request whose `params.message.parts[0]` is shaped as `{ "data": <action> }`, and the cycle repeats.
+6. The user interacts with the surface. The matching adapter wraps the interaction in the v0.9 event envelope and dispatches it through `SurfaceGroupModel.OnAction`. The host forwards that payload to the agent as an A2A `message/send` request whose `params.message.parts[0]` is shaped as `{ "kind": "data", "data": { "version": "v0.9", "action": <A2uiClientAction> } }`, and the cycle repeats.
 
 ## Who is it for?
 
@@ -85,7 +85,7 @@ Because every adapter renders a real Syncfusion Blazor component, the generated 
 
 ## What you get in the package
 
-- **18 A2UI primitives** rendered as HTML fall backs under the `BlazorSyncfusionCatalog`: `Text`, `Image`, `Icon`, `Video`, `AudioPlayer`, `Card`, `Tabs`, `Modal`, `Row`, `Column`, `List`, `Divider`, `Button`, `TextField`, `CheckBox`, `ChoicePicker`, `Slider`, `DateTimeInput` — these come from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` and ship in the base Blazor package even when no Syncfusion widgets are registered.
+- **18 A2UI primitives** rendered as HTML fallbacks under the `BlazorSyncfusionCatalog`: `Text`, `Image`, `Icon`, `Video`, `AudioPlayer`, `Card`, `Tabs`, `Modal`, `Row`, `Column`, `List`, `Divider`, `Button`, `TextField`, `CheckBox`, `ChoicePicker`, `Slider`, `DateTimeInput` — these come from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` and ship in the base Blazor package even when no Syncfusion widgets are registered.
 - **`Syncfusion.Blazor.A2UI.SyncfusionComponents.SyncfusionComponentFactory`**: more than 60 Syncfusion Blazor components — `DataGrid`, `TreeGrid`, `Chart`, `3DChart`, `HeatMap`, `Diagram`, `Maps`, `Scheduler`, `GanttChart`, the calendar/date family, the button family, dropdowns, inputs, editors, file/barcode generators, layout/navigation, notifications, and more. The exact list lives on [Supported Components](./supported-components).
 - **`<SyncfusionA2UIProvider>`**: A one-line renderer (mount as `<SyncfusionA2UIProvider Surface="mySurface" />`) with a built-in error boundary that turns render errors into a graceful inline message instead of crashing the host app.
 - **DI helpers**: `AddA2UIWithSyncfusionComponents()` for the combined basic + Syncfusion catalog.
@@ -101,7 +101,7 @@ The package is layered so that the framework-agnostic runtime is always reusable
 | Blazor primitives | `Syncfusion.Blazor.A2UI.Components` | HTML-fallback `.razor` implementations of the 18 basic A2UI schemas. |
 | Syncfusion widgets | `Syncfusion.Blazor.A2UI.SyncfusionComponents` | More than 60 Syncfusion Blazor adapters. |
 
-## When to use it and when not to use it
+## When to use it (and when not to)
 
 **Use Syncfusion A2UI for Blazor when:**
 
@@ -110,6 +110,13 @@ The package is layered so that the framework-agnostic runtime is always reusable
 - You want runtime validation of every agent message against a bundled schema.
 - You need bidirectional data binding so the agent can react to what users do within the surface.
 - You are willing to opt in to Syncfusion's licensing and bring in the per-component NuGet package for every family the agent may render.
+
+**Do not use it when:**
+
+- The agent does not emit A2UI v0.9 messages — the package is opinionated and will reject anything else.
+- You need pixel-perfect control over every byte the agent emits; A2UI is declarative and the catalog decides what the renderer can produce.
+- You need to support rendering on platforms other than Blazor (the package is .NET-only and ships a Blazor-specific renderer).
+- The agent output must round-trip a strict Markdown / HTML payload — `Text` passes content through Blazor's normal string encoding, so HTML in `text` does not auto-render. Use a dedicated rich-text component instead.
 
 ## Need help?
 

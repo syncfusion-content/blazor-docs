@@ -2,7 +2,7 @@
 layout: post
 title: Supported Syncfusion A2UI Components for Blazor | Syncfusion
 description: Reference guide to all Syncfusion A2UI for Blazor adapters, grouped by category with A2UI catalog IDs and brief descriptions.
-control: Supported Components
+control: A2UI Supported Components
 platform: Blazor
 documentation: ug
 domainurl: ##DomainURL##
@@ -14,10 +14,7 @@ The Syncfusion A2UI for Blazor package ships a catalog of **60+ Syncfusion Blazo
 
 Every adapter implements the A2UI v0.9 component contract, so an agent can stream any of them as part of a `createSurface` or `updateComponents` message and have it rendered by `<SyncfusionA2UIProvider>` with no extra wiring. The widgets come from the Syncfusion Blazor library (e.g. `Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`) and inherit the components' built-in theming, accessibility, and event surface.
 
-This page is the reference. Use it when you need to know the exact adapter id to put inside an A2UI component payload, or when you want to see the full shape of the catalog at a glance. The tutorial lives on [Getting Started](./getting-started).
-
-<!-- The Syncfusion widgets are gated by the `USE_SYNCFUSION_COMPONENTS` compile constant. -->
-N> Component ids shown below follow the pattern `Syncfusion<ComponentName>` and are published as part of the `0.1.0-beta.0` Blazor renderer. The factory list is the source of truth — if your build of the package has been extended locally, the order and entries below may not match. The first stable release locks both the catalog id (`"syncfusion-a2ui-catalog"`) and the schema names.
+This page is the reference. Use it when you need to know the exact adapter id to put inside an A2UI component payload, or when you want to see the full shape of the catalog at a glance. The tutorial lives on [Getting Started](./getting-started). The exact property schema for every adapter is shipped as a `DeclaredComponentSchema` in `SyncfusionComponentFactory` — read it from the source if you need to write a payload beyond the [Getting Started](./getting-started#render-your-first-blazor-a2ui-surface) example.
 
 ## Data Grid & Trees
 
@@ -31,17 +28,24 @@ Tabular grid components for displaying, editing, and navigating structured row d
 
 ## Charts & Visualization
 
-Charting, mapping, and diagram components for rendering quantitative, geographic, and node-link visuals.
+Charting and mapping components for rendering quantitative and geographic visuals.
 
 | Component | Description |
 | --- | --- |
-| `SyncfusionChart` | 30+ chart types — line, bar, area, spline, stacking, radar, polar, bubble, range, hilo, waterfall, histogram (SfChart). |
-| `Syncfusion3DChart` | 3D column / bar variants (SfChart3D). |
-| `SyncfusionHeatMap` | Heat map for density, matrix, or risk visualization (SfHeatMap). |
-| `SyncfusionDiagram` | Node-link diagramming — org charts, flowcharts, network maps, BPMN, and related shapes (SfDiagram). |
-| `SyncfusionMaps` | Geographic / choropleth map with markers, bubbles, legends, and geographic data layers (SfMaps). |
-| `SyncfusionKanban` | Kanban board with swimlanes, columns, and WIP limits (SfKanban). |
-| `SyncfusionQueryBuilder` | Visual query builder with rule groups, conditions, and SQL preview (SfQueryBuilder). |
+| `SyncfusionChart` | 30+ chart types — line, bar, area, spline, stacking, radar, polar, bubble, range, hilo, waterfall, histogram (`SfChart`). |
+| `Syncfusion3DChart` | 3D column / bar variants (`SfChart3D`). |
+| `SyncfusionHeatMap` | Heat map for density, matrix, or risk visualization (`SfHeatMap`). |
+| `SyncfusionMaps` | Geographic / choropleth map with markers, bubbles, legends, and geographic data layers (`SfMaps`). |
+| `SyncfusionDiagram` | Node-link diagramming — org charts, flowcharts, network maps, BPMN, and related shapes (`SfDiagram`). |
+
+## Workflow & Querying
+
+Boards and visual query builders for structured task and rule workflows.
+
+| Component | Description |
+| --- | --- |
+| `SyncfusionKanban` | Kanban board with swimlanes, columns, and WIP limits (`SfKanban`). |
+| `SyncfusionQueryBuilder` | Visual query builder with rule groups, conditions, and SQL preview (`SfQueryBuilder`). |
 
 ## Scheduling & Planning
 
@@ -49,7 +53,7 @@ Components for visualizing appointments and tasks across calendar and timeline v
 
 | Component | Description |
 | --- | --- |
-| `SyncfusionScheduler` | Day, week, work-week, month, and agenda views with appointments, resources, and recurrence (SfScheduler). |
+| `SyncfusionScheduler` | Day, week, work-week, month, and agenda views with appointments, resources, and recurrence (`SfSchedule`). |
 | `SyncfusionGanttChart` | Gantt view with tasks, dependencies, baselines, and resource scheduling (SfGantt). |
 
 ## Navigation & Layout
@@ -66,9 +70,18 @@ Components that help users move through an app's sections, views, and pages, plu
 | `SyncfusionBreadcrumb` | Hierarchical breadcrumb of links for the current location (SfBreadcrumb). |
 | `SyncfusionMenu` | Vertical / horizontal menu with sub-menus, icons, and shortcuts (SfMenu). |
 | `SyncfusionPager` | Numeric / previous-next pager for list or grid pagination (SfPager). |
-| `SyncfusionCard` | Container with header, body, and footer blocks for grouped content (SfCard). |
 | `SyncfusionTreeView` | Hierarchical tree view with expand/collapse, drag and drop, and selection (SfTreeView). |
 | `SyncfusionListView` | Vertical list of items with template, grouping, and selection (SfListView). |
+
+## Containers (CSS-based)
+
+Components in this section have no `Sf*` Blazor wrapper — they are pure CSS classes with a Syncfusion look-and-feel. The renderer emits the right class names and lets the bundled theme stylesheet do the rest.
+
+| Component | Description |
+| --- | --- |
+| `SyncfusionCard` | Container with header, body, and footer blocks. Implemented as a Syncfusion `<SfCard>` (`Syncfusion.Blazor.Cards`) wrapper. |
+| `SyncfusionBadge` | Numeric or text badge overlaid on a target element (CSS classes only — no `SfBadge`). |
+| `SyncfusionAvatar` | Initials / image / icon avatar with shape and size variants (CSS classes only — no `SfAvatar`). |
 
 ## Text Inputs
 
@@ -132,11 +145,9 @@ Inline messaging and overlay components for surfacing loading, status, notificat
 | Component | Description |
 | --- | --- |
 | `SyncfusionMessage` | Inline informational, warning, error, or success banner (SfMessage). |
-| `SyncfusionToast` | Auto-dismissing notification toast with severity and actions (SfToast). |
-| `SyncfusionSpinner` | Indeterminate or determinate progress spinner overlay (SfSpinner). |
-| `SyncfusionSkeleton` | Placeholder shimmer for content that is still loading (SfSkeleton). |
-| `SyncfusionBadge` | Numeric or text badge overlaid on a target element (SfBadge). |
-| `SyncfusionAvatar` | Initials / image / icon avatar with shape and size variants (SfAvatar). |
+| `SyncfusionToast` | Auto-dismissing notification toast with title, content, position, and progress bar (`SfToast`). |
+| `SyncfusionSpinner` | Indeterminate progress spinner overlay (`SfSpinner`). |
+| `SyncfusionSkeleton` | Placeholder shimmer for content that is still loading (`SfSkeleton`). |
 
 ## Editors
 
@@ -168,14 +179,14 @@ Selection controls for picking one or many values from lists with search, groupi
 | `SyncfusionComboBox` | Editable, searchable, single-select combobox with autocomplete (SfComboBox). |
 | `SyncfusionMultiSelect` | Multi-value selection with chips, tagging, and search (SfMultiSelect). |
 
-## File & Barcode
+## Barcode Generators
 
 Generators for QR, Data Matrix, and 1D barcodes used for identification, tracking, and scanning workflows.
 
 | Component | Description |
 | --- | --- |
-| `SyncfusionQRCode` | QR code generator with size, error-correction, and color options (SfQRCode). |
-| `SyncfusionDataMatrix` | Data Matrix (ECC200) 2D barcode generator (SfDataMatrix). |
+| `SyncfusionQRCode` | QR code generator with size, error-correction, and color options (`SfQRCodeGenerator`). |
+| `SyncfusionDataMatrix` | Data Matrix (ECC200) 2D barcode generator (`SfDataMatrixGenerator`). |
 | `SyncfusionBarcodeGenerator` | 1D barcode generator — Code128, Code39, EAN, UPC, etc. (SfBarcodeGenerator). |
 
 ## Document Authoring & Review
@@ -185,7 +196,7 @@ Components for composing, viewing, and reviewing full documents and PDFs in the 
 | Component | Description |
 | --- | --- |
 | `SyncfusionDocumentEditorContainer` | Full-featured Word-compatible document editor with ribbon, comments, track changes, and layout (SfDocumentEditor). |
-| `SyncfusionPdfViewer` | PDF viewer with paging, search, zoom, and form filling (SfPdfViewer). |
+| `SyncfusionPdfViewer` | PDF viewer with paging, search, zoom, and form filling (`SfPdfViewer2`). |
 
 ## A2UI primitives (HTML fall backs)
 
@@ -212,7 +223,7 @@ These 18 IDs are registered by the base `BlazorSyncfusionCatalog`. They are not 
 | `Slider` | Label + dynamic value + min/max + checks. | `Slider.razor` |
 | `DateTimeInput` | Dynamic value + `enableDate` / `enableTime` + min/max + label + checks. | `DateTimeInput.razor` |
 
-N>The Syncfusion-prefixed equivalents above (`SyncfusionButton`, `SyncfusionCheckBox`, `SyncfusionSlider`, `SyncfusionTabs`) are the Syncfusion-widget-backed adapters in `SyncfusionComponentFactory`; the bare-id versions in this table are HTML-fallback adapters in `BasicComponentFactory`. Pick one of the two — do not emit both in the same `createSurface`.
+N>The Syncfusion-prefixed equivalents above (`SyncfusionButton`, `SyncfusionCheckBox`, `SyncfusionSlider`, `SyncfusionTabs`) are the Syncfusion-widget-backed adapters in `SyncfusionComponentFactory`; the bare-id versions in this table are HTML-fallback adapters in `BasicComponentFactory`. They register as **two different component ids** in the same `syncfusion-a2ui-catalog` catalog. Emitting both at the same `id` (e.g. `id="button"` with `component: "Button"` and another `component: "SyncfusionButton"`) results in a duplicate-id error from `SurfaceComponentsModel.Add` and the second registration is rejected. Pick one adapter family per surface.
 
 ## Counts at a glance
 
@@ -220,9 +231,9 @@ The exact adapter count grows as new component families land in `SyncfusionCompo
 
 | Source | Adapter count | Notes |
 | --- | --- | --- |
-| `SyncfusionComponentFactory.AllSchemas` | **60+** | Syncfusion Blazor Components. |
+| `SyncfusionComponentFactory.AllSchemas` | **66** | Syncfusion Blazor Components. |
 | `BasicComponentFactory.All` | **18** | A2UI v0.9 primitives as HTML render fragments. |
-| Total in a `BlazorSyncfusionCatalog.Combine(...)` registry | **60+** | Ready for `MessageProcessor`. |
+| Total in a `BlazorSyncfusionCatalog.Combine(...)` registry | **84** | The combined catalog the agent sees under id `"syncfusion-a2ui-catalog"`. |
 
 ## See also
 
