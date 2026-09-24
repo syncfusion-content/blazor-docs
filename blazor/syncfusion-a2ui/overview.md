@@ -42,7 +42,7 @@ The protocol specifies four message types — `createSurface`, `updateComponents
 
 The package provides the Syncfusion implementation of the rendering layer:
 
-- Ships a catalog of [more than 60 Syncfusion Blazor adapters](./supported-components) — every one is a real Syncfusion widget — plus the 18 A2UI primitives as HTML fallbacks.
+- Ships a catalog of [more than 60 Syncfusion Blazor adapters](./supported-components) — every one is a real Syncfusion widget — plus the 18 A2UI primitives as HTML fall backs.
 - Validates every message at runtime against the schemas bundled in `Syncfusion.A2UI.Core`, so malformed agent output is rejected with a clear `A2uiError` instead of failing silently.
 - Binds the data and user actions between Syncfusion widgets and the A2UI `DataModel` automatically. Every action dispatched by a Syncfusion adapter is wrapped in the v0.9 envelope `{ "event": { "name": "...", "context": { ... } } }` (see `Syncfusion.Blazor.A2UI.Adapter.EventDispatchHelper`); the surrounding `A2uiClientAction` that the surface emits carries `name`, `surfaceId`, `sourceComponentId`, `timestamp`, and `context` per the v0.9 spec.
 - Provides a `<SyncfusionA2UIProvider Surface="..." />` component that mounts the resulting surface with a built-in error boundary.
@@ -85,7 +85,7 @@ Because every adapter renders a real Syncfusion Blazor component, the generated 
 
 ## What you get in the package
 
-- **18 A2UI primitives** rendered as HTML fallbacks under the `BlazorSyncfusionCatalog`: `Text`, `Image`, `Icon`, `Video`, `AudioPlayer`, `Card`, `Tabs`, `Modal`, `Row`, `Column`, `List`, `Divider`, `Button`, `TextField`, `CheckBox`, `ChoicePicker`, `Slider`, `DateTimeInput` — these come from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` and ship in the base Blazor package even when no Syncfusion widgets are registered.
+- **18 A2UI primitives** rendered as HTML fall backs under the `BlazorSyncfusionCatalog`: `Text`, `Image`, `Icon`, `Video`, `AudioPlayer`, `Card`, `Tabs`, `Modal`, `Row`, `Column`, `List`, `Divider`, `Button`, `TextField`, `CheckBox`, `ChoicePicker`, `Slider`, `DateTimeInput` — these come from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` and ship in the base Blazor package even when no Syncfusion widgets are registered.
 - **`Syncfusion.Blazor.A2UI.SyncfusionComponents.SyncfusionComponentFactory`**: more than 60 Syncfusion Blazor components — `DataGrid`, `TreeGrid`, `Chart`, `3DChart`, `HeatMap`, `Diagram`, `Maps`, `Scheduler`, `GanttChart`, the calendar/date family, the button family, dropdowns, inputs, editors, file/barcode generators, layout/navigation, notifications, and more. The exact list lives on [Supported Components](./supported-components).
 - **`<SyncfusionA2UIProvider>`**: A one-line renderer (mount as `<SyncfusionA2UIProvider Surface="mySurface" />`) with a built-in error boundary that turns render errors into a graceful inline message instead of crashing the host app.
 - **DI helpers**: `AddA2UIWithSyncfusionComponents()` for the combined basic + Syncfusion catalog.

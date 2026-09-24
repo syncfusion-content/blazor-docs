@@ -353,7 +353,7 @@ Replace the contents of **Pages/Home.razor** with the snippet below. It builds o
 
 ### Import the component styles
 
-The stylesheets imported on the [Getting Started](./getting-started) page cover the components used in the static example. For an agent-driven app, ensure the stylesheet for every Syncfusion component family the agent might generate is loaded; A2UI surfaces are dynamic, so missing stylesheets cause the agent's output to render as unstyled HTML.
+The stylesheets imported on the [Getting Started](./getting-started) page cover the components used in the static example. For an agent-driven app, ensure the stylesheet for every Syncfusion component family the agent might generate is loaded; A2UI surfaces are dynamic, so missing stylesheets cause the agent's output to render as plain HTML.
 
 For example, if your chat often surfaces text inputs and buttons, make sure the inputs / textbox / buttons resources from the `Syncfusion.Blazor.Themes` static web assets are loaded alongside the base theme (for example, **fluent2**) registered in **App.razor**.
 
