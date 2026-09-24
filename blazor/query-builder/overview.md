@@ -7,7 +7,7 @@ control: QueryBuilder
 documentation: ug
 ---
 
-# Overview in Blazor Query Builder
+# Blazor Query Builder Documentation Overview
 
 ## Introduction to Syncfusion Blazor Query Builder
 
@@ -53,8 +53,8 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 | Feature | Purpose | Key Benefit |
 |---------|---------|-------------|
-| **[Filtering](./filtering)** | Apply built-in and value-filtering to the bound data | Immediate result feedback |
-| **[Separate Connector](./separate-connector)** | Render vertically-stacked AND/OR connectors between rules | Distinct group connectors |
+| **[Filtering](./filtering)** | Apply built-in and value filtering to the bound data | Immediate result feedback |
+| **[Separate Connector](./separate-connector)** | Render vertically stacked AND/OR connectors between rules | Distinct group connectors |
 | **[Lock Group/Rule](./lock-group-rule)** | Disable editing of individual rules or entire groups while keeping them in evaluation | Protected critical conditions |
 | **[Clone Group/Rule](./clone-group-rule)** | Duplicate existing rules or groups | Fast condition reuse |
 | **[Drag and Drop](./drag-and-drop)** | Rearrange rules and groups by dragging | Visual query structuring |
@@ -90,7 +90,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 - **[Right to Left](./how-to/right-to-left)** - RTL rendering for RTL languages
 - **[WAI-ARIA attributes](./accessibility#wai-aria-attributes)** - Accessible roles and attributes for the Query Builder UI
 - **[Keyboard interaction](./accessibility#keyboard-interaction)** - Complete component operation via keyboard
-  - Tab / Shift+Tab - Move focus between fields, operators, values, and action buttons
+  - **Tab / Shift+Tab** - Move focus between fields, operators, values, and action buttons
 - **[Ensuring accessibility](./accessibility#ensuring-accessibility)** - axe-core with Playwright validation guidance
 
 ## Advanced features
