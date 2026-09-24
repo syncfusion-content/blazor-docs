@@ -57,7 +57,8 @@ The diagram from the [Overview](./overview) applies here too, with one extra bac
 
 Replace the contents of **Pages/Home.razor** with the snippet below. It builds on the Getting Started example and adds a small chat input, a JSON-RPC `message/send` request, and the round-trip back to the agent on every user interaction inside the surface.
 
-````razor
+{% tabs %}
+{% highlight razor tabtitle="~/Home.razor" %}
 @page "/"
 @rendermode InteractiveServer
 
@@ -348,7 +349,9 @@ Replace the contents of **Pages/Home.razor** with the snippet below. It builds o
     void IDisposable.Dispose() => _actionSubscription?.Dispose();
 }
 
-````
+{% endhighlight %}
+{% endtabs %}
+
 ![Syncfusion A2UI getting-started output](./images/ai-integration.png)
 
 ### Import the component styles
