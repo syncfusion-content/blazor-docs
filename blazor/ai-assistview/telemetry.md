@@ -9,9 +9,9 @@ documentation: ug
 
 # Telemetry in Blazor AI AssistView
 
-To get started with the telemetry feature in AI AssistView, configure the `AssistViewTelemetry` tag directive inside the [SfAIAssistView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html) and set its `Enable` property to `true`. Once configured, AI AssistView will start tracking AI interaction metrics such as response duration and tool calls, and will render a built-in telemetry summary button (displaying the duration) in each response toolbar.
+The telemetry feature in AI AssistView will track AI interaction metrics such as response duration, tool calls, model informations and render a built-in telemetry button (displaying the duration) in each response toolbar when enabled. It can also be customized using the `telemetrySettings` properties which has `metrics` & `beforeReport` event.
 
-You can hover over the telemetry summary button in any response toolbar to view the full telemetry report in a tooltip.
+You can hover over the telemetry button in any response toolbar to view the telemetry report in a tooltip.
 
 ```cshtml
 
@@ -46,13 +46,24 @@ You can hover over the telemetry summary button in any response toolbar to view 
 
 ![Blazor AI AssistView telemetry getting started](./images/ai-assistview-telemetry-getting-started.webp)
 
-N> Add `@using Syncfusion.Blazor.InteractiveChat` to the Razor file (or to `~/_Imports.razor`) to use `SfAIAssistView` together with the `AssistViewTelemetry`, `TelemetryMetric`, `TelemetryData`, and `AssistViewTelemetryReport` types.
-
 ## Configuring metrics
 
-You can control which telemetry metrics are captured in the report using the `Metrics` property of the `AssistViewTelemetry` tag. It accepts one or more values from the `TelemetryMetric` enum, such as `Status`, `Duration`, `ToolCalls`, `StreamingChunks`, `Model`, `InputTokens`, `OutputTokens`, `ReasoningTokens`, `CachedInputTokens`, and `TotalTokens`.
+You can control which telemetry metrics are captured in the report using the `Metrics` property of the [AssistViewTelemetry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewTelemetry.html) component. It accepts one or more values from the `TelemetryMetric` type, such as `status`, `duration`, `toolCalls`, `streamingChunks`, `model`, `inputTokens`, `outputTokens` and `totalTokens`.
 
 Additionally, the order of metrics in the `Metrics` array also determines the display order of rows in the telemetry tooltip.
+
+| Metric | Description |
+|---------|-------------|
+| `status` | Indicates whether the response was completed or cancelled. |
+| `duration` | Total time taken to generate the response. |
+| `toolCalls` | Number of tool invocations performed while generating the response. |
+| `streamingChunks` | Number of streamed content chunks received for the response. |
+| `model` | Name of the AI model used to generate the response. |
+| `inputTokens` | Number of tokens included in the input prompt. |
+| `outputTokens` | Number of tokens generated in the response. |
+| `totalTokens` | Total token count calculated as the sum of `inputTokens` and `outputTokens`. |
+| `reasoningTokens` | Number of tokens consumed for reasoning by the model, when available. |
+| `cachedInputTokens` | Number of input tokens served from the model cache, when available. |
 
 ```cshtml
 
@@ -106,7 +117,7 @@ Additionally, the order of metrics in the `Metrics` array also determines the di
 
 ## Customizing the report
 
-Use the `OnBeforeReport` callback of the `AssistViewTelemetry` tag to intercept the generated report before it is rendered. The callback receives the `TelemetryReport` instance and must return it (modified or as is) to deliver the report, or `null` to suppress the report delivery. Entries added to the report's `CustomAttributes` dictionary are shown as additional rows in the telemetry tooltip.
+Use the [BeforeReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewTelemetry.html#Syncfusion_Blazor_InteractiveChat_AssistViewTelemetry_BeforeReport) event in the [AssistViewTelemetry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewTelemetry.html) component to intercept the generated report before it is rendered. It accepts the report (`TelemetryReport`) as an argument and allows you to modify it or `null` to suppress the report delivery. Custom attributes added in this callback will be displayed additionally in the telemetry tooltip.
 
 ```cshtml
 
@@ -162,9 +173,9 @@ Use the `OnBeforeReport` callback of the `AssistViewTelemetry` tag to intercept 
 
 ![Blazor AI AssistView telemetry before report](./images/ai-assistview-telemetry-before-report.webp)
 
-## Enriching with AI usage data
+## Displaying AI data
 
-AI AssistView automatically measures the basic metrics such as `Duration`, `ToolCalls`, and `StreamingChunks`. To include model and token usage details, pass the third optional parameter `TelemetryData` to the `UpdateResponseAsync` method on [SfAIAssistView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html). The `Model`, `InputTokens`, `OutputTokens`, `ReasoningTokens`, and `CachedInputTokens` values from this object are merged into the final telemetry report.
+The AI AssistView automatically measures the metrics such as `duration`, `toolCalls`, and `streamingChunks`. To include model and token usage details, configure the optional `TelemetryData` parameter in the [UpdateResponseAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_UpdateResponseAsync_System_String_Syncfusion_Blazor_InteractiveChat_PromptItem_Syncfusion_Blazor_InteractiveChat_TelemetryData_) method. The `model`, `inputTokens`, `outputTokens`, `reasoningTokens`, and `cachedInputTokens` values from this argument are merged into the final telemetry report.
 
 ```cshtml
 
@@ -236,9 +247,9 @@ AI AssistView automatically measures the basic metrics such as `Duration`, `Tool
 
 ![Blazor AI AssistView telemetry usage data](./images/ai-assistview-telemetry-usage-data.webp)
 
-## Custom attributes
+### Custom attributes
 
-Pass arbitrary key/value pairs through the `CustomAttributes` dictionary of the `TelemetryData` argument to surface domain-specific metrics (for example, `region`, `tenant`, `sessionId`, or `feature`) inside the telemetry report. Each entry is rendered as its own row in the telemetry tooltip and is included alongside the standard metrics regardless of the `Metrics` filter.
+Pass custom key/value pairs through the `CustomAttributes` field of the [TelemetryData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.TelemetryData.html) argument to surface domain-specific metrics (for example, `region`, `tenant`, `sessionId`, or `feature`) inside the telemetry report. Each entry is rendered as its own row in the telemetry tooltip and is included alongside the standard metrics regardless of the `Metrics` filter.
 
 ```cshtml
 
@@ -289,15 +300,15 @@ Pass arbitrary key/value pairs through the `CustomAttributes` dictionary of the 
 
 ![Blazor AI AssistView telemetry custom attributes](./images/ai-assistview-telemetry-custom-attributes.webp)
 
-## Behavior notes
+## Key characteristics
 
-The following are the key behaviors and constraints of the telemetry feature:
+The following are the key behaviors and constraints of the telemetry support:
 
 1. **Turn tracking**: A telemetry turn begins when a prompt is sent (or [ExecutePromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_ExecutePromptAsync_System_String_) is called) and ends when the response is completed or canceled (via `stop responding` button, `CancelPrompt`, or `FailPrompt`). The status is recorded as `completed` or `canceled` respectively in the report.
 
-2. **Telemetry button state**: The telemetry summary button in the response toolbar displays `— ms` (a disabled state) when no telemetry report is available for the completed or canceled response, and then shows only the `Duration` value once the report is generated.
+2. **Telemetry button state**: The telemetry button in the response toolbar displays `— ms` (a disabled state) when no telemetry report is available for the completed or cancelled response, and then shows only the `duration` value once the report is generated.
 
-3. **Tooltip display rules**: The telemetry tooltip only displays rows for metrics that have valid values. Count-based metrics `ToolCalls`, `InputTokens`, `OutputTokens`, `TotalTokens`, `ReasoningTokens`, `CachedInputTokens`, and `StreamingChunks` are displayed only when their values are positive numbers (greater than 0). Other metrics such as `Model` and `Status` are displayed whenever they are present.
+3. **Tooltip data display**: The telemetry tooltip only displays rows for metrics that have valid values. Count-based metrics `toolCalls`, `inputTokens`, `outputTokens`, `totalTokens`, `reasoningTokens`, `cachedInputTokens`, and `streamingChunks` are displayed only when their values are positive numbers (greater than 0). Other metrics such as `model` and `status` are displayed whenever they are present.
 
 4. **Duration formatting**: Duration values below 1 second are displayed in `ms`, and values of 1 second or above are displayed in `s` with two decimal places (for example, `500 ms`, `1.25 s`).
 
@@ -306,5 +317,3 @@ The following are the key behaviors and constraints of the telemetry feature:
 6. **Metrics filter precedence**: When the `Metrics` property of the `AssistViewTelemetry` tag is configured, only the specified metrics are retained in the report. However, `Status` and `Duration` are always retained, and entries in `CustomAttributes` are always included in the tooltip.
 
 7. **Regenerate flow**: Each regenerated response emits its own telemetry report. The report of the latest completion is bound to the prompt response.
-
-8. **Memory cleanup**: Telemetry reports and tooltips are cleared when the component is disposed.
