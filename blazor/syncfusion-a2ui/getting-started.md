@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with Syncfusion A2UI for Blazor | Syncfusion
 description: Step-by-step guide to install the Syncfusion A2UI for Blazor package and render your first A2UI v0.9 surface as a Syncfusion Blazor component.
-control: Getting Started
+control: A2UI Getting Started
 platform: Blazor
 documentation: ug
 domainurl: ##DomainURL##
@@ -15,10 +15,10 @@ This section explains how to include the [Syncfusion A2UI for Blazor](https://a2
 The runtime is composed of two NuGet packages:
 
 - `Syncfusion.A2UI.Core` — the framework-agnostic A2UI v0.9 engine.
-- `Syncfusion.Blazor.A2UI` — the Blazor renderer that adds Syncfusion Blazor Components on top of the engine and **transitively brings in every Syncfusion Blazor component package it depends on** (`Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Themes`, and more).
+- `Syncfusion.Blazor.A2UI` — the Blazor renderer that adds Syncfusion Blazor Components on top of the engine. When you register the combined catalog via `AddA2UIWithSyncfusionComponents()`, it transitively brings in every Syncfusion Blazor component package it depends on (`Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`, `Syncfusion.Blazor.Schedule`, `Syncfusion.Blazor.Themes`, and more). 
 
-<!-- Both packages are at 0.1.0-beta.0 during preview. Update the version once they ship stable. -->
-N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be published on NuGet under placeholder package ids (`Syncfusion.A2UI.Core` and `Syncfusion.Blazor.A2UI`, both at `0.1.0-beta.0`). Update the versions in the commands below once the official NuGet packages are released.
+
+N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be published on NuGet under placeholder package ids (`Syncfusion.A2UI.Core` and `Syncfusion.Blazor.A2UI`, both at `preview`). 
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be pub
 Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling) or via the .NET CLI.
 
 ```bash
-dotnet new blazor -o BlazorA2UIApp --interactivity Auto
+dotnet new blazor -o BlazorA2UIApp --interactivity Server
 cd BlazorA2UIApp
 ```
 
@@ -83,12 +83,17 @@ N> The Syncfusion Blazor component packages the renderer depends on (`Syncfusion
 
 ## Add import namespaces
 
-After the package is installed, open **~/_Imports.razor** and import the Syncfusion A2UI namespaces.
+After the package is installed, open **~/_Imports.razor** and import the Syncfusion A2UI namespaces alongside the base `Syncfusion.Blazor` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
+@using Syncfusion.A2UI.Core.Processing
+@using Syncfusion.A2UI.Core.Serialization
+@using Syncfusion.A2UI.Core.State
+@using Syncfusion.Blazor.A2UI.NodeView
+@using Syncfusion.Blazor.A2UI.SyncfusionComponents
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,6 +110,7 @@ using Syncfusion.Blazor.A2UI.SyncfusionComponents;
 ...
 
 builder.Services.AddSyncfusionBlazor();
+builder.Services.AddHttpClient();
 builder.Services.AddA2UIWithSyncfusionComponents();
 
 {% endhighlight %}
@@ -134,13 +140,16 @@ Include the required [script references](../common/adding-script-references) at 
 
 ## Render your first Blazor A2UI surface
 
-Open **Pages/Home.razor** and add the markup below. The page declares an A2UI v0.9 JSON envelope with three messages (`createSurface`, `updateDataModel` with the orders binding, and `updateComponents` that mounts the `SyncfusionDataGrid`), parses it through `A2uiJson.ParseMessages(...)`, feeds it to the `MessageProcessor`, and renders the resulting `SurfaceModel` through `<SyncfusionA2UIProvider>`.
+Open **Components/Pages/Home.razor** (created by the `blazor` template at the path `Components/Pages/`) and add the markup below. The page declares an A2UI v0.9 JSON envelope with four messages (`createSurface`, two `updateDataModel` payloads, and `updateComponents` that mounts the `SyncfusionDataGrid`), parses it through `A2uiJson.ParseMessages(...)`, feeds it to the `MessageProcessor`, and renders the resulting `SurfaceModel` through `<SyncfusionA2UIProvider>`. `@rendermode InteractiveServer` is required so the grid's paging, sorting, and filtering actually respond to clicks.
 
 {% tabs %}
-{% highlight razor tabtitle="Pages/Home.razor" %}
+{% highlight razor tabtitle="Components/Pages/Home.razor" %}
 
 @page "/"
+@rendermode InteractiveServer
+@implements IDisposable
 @using System.Text.Json
+@using Syncfusion.A2UI.Core.Common
 @using Syncfusion.A2UI.Core.Processing
 @using Syncfusion.A2UI.Core.Serialization
 @using Syncfusion.A2UI.Core.State
@@ -155,23 +164,26 @@ Open **Pages/Home.razor** and add the markup below. The page declares an A2UI v0
 
 @code {
     private SurfaceModel? surface;
+    private ISubscription? _selectionSub;
 
     protected override void OnInitialized()
     {
         try { Processor.Model.DeleteSurface("orders"); } catch { /* Surface didn't exist */ }
-        
+
         var messages = A2uiJson.ParseMessages(JsonDocument.Parse(Json).RootElement);
         Processor.ProcessMessages(messages);
         surface = Processor.Model.GetSurface("orders");
     }
 
+    void IDisposable.Dispose() => _selectionSub?.Dispose();
+
     private const string Json = """
     {
       "version": "v0.9",
       "messages": [
-        { "createSurface": { "surfaceId": "orders", "catalogId": "syncfusion-a2ui-catalog", "sendDataModel": true } },
+        { "version": "v0.9", "createSurface": { "surfaceId": "orders", "catalogId": "syncfusion-a2ui-catalog", "sendDataModel": true } },
 
-        { "updateDataModel": {
+        { "version": "v0.9", "updateDataModel": {
             "surfaceId": "orders",
             "path": "/orders",
             "value": [
@@ -193,13 +205,13 @@ Open **Pages/Home.razor** and add the markup below. The page declares an A2UI v0
             ]
         }},
 
-        { "updateDataModel": {
+        { "version": "v0.9", "updateDataModel": {
             "surfaceId": "orders",
-            "path": "/notifications",
-            "value": []
+            "path": "/selectedRowJson",
+            "value": ""
         }},
 
-        { "updateComponents": {
+        { "version": "v0.9", "updateComponents": {
             "surfaceId": "orders",
             "components": [
               {
@@ -235,15 +247,6 @@ Open **Pages/Home.razor** and add the markup below. The page declares an A2UI v0
                   "persistSelection": false
                 },
 
-                "onRowClick":      "rowClicked",
-                "onRowDoubleClick":"rowDoubleClicked",
-                "onCellClick":     "cellClicked",
-                "onActionBegin":   "actionStarted",
-                "onActionComplete":"actionCompleted",
-                "onActionFailure": "actionFailed",
-                "onDataBound":     "dataBound",
-                "onCommandClick":  "commandClicked",
-
                 "columns": [
                   { "field": "OrderID",    "headerText": "Order ID",    "isPrimaryKey": true,
                     "type": "number",   "width": "110", "textAlign": "Right", "format": "N0" },
@@ -251,7 +254,7 @@ Open **Pages/Home.razor** and add the markup below. The page declares an A2UI v0
                   { "field": "Freight",    "headerText": "Freight",
                     "width": "120", "textAlign": "Right", "format": "C2" },
                   { "field": "OrderDate",  "headerText": "Order Date",
-                    "width": "150", "type": "date", "format": "d" },
+                    "width": "150", "type": "date" },
                   { "field": "ShipCountry","headerText": "Ship Country","width": "150" }
                 ]
               },
@@ -275,13 +278,14 @@ Open **Pages/Home.razor** and add the markup below. The page declares an A2UI v0
 
 What the snippet does, in order:
 
-1. Injects the singleton `MessageProcessor` registered by `AddA2UIWithSyncfusionComponents()`.
-2. Embeds an A2UI v0.9 JSON envelope covering three messages (`createSurface` → `updateComponents` → `updateDataModel`) that mounts a `Column` containing a `Text` title, a fully-featured `SyncfusionDataGrid`, and a `Text` caption wired to `${selectedRowJson}`.
-3. In the Blazor lifecycle (`OnInitialized`), parses the JSON via `A2uiJson.ParseMessages(...)`, calls `Processor.ProcessMessages(...)`, and reads the assembled `SurfaceModel` from `Processor.Model.GetSurface("orders")` so `<SyncfusionA2UIProvider>` can render it.
-4. The grid renders 15 `Orders` rows with paging (`pageSize: 10`, `pageCount: 5`), Excel-style immediate filtering, ascending sort by `OrderID`, single-row selection, alt rows, hover, gridlines, ellipsis-with-tooltip clipping, and a full column schema (format, width, alignment, primary key).
-5. Row/cell action handlers (`rowClicked`, `cellClicked`, `dataBound`, `actionStarted`, `actionCompleted`, …) and the inherited `SyncfusionDataGrid` schema let the agent later respond to grid interactions. The provider is generic — swap `SyncfusionDataGrid` for `SyncfusionChart`, `SyncfusionScheduler`, `SyncfusionCalendar`, `SyncfusionTextBox`, `SyncfusionDocumentEditorContainer`, `SyncfusionKanban`, … and the same pipeline renders it.
+1. Opts the page in to interactive rendering with `@rendermode InteractiveServer` (required under `--interactivity Auto`).
+2. Injects the `MessageProcessor` registered by `AddA2UIWithSyncfusionComponents()` (or, for Server / Auto hosts, the scoped instance registered by `AddAUI()` — see the Program.cs note above).
+3. Embeds an A2UI v0.9 JSON envelope covering four messages (`createSurface` → two `updateDataModel` payloads → `updateComponents`) that mounts a `Column` containing a fully-featured `SyncfusionDataGrid` and a `Text` caption wired to `{ "path": "/selectedRowJson" }`. Each message carries its own `version` field per the A2UI v0.9 spec, even though the top-level envelope also has one.
+4. In the Blazor lifecycle (`OnInitialized`), parses the JSON via `A2uiJson.ParseMessages(...)`, calls `Processor.ProcessMessages(...)`, and reads the assembled `SurfaceModel` from `Processor.Model.GetSurface("orders")` so `<SyncfusionA2UIProvider>` can render it.
+5. The grid renders 15 `Orders` rows with paging (`pageSize: 10`, `pageCount: 5`), Excel-style immediate filtering, ascending sort by `OrderID`, single-row selection, alt rows, hover, gridlines, ellipsis-with-tooltip clipping, and a full column schema (format, width, alignment, primary key).
+6. The `Text` caption under the grid binds to `/selectedRowJson`. Because the data model seeds that path with `""` and nothing in the sample writes to it, the caption stays empty until you forward grid events to the agent (or write back from a handler). The provider is generic — swap `SyncfusionDataGrid` for `SyncfusionChart`, `SyncfusionScheduler`, `SyncfusionCalendar`, `SyncfusionTextBox`, `SyncfusionDocumentEditorContainer`, `SyncfusionKanban`, … and the same pipeline renders it.
 
-N> In production, replace the embedded JSON with messages streamed from an [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/). See [AI Integration](./ai-integration) for the JSON-RPC round-trip pattern.
+N> In production, replace the embedded JSON with messages streamed from an [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/). See [AI Integration](./ai-integration) for the agent round-trip pattern.
 
 ## Run the application
 
@@ -289,7 +293,7 @@ N> In production, replace the embedded JSON with messages streamed from an [A2UI
 
 {% tabcontent Visual Studio %}
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The Syncfusion Blazor `DataGrid` will render in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) to launch the application without the debugger. The Syncfusion Blazor `DataGrid` will render in your default web browser.
 
 {% endtabcontent %}
 
