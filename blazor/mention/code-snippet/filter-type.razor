@@ -1,13 +1,11 @@
 @using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Data
 
-<SfMention TItem="EmployeeData" PopupWidth="250px" SuggestionCount=6 FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
+<SfMention TItem="SportsData" DataSource="@sports" SuggestionCount="6" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
     <TargetComponent>
-        <div id="commentsMention" placeholder="Type @@ and tag employee"></div>
+        <div id="commentsMention" placeholder="Type @@ and tag sport"></div>
     </TargetComponent>
     <ChildContent>
-        <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-        <MentionFieldSettings Text="FirstName" Value="EmployeeID"></MentionFieldSettings>
+        <MentionFieldSettings Text="Game" Value="ID"></MentionFieldSettings> <!-- [MentionFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html) -->
     </ChildContent>
 </SfMention>
 
@@ -31,11 +29,23 @@
 
 @code {
 
-    public class EmployeeData
+    public class SportsData
     {
-        public int EmployeeID {get; set; }
-        public string FirstName { get; set; }
-        public string Designation {get; set; }
-        public string Country { get; set; } 
+        public string ID { get; set; }
+        public string Game { get; set; }
     }
+
+    private List<SportsData> sports = new()
+    {
+        new() { ID = "game1", Game = "Badminton" },
+        new() { ID = "game2", Game = "Basketball" },
+        new() { ID = "game3", Game = "Cricket" },
+        new() { ID = "game4", Game = "Football" },
+        new() { ID = "game5", Game = "Golf" },
+        new() { ID = "game6", Game = "Hockey" },
+        new() { ID = "game7", Game = "Rugby" },
+        new() { ID = "game8", Game = "Snooker" },
+        new() { ID = "game9", Game = "Tennis" },
+        new() { ID = "game10", Game = "Volleyball" }
+    };
 }
