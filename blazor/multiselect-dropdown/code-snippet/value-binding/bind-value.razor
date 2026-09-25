@@ -1,8 +1,10 @@
 @using Syncfusion.Blazor.DropDowns
-
-@foreach (var SelectedValue in MultiValue)
+@if (MultiValue != null)
 {
-<p>MultiSelect value is:<strong>@SelectedValue</strong></p>
+    @foreach (var SelectedValue in MultiValue)
+    {
+        <p>MultiSelect value is:<strong>@SelectedValue</strong></p>
+    }
 }
 
 <SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" TItem="Countries" @bind-Value="@MultiValue" DataSource="@Country" Width="300px">
