@@ -67,7 +67,7 @@ Properties such as **font-family**, **background-color**, **padding**, and **bor
 </style>
 ```
 
-![Pager root](./images/blazor-pager-root.png)
+![Pager root](./images/blazor-pager-root.webp)
 
 ## Customize numeric items
 
@@ -122,7 +122,7 @@ Properties such as **background-color**, **border**, **padding**, and **border-r
 </style>
 ```
 
-![Pager Numeric Item](./images/blazor-pager-numericitem.png)
+![Pager Numeric Item](./images/blazor-pager-numericitem.webp)
 
 ## Customize navigation buttons
 
@@ -177,7 +177,7 @@ Adjust properties such as **background-color**, **padding**, and **border** to m
 </style>
 ```
 
-![Pager Navigation Button](./images/blazor-pager-navigationbutton.png)
+![Pager Navigation Button](./images/blazor-pager-navigationbutton.webp)
 
 
 ## Customize page size dropdown
@@ -255,7 +255,7 @@ The dropdown component renders outside the `.e-pager` container, therefore dropd
 }
 ```
 
-![Pager Dropdown](./images/blazor-pager-dropdown.png)
+![Pager Dropdown](./images/blazor-pager-dropdown.webp)
 
 
 ## Customize focus and disabled states
@@ -337,7 +337,7 @@ Properties such as **outline**, **outline-offset**, **opacity**, and **cursor** 
     }
 </style>
 ```
-![Pager Focus And Disable](./images/blazor-pager-focus-disable.png)
+![Pager Focus And Disable](./images/blazor-pager-focus-disable.webp)
 
 ## Apply custom CSS class
 
@@ -370,9 +370,13 @@ The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
         color: #667eea;
         font-weight: bold;
     }
+
+    .e-pager.custom-pager .e-parentmsgbar{
+        color: #ffffff;
+    }
 </style>
 ```
 
 This approach allows creating multiple pager variants with different visual themes within the same application, maintaining design consistency while providing flexibility for specific use cases.
 
-![Pager Custom CssClass](./images/blazor-pager-customcssclass.png)
+![Pager Custom CssClass](./images/blazor-pager-customcssclass.webp)
