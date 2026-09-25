@@ -17,7 +17,7 @@ This section briefly explains how to include the [Blazor Skeleton](https://www.s
 
 {% tabcontent Visual Studio %}
 
-Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
+Create a **Blazor Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs#blazor-project-templates-and-template-options) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation.
 
 {% endtabcontent %}
 
@@ -35,7 +35,7 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+Alternatively, create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc#blazor-project-templates-and-template-options), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 {% endtabcontent %}
 
@@ -57,7 +57,7 @@ cd BlazorWebApp.Client
 
 {% endtabcontents %}
 
-N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
+N> Configure the appropriate [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs#interactivity-location) while creating a Blazor Web App. For detailed information, refer to the [interactive render mode documentation](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
 
 ## Install the required Blazor packages
 
@@ -173,6 +173,8 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 @rendermode InteractiveAuto
 
+@using Syncfusion.Blazor.Notifications
+
 <SfSkeleton Height="15px" Width="200px"></SfSkeleton><br/>
 <SfSkeleton Height="15px" Width="100px"></SfSkeleton>
 
@@ -234,6 +236,8 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notification
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
+@using Syncfusion.Blazor.Notifications
+
 <div style="width: 200px">
     <SfSkeleton Shape="SkeletonType.Circle" Width="48px" CssClass="custom-css"></SfSkeleton>
     <SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton>
@@ -255,6 +259,7 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notification
 
 ## See also
 
-1. [Getting Started with Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
-2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-3. [Getting Started with Blazor Skeleton Shapes](https://blazor.syncfusion.com/documentation/skeleton/shapes)
+1. [Getting Started with Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+2. [Getting Started with Blazor Server App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor WebAssembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+4. [Getting Started with Blazor Skeleton Shapes](https://blazor.syncfusion.com/documentation/skeleton/shapes)
