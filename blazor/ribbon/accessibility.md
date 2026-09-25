@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Ribbon
 
-The Ribbon component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Ribbon component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Ribbon component is outlined below.
+The accessibility compliance for the Blazor Ribbon component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,7 +39,7 @@ The accessibility compliance for the Ribbon component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Ribbon component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) patterns to meet the accessibility. The following ARIA attributes are used in the Ribbon component:
+The Blazor Ribbon component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Ribbon component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -68,35 +68,35 @@ The Ribbon component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pat
 
 ## Keyboard interaction
 
-The Ribbon component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Ribbon component.
+The Blazor Ribbon component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Ribbon component.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <b>Ribbon Tab</b> | | |
+| <b>Blazor Ribbon Tab</b> | | |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon tabs. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the next Tab.  |
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the previous Tab. |
-| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | To select the currently focused ribbon tab. |
-| <b>Ribbon Items</b>| | |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon Items. |
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | To select the currently focused Blazor Ribbon tab. |
+| <b>Blazor Ribbon Items</b>| | |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the Blazor Ribbon Items. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next item. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous item. |
-| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | To select the currently focused ribbon item. |
-| <b>Ribbon Dropdown Items/ Ribbon Split button</b>||
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | To select the currently focused Blazor Ribbon item. |
+| <b>Blazor Ribbon Dropdown Items/ Blazor Ribbon Split button</b>||
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 | <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the next item. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the previous item. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup.|
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup |
-| <b>Ribbon File menu</b>| | |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon file menu. |
+| <b>Blazor Ribbon File menu</b>| | |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the Blazor Ribbon file menu. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous action item. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next action item. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup |
-| <b>Ribbon Combobox</b> | | |
+| <b>Blazor Ribbon Combobox</b> | | |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Selects the first item in the ComboBox when no item selected. Otherwise, selects the item next to the currently selected item. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Selects the item previous to the currently selected one. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item when popup list opens. |
@@ -112,7 +112,7 @@ The Ribbon component followed the [keyboard interaction](https://www.w3.org/WAI/
 
 ## Ensuring accessibility
 
-The Ribbon component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Ribbon component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 ## See also
 

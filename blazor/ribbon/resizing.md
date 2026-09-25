@@ -9,7 +9,7 @@ documentation: ug
 
 # Resizing in Blazor Ribbon
 
-The Ribbon dynamically adjusts its elements during resizing. When the ribbon's size increases, elements expand, and when it decreases, elements collapse. Resizing is supported in both Classic and Simplified modes, with the flexibility to customize the order in which elements resize.
+The Blazor Ribbon dynamically adjusts its elements during resizing. When the Blazor Ribbon's size increases, elements expand, and when it decreases, elements collapse. Resizing is supported in both Classic and Simplified modes, with the flexibility to customize the order in which elements resize.
 
 - **Classic Mode**: During resizing, the size of items adjusts sequentially based on the available width of the tab content in the order: `Large → Medium → Small` (and vice versa).  
 - **Simplified Mode**: During resizing, the size of items adjusts sequentially in the order: `Medium → Small` (and vice versa).
@@ -49,7 +49,7 @@ You can use the [AllowedSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Item AllowedSizes](./images/ribbon_allowedSizes.webp)
+![Blazor Ribbon Item AllowedSizes](./images/ribbon_allowedSizes.webp)
 
 ## Defining items active size
 

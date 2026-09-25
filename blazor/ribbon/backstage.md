@@ -9,7 +9,7 @@ documentation: ug
 
 # Backstage in Blazor Ribbon
 
-The Ribbon component supports a backstage view as an enhancement to the traditional file menu. Backstage view can be used to display options like application settings, user details, and more. It can be configured using the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive.
+The Blazor Ribbon component supports a backstage view as an enhancement to the traditional file menu. Backstage view can be used to display options like application settings, user details, and more. It can be configured using the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive.
 
 Backstage menu options are displayed on the left panel, and the corresponding content is shown on the right panel.
 
@@ -1010,7 +1010,7 @@ The height and width of the backstage view can be customized using the [Height](
 
 ## Events
 
-The following event is available in the Ribbon Backstage.
+The following event is available in the Blazor Ribbon Backstage.
 
 |Name|Args|Description|
 |---|---|---|
