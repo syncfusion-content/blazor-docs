@@ -7,7 +7,7 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Overview in Blazor AI AssistView
+# Blazor AI AssistView Documentation Overview
 
 ## Introduction to Syncfusion Blazor AI AssistView
 
@@ -33,8 +33,8 @@ The [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-a
 | Provider | Key Benefit | Best For |
 |----------|--------------|----------|
 | **[Azure OpenAI](./ai-integrations/openai-integration)** | Enterprise-grade OpenAI models on Azure | Production enterprise applications |
-| **[Google Gemini](./ai-integrations/gemini-integration)** | Google's multimodal Gemini models | Google Cloud-based stacks |
-| **[Ollama LLM](./ai-integrations/ollama-llm-integration)** | Locally hosted open-source models | Privacy-sensitive, offline scenarios |
+| **[Google Gemini](./ai-integrations/gemini-integration)** | Google's multimodal Gemini models | Google Cloud based stacks |
+| **[Ollama LLM](./ai-integrations/ollama-llm-integration)** | Locally hosted open source models | Privacy sensitive, offline scenarios |
 | **[LiteLLM](./ai-integrations/lite-llm-integration)** | Unified gateway across multiple providers | Multi-provider architectures |
 
 **Microsoft.Extensions.AI integration**
@@ -60,9 +60,9 @@ The [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-a
 
 | Feature | Purpose | Key Benefit |
 |---------|---------|-------------|
-| **[Configure footer toolbar](./toolbar-items#configure-footer-toolbar)** | Set up prompt and response toolbar items | Message-level actions |
+| **[Configure footer toolbar](./toolbar-items#configure-footer-toolbar)** | Set up prompt and response toolbar items | Message level actions |
 | **[Adding header toolbar items](./toolbar-items#adding-header-toolbar-items)** | Add actions to the component header | Global chat controls |
-| **[Built-in toolbar items](./toolbar-items#built-in-toolbar-items)** | Use predefined items such as copy, regenerate, and edit | Out-of-the-box productivity |
+| **[Built-in toolbar items](./toolbar-items#built-in-toolbar-items)** | Use predefined items such as copy, regenerate, and edit | Out-of-box productivity |
 | **[Toolbar positioning](./toolbar-items#toolbar-positioning)** | Place toolbars wherever they fit the UI | Flexible layouts |
 | **[Adding custom items](./toolbar-items#adding-custom-items)** | Add application-specific actions | Tailored experiences |
 
@@ -113,10 +113,10 @@ The [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-a
 
 - **[WAI-ARIA attributes](./accessibility#wai-aria-attributes)** - Accessible roles and attributes for buttons, toolbars, and inputs
 - **[Keyboard interaction](./accessibility#keyboard-interaction)** - Complete component operation via keyboard
-  - Tab / Shift+Tab - Move focus forward and backward
-  - Enter / Space - Select the focused item
-  - Arrow Keys - Navigate between toolbar items
-  - Home / End - Jump to the first or last toolbar item
+  - **Tab / Shift+Tab** - Move focus forward and backward
+  - **Enter / Space** - Select the focused item
+  - **Arrow Keys** - Navigate between toolbar items
+  - **Home / End** - Jump to the first or last toolbar item
 - **[Ensuring accessibility](./accessibility#ensuring-accessibility)** - axe-core with Playwright validation guidance
 - **Right-to-Left support** - RTL rendering for RTL languages
 
@@ -126,7 +126,7 @@ The [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-a
 
 | Feature | Purpose | Use Case | Key Benefit |
 |---------|---------|----------|-------------|
-| **[Methods](./methods)** | Programmatically execute prompts and control the view | Dynamic, code-driven conversations | Automation-friendly API |
+| **[Methods](./methods)** | Programmatically execute prompts and control the view | Dynamic, code-driven conversations | Automation friendly API |
 | **[Events](./events)** | Handle lifecycle, prompt, and attachment events | Custom workflows and integrations | Deep integration points |
 
 ## System requirements
