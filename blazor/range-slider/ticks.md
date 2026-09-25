@@ -16,7 +16,7 @@ Ticks in the slider help users quickly identify the current value or range. Conf
 
 <SfSlider @bind-Value="@value">
     <SliderTicks Placement="Placement.After" ShowSmallTicks="true" LargeStep="20" SmallStep="10"></SliderTicks>
-    <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.Before"></SliderTooltip>
+    <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.After"></SliderTooltip>
 </SfSlider>
 
 @code {
@@ -34,7 +34,7 @@ When the slider moves, its value increases or decreases by the step amount. By d
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Step="10" @bind-Value="@value">
-   <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.Before"></SliderTooltip>
+   <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.After"></SliderTooltip>
 </SfSlider>
 
 @code {
@@ -53,7 +53,7 @@ Set the minimum (start) and maximum (end) values using the [`Min`](https://help.
 
 <SfSlider @bind-Value ="@value" Min="100" Max="1100">
      <SliderTicks Placement="Placement.After" ShowSmallTicks="true" LargeStep="100" SmallStep="50"></SliderTicks>
-    <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.Before"></SliderTooltip>
+    <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.After"></SliderTooltip>
 </SfSlider>
 
 @code {

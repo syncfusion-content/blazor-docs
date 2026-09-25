@@ -9,7 +9,19 @@ documentation: ug
 
 # Tooltip in Blazor Range Slider
 
-The slider can display a tooltip that shows the current value when interacting with the control. Configure the tooltip position using the [`Placement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTooltip.html#Syncfusion_Blazor_Inputs_SliderTooltip_Placement) property. Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or clicking on the Slider handle and it always remains/displays on the page.
+
+The slider can display a tooltip that shows the current value when interacting with the control. The tooltip position is configured using the [`Placement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTooltip.html#Syncfusion_Blazor_Inputs_SliderTooltip_Placement) property.
+
+
+The [`ShowOn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTooltip.html#Syncfusion_Blazor_Inputs_SliderTooltip_ShowOn) property controls how the tooltip responds to user interactions based on the device type:
+
+
+- `Auto`: Displays the tooltip automatically on both focus and click interactions.
+- `Focus`: Displays the tooltip only when the slider handle receives focus.
+- `Hover`: Displays the tooltip when hovering over the slider handle.
+- `Always`: Keeps the tooltip continuously visible at all times.
+
+The Auto mode is recommended for most scenarios, as it adapts to both desktop and touch devices for optimal usability.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -34,12 +46,12 @@ N> After enabling slider buttons, pressing the Tab key moves focus to the handle
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider @bind-Value="@value" ShowButtons="true" >
-    <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.After"></SliderTooltip>
+<SfSlider TValue="int[]" Min="0" Max="100" Value="@Value" Type="SliderType.Range" ShowButtons="true">
+     <SliderTooltip IsVisible="true" ShowOn="TooltipShowOn.Always" Placement="TooltipPlacement.After"></SliderTooltip>
 </SfSlider>
 
-@code {
-    int value = 30;
+@code{
+   public int[] Value = { 30, 70 };
 }
 ```
 

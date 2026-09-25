@@ -9,7 +9,7 @@ documentation: ug
 
 # Limits in Blazor Range Slider
 
-Slider limits restrict the movement of the slider thumb(s) within a specified range. This is useful when higher or lower values would negatively affect a process or product where the slider is used.
+[Slider limits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html) restrict the movement of the slider thumb(s) within a specified range. This is useful when higher or lower values would negatively affect a process or product where the slider is used.
 
 The following options are available in the slider’s limits object. Each API in the limits object is optional.
 
@@ -39,7 +39,7 @@ Refer to the following snippet to enable limits in the slider.
 
 ## Range slider limits
 
-In the Range slider, both handles can be restricted and locked using the limits object. In this example, the first handle is limited between 10 and 40, and the second handle is limited between 60 and 90.
+When using the [Range slider type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Type), both handles are enabled, and you can limit their movement within specified limits using the [limits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html) object. In this example, the first handle is limited between 10 and 40, and the second handle is limited between 60 and 90.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
