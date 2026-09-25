@@ -13,9 +13,9 @@ This section explains the pane settings behavior.
 
 ## Pane visibility
 
-You can show or hide the Blazor Splitter panes using the `Visible` property based on the application’s demand like initial load or dynamic cases. The `Visible` property is enabled by default in the Blazor splitter.
+You can show or hide the Blazor Splitter panes using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SplitterPane.html#Syncfusion_Blazor_Layouts_SplitterPane_Visible) property based on the application's demand, such as initial load or dynamic cases. The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SplitterPane.html#Syncfusion_Blazor_Layouts_SplitterPane_Visible) property is enabled by default in the Blazor Splitter.
 
-In the following code example, the `Visible` property binds to the second `SplitterPane` to show/hide the pane on CheckBox state change.
+In the following code example, the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SplitterPane.html#Syncfusion_Blazor_Layouts_SplitterPane_Visible) property binds to the second `SplitterPane` to show/hide the pane when toggling a button.
 
 ```cshtml
 

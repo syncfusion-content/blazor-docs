@@ -66,7 +66,7 @@ The Blazor Splitter's panes are adjusted automatically during resizing if the si
 
 ## Fixed pane
 
-The split panes can be rendered with fixed size in both `Horizontal` and `Vertical` mode. Even if a fixed size is provided to all the panes, the last pane is considered as a flexible pane.
+The split panes can be rendered with fixed size in both [`Horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.Orientation.html#Syncfusion_Blazor_Layouts_Orientation_Horizontal) and [`Vertical`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.Orientation.html#Syncfusion_Blazor_Layouts_Orientation_Horizontal) mode. Even if a fixed size is provided to all the panes, the last pane is considered as a flexible pane.
 
 ```cshtml
 
@@ -104,7 +104,7 @@ The split panes can be rendered with fixed size in both `Horizontal` and `Vertic
 
 ![Blazor Splitter with Fixed Pane Size in Pixel](./images/blazor-splitter-fixed-pane-size-in-pixel.webp)
 
-Splitter pane Size in `Percentage`.
+Splitter pane [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SplitterPane.html#Syncfusion_Blazor_Layouts_SplitterPane_Size) in `Percentage`.
 
 ```cshtml
 
@@ -130,6 +130,13 @@ Splitter pane Size in `Percentage`.
     </SplitterPanes>
 </SfSplitter>
 
+<style>
+    .e-pane {
+        text-align: center;
+        align-items: center;
+        display: grid;
+    }
+</style>
 ```
 
 ![Blazor Splitter with Fixed Pane Size in Percentage](./images/blazor-splitter-fixed-pane-size-in-percentage.webp)
