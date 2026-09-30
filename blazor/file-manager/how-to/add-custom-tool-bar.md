@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding Custom Item to Toolbar in Blazor File Manager | Syncfusion®
-description: Learn here all about adding custom item to toolbar in Blazor File Manager component and much more details.
+description: Learn how to add and customize toolbar items in the Blazor File Manager component.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -9,9 +9,11 @@ documentation: ug
 
 # Adding Custom Item to Toolbar in Blazor File Manager Component
 
-To enhance the customization of toolbar items, the [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html) tag and [FileManagerCustomToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerCustomToolbarItem.html) property can be utilized. These features allow for easy addition, appearance, modification of custom toolbar items.
+Use the [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html) component to configure toolbar items. To render a custom Blazor component in the toolbar, use the [FileManagerCustomToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerCustomToolbarItem.html) component inside `FileManagerCustomToolbarItems`.
 
-**Case 1**: To introduce the `Custom` item to the toolbar using the list of items and customize using icon and tooltip attributes, you can refer to the below code example.
+The examples use `/api/SampleData` backend endpoints. To configure these endpoints, see the [Data Binding](https://blazor.syncfusion.com/documentation/file-manager/data-binding) guide.
+
+**Case 1**: Add a `Custom` item to the toolbar and customize its icon and tooltip as shown in the following example.
 
 
 ```cshtml
@@ -47,10 +49,10 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 
 ```
 
-![Blazor FileManger displays Custom Item in Toolbar](../images/blazor-filemanager-custom-item.webp)
+![Blazor File Manager displays a custom item in the toolbar](../images/blazor-filemanager-custom-item.webp)
 
 
-**Case 2**: To include Blazor components in the File Manager toolbar, you can use the template tag. This enables you to seamlessly render additional components within the toolbar. By assigning the same `Name` property in the toolbar items list, you can determine the desired position of the template item within the toolbar.
+**Case 2**: To include Blazor components in the File Manager toolbar, use the `Template` tag. Set the `Name` property to match the corresponding item in the toolbar list to control its position. This example renders a button and logs its click; replace the handler with your application's zoom logic.
 
 ```cshtml
 
@@ -64,13 +66,13 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
                                  GetImageUrl="/api/SampleData/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerToolbarSettings ToolbarItems="@Items"> 
-            <FileManagerCustomToolbarItems> 
+            <FileManagerCustomToolbarItems>
                 <FileManagerCustomToolbarItem Name="Zoomin">
                     <Template>
                         <SfButton CssClass="e-tbar-btn-text e-tbar-ddb-text " Content="Zoom In" IconCss="e-icons e-zoom-in"></SfButton>
                     </Template>
                 </FileManagerCustomToolbarItem>
-            </FileManagerCustomToolbarItems> 
+            </FileManagerCustomToolbarItems>
         </FileManagerToolbarSettings>
     </SfFileManager>
 
@@ -95,4 +97,4 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 ```
 
 
-![Blazor FileManger displays Zoom button in Toolbar](../images/blazor-filemanager-zoom-button.webp)
+![Blazor File Manager displays a Zoom In button in the toolbar](../images/blazor-filemanager-zoom-button.webp)
