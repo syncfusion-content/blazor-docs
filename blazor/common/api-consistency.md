@@ -13,104 +13,99 @@ This document lists common API names that appear across multiple [Syncfusion Bla
 
 ## 1) Common appearance and layout APIs
 
-These APIs are commonly used to control size, styling, and layout behavior.
-
-| API name | Purpose | Components that commonly use it |
+| API name | Purpose | Verified components |
 | --- | --- | --- |
-| `CssClass` | Adds one or more custom CSS classes to the component's root element for styling. | Accordion, Button, Card, AppBar, Scheduler, Toolbar, Sidebar, Context Menu, Dropdown Tree, Chat UI, AI AssistView |
-| `Width` | Sets the component width as pixels or a percentage. | Charts, DataGrid, Gantt Chart, Diagram, Sidebar, Kanban, Stock Chart, Pivot Table, Splitter |
-| `Height` | Sets the component height as pixels or a percentage. | Charts, DataGrid, Gantt Chart, Diagram, Sidebar, Kanban, Stock Chart, Pivot Table, Splitter, Tree Grid |
-| `Visible` | Shows or hides the component without destroying its state. | Sidebar, Toolbar, Card, Kanban, Scheduler, Progress Bar, Chips, Floating Action Button, Speed Dial, Rating, chart legends, data labels, and column/item models |
-| `Enabled` | Enables or disables user interaction with the component. | Button, Chips, Calendar, DatePicker, TimePicker, DateTime Picker, DateRangePicker, Dropdown List, MultiSelect Dropdown, AutoComplete, ListBox, ListView, Range Selector, Rich Text Editor, Splitter, TextBox, File Upload, Dashboard |
-| `Theme` | Applies a built-in theme such as Material, Bootstrap5, Fluent, Tailwind, or HighContrast. | Charts, Accumulation Chart, Bullet Chart, Sparkline Charts, TreeMap, Map, Image Editor, Linear Gauge, Circular Gauge, Chart Wizard, Stock Chart, 3D Charts |
-| `EnableRtl` | Enables right-to-left rendering to support Arabic, Hebrew, and other RTL languages. | Scheduler, Kanban, DataGrid, Gantt Chart, Tree Grid, Charts, Accumulation Chart, 3D Charts, Bullet Chart, Sparkline Charts, TreeMap, Map, Pivot Table, ListView, Menu Bar, Toolbar, Sidebar, Splitter, Dashboard, Rich Text Editor, Dialog, Progress Bar, Query Builder, Range Selector, Toast, AI AssistView, Chat UI, Block Editor, Sankey Diagram, Calendar, DatePicker, TimePicker, DateTime Picker, DateRangePicker, AutoComplete, ComboBox, Dropdown List, MultiSelect Dropdown, Image Editor, Data Form |
+| `CssClass` | Adds one or more custom CSS classes to the component root element for styling. | Accordion, AppBar, AutoComplete, Breadcrumb, Button, Calendar, Carousel, CheckBox, Chip, ColorPicker, Dialog, DropDownList, DropDownTree, FileManager, ImageEditor, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, Mention, Menu, Message, MultiColumnComboBox, MultiSelect, OtpInput, Pager, ProgressButton, QueryBuilder, RadioButton, Rating, Ribbon, RichTextEditor, Schedule, Sidebar, Signature, Skeleton, Slider, SpeechToText, SpeedDial, SplitButton, Splitter, Spreadsheet, Stepper, Switch, Tab, TextArea, TextBox, Timeline, TimePicker, Toast, Toolbar, Tooltip, TreeView, Uploader |
+| `Width` | Sets the component width. The accepted unit and default value vary by component. | Accordion, BlockEditor, Carousel, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, DropDownList, DropDownTree, FileManager, Gantt, Grid, ImageEditor, Kanban, ListView, MaskedTextBox, MultiColumnComboBox, MultiSelect, PivotView, ProgressBar, QueryBuilder, Ribbon, RichTextEditor, Schedule, Sidebar, Skeleton, Slider, Splitter, Spreadsheet, Tab, TextArea, TextBox, TimePicker, Toast, Toolbar, Tooltip, TreeGrid, TreeMap |
+| `Height` | Sets the component height. The accepted unit and default value vary by component. | Accordion, BlockEditor, Carousel, Dialog, DocumentEditor, DocumentEditorContainer, FileManager, Gantt, Grid, ImageEditor, Kanban, ListBox, ListView, PivotView, ProgressBar, QueryBuilder, RichTextEditor, Skeleton, Splitter, Spreadsheet, Tab, Toast, Toolbar, Tooltip, TreeView |
+| `EnableRtl` | Enables right-to-left rendering. | Accordion, AppBar, AutoComplete, Breadcrumb, Button, Calendar, Carousel, CheckBox, Chip, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, DropDownList, DropDownTree, FileManager, Gantt, Grid, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, Menu, MultiSelect, PivotView, ProgressBar, QueryBuilder, RadioButton, RichTextEditor, Sidebar, Slider, Splitter, Switch, Tab, TimePicker, Toast, Toolbar, Tooltip, TreeView, Uploader |
 
 ## 2) Common value and selection APIs
 
-These APIs are widely used in input-style controls and interactive widgets.
-
-| API name | Purpose | Components that commonly use it |
+| API name | Purpose | Verified components |
 | --- | --- | --- |
-| `Value` | Gets or sets the current value and supports two-way binding through `@bind-Value`. | TextBox, Numeric Textbox, DatePicker, ComboBox, Dropdown List, AutoComplete, MultiSelect Dropdown, Range Slider, Rating, Rich Text Editor |
-| `Placeholder` | Shows hint text inside an input when no value is entered. | TextBox, ComboBox, Dropdown List, AutoComplete, MultiSelect Dropdown, DatePicker, TimePicker, DateTime Picker, DateRangePicker, MultiColumn ComboBox, Numeric Textbox, Input Mask, TextArea |
-| `AllowMultiSelection` | Enables selecting multiple items or nodes at once. | File Manager, TreeView, Dropdown Tree |
-| `AllowSelection` | Enables or disables item, row, or data-point selection. | DataGrid, Tree Grid, Gantt Chart, Charts, Accumulation Chart, 3D Charts, HeatMap Chart |
-| `AllowFiltering` | Enables the built-in filter UI, such as a filter bar or search box, to narrow down data. | DataGrid, Tree Grid, Gantt Chart, AutoComplete, ComboBox, Dropdown List, MultiSelect Dropdown, ListBox, MultiColumn ComboBox |
-| `ShowCheckBox` | Displays checkboxes in front of items or nodes for multi-item selection. | TreeView, ListView, Tree Grid, ListBox, Dropdown Tree |
-| `AllowResizing` | Enables resizing of columns, panels, dialogs, or appointments by dragging. | DataGrid, Tree Grid, Gantt Chart, Dashboard, Dialog, Scheduler |
-| `AllowDragAndDrop` | Enables dragging items, cards, nodes, or appointments between locations. | TreeView, Kanban, Scheduler, File Manager, Query Builder, Pivot Table |
+| `Value` | Gets or sets the current value; commonly supports two-way binding. | Calendar, CheckBox, Chip, ColorPicker, DatePicker, DateTimePicker, DropDownList, DropDownTree, InPlaceEditor, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, OtpInput, ProgressBar, RadioButton, Rating, RichTextEditor, Slider, Switch, TimePicker |
+| `Placeholder` | Shows hint text when no value is entered or selected. | DatePicker, DateRangePicker, DateTimePicker, DropDownList, DropDownTree, MaskedTextBox, MultiColumnComboBox, MultiSelect, OtpInput, RichTextEditor, TextArea, TextBox, TimePicker |
+| `Min` / `Max` | Restricts the selectable date or time range. The exact semantics differ by component, but the common range-limiting pattern is shared across the calendar family. | Calendar, DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `FirstDayOfWeek` | Sets the first day of the week used in calendar views. | Calendar, DatePicker, DateRangePicker, DateTimePicker, Schedule |
+| `CalendarMode` | Switches the calendar system such as Gregorian or Hijri. | Calendar, DatePicker, DateRangePicker, DateTimePicker |
+| `ShowTodayButton` | Shows or hides the Today button in calendar-based pickers. | Calendar, DatePicker, DateRangePicker, DateTimePicker |
+| `WeekNumber` | Shows or hides week numbers in calendar-based pickers. | Calendar, DatePicker, DateRangePicker, DateTimePicker |
+| `AllowMultiSelection` | Enables multiple-item selection. | FileManager, DropDownTree, TreeView |
+| `AllowSelection` | Enables row/cell or item selection, depending on the component. | Gantt, Grid, TreeGrid |
+| `AllowFiltering` | Enables built-in filtering or search UI. | DropDownList, DropDownTree, Gantt, Grid, ListBox, MultiColumnComboBox, MultiSelect, Spreadsheet, TreeGrid |
+| `ShowCheckBox` | Displays checkboxes in items or nodes for multi-selection. | DropDownTree, ListView, TreeView |
+| `Enabled` | Enables or disables the component or item. The exact target differs by component. | Calendar, Chip, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, DropDownList, DropDownTree, FileManager, Grid, ListBox, ListView, MaskedTextBox, MultiColumnComboBox, MultiSelect, ProgressButton, RadioButton, RichTextEditor, Slider, Splitter, TextBox, TimePicker, Uploader |
+| `AllowResizing` | Enables resizing of component surface areas or rows/columns where supported. | DashboardLayout, Gantt, Grid, Schedule, Spreadsheet, TreeGrid |
+| `AllowDragAndDrop` | Enables drag-and-drop interactions. | FileManager, Kanban, ListBox, QueryBuilder, Schedule, Tab, TreeView |
 
 ## 3) Common data and binding APIs
 
-These APIs help components connect to local collections or remote data sources.
-
-| API name | Purpose | Components that commonly use it |
+| API name | Purpose | Verified components |
 | --- | --- | --- |
-| `DataSource` | Binds the component to an `IEnumerable` collection or a `SfDataManager` for remote data. | Charts, Accumulation Chart, DataGrid, Tree Grid, Gantt Chart, Scheduler, Kanban, ListView, TreeView, Menu Bar, Breadcrumb, Map, Stepper, 3D Charts |
-| `Query` | Passes extra query options, such as filtering or sorting, to `DataManager`-based sources. | Charts, Accumulation Chart, DataGrid, Tree Grid, Gantt Chart, Kanban, Scheduler, ListView, Range Selector, Pivot Table |
-| `Fields` | Configures data field mappings such as ID, text, parent ID, and child fields. | ListView, TreeView, Menu Bar, Breadcrumb, Accordion, AutoComplete, ComboBox, Dropdown List |
+| `DataSource` | Binds the component to local data or a `SfDataManager`/remote source when supported. | DropDownList, Gantt, Grid, Kanban, ListView, MultiColumnComboBox, QueryBuilder, Spreadsheet |
+| `Query` | Supplies an external query used during data processing. | DropDownList, Gantt, Grid, Kanban, ListView, MultiColumnComboBox |
+| `Fields` | Maps component-specific field settings. This is not a single shared contract; the mapped fields differ by component. | AutoComplete, Breadcrumb, ListView, Menu, TreeView |
 
 ## 4) Common interaction and event APIs
 
-These APIs are useful for tracking user actions and component state changes.
-
-| API name | Purpose | Components that commonly use it |
+| API name | Purpose | Verified components |
 | --- | --- | --- |
-| `Created` | Fires once after the component is fully created and ready for interaction. | DataGrid, Charts, Scheduler, Sidebar, Toolbar, Accordion, Kanban, Tree Grid, Rich Text Editor, Image Editor |
-| `Destroyed` | Fires when the component is about to be removed from the DOM. | Charts, Accumulation Chart, Sidebar, Toolbar, Kanban, Tree Grid, Diagram, Rich Text Editor |
-| `ValueChange` | Fires when the component value changes due to user interaction or programmatic updates. | TextBox, Numeric Textbox, DatePicker, TimePicker, DateTime Picker, DateRangePicker, ComboBox, Dropdown List, AutoComplete, MultiSelect Dropdown, Range Slider, Rating, Radio Button, Toggle Switch Button, Calendar |
-| `OnDataBound` | Fires when data is bound and ready for rendering or adjustments. | DataGrid, Tree Grid, Gantt Chart, ListView, Scheduler, Kanban, Dropdown List, Stepper |
-| `Opened` | Fires when a popup or dropdown interface is opened. | Dropdown List, ComboBox, AutoComplete, MultiSelect Dropdown, DatePicker, TimePicker, DateTime Picker, DateRangePicker, Dialog, Sidebar, Menu Bar |
-| `Closed` | Fires when a popup or overlay is closed. | Dropdown List, ComboBox, AutoComplete, MultiSelect Dropdown, DatePicker, TimePicker, DateTime Picker, Dialog, Sidebar, Menu Bar |
-| `RowSelected` / `RowSelecting` | Fires after or before a grid row is selected. | DataGrid, Tree Grid, Gantt Chart |
+| `Created` | Fires after the component is created or rendered. | Accordion, AppBar, AutoComplete, Breadcrumb, Button, Calendar, CheckBox, Chip, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, DropDownList, DropDownTree, Gantt, Grid, ImageEditor, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, Mention, Menu, MultiColumnComboBox, MultiSelect, NumericTextBox, OtpInput, Pager, PivotView, QueryBuilder, RadioButton, Rating, Ribbon, RichTextEditor, Sidebar, Signature, Slider, SpeechToText, SpeedDial, Splitter, Stepper, Switch, Tab, TextArea, TextBox, Timeline, TimePicker, Toast, Toolbar, Tooltip, TreeView, Uploader |
+| `Destroyed` | Fires when the component is disposed or destroyed. | Accordion, AppBar, AutoComplete, Calendar, CheckBox, Chip, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, DropDownList, DropDownTree, Gantt, Grid, ImageEditor, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, Mention, MultiColumnComboBox, MultiSelect, NumericTextBox, PivotView, QueryBuilder, RichTextEditor, Sidebar, Slider, Splitter, Tab, TextArea, TextBox, TimePicker, Toast, Toolbar, Tooltip, TreeView |
+| `Blur` | Fires when the component loses focus. | AutoComplete, BlockEditor, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, RichTextEditor, TextArea, TextBox, TimePicker |
+| `Focus` | Fires when the component gains focus. | AutoComplete, BlockEditor, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, RichTextEditor, TextArea, TextBox, TimePicker |
+| `ValueChange` | Fires when the component value changes. The event payload and timing differ by component. | AutoComplete, Calendar, CheckBox, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, InPlaceEditor, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, RadioButton, RichTextEditor, Slider, Switch, TextArea, TextBox, TimePicker, Uploader |
+| `DataBound` | Fires after data binding is complete. | AutoComplete, ComboBox, DropDownList, Gantt, Grid, MultiSelect, PivotView, QueryBuilder, TreeView |
+| `OnOpen` / `Opened` | Fires when a popup, dialog, tooltip, or menu-like overlay is opened or about to open. | AutoComplete, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, Dialog, DropDownButton, DropDownList, Menu, MultiSelect, Sidebar, SplitButton, SpeedDial, Toast, Tooltip |
+| `OnClose` / `Closed` | Fires when a popup, dialog, tooltip, message, or overlay is closed or about to close. | AutoComplete, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, Dialog, DropDownButton, DropDownList, Menu, MultiSelect, Sidebar, SplitButton, SpeedDial, Toast, Tooltip |
+| `RowSelected` / `RowSelecting` | Fires after or before row selection. | Gantt, Grid, PivotView |
 
 ## 5) Common configuration APIs for component behavior
 
-These APIs often control runtime behavior and user experience.
-
-| API name | Purpose | Components that commonly use it |
+| API name | Purpose | Verified components |
 | --- | --- | --- |
-| `Readonly` | Makes the component display-only and prevents users from changing the value. | TextBox, Numeric Textbox, DatePicker, ComboBox, Dropdown List, AutoComplete, MultiSelect Dropdown, Range Slider, Rating, Block Editor, Rich Text Editor |
-| `Disabled` | Disables the component or an individual item so it ignores user interaction. | Button, Button Group, Checkbox, Radio Button, Toggle Switch Button, Floating Action Button, Speed Dial, Progress Button, Split Button, Dropdown Menu item, Accordion item, ListView items |
-| `ShowClearButton` | Renders a clear button to reset the component value with one click. | TextBox, Dropdown List, ComboBox, AutoComplete, DatePicker, TimePicker, DateTime Picker, DateRangePicker, MultiSelect Dropdown, Numeric Textbox, Input Mask |
-| `AllowEditing` | Enables editing of records, cells, or annotations. | DataGrid (`GridEditSettings`), Tree Grid, Gantt Chart (`GanttEditSettings`), Kanban |
-| `AllowSorting` | Enables sorting records by clicking column headers. | DataGrid, Tree Grid, Gantt Chart |
-| `AllowGrouping` | Enables drag-and-drop grouping of records by column. | DataGrid, Tree Grid, Gantt Chart |
-| `AllowPaging` | Splits large datasets into pages. | DataGrid, Tree Grid, Gantt Chart, File Manager, 3D Charts (legend paging) |
-| `AllowTextWrap` | Wraps long cell, header, or node text into multiple lines. | DataGrid, Tree Grid, TreeView |
-| `AllowReordering` | Enables dragging column headers to change their order. | DataGrid, Tree Grid, Gantt Chart |
-| `ShowColumnMenu` | Shows a menu on column headers with options such as sort, filter, and autofit. | DataGrid, Tree Grid, Gantt Chart |
-| `EnableContextMenu` | Shows a right-click context menu. | DataGrid, Tree Grid, Gantt Chart |
-| `EnablePersistence` | Saves component state to browser `localStorage` so it survives page reloads. | DataGrid, Tree Grid, Gantt Chart, Scheduler, Kanban, ListView, Map, Sidebar, Splitter, Dashboard, Pivot Table, Dialog, Rich Text Editor, Radio Button, Toggle Switch Button, Calendar, DatePicker, TimePicker, Color Picker, Signature |
-| `EnableVirtualization` | Renders only visible rows or items for smooth scrolling through large datasets. | DataGrid, Tree Grid, Gantt Chart, ListView, TreeView, Dropdown Tree, File Manager |
-| `ShowTooltip` | Shows a tooltip on hover to display additional information. | DataGrid, Gantt Chart (timeline cells), Scheduler (events), Pivot Table, Rating, Stepper, Speech To Text, Rich Text Editor, Smart Rich Text Editor |
-| `EnableHover` | Highlights the row or item under the mouse cursor. | DataGrid, Tree Grid |
-| `EnableHtmlSanitizer` | Sanitizes HTML content to prevent cross-site scripting attacks. | Rich Text Editor, Smart Rich Text Editor, Gantt Chart |
-| `AllowRowDragAndDrop` | Enables dragging and dropping rows to reorder or move them. | DataGrid, Tree Grid, Gantt Chart |
-| `Tooltip` | Configures tooltip content and appearance for chart elements. | Charts, Accumulation Chart, 3D Charts, Sparkline Charts, Stock Chart |
+| `Readonly` / `ReadOnly` | Makes the component read-only. The casing differs by component. | BlockEditor, DatePicker, DateRangePicker, DateTimePicker, DropDownList, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, QueryBuilder, Rating, RichTextEditor, Slider, Stepper, TextArea, TextBox, TimePicker |
+| `AllowEdit` | Allows the user to type a value directly instead of using only the popup or picker surface. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `FullScreen` | Enables full-screen popup rendering on mobile or tablet devices. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `OpenOnFocus` | Opens the popup automatically when the input receives focus. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `EnableMask` | Enables masked input behavior. | DatePicker, DateTimePicker, TimePicker |
+| `FloatLabelType` | Configures floating label behavior. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `Format` | Configures display formatting for the selected value. | Calendar, DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `InputFormats` | Configures accepted input parsing formats. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `HtmlAttributes` | Provides additional HTML attributes for the component root element or wrapper. This is a very common pattern across the component set. | Accordion, AppBar, AutoComplete, Breadcrumb, Button, Calendar, Carousel, CheckBox, Chip, ColorPicker, ContextMenu, DatePicker, DateRangePicker, DateTimePicker, Dialog, DropDownButton, DropDownList, DropDownTree, FileManager, ImageEditor, InPlaceEditor, ListBox, ListView, MaskedTextBox, MultiColumnComboBox, MultiSelect, OtpInput, ProgressButton, RadioButton, Rating, Sidebar, Signature, SpeechToText, SplitButton, Splitter, Switch, TextArea, TextBox, TimePicker, Tooltip, Uploader |
+| `InputAttributes` | Provides additional HTML attributes for the input element. | DatePicker, DateRangePicker, DateTimePicker, DropDownList, MaskedTextBox, MultiColumnComboBox, MultiSelect, TextArea, TextBox, TimePicker, Uploader |
+| `TabIndex` | Controls keyboard tab order. | Calendar, DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `ZIndex` | Controls popup stacking order. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `IconCss` | Supplies an icon CSS class for buttons, menu items, or items that render icons. | Breadcrumb, Button, DropDownButton, ProgressButton, SpeedDialItem, SplitButton |
+| `IconPosition` | Controls where the icon appears relative to text. | Button, DropDownButton, ProgressButton, SpeedDial, SplitButton |
+| `Disabled` | Disables the component or item. | Breadcrumb, Button, CheckBox, ColorPicker, DropDownTree, InPlaceEditor, MultiColumnComboBox, OtpInput, RadioButton, Rating, Signature, SpeechToText, SpeedDial, SpeedDialItem, Switch, Timeline, TreeView |
+| `ShowClearButton` | Displays a clear button. | AutoComplete, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, DropDownTree, MaskedTextBox, MultiColumnComboBox, MultiSelect, TextArea, TextBox, TimePicker |
+| `StrictMode` | Restricts user input to valid values within the configured range. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `AllowEditing` | Enables editing where the component supports it. | Spreadsheet, TreeView |
+| `AllowSorting` | Enables sorting. | Gantt, Grid, MultiColumnComboBox, Spreadsheet, TreeGrid |
+| `AllowGrouping` | Enables grouping or grouping UI. | Grid, PivotView |
+| `AllowPaging` | Enables paging. | FileManager, Grid, MultiColumnComboBox, TreeGrid |
+| `AllowTextWrap` | Enables text wrapping. | Grid, TreeGrid, TreeView |
+| `AllowReordering` | Enables reordering of columns or tab items. | Gantt, Grid, Tab |
+| `EnableContextMenu` | Enables the context menu. | DocumentEditor, Gantt, Spreadsheet |
+| `EnablePersistence` | Persists state across page reloads. The persisted state differs by component. | Accordion, Breadcrumb, Calendar, Carousel, CheckBox, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, DropDownList, DropDownTree, FileManager, Gantt, Grid, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, Pager, PivotView, QueryBuilder, RadioButton, Ribbon, RichTextEditor, Sidebar, Signature, Slider, Splitter, Tab, TimePicker, TreeView, Uploader |
+| `EnableVirtualization` | Enables virtualization for large data sets. | DropDownList, DropDownTree, FileManager, Grid, ListView, MultiColumnComboBox, MultiSelect, PivotView, TreeView |
+| `ShowTooltip` | Displays tooltips where supported. | FileManager, Grid, PivotView, Rating, RichTextEditor, SpeechToText, Stepper |
+| `EnableHtmlSanitizer` | Sanitizes HTML or text content to reduce XSS risk. | BlockEditor, FileManager, PivotView, RichTextEditor, Uploader |
+| `AllowRowDragAndDrop` | Enables row drag-and-drop. | Gantt, Grid |
+| `Tooltip` | Configures tooltip-related content or behavior. | Tooltip, RichTextEditor, Grid, PivotView, Rating |
 
-## 6) Common method APIs (shared method names)
+## 6) Common method APIs
 
-These methods often share the same name across components, mostly exposed as `Async` methods in Blazor.
-
-| API name | Purpose | Components that commonly use it |
+| API name | Purpose | Verified components |
 | --- | --- | --- |
-| `RefreshAsync` | Re-renders the component after external state or data changes. | Charts, DataGrid, Circular Gauge, Linear Gauge, Dashboard, Image Editor, Kanban, Pivot Table, Toolbar, ListView, Accordion |
-| `FocusAsync` | Sets keyboard focus to the component. | TextBox, Numeric Textbox, DatePicker, ComboBox, Dropdown List, AutoComplete, MultiSelect Dropdown, Button, Checkbox, Chips, Floating Action Button, Chat UI, Accumulation Chart, Toolbar, Rich Text Editor |
-| `PrintAsync` | Triggers the browser print dialog with the component content. | Charts, Accumulation Chart, 3D Charts, Bullet Chart, Circular Gauge, Linear Gauge, DataGrid, Tree Grid, Gantt Chart, Scheduler, Map, Pivot Table, Diagram, Stock Chart, TreeMap, Block Editor |
-| `ExportAsync` | Exports the component to an image, PDF, or other file format. | Charts, Accumulation Chart, 3D Charts, Circular Gauge, Linear Gauge, Sankey Diagram, HeatMap Chart, DataGrid, Tree Grid, Gantt Chart, Scheduler, Pivot Table, Stock Chart, Image Editor, Diagram, Block Editor |
-| `SelectRowsAsync` | Selects specific grid rows programmatically. | DataGrid, Tree Grid, Gantt Chart |
-| `ClearSelectionAsync` | Clears the current selection. | DataGrid, Tree Grid, Gantt Chart, HeatMap Chart, ListView, TreeView |
-| `ExpandAllAsync` / `CollapseAllAsync` | Expands or collapses all groups, rows, or nodes. | TreeView, Tree Grid, Gantt Chart |
-| `HideAsync` / `ShowAsync` | Programmatically hides or shows a component. | Dialog, Toast, Sidebar, Speed Dial, Message |
-| `OpenAsync` / `CloseAsync` | Programmatically opens or closes a popup-style component or loads an image. | Dialog, Tooltip, Sidebar, Image Editor (`OpenAsync` loads an image) |
-| `GetPersistDataAsync` | Gets the current state as a JSON string for manual persistence management. | DataGrid, Tree Grid, Gantt Chart, Pivot Table, Dashboard |
-
-## Notes for new users
-
-- Many Syncfusion Blazor components use the same property names, even when the underlying behavior is slightly different.
-- The `Allow*` prefix usually turns a feature on, `Enable*` usually controls runtime behavior, and `Show*` usually makes a UI element visible. Learning these patterns makes many APIs easier to understand.
-- Data-oriented controls often share `DataSource`, `Query`, and `Fields`.
-- Interaction-heavy components usually expose familiar event names such as `Created`, `Destroyed`, and `ValueChange`.
-- Grid family components such as DataGrid, Tree Grid, and Gantt Chart often share the same API names for sorting, filtering, grouping, resizing, and paging.
-- When in doubt, check the component-specific API reference to confirm whether a property behaves the same way across components.
+| `RefreshAsync` | Re-renders or refreshes the component. | DashboardLayout, DropDownTree, Gantt, Kanban, Pager, PivotView, Signature, Tab, Toast, Toolbar, Tooltip, TreeMap |
+| `FocusAsync` | Sets keyboard focus to the component. | Button, ColorPicker, DatePicker, DateRangePicker, DateTimePicker, DocumentEditor, DropDownList, MaskedTextBox, MultiColumnComboBox, MultiSelect, ProgressButton, RichTextEditor, TextArea, TextBox, TimePicker |
+| `PrintAsync` | Invokes printing for the component or its content. | BlockEditor, DocumentEditor, RichTextEditor, TreeMap |
+| `ExportAsync` | Exports the component or its content when supported. | ImageEditor, TreeMap |
+| `ClearSelectionAsync` | Clears the current selection. | FileManager, Gantt, Grid, ImageEditor, TreeGrid |
+| `ExpandAllAsync` / `CollapseAllAsync` | Expands or collapses all relevant nodes or rows. | Gantt, TreeView, TreeGrid |
+| `HideAsync` / `ShowAsync` | Hides or shows a popup-style component or overlay. | Dialog, SpeedDial, Toast |
+| `OpenAsync` / `CloseAsync` | Opens or closes a popup-style component; in some components, `OpenAsync` loads content. | ContextMenu, DocumentEditor, ImageEditor, Menu, Tooltip |
+| `GetPersistDataAsync` | Retrieves the persisted state payload. | Calendar, DatePicker, DateTimePicker, DashboardLayout, Gantt, MaskedTextBox, PivotView, TextArea, TextBox, TimePicker |
