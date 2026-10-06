@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resource allocation with Blazor Gantt Chart and AI models | Syncfusion®
+title: Resource allocation with Blazor Gantt Chart and AI models | Syncfusion
 description: Learn how to use the Syncfusion Blazor Gantt Chart with OpenAI, Azure OpenAI, or Ollama for automatic resource allocation. Explore for more details.
 platform: Blazor
 control: AI Integration
