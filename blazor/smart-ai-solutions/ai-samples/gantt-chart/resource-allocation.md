@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resource allocation with Blazor Gantt Chart and AI models | Syncfusion
-description: Learn how to use the Syncfusion Blazor Gantt Chart with OpenAI, Azure OpenAI, or Ollama for automatic resource allocation. Explore to more details.
+title: Resource allocation with Blazor Gantt Chart and AI models | Syncfusion®
+description: Learn how to use the Syncfusion Blazor Gantt Chart with OpenAI, Azure OpenAI, or Ollama for automatic resource allocation. Explore for more details.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -10,7 +10,7 @@ keywords: Blazor Gantt Chart, AI resource allocation, Syncfusion Blazor AI
 
 # Resource allocation with Blazor Gantt Chart and AI models
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatic resource reallocation in a Syncfusion Blazor Gantt Chart component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. This sample demonstrates how to efficiently manage resource overallocation by reallocating available resources to tasks.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package for automatic resource reallocation in a Syncfusion Blazor Gantt Chart component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. This sample demonstrates how to efficiently manage resource overallocation by reallocating available resources to tasks.
 
 ## Prerequisites
 
@@ -92,7 +92,6 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 
 using Syncfusion.Blazor.AI;
 using Microsoft.Extensions.AI;
-using Syncfusion.Blazor.SmartComponents;
 using OpenAI;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -229,9 +228,9 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Integrated Gantt Chart with AI
+## Integrate Gantt Chart with AI
 
-The following code example show hot to integrate the Gantt Chart with AI for automatic resource allocation
+The following code example shows how to integrate the Gantt Chart with AI for automatic resource allocation:
 
 {% tabs %}
 {% highlight C# tabtitle="Home.razor" %}
@@ -580,7 +579,7 @@ builder.Services.AddSyncfusionBlazor();
 
 string apiKey = "API-KEY";
 string modelName = "OPENAI_MODEL";
-OpenAIClient client = new OpenAIClient(apiKey);
+OpenAIClient openAIClient = new OpenAIClient(apiKey);
 IChatClient chatClient = openAIClient.GetChatClient(modelName).AsIChatClient();
 builder.Services.AddChatClient(chatClient);
 
@@ -596,7 +595,7 @@ app.Run();
 
 ## Error handling and troubleshooting
 
-If the AI service fails to return a valid response, the TreeGrid displays an error message (“Oops! Please try again!”). Common issues include:
+If the AI service fails to return a valid response, the Gantt Chart displays an error message ("Something went wrong."). Common issues include:
 
 - **Invalid API key or endpoint**: Verify that `openAIApiKey`, `azureOpenAIKey`, or the Ollama `Endpoint` is correct and the service is accessible.
 - **Model unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
