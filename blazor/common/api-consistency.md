@@ -1,7 +1,7 @@
 ---
 layout: post
 title: API consistency in Blazor components | Syncfusion®
-description: Learn the common API names shared across Syncfusion Blazor components, including appearance, value, data binding, event, and method APIs to help you move between components easily.
+description: Learn the common API names (appearance, value, data binding, event, and method) shared across Syncfusion Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
