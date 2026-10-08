@@ -180,7 +180,7 @@ N> If the interactivity location is set to `Per page/component` in the Web App, 
 
 ## Binding data source
 
-After initialization, populate the ListBox using the `DataSource` property. In the following example, an array of objects is bound and fields are mapped via `ListBoxFieldSettings`.
+After initialization, populate the ListBox using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. In the following example, an array of objects is bound and fields are mapped via [ListBoxFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
