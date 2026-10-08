@@ -222,13 +222,13 @@ Create a protected page that displays the **Blazor DataGrid** only after the use
 			   Click the Login button below to sign in with Microsoft Entra ID.
 			   Once you’re logged in, the Blazor DataGrid will be displayed below.
 			</p>
-			<a class="btn btn-primary" href="/MicrosoftIdentity/Account/SignIn">Login with Microsoft</a>
+			<a class="btn btn-primary" href="/MicrosoftIdentity/Account/SignIn" aria-label="Login with Microsoft Id">Login with Microsoft</a>
 		</div>
 	</NotAuthorized>
 	<Authorized>
 		<div class="d-flex justify-content-between align-items-center">
 			<h1>DataGrid</h1>
-			<a class="btn btn-secondary" href="/MicrosoftIdentity/Account/SignOut">Logout</a>
+			<a class="btn btn-secondary" href="/MicrosoftIdentity/Account/SignOut" aria-label="Logout an account">Logout</a>
 		</div>
 
 		<SfGrid DataSource="@Orders">
@@ -288,6 +288,8 @@ The application securely signs users in through **Microsoft Entra ID** and manag
 ![Blazor DataGrid with Microsoft Enta ID](images/blazor-datagrid-microsoftentraid.webp)
 
 This approach provides a secure, enterprise ready foundation for building modern Blazor applications with controlled access to data and UI components.   
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20Microsoft-Entra-ID)
 
 ## See also
 

@@ -27,7 +27,7 @@ Follow these steps to validate the Syncfusion<sup style="font-size:70%">&reg;</s
 
 {% tabs %}
 {% highlight c# tabtitle="v34.1.29 and later" %}
-# Replace the parameters with the desired platform, version, and actual license key.
+// Replace the parameters with the desired platform, version, and actual license key.
 
 $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"UIComponent" /version:"34.1.29" /licensekey:"Your License Key"
 
@@ -35,7 +35,7 @@ Write-Host $result
 {% endhighlight %}
 
 {% highlight c# tabtitle="Before v34.1.29" %}
-# Replace the parameters with the desired platform, version, and actual license key.
+// Replace the parameters with the desired platform, version, and actual license key.
 
 $result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"Blazor" /version:"26.2.4" /licensekey:"Your License Key"
 

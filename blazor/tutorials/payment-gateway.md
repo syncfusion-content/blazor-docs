@@ -930,6 +930,8 @@ Before running the application, configure the Stripe test-mode keys as described
 
 ![Blazor Payment gateway sample](./images/payment-gateway.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Payment%20gateway)
+
 ## See also
 
 * [Creating a Shopping Cart with Blazor Components](https://blazor.syncfusion.com/documentation/tutorials/shopping-cart)

@@ -277,6 +277,8 @@ Once the compilation completes, open your browser and navigate to `http://localh
 
 ![Blazor DataGrid Component](../images/blazor-angular-integration.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20Wasm%20with%20angular)
+
 ## See also
 
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)

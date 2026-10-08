@@ -424,6 +424,8 @@ After the application starts, click the **Load GridData** button to initiate aut
 
 ![Blazor DataGrid with JWT](images/jwt-authentication.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20Jwt%20Authentication)
+
 ## See also
 
 - [Configure JWT bearer authentication in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/configure-jwt-bearer-authentication?view=aspnetcore-10.0)

@@ -338,7 +338,7 @@ This page demonstrates how to conditionally render the [Blazor DataGrid](https:/
                     </GridColumns>
                 </SfGrid>
             </div>
-            <a href="/signout" class="btn btn-secondary">Sign out</a>
+            <a href="/signout" class="btn btn-secondary" aria-label="Sign out an account">Sign out</a>
         </Authorized>
         <NotAuthorized>
             <div>
@@ -404,6 +404,8 @@ N> By default, the app runs on `https://localhost:7000` (or similar port defined
 **Output:**
 
 ![Blazor DataGrid displaying order data after AWS Cognito authentication](./images/aws-cognito.webp)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/blazor-aws-cognito)
 
 ## See also
 
