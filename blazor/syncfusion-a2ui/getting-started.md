@@ -40,7 +40,7 @@ For step-by-step instructions on creating a new Blazor App, see [Getting Started
 
 ## Install the Syncfusion A2UI Blazor package
 
-Install the [Syncfusion.Blazor.A2UI]() NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](../nuget-packages) topic for details.
+Install the [Syncfusion.Blazor.A2UI](https://www.nuget.org/packages/Syncfusion.Blazor.A2UI) NuGet package. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](../nuget-packages) topic for details.
 
 {% tabcontents %}
 
@@ -274,7 +274,7 @@ Open **Components/Pages/Home.razor** (created by the `blazor` template at the pa
 {% endhighlight %}
 {% endtabs %}
 
-![Syncfusion A2UI getting-started output](./images/getting-started.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBxsNNQMGEdynZI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Syncfusion A2UI getting-started output](./images/getting-started.png)" %}
 
 What the snippet does, in order:
 
