@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resource Allocation with Blazor Gantt Chart and Azure OpenAI | Syncfusion
+title: Gantt Chart Resource Allocation with Azure OpenAI
 description: Learn how to integrate Syncfusion Blazor Gantt Chart with Azure OpenAI to automatically resolve resource overallocation and optimize task assignments.
 platform: Blazor
 control: AI Integration
@@ -57,17 +57,17 @@ Add the stylesheet and script references to **~/Components/App.razor** for Blazo
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
 
-<head>
-    ....
-    <!-- Blazor theme stylesheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
-</head>
+    <head>
+        ....
+        <!-- Blazor theme stylesheet -->
+        <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    </head>
 
-<body>
-    ....
-    <!-- Blazor core script -->
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
+    <body>
+        ....
+        <!-- Blazor core script -->
+        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    </body>
 
 {% endhighlight %}
 {% endtabs %}
@@ -485,6 +485,7 @@ namespace GanttChart.Components.Models
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ## Error handling and troubleshooting
@@ -497,6 +498,6 @@ If the AI service fails to return a valid response, the Gantt Chart displays an 
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
 
-![Resource Allocation](../images/resource_allocation.gif)
+![Resource Allocation](../images/resource-allocation.webp)
 
 N> [View sample in GitHub](https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/GanttChart/ResourceOverallocation.razor)

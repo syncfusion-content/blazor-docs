@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Progress Predictor with Blazor Gantt Chart and Azure OpenAI | Syncfusion
-description: Learn how to integrate Syncfusion Blazor Gantt Chart with Azure OpenAI to predict milestone completion dates and project completion timelines using historical and current project data.
+title: Gantt Chart Progress Prediction with Azure OpenAI
+description: Use Azure OpenAI with Syncfusion Blazor Gantt Chart to forecast milestone completion dates and project timelines from schedules, dependencies, and progress.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -10,7 +10,7 @@ keywords: Blazor Gantt Chart, Azure OpenAI, Progress Predictor, Project Forecast
 
 # Progress Predictor with Blazor Gantt Chart and Azure OpenAI
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.fusion.Blazor.AI) package with the Syncfusion Blazor Gantt Chart to predict project milestones and completion dates using Azure OpenAI. The [Syncfusion.Blazor.AI](https://www.fusion.Blazor.AI) package enables integration with AI models to analyze project schedules, historical execution patterns, task dependencies, and progress information. This sample demonstrates how to forecast milestone completion dates and overall project completion timelines based on historical and current project data.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with the Syncfusion Blazor Gantt Chart to predict project milestones and completion dates using Azure OpenAI. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to analyze project schedules, historical execution patterns, task dependencies, and progress information. This sample demonstrates how to forecast milestone completion dates and overall project completion timelines based on historical and current project data.
 
 ## Prerequisites
 
@@ -123,7 +123,7 @@ Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuratio
 - **Server mode**: Register the service in the single **~/Program.cs** file.
 
 {% tabs %}
-{% highlight C# tabtitle="" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 using Syncfusion.Blazor;
 
@@ -621,6 +621,6 @@ If the AI service fails to return a valid response, the Gantt Chart displays an 
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
 
-![Progress Predictor](../ai/images/progress-predictor.gif)
+![Progress Predictor](../images/progress-predictor.gif)
 
 N> [View sample in GitHub](https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/GanttChart/ProgressPrediction.razor)
