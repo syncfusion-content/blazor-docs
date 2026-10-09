@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gantt Chart Resource Allocation with Azure OpenAI
+title: Gantt Chart Resource Allocation with Azure OpenAI | Syncfusion®
 description: Learn how to integrate Syncfusion Blazor Gantt Chart with Azure OpenAI to automatically resolve resource overallocation and optimize task assignments.
 platform: Blazor
 control: AI Integration

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gantt Chart Progress Prediction with Azure OpenAI
+title: Gantt Chart Progress Prediction with Azure OpenAI | Syncfusion®
 description: Use Azure OpenAI with Syncfusion Blazor Gantt Chart to forecast milestone completion dates and project timelines from schedules, dependencies, and progress.
 platform: Blazor
 control: AI Integration
@@ -479,8 +479,8 @@ namespace GanttChart.Components.Model
             new ResourceInfoModel() { Id= 6, Name= "Van Jack", MaxUnit = 100 },
             new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan", MaxUnit = 100 },
             new ResourceInfoModel() { Id= 8, Name= "Jack Davolio", MaxUnit = 100 },
-            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet", MaxUnit = 100 },
-            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller",MaxUnit = 100 },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vine", MaxUnit = 100 },
+            new ResourceInfoModel() { Id= 10, Name= "Vine Fuller",MaxUnit = 100 },
             new ResourceInfoModel() { Id= 11, Name= "Bergs Anton",MaxUnit = 100 },
             new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor",MaxUnit = 100 }
         };
