@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resource Allocation with Blazor Gantt Chart and Azure OpenAI | Syncfusion
+title: Gantt Chart Resource Allocation with Azure OpenAI | Syncfusion®
 description: Learn how to integrate Syncfusion Blazor Gantt Chart with Azure OpenAI to automatically resolve resource overallocation and optimize task assignments.
 platform: Blazor
 control: AI Integration
@@ -14,38 +14,13 @@ This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.
 
 ## Prerequisites
 
-Ensure the following NuGet packages are installed based on the selected AI service.
+Install the required Blazor and AI service NuGet packages based on the selected AI service.
 
 ### For Azure OpenAI
 
-Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI
-Install-Package Azure.AI.OpenAI
-
-## Add stylesheet and script resources
-
-Include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of the main page:
-
-- For **.NET 6** Blazor Server apps, add to **~/Pages/_Layout.cshtml**.
-- For **.NET 8 or .NET 9 or .NET 10** Blazor Server apps, add to **~/Components/App.razor**.
-
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-<body>
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-```
-
-> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for methods to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different approaches to adding script references in your Blazor application.
-
-
-## Configure Azure OpenAI
-
-Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
-
-- Install the required NuGet packages:
+- [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+- [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
+- [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -57,10 +32,58 @@ Install-Package Azure.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
-- Add the following configuration in **~/Program.cs** file in the Blazor Web App: 
+### Syncfusion packages
+
+- [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
+- [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add stylesheet and script resources
+
+Include the Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+Add the stylesheet and script references to **~/Components/App.razor** for Blazor Web Apps using the Interactive Server render mode.
+
+{% tabs %}
+{% highlight html tabtitle="App.razor" %}
+
+    <head>
+        ....
+        <!-- Blazor theme stylesheet -->
+        <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        ....
+        <!-- Blazor core script -->
+        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    </body>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for methods to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different approaches to adding script references in your Blazor application.
+
+
+## Configure Azure OpenAI
+
+Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
+
+
+- Add the following configuration in **~/Program.cs** file in the Blazor Web App: 
+
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -92,8 +115,8 @@ builder.Services.AddSingleton<AzureAIService>();
 
 var app = builder.Build();
 
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Register Syncfusion Blazor Service
@@ -132,8 +155,6 @@ The following code example shows how to integrate the Gantt Chart with AI for au
 {% highlight C# tabtitle="Home.razor" %}
 
 @inject AzureAIService OpenAIService
-@using GanttChart.Components.Service;
-@using GanttChart.Components.Model;
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -147,8 +168,8 @@ The following code example shows how to integrate the Gantt Chart with AI for au
             <SfButton CssClass="e-flat" IsPrimary="true" IconCss="e-icons e-refresh" IconPosition=@IconPosition.Right OnClick="Reload">Something went wrong.</SfButton>
         </div>
     }
-    <div style="position: relative">
-        <SfGantt @ref="Gantt" ViewType="ViewType.ResourceView" ShowOverallocation="true" DataSource="@TaskCollection" Width="100%" TreeColumnIndex="1" WorkUnit="WorkUnit.Hour" AllowUnscheduledTasks="true">
+    <div>
+        <SfGantt @ref="Gantt" ViewType="ViewType.ResourceView" ShowOverallocation="true" DataSource="@TaskCollection" Width="900px"  Height="550px" TreeColumnIndex="1"  AllowUnscheduledTasks="true">
             <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
             ParentID="ParentId" Work="Work" TaskType="TaskType">
             </GanttTaskFields>
@@ -180,7 +201,7 @@ The following code example shows how to integrate the Gantt Chart with AI for au
                             progressClassName = "e-custom-progress";
                         }
                         <div class="e-gantt-child-taskbar e-gantt-child-taskbar-inner-div @taskbarClassName" style="height:22px;" tabindex=-1>
-                            <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar @progressClassName" style="height:22px;width:@(taskModel.ProgressWidth + "px");text-align: right;border-radius: 0px;">
+                            <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar @progressClassName" style="height:22px; width:@(taskModel.ProgressWidth + "px");text-align: right;border-radius: 0px;">
                             </div>
                         </div>
                     }
@@ -218,7 +239,6 @@ The following code example shows how to integrate the Gantt Chart with AI for au
 {% endhighlight %}
 {% highlight C# tabtitle="Home.razor.cs" %}
 
-using GanttChart.Components.Models;
 using Microsoft.JSInterop;
 using Syncfusion.Blazor.Gantt;
 using System.Text.Json;
@@ -227,7 +247,7 @@ namespace BlazorApp1.Components.Pages
 {
     public partial class Home
     {
-        public  SfGantt<GanttModel.TaskInfoModel> Gantt;
+        private SfGantt<GanttModel.TaskInfoModel> Gantt;
         private List<GanttModel.TaskInfoModel> TaskCollection { get; set; }
         private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; }
         private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; }
@@ -243,24 +263,35 @@ namespace BlazorApp1.Components.Pages
         private string GeneratePrompt(List<GanttModel.TaskInfoModel> TaskCollection, List<GanttModel.ResourceInfoModel> ResourceCollection, List<GanttModel.AssignmentModel> AssignmentCollection)
         {
             return @"Here's a revised prompt to ensure the AI provides the results in JSON format:
-    Function as an AI assistant responsible for optimizing resource assignments in a project management system. Your goal is to prevent overlapping task assignments for each resource, ensuring no resource is double-booked.
-    1. **Check Task Assignments:** Review the start and end dates of tasks assigned to each resource to identify overlaps.
-    2. **Resolve Conflicts:** Reassign conflicting tasks to other available resources without scheduling conflicts, ensuring each task is assigned to a resource.
-    3. **Provide Updated Assignments:** Return the updated assignments.
-    Please return a JSON object with the following:
-    - **AssignmentCollection:** Updated resource assignments.
-    - **TaskIds:** List of task IDs where resource assignments have changed.
-    The response must be in JSON format only, with no additional explanations or content.
-    Here is the dataset:
-    - Task Collection Data: " + JsonSerializer.Serialize(TaskCollection) + @"
-    - Resource Collection Data: " + JsonSerializer.Serialize(ResourceCollection) + @"
-    - Assignment Collection Data: " + JsonSerializer.Serialize(AssignmentCollection) + @"
-    Note: Ensure the response is a JSON string and does not include any extra information.";
+                Function as an AI assistant responsible for optimizing resource assignments in a project management system. Your goal is to prevent overlapping task assignments for each resource, ensuring no resource is double-booked.
+                1. **Check Task Assignments:** Review the start and end dates of tasks assigned to each resource to identify overlaps.
+                2. **Resolve Conflicts:** Reassign conflicting tasks to other available resources without scheduling conflicts, ensuring each task is assigned to a resource.
+                3. **Provide Updated Assignments:** Return the updated assignments.
+                Please return a JSON object with the following:
+                - **AssignmentCollection:** Updated resource assignments.
+                - **TaskIds:** List of task IDs where resource assignments have changed.
+                The response must be in JSON format only, with no additional explanations or content.
+                Here is the dataset:
+                - Task Collection Data: " + JsonSerializer.Serialize(TaskCollection) + @"
+                - Resource Collection Data: " + JsonSerializer.Serialize(ResourceCollection) + @"
+                - Assignment Collection Data: " + JsonSerializer.Serialize(AssignmentCollection) + @"
+                Note: Ensure the response is a JSON string and does not include any extra information.";
         }
+
+        /// <summary>
+        /// Reloads the current page and restores the application to its initial state.
+        /// </summary>
+        /// <remarks>
         private async Task Reload()
         {
             await JsInterop.InvokeVoidAsync("window.location.reload");
         }
+
+        /// <summary>
+        /// Sends the current task, resource, and assignment data to the AI service
+        /// and automatically optimizes resource allocation by resolving
+        /// resource overallocation conflicts.
+        /// </summary>
         private async Task OpenAIHandler()
         {
             await Gantt.ShowSpinnerAsync();
@@ -389,18 +420,18 @@ namespace GanttChart.Components.Models
         public class ResourceInfoModel
         {
             public int Id { get; set; }
-            public string Name { get; set; }
+            public string? Name { get; set; }
             public double MaxUnit { get; set; }
         }
 
         public class TaskInfoModel
         {
             public int Id { get; set; }
-            public string Name { get; set; }
-            public string TaskType { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
             public DateTime StartDate { get; set; }
             public DateTime? EndDate { get; set; }
-            public string Duration { get; set; }
+            public string? Duration { get; set; }
             public int Progress { get; set; }
             public int? ParentId { get; set; }
             public double? Work { get; set; }
@@ -454,37 +485,8 @@ namespace GanttChart.Components.Models
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="Program.cs" %}
-
-using BlazorApp1.Components;
-using GanttChart.Components.Service;
-using Syncfusion.Blazor.AI;
-using Azure.AI.OpenAI;
-using Microsoft.Extensions.AI;
-using System.ClientModel;
-
-var builder = WebApplication.CreateBuilder(args);
-
-string azureOpenAIKey = "AZUREOPENAI-API-KEY";
-string azureOpenAIEndpoint = "AZUREOPENAI-API-ENDPOINT";
-string azureOpenAIModel = "AZUREOPENAI-API-MODEL";
-AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-    new Uri(azureOpenAIEndpoint),
-    new ApiKeyCredential(azureOpenAIKey)
-);
-IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
-builder.Services.AddChatClient(azureOpenAIChatClient);
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-builder.Services.AddSingleton<AzureAIService>();
-builder.Services.AddSingleton<SyncfusionAIService>();
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-var app = builder.Build();
-
-{% endhighlight %}
 {% endtabs %}
+
 
 ## Error handling and troubleshooting
 
@@ -496,8 +498,6 @@ If the AI service fails to return a valid response, the Gantt Chart displays an 
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
 
-## Performance considerations
+![Resource Allocation](../images/resource-allocation.webp)
 
-When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
-
-![Resource Allocation](ai\images\resource-allocation.webp)
+N> [View sample in GitHub](https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/GanttChart/ResourceOverallocation.razor)

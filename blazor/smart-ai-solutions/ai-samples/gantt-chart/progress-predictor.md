@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Progress Predictor with Blazor Gantt Chart and Azure OpenAI | Syncfusion
-description: Learn how to integrate Syncfusion Blazor Gantt Chart with Azure OpenAI to predict milestone completion dates and project completion timelines using historical and current project data.
+title: Gantt Chart Progress Prediction with Azure OpenAI | Syncfusion®
+description: Use Azure OpenAI with Syncfusion Blazor Gantt Chart to forecast milestone completion dates and project timelines from schedules, dependencies, and progress.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -10,42 +10,17 @@ keywords: Blazor Gantt Chart, Azure OpenAI, Progress Predictor, Project Forecast
 
 # Progress Predictor with Blazor Gantt Chart and Azure OpenAI
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.fusion.Blazor.AI) package with the Syncfusion Blazor Gantt Chart to predict project milestones and completion dates using Azure OpenAI. The [Syncfusion.Blazor.AI](https://www.fusion.Blazor.AI) package enables integration with AI models to analyze project schedules, historical execution patterns, task dependencies, and progress information. This sample demonstrates how to forecast milestone completion dates and overall project completion timelines based on historical and current project data.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package with the Syncfusion Blazor Gantt Chart to predict project milestones and completion dates using Azure OpenAI. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to analyze project schedules, historical execution patterns, task dependencies, and progress information. This sample demonstrates how to forecast milestone completion dates and overall project completion timelines based on historical and current project data.
 
 ## Prerequisites
 
-Ensure the following NuGet packages are installed based on the selected AI service.
+Install the required Blazor and AI service NuGet packages based on the selected AI service.
 
 ### For Azure OpenAI
 
-Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI
-Install-Package Azure.AI.OpenAI
-
-## Add stylesheet and script resources
-
-Include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of the main page:
-
-- For **.NET 6** Blazor Server apps, add to **~/Pages/_Layout.cshtml**.
-- For **.NET 8 or .NET 9 or .NET 10** Blazor Server apps, add to **~/Components/App.razor**.
-
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-<body>
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-```
-
-> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for methods to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different approaches to adding script references in your Blazor application.
-
-
-## Configure Azure OpenAI
-
-Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
-
-- Install the required NuGet packages:
+- [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+- [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
+- [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -57,10 +32,56 @@ Install-Package Azure.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
-- Add the following configuration in **~/Program.cs** file in the Blazor Web App: 
+### Syncfusion packages
+
+- [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
+- [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add stylesheet and script resources
+
+Include the Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+Add the stylesheet and script references to **~/Components/App.razor** for Blazor Web Apps using the Interactive Server render mode.
+
+{% tabs %}
+{% highlight html tabtitle="App.razor" %}
+
+<head>
+    ....
+    <!-- Blazor theme stylesheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+</head>
+
+<body>
+    ....
+    <!-- Blazor core script -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for methods to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different approaches to adding script references in your Blazor application.
+
+## Configure Azure OpenAI
+
+Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
+
+- Add the following configuration in **~/Program.cs** file in the Blazor Web App: 
+
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -92,19 +113,28 @@ builder.Services.AddSingleton<AzureAIService>();
 
 var app = builder.Build();
 
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Register Syncfusion Blazor Service
 
-Add the Syncfusion Blazor service to the **~/Program.cs** file.
+Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuration depends on the app’s **Interactive Render Mode**:
+
+- **Server mode**: Register the service in the single **~/Program.cs** file.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
 
 using Syncfusion.Blazor;
 
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
 builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,9 +150,7 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
-@using GanttChart.Components.Model
 @using System.Text.Json
-@using GanttChart.Components.Service
 @using System.IO
 @inject IJSRuntime JsInterop
 <div class="col-lg-12 control-section" id="gantt-control-section">
@@ -132,8 +160,8 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
             <SfButton CssClass="e-flat" IsPrimary="true" IconCss="e-icons e-refresh" IconPosition=@IconPosition.Right OnClick="Reload">Something went wrong.</SfButton>
         </div>
     }
-    <div style="position: relative">
-        <SfGantt @ref="Gantt" DataSource="@TaskCollection" Width="100%" TreeColumnIndex="1" WorkUnit="WorkUnit.Hour">
+    <div>
+        <SfGantt @ref="Gantt" DataSource="@TaskCollection" Width="900px" Height="550px" TreeColumnIndex="1" >
             <GanttTaskFields Dependency="Predecessor" Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
             ParentID="ParentId" Work="Work" TaskType="TaskType">
             </GanttTaskFields>
@@ -178,125 +206,140 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
         </SfGantt>
     </div>
 </div>
-@code {
-    public SfGantt<TaskInfoModel> Gantt = new();
-    public List<TaskInfoModel> TaskCollection { get; set; } = new();
-    private bool showMessage;
-    private Dictionary<string, string> riskAnalyzeContent = new();
-    private Dictionary<string, string> riskAnalyzePriority = new();
-    private Dictionary<string, DateTime> milestoneDates = new();
-    protected override void OnInitialized()
-    {
-        TaskCollection = GanttDataModel.GetTaskCollection();
-    }
-    private string GeneratePrompt()
-    {
-        return @"You analyze the multiple year HistoricalTaskDataCollections and current TaskDataCollection to predict project completion dates and milestones based on current progress and historical trends. Ignore the null or empty values, and collection values based parent child mapping. Avoid json tags with your response. No other explanation or content to be returned."
-        + @" HistoricalTaskDataCollections :" + GetHistoricalCollection() + @" TaskDataCollection: " + JsonSerializer.Serialize(TaskCollection) +
-                    @"Generate a JSON object named 'TaskDetails' containing below keys:
-- Key 'MilestoneTaskDate' with a list of milestone dates 'MilestoneDate' with 'TaskName' - task name. A milestone date is defined as the end date of tasks with a duration of 0 and only give current based milestone .
-- Key 'ProjectCompletionDate' indicating the latest end date among all tasks.
-- Key 'Summary' providing a summary of the project completion date and milestones.
-        Here is the output JSON schema:
+@code{
+        private SfGantt<TaskInfoModel> Gantt = new();
+        private List<TaskInfoModel> TaskCollection { get; set; } = new();
+        private bool showMessage;
+        private Dictionary<string, DateTime> milestoneDates = new();
+        protected override void OnInitialized()
         {
-      'TaskDetails': {
-        'MilestoneTaskDate': [],
-        'ProjectCompletionDate' : '',
-        'Summary' : ''
+            TaskCollection = GanttDataModel.GetTaskCollection();
         }
-    }
-Ensure milestones are defined correctly based on tasks with a duration of 0, and the project completion date reflects the latest end date of all tasks.
-.";
-    }
-    private async Task Reload()
-    {
-        await JsInterop.InvokeVoidAsync("window.location.reload");
-    }
-    private async Task OpenAIHandler()
-    {
-        await Gantt.ShowSpinnerAsync();
-        showMessage = false;
-        milestoneDates = new();
-        string AIPrompt = GeneratePrompt();
-        string result = await OpenAIService.GetCompletionAsync(AIPrompt);
-        try
+        private string GeneratePrompt()
         {
-            if (result.StartsWith("```json"))
+            return @"You analyze the multiple year HistoricalTaskDataCollections and current TaskDataCollection to predict project completion dates and milestones based on current progress and historical trends. Ignore the null or empty values, and collection values based parent child mapping. Avoid json tags with your response. No other explanation or content to be returned."
+            + @" HistoricalTaskDataCollections :" + GetHistoricalCollection() + @" TaskDataCollection: " + JsonSerializer.Serialize(TaskCollection) +
+                        @"Generate a JSON object named 'TaskDetails' containing below keys:
+            - Key 'MilestoneTaskDate' with a list of milestone dates 'MilestoneDate' with 'TaskName' - task name. A milestone date is defined as the end date of tasks with a duration of 0 and only give current based milestone .
+            - Key 'ProjectCompletionDate' indicating the latest end date among all tasks.
+            - Key 'Summary' providing a summary of the project completion date and milestones.
+            Here is the output JSON schema:
             {
-                result = result.Replace("```json", "").Replace("```", "").Trim();
+                'TaskDetails': {
+                'MilestoneTaskDate': [],
+                'ProjectCompletionDate' : '',
+                'Summary' : ''
             }
-            else if (result.StartsWith("```"))
+        }
+            Ensure milestones are defined correctly based on tasks with a duration of 0, and the project completion date reflects the latest end date of all tasks.
+            .";
+        }
+
+        /// <summary>
+        /// Reloads the current page and restores the application to its initial state.
+        /// </summary>
+        /// <remarks>
+        private async Task Reload()
+        {
+            await JsInterop.InvokeVoidAsync("window.location.reload");
+        }
+
+        /// <summary>
+        /// Sends the current project data and historical project information to the
+        /// AI service and processes the predicted milestone and project completion dates.
+        /// </summary>
+        private async Task OpenAIHandler()
+        {
+            await Gantt.ShowSpinnerAsync();
+            showMessage = false;
+            milestoneDates = new();
+            string AIPrompt = GeneratePrompt();
+            string result = await OpenAIService.GetCompletionAsync(AIPrompt);
+            try
             {
-                result = result.Replace("```", "").Replace("```", "").Trim();
-            }
-            var content = JsonDocument.Parse(result).RootElement.GetProperty("TaskDetails").ToString();
-            using (JsonDocument document = JsonDocument.Parse(content))
-            {
-                if (document.RootElement.TryGetProperty("MilestoneTaskDate", out JsonElement milestoneElement))
+                if (result.StartsWith("```json"))
                 {
-                    foreach (var milestone in milestoneElement.EnumerateArray())
+                    result = result.Replace("```json", "").Replace("```", "").Trim();
+                }
+                else if (result.StartsWith("```"))
+                {
+                    result = result.Replace("```", "").Replace("```", "").Trim();
+                }
+                var content = JsonDocument.Parse(result).RootElement.GetProperty("TaskDetails").ToString();
+                using (JsonDocument document = JsonDocument.Parse(content))
+                {
+                    if (document.RootElement.TryGetProperty("MilestoneTaskDate", out JsonElement milestoneElement))
                     {
-                        var datas = JsonSerializer.Deserialize<Dictionary<string, string>>(milestone);
-                        if (datas != null)
+                        foreach (var milestone in milestoneElement.EnumerateArray())
                         {
-                            if (milestoneDates.Any() && milestoneDates.ContainsKey(datas["TaskName"]))
+                            var datas = JsonSerializer.Deserialize<Dictionary<string, string>>(milestone);
+                            if (datas != null)
                             {
-                                continue;
-                            }
-                            TaskInfoModel? record = GanttDataModel.GetTaskCollection().Where(s => s.Name == datas["TaskName"]).FirstOrDefault();
-                            if (record is not null)
-                            {
-                                var parentRecord = GanttDataModel.GetTaskCollection().Where(s => s.Id == record.ParentId).FirstOrDefault();
-                                if (parentRecord is not null)
+                                if (milestoneDates.Any() && milestoneDates.ContainsKey(datas["TaskName"]))
                                 {
-                                    milestoneDates.Add(parentRecord.Name!, Convert.ToDateTime(datas["MilestoneDate"]));
+                                    continue;
+                                }
+                                TaskInfoModel? record = GanttDataModel.GetTaskCollection().Where(s => s.Name == datas["TaskName"]).FirstOrDefault();
+                                if (record is not null)
+                                {
+                                    var parentRecord = GanttDataModel.GetTaskCollection().Where(s => s.Id == record.ParentId).FirstOrDefault();
+                                    if (parentRecord is not null)
+                                    {
+                                        milestoneDates.Add(parentRecord.Name!, Convert.ToDateTime(datas["MilestoneDate"]));
+                                    }
                                 }
                             }
                         }
                     }
                 }
+                var collection = JsonSerializer.Deserialize<Dictionary<string, object>>(content);
+                if (collection is null)
+                {
+                    await Gantt.HideSpinnerAsync();
+                    return;
+                }
+                await Task.Delay(100);
+                if (DateTime.TryParse(collection["ProjectCompletionDate"].ToString(), out DateTime projectDate))
+                {
+                    milestoneDates.Add("Project Completion date", projectDate);
+                }
+                StateHasChanged();
             }
-            var collection = JsonSerializer.Deserialize<Dictionary<string, object>>(content);
-            if (collection is null)
+            catch (Exception)
             {
+                showMessage = true;
                 await Gantt.HideSpinnerAsync();
                 return;
             }
-            await Task.Delay(100);
-            if (DateTime.TryParse(collection["ProjectCompletionDate"].ToString(), out DateTime projectDate))
-            {
-                milestoneDates.Add("Project Completion date", projectDate);
-            }
-            StateHasChanged();
-        }
-        catch (Exception)
-        {
-            showMessage = true;
             await Gantt.HideSpinnerAsync();
-            return;
+            await Task.CompletedTask;
         }
-        await Gantt.HideSpinnerAsync();
-        await Task.CompletedTask;
-    }
-    private string GetHistoricalCollection()
-    {
-        string historicalDataCollection = string.Empty;
-        for (int year = 2021; year < 2026; year++)
+
+
+        /// <summary>
+        /// Retrieves and aggregates historical project task data from the
+        /// <c>ProgressHistoricalData.json</c> file for multiple years.
+        /// </summary>
+        private string GetHistoricalCollection()
         {
-            string currentDir = Directory.GetCurrentDirectory();
-            // Combine the current directory with the relative path
-            string fullPath = Path.Combine(currentDir, "Model/ProgressHistoricalData.json");
-            if (!File.Exists(fullPath))
+            string historicalDataCollection = string.Empty;
+            for (int year = 2021; year < 2026; year++)
             {
-                throw new FileNotFoundException(
-                    $"Historical data file not found: {fullPath}");
+                string currentDir = Directory.GetCurrentDirectory();
+                // Combine the current directory with the relative path
+                string fullPath = Path.Combine(currentDir, "Model/ProgressHistoricalData.json");
+                if (!File.Exists(fullPath))
+                {
+                    throw new FileNotFoundException(
+                        $"Historical data file not found: {fullPath}");
+                }
+                using StreamReader streamReader = new StreamReader(fullPath);
+                historicalDataCollection += $"HistoricalTaskDataCollection{year}: " + JsonDocument.Parse(streamReader.ReadToEnd()).RootElement.GetProperty($"TaskDataCollection{year}").ToString() + ", ";
             }
-            using StreamReader streamReader = new StreamReader(fullPath);
-            historicalDataCollection += $"HistoricalTaskDataCollection{year}: " + JsonDocument.Parse(streamReader.ReadToEnd()).RootElement.GetProperty($"TaskDataCollection{year}").ToString() + ", ";
-        }
-        return historicalDataCollection;
+            return historicalDataCollection;
     }
 }
+
 <style>
     #Gantt_Toolbar {
         border: 1px solid lightgray !important;
@@ -345,6 +388,7 @@ namespace GanttChart.Components.Services
         /// <param name="appendPreviousResponse">Indicates whether to append previous responses to the conversation history. Defaults to <c>false</c></param>
         /// <param name="systemRole">Specifies the systemRole that is sent to AI Clients. Defaults to <c>null</c></param>
         /// <returns>The AI-generated completion as a string.</returns>
+        
         public async Task<string> GetCompletionAsync(string prompt, bool returnAsJson = true, bool appendPreviousResponse = false, string systemRole = null)
         {
             string systemMessage = returnAsJson ? "You are a helpful assistant that only returns and replies with valid, iterable RFC8259 compliant JSON in your responses unless I ask for any other format. Do not provide introductory words such as 'Here is your result' or '```json', etc. in the response" : !string.IsNullOrEmpty(systemRole) ? systemRole : "You are a helpful assistant";
@@ -383,7 +427,6 @@ namespace GanttChart.Components.Services
         }
     }
 }
-
 
 {% endhighlight %}
 {% highlight C# tabtitle="GanttModel.cs" %}
@@ -436,8 +479,8 @@ namespace GanttChart.Components.Model
             new ResourceInfoModel() { Id= 6, Name= "Van Jack", MaxUnit = 100 },
             new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan", MaxUnit = 100 },
             new ResourceInfoModel() { Id= 8, Name= "Jack Davolio", MaxUnit = 100 },
-            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet", MaxUnit = 100 },
-            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller",MaxUnit = 100 },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vine", MaxUnit = 100 },
+            new ResourceInfoModel() { Id= 10, Name= "Vine Fuller",MaxUnit = 100 },
             new ResourceInfoModel() { Id= 11, Name= "Bergs Anton",MaxUnit = 100 },
             new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor",MaxUnit = 100 }
         };
@@ -458,134 +501,111 @@ namespace GanttChart.Components.Model
                 new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="3", TaskType="FixedUnit", Work=24 },
             };
         }
-        public static List<TaskInfoModel> DataSourceCollection()
-        {
-            List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-                new TaskInfoModel() { Id = 1, Name = "Product concept", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 08), Duration = "5 days" },
-                new TaskInfoModel() { Id = 2, Name = "Defining the product usage", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 08), Duration = "3", Progress = 30, ParentId = 1 },
-                new TaskInfoModel() { Id = 3, Name = "Defining the target audience", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 04), Duration = "3", Progress = 40, ParentId = 1 },
-                new TaskInfoModel() { Id = 4, Name = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), EndDate = new DateTime(2021, 04, 08), Duration = "2", Progress = 30, ParentId = 1, Predecessor = "2" },
-                new TaskInfoModel() { Id = 5, Name = "Concept approval", StartDate = new DateTime(2021, 04, 08), EndDate = new DateTime(2021, 04, 08), Duration = "0", Predecessor = "3,4" },
-                new TaskInfoModel() { Id = 6, Name = "Market research", StartDate = new DateTime(2021, 04, 09), EndDate = new DateTime(2021, 04, 18), Predecessor = "2", Duration = "4", Progress = 30 },
-                new TaskInfoModel() { Id = 7, Name = "Demand analysis", StartDate = new DateTime(2021, 04, 09), EndDate = new DateTime(2021, 04, 12), Duration = "4", Progress = 40, ParentId = 6 },
-                new TaskInfoModel() { Id = 8, Name = "Customer strength", StartDate = new DateTime(2021, 04, 09), EndDate = new DateTime(2021, 04, 12), Duration = "4", Progress = 30, ParentId = 7, Predecessor = "5" },
-                new TaskInfoModel() { Id = 9, Name = "Market opportunity analysis", StartDate = new DateTime(2021, 04, 09), EndDate = new DateTime(2021, 04, 12), Duration = "4", ParentId = 7, Predecessor = "5" },
-                new TaskInfoModel() { Id = 10, Name = "Competitor analysis", StartDate = new DateTime(2021, 04, 15), EndDate = new DateTime(2021, 04, 18), Duration = "4", Progress = 30, ParentId = 6, Predecessor = "7,8" }
-            };
-            return Tasks;
-        }
-        public static List<TaskInfoModel> GetBaselineCollection()
-        {
-            List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-                new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 06) },
-                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 02), Duration = "1", BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 02), Progress = 30, ParentId = 1 },
-                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 04, 02), Duration = "5", Progress = 40, BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 10), ParentId = 1 },
-                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 04, 08), Duration = "2", EndDate = new DateTime(2021, 04, 09), BaselineStartDate = new DateTime(2021, 04, 08), BaselineEndDate = new DateTime(2021, 04, 12), Progress = 30, ParentId = 1 },
-                new TaskInfoModel() { Id = 5, Name = "Project initiation", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 08) },
-                new TaskInfoModel() { Id = 6, Name = "Identify site location", StartDate = new DateTime(2021, 04, 02), Duration = "6", Progress = 30, ParentId = 5, BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 09) },
-                new TaskInfoModel() { Id = 7, Name = "Perform soil test", StartDate = new DateTime(2021, 04, 02), Duration = "4", Progress = 40, ParentId = 5, BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 07) },
-                new TaskInfoModel() { Id = 8, Name = "Soil test approval", Status="Critical", StartDate = new DateTime(2021, 04, 02), Duration = "5", Progress = 30, ParentId = 5, BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 04) },
-                new TaskInfoModel() { Id = 9, Name = "Market opportunity analysis", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 06) },
-                new TaskInfoModel() { Id = 10, Name = "Competitor analysis", Status="Critical", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 02), Duration = "3", BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 05), Progress = 30, ParentId = 9 },
-                new TaskInfoModel() { Id = 11, Name = "Product strength analysis", Status="Critical", StartDate = new DateTime(2021, 04, 02), Duration = "5", Progress = 40, BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 06), ParentId = 9 },
-                new TaskInfoModel() { Id = 12, Name = "Research completed", StartDate = new DateTime(2021, 04, 08), Duration = "10", EndDate = new DateTime(2021, 04, 08), Progress = 30, ParentId = 9 },
-                new TaskInfoModel() { Id = 13, Name = "Product design and development", StartDate = new DateTime(2021, 04, 02), Duration = "5", Progress = 40, BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 08), ParentId = 9 }
-            };
-            return Tasks;
-        }
-
-        public static List<TaskInfoModel> HistoricalTaskData => new List<TaskInfoModel>
-        {
-            new TaskInfoModel { Id = 1, Name = "Requirement Analysis", StartDate = new DateTime(2026, 1, 10), EndDate = new DateTime(2026, 1, 15), Duration = "5", Progress = 100, ParentId = null },
-            new TaskInfoModel { Id = 2, Name = "UI/UX Design", StartDate = new DateTime(2026, 1, 15), EndDate = new DateTime(2026, 1, 17), Duration = "2", Progress = 0, ParentId = null },
-            new TaskInfoModel { Id = 3, Name = "Backend Development", StartDate = new DateTime(2026, 1, 20), EndDate = new DateTime(2026, 1, 23), Duration = "3", Progress = 50, ParentId = null },
-            new TaskInfoModel { Id = 4, Name = "Database Schema Design", StartDate = new DateTime(2026, 1, 18), EndDate = new DateTime(2026, 1, 24), Duration = "6", Progress = 0, ParentId = null },
-            new TaskInfoModel { Id = 5, Name = "Frontend Development", StartDate = new DateTime(2026, 1, 22), EndDate = new DateTime(2026, 1, 27), Duration = "5", Progress = 80, ParentId = null },
-            new TaskInfoModel { Id = 6, Name = "Testing Phase", StartDate = new DateTime(2026, 1, 25), EndDate = new DateTime(2026, 1, 30), Duration = "6", Progress = 20, ParentId = null },
-            new TaskInfoModel { Id = 7, Name = "Deployment Preparation", StartDate = new DateTime(2026, 1, 28), EndDate = new DateTime(2026, 2, 5), Duration = "9", Progress = 10, ParentId = null },
-            new TaskInfoModel { Id = 8, Name = "User Documentation", StartDate = new DateTime(2026, 2, 1), EndDate = new DateTime(2026, 2, 10), Duration = "10", Progress = 30, ParentId = null },
-            new TaskInfoModel { Id = 9, Name = "Security Audit", StartDate = new DateTime(2026, 2, 5), EndDate = new DateTime(2026, 2, 15), Duration = "11", Progress = 40, ParentId = null },
-            new TaskInfoModel { Id = 10, Name = "Performance Optimization", StartDate = new DateTime(2026, 2, 10), EndDate = new DateTime(2026, 2, 20), Duration = "11", Progress = 60, ParentId = null },
-            new TaskInfoModel { Id = 11, Name = "Beta Testing", StartDate = new DateTime(2026, 2, 15), EndDate = new DateTime(2026, 2, 25), Duration = "11", Progress = 70, ParentId = null },
-            new TaskInfoModel { Id = 12, Name = "Bug Fixing", StartDate = new DateTime(2026, 2, 20), EndDate = new DateTime(2026, 3, 5), Duration = "14", Progress = 80, ParentId = null }
-        };
-
-        public static List<AssignmentModel> GetAssignmentCollection()
-        {
-            List<AssignmentModel> assignments = new List<AssignmentModel>()
-            {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2, ResourceId=1, Unit=100},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 3, ResourceId=1, Unit=50},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 4, ResourceId=3, Unit=40},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 6, ResourceId=3, Unit = 100},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 7, ResourceId=8, Unit = 100},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 8, ResourceId=5, Unit = 70},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 9, ResourceId=5, Unit = 60}
-            };
-            return assignments;
-        }
-
-        public static List<AssignmentModel> ResourceAssignmentCollection()
-        {
-            List<AssignmentModel> assignments = new List<AssignmentModel>()
-            {
-                new AssignmentModel(){ PrimaryId=1, TaskId = 2, ResourceId=1},
-                new AssignmentModel(){ PrimaryId=2, TaskId = 3, ResourceId=1},
-                new AssignmentModel(){ PrimaryId=3, TaskId = 4, ResourceId=3},
-                new AssignmentModel(){ PrimaryId=4, TaskId = 6, ResourceId=3},
-                new AssignmentModel(){ PrimaryId=5, TaskId = 7, ResourceId=8},
-                new AssignmentModel(){ PrimaryId=6, TaskId = 8, ResourceId=5},
-                new AssignmentModel(){ PrimaryId=7, TaskId = 10, ResourceId=2},
-                new AssignmentModel(){ PrimaryId=8, TaskId = 11, ResourceId=2},
-            };
-            return assignments;
-        }
-
-        public static List<TaskInfoModel> TaskDataCollection => new List<TaskInfoModel>
-        {
-            new TaskInfoModel() { Id = 1, Name = "Product concept", StartDate = new DateTime(2026, 04, 02), EndDate = new DateTime(2026, 04, 08), Duration = "5 days" },
-            new TaskInfoModel() { Id = 2, Name = "Defining the product usage", StartDate = new DateTime(2026, 04, 02), EndDate = new DateTime(2026, 04, 08), Duration = "3", Progress = 30, ParentId = 1 },
-            new TaskInfoModel() { Id = 3, Name = "Defining the target audience", StartDate = new DateTime(2026, 04, 02), EndDate = new DateTime(2026, 04, 04), Duration = "3", Progress = 40, ParentId = 1 },
-            new TaskInfoModel() { Id = 4, Name = "Prepare product sketch and notes", StartDate = new DateTime(2026, 04, 05), EndDate = new DateTime(2026, 04, 08), Duration = "2", Progress = 30, ParentId = 1, Predecessor = "2" },
-            new TaskInfoModel() { Id = 5, Name = "Concept approval", StartDate = new DateTime(2026, 04, 08), EndDate = new DateTime(2026, 04, 08), Duration = "0", Predecessor = "3,4", ParentId=1 },
-            new TaskInfoModel() { Id = 6, Name = "Market research", StartDate = new DateTime(2026, 04, 09), EndDate = new DateTime(2026, 04, 18), Predecessor = "2", Duration = "4", Progress = 30 },
-            new TaskInfoModel() { Id = 7, Name = "Demand analysis", StartDate = new DateTime(2026, 04, 09), EndDate = new DateTime(2026, 04, 12), Duration = "4", Progress = 40, ParentId = 6 },
-            new TaskInfoModel() { Id = 8, Name = "Customer strength", StartDate = new DateTime(2026, 04, 09), EndDate = new DateTime(2026, 04, 12), Duration = "4", Progress = 30, ParentId = 7, Predecessor = "5" },
-            new TaskInfoModel() { Id = 9, Name = "Market opportunity analysis", StartDate = new DateTime(2026, 04, 09), EndDate = new DateTime(2026, 04, 12), Duration = "4", ParentId = 7, Predecessor = "5" },
-            new TaskInfoModel() { Id = 10, Name = "Competitor analysis", StartDate = new DateTime(2026, 04, 15), EndDate = new DateTime(2026, 04, 18), Duration = "4", Progress = 30, ParentId = 6, Predecessor = "7,8" }
-        };
+        
     }
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="Program.cs" %}
+{% highlight C# tabtitle="ProgressHistoricalData.json" %}
 
-using BlazorApp1.Components;
-using GanttChart.Components.Service;
-using Syncfusion.Blazor.AI;
-using Azure.AI.OpenAI;
-using Microsoft.Extensions.AI;
-using System.ClientModel;
-
-var builder = WebApplication.CreateBuilder(args);
-
-string azureOpenAIKey = "AZUREOPENAI-API-KEY";
-string azureOpenAIEndpoint = "AZUREOPENAI-API-ENDPOINT";
-string azureOpenAIModel = "AZUREOPENAI-API-MODEL";
-AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-    new Uri(azureOpenAIEndpoint),
-    new ApiKeyCredential(azureOpenAIKey)
-);
-IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
-builder.Services.AddChatClient(azureOpenAIChatClient);
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-builder.Services.AddSingleton<AzureAIService>();
-builder.Services.AddSingleton<SyncfusionAIService>();
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-var app = builder.Build();
+{
+  "TaskDataCollection2021": [
+    {
+      "Id": 1,
+      "Name": "Product concept",
+      "StartDate": "2021-04-02",
+      "EndDate": "2021-04-08",
+      "Duration": "5 days",
+      "Progress": 100
+    },
+    {
+      "Id": 2,
+      "Name": "Defining the product usage",
+      "StartDate": "2021-04-02",
+      "EndDate": "2021-04-08",
+      "Duration": "3 days",
+      "Progress": 100,
+      "ParentId": 1
+    },
+    {
+      "Id": 3,
+      "Name": "Defining the target audience",
+      "StartDate": "2021-04-02",
+      "EndDate": "2021-04-04",
+      "Duration": "3 days",
+      "Progress": 100,
+      "ParentId": 1
+    },
+    {
+      "Id": 4,
+      "Name": "Prepare product sketch and notes",
+      "StartDate": "2021-04-05",
+      "EndDate": "2021-04-08",
+      "Duration": "2 days",
+      "Progress": 100,
+      "ParentId": 1,
+      "Predecessor": "2"
+    },
+    {
+      "Id": 5,
+      "Name": "Concept approval",
+      "StartDate": "2021-04-08",
+      "EndDate": "2021-04-08",
+      "Duration": "0 days",
+      "Predecessor": "3,4",
+      "ParentId": 1,
+      "Progress": 100
+    },
+    {
+      "Id": 6,
+      "Name": "Market research",
+      "StartDate": "2021-04-09",
+      "EndDate": "2021-04-18",
+      "Duration": "4 days",
+      "Progress": 100,
+      "Predecessor": "2"
+    },
+    {
+      "Id": 7,
+      "Name": "Demand analysis",
+      "StartDate": "2021-04-09",
+      "EndDate": "2021-04-12",
+      "Duration": "4 days",
+      "Progress": 100,
+      "ParentId": 6
+    },
+    {
+      "Id": 8,
+      "Name": "Customer strength",
+      "StartDate": "2021-04-09",
+      "EndDate": "2021-04-12",
+      "Duration": "4 days",
+      "Progress": 100,
+      "ParentId": 7,
+      "Predecessor": "5"
+    },
+    {
+      "Id": 9,
+      "Name": "Market opportunity analysis",
+      "StartDate": "2021-04-09",
+      "EndDate": "2021-04-12",
+      "Duration": "4 days",
+      "ParentId": 7,
+      "Progress": 100,
+      "Predecessor": "5"
+    },
+    {
+      "Id": 10,
+      "Name": "Competitor analysis",
+      "StartDate": "2021-04-15",
+      "EndDate": "2021-04-18",
+      "Duration": "4 days",
+      "Progress": 100,
+      "ParentId": 6,
+      "Predecessor": "7,8"
+    }
+  ]
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -601,8 +621,6 @@ If the AI service fails to return a valid response, the Gantt Chart displays an 
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
 
-## Performance considerations
+![Progress Predictor](../images/progress-predictor.gif)
 
-When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
-
-![Progress Predictor](ai\images\progress-predictor.gif)
+N> [View sample in GitHub](https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/GanttChart/ProgressPrediction.razor)
