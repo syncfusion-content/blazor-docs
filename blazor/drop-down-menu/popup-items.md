@@ -111,6 +111,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 Popup items can be customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. The following example demonstrates customizing items with CSS:
 
 ```cshtml
+@using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Edit" CssClass="custom">
     <DropDownMenuItems>
@@ -155,22 +156,22 @@ Populate multilevel submenu items in the Dropdown Menu by hosting a Context Menu
 </SfDropDownButton>
 
 @code {
-    SfDropDownButton FileButton;
-    SfContextMenu<ContextMenuItemModel> ContextMenu;
+    SfDropDownButton? FileButton;
+    SfContextMenu<ContextMenuItemModel>? ContextMenu;
 
-    private void BeforeClose(BeforeOpenCloseMenuEventArgs<ContextMenuItemModel> args)
+    private void BeforeClose ( BeforeOpenCloseMenuEventArgs<ContextMenuItemModel> args )
     {
         if (args.ParentItem == null)
         {
-            FileButton.Toggle();
+            FileButton!.Toggle();
         }
     }
     public class ContextMenuItemModel
     {
-        public List<ContextMenuItemModel> Items { get; set; }
-        public string Content { get; set; }
-        public string Id { get; set; }
-        public string IconCss { get; set; }
+        public List<ContextMenuItemModel>? Items { get; set; }
+        public string? Content { get; set; }
+        public string? Id { get; set; }
+        public string? IconCss { get; set; }
         public Boolean Separator { get; set; }
     }
     private List<ContextMenuItemModel> FileMenuItems = new List<ContextMenuItemModel>{
@@ -202,17 +203,17 @@ Populate multilevel submenu items in the Dropdown Menu by hosting a Context Menu
         new ContextMenuItemModel { Id ="FileMenuItemsPrint",Content = "Print" }
     };
 
-    public async Task OnMenuCreated()
+    public async Task OnMenuCreated ()
     {
-        await ContextMenu.OpenAsync();
+        await ContextMenu!.OpenAsync();
     }
 
-    private void Opened()
+    private void Opened ()
     {
-        
+
     }
 
-    private void Closed()
+    private void Closed ()
     {
 
     }
