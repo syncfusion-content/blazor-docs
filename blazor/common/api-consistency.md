@@ -50,7 +50,6 @@ The guide is organized into the following sections:
 | `AllowSelection` | Enables row/cell or item selection, depending on the component. | Gantt, Grid, TreeGrid |
 | `AllowFiltering` | Enables built-in filtering or search UI. | DropDownList, DropDownTree, Gantt, Grid, ListBox, MultiColumnComboBox, MultiSelect, Spreadsheet, TreeGrid |
 | `ShowCheckBox` | Displays checkboxes in items or nodes for multi-selection. | DropDownTree, ListView, TreeView |
-| `Enabled` | Enables or disables the component or item. The exact target differs by component. | Calendar, Chip, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, DropDownList, DropDownTree, FileManager, Grid, ListBox, ListView, MaskedTextBox, MultiColumnComboBox, MultiSelect, ProgressButton, RadioButton, RichTextEditor, Slider, Splitter, TextBox, TimePicker, Uploader |
 | `AllowResizing` | Enables resizing of component surface areas or rows/columns where supported. | DashboardLayout, Gantt, Grid, Schedule, Spreadsheet, TreeGrid |
 | `AllowDragAndDrop` | Enables drag-and-drop interactions. | FileManager, Kanban, ListBox, QueryBuilder, Schedule, Tab, TreeView |
 
@@ -85,7 +84,6 @@ The guide is organized into the following sections:
 
 | API name | Purpose | Supported components |
 | --- | --- | --- |
-| `Readonly` / `ReadOnly` | Makes the component read-only. The casing differs by component. | BlockEditor, DatePicker, DateRangePicker, DateTimePicker, DropDownList, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, QueryBuilder, Rating, RichTextEditor, Slider, Stepper, TextArea, TextBox, TimePicker |
 | `AllowEdit` | Allows the user to type a value directly instead of using only the popup or picker surface. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
 | `FullScreen` | Enables full-screen popup rendering on mobile or tablet devices. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
 | `OpenOnFocus` | Opens the popup automatically when the input receives focus. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
@@ -101,7 +99,6 @@ The guide is organized into the following sections:
 | `ZIndex` | Controls popup stacking order. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
 | `IconCss` | Supplies an icon CSS class for buttons, menu items, or items that render icons. | Breadcrumb, Button, DropDownButton, ProgressButton, SpeedDialItem, SplitButton |
 | `IconPosition` | Controls where the icon appears relative to text. | Button, DropDownButton, ProgressButton, SpeedDial, SplitButton |
-| `Disabled` | Disables the component or item. | Breadcrumb, Button, CheckBox, ColorPicker, DropDownTree, InPlaceEditor, MultiColumnComboBox, OtpInput, RadioButton, Rating, Signature, SpeechToText, SpeedDial, SpeedDialItem, Switch, Timeline, TreeView |
 | `ShowClearButton` | Displays a clear button. | AutoComplete, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, DropDownTree, MaskedTextBox, MultiColumnComboBox, MultiSelect, TextArea, TextBox, TimePicker |
 | `LoadOnDemand` | Delays loading or rendering content until it is expanded or requested. | Accordion, DropDownTree, TreeView |
 | `StrictMode` | Restricts user input to valid values within the configured range. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
