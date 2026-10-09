@@ -168,7 +168,7 @@ The following code example shows how to integrate the Gantt Chart with AI for au
             <SfButton CssClass="e-flat" IsPrimary="true" IconCss="e-icons e-refresh" IconPosition=@IconPosition.Right OnClick="Reload">Something went wrong.</SfButton>
         </div>
     }
-    <div style="position: relative">
+    <div>
         <SfGantt @ref="Gantt" ViewType="ViewType.ResourceView" ShowOverallocation="true" DataSource="@TaskCollection" Width="900px"  Height="550px" TreeColumnIndex="1"  AllowUnscheduledTasks="true">
             <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
             ParentID="ParentId" Work="Work" TaskType="TaskType">
@@ -278,11 +278,20 @@ namespace BlazorApp1.Components.Pages
                 Note: Ensure the response is a JSON string and does not include any extra information.";
         }
 
+        /// <summary>
+        /// Reloads the current page and restores the application to its initial state.
+        /// </summary>
+        /// <remarks>
         private async Task Reload()
         {
             await JsInterop.InvokeVoidAsync("window.location.reload");
         }
 
+        /// <summary>
+        /// Sends the current task, resource, and assignment data to the AI service
+        /// and automatically optimizes resource allocation by resolving
+        /// resource overallocation conflicts.
+        /// </summary>
         private async Task OpenAIHandler()
         {
             await Gantt.ShowSpinnerAsync();
@@ -411,18 +420,18 @@ namespace GanttChart.Components.Models
         public class ResourceInfoModel
         {
             public int Id { get; set; }
-            public string Name { get; set; }
+            public string? Name { get; set; }
             public double MaxUnit { get; set; }
         }
 
         public class TaskInfoModel
         {
             public int Id { get; set; }
-            public string Name { get; set; }
-            public string TaskType { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
             public DateTime StartDate { get; set; }
             public DateTime? EndDate { get; set; }
-            public string Duration { get; set; }
+            public string? Duration { get; set; }
             public int Progress { get; set; }
             public int? ParentId { get; set; }
             public double? Work { get; set; }

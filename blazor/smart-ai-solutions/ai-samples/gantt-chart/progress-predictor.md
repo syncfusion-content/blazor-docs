@@ -74,16 +74,14 @@ Add the stylesheet and script references to **~/Components/App.razor** for Blazo
 
 > Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for methods to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different approaches to adding script references in your Blazor application.
 
-
 ## Configure Azure OpenAI
 
 Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
 
-
 - Add the following configuration in **~/Program.cs** file in the Blazor Web App: 
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Program.cs" %}
 
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
@@ -118,13 +116,11 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Register Syncfusion Blazor Service
 
 Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuration depends on the app’s **Interactive Render Mode**:
 
 - **Server mode**: Register the service in the single **~/Program.cs** file.
-
 
 {% tabs %}
 {% highlight C# tabtitle="" %}
@@ -139,7 +135,6 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -167,8 +162,8 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
             <SfButton CssClass="e-flat" IsPrimary="true" IconCss="e-icons e-refresh" IconPosition=@IconPosition.Right OnClick="Reload">Something went wrong.</SfButton>
         </div>
     }
-    <div style="position: relative">
-        <SfGantt @ref="Gantt" DataSource="@TaskCollection" Width="100%" TreeColumnIndex="1" WorkUnit="WorkUnit.Hour">
+    <div>
+        <SfGantt @ref="Gantt" DataSource="@TaskCollection" Width="900px" Height="550px" TreeColumnIndex="1" >
             <GanttTaskFields Dependency="Predecessor" Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
             ParentID="ParentId" Work="Work" TaskType="TaskType">
             </GanttTaskFields>
@@ -214,8 +209,8 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
     </div>
 </div>
 @code{
-        public SfGantt<TaskInfoModel> Gantt = new();
-        public List<TaskInfoModel> TaskCollection { get; set; } = new();
+        private SfGantt<TaskInfoModel> Gantt = new();
+        private List<TaskInfoModel> TaskCollection { get; set; } = new();
         private bool showMessage;
         private Dictionary<string, string> riskAnalyzeContent = new();
         private Dictionary<string, string> riskAnalyzePriority = new();
@@ -243,10 +238,20 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
             Ensure milestones are defined correctly based on tasks with a duration of 0, and the project completion date reflects the latest end date of all tasks.
             .";
         }
+
+        /// <summary>
+        /// Reloads the current page and restores the application to its initial state.
+        /// </summary>
+        /// <remarks>
         private async Task Reload()
         {
             await JsInterop.InvokeVoidAsync("window.location.reload");
         }
+
+        /// <summary>
+        /// Sends the current project data and historical project information to the
+        /// AI service and processes the predicted milestone and project completion dates.
+        /// </summary>
         private async Task OpenAIHandler()
         {
             await Gantt.ShowSpinnerAsync();
@@ -313,6 +318,12 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
             await Gantt.HideSpinnerAsync();
             await Task.CompletedTask;
         }
+
+
+        /// <summary>
+        /// Retrieves and aggregates historical project task data from the
+        /// <c>ProgressHistoricalData.json</c> file for multiple years.
+        /// </summary>
         private string GetHistoricalCollection()
         {
             string historicalDataCollection = string.Empty;
@@ -330,9 +341,9 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
                 historicalDataCollection += $"HistoricalTaskDataCollection{year}: " + JsonDocument.Parse(streamReader.ReadToEnd()).RootElement.GetProperty($"TaskDataCollection{year}").ToString() + ", ";
             }
             return historicalDataCollection;
-        }
     }
 }
+
 <style>
     #Gantt_Toolbar {
         border: 1px solid lightgray !important;
