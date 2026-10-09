@@ -162,6 +162,8 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component inside the razor file.
 
+In this sample, the [TargetComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_TargetComponent) template renders the element (here, a `<div>`) to which the mention popup is attached. The `ChildContent` block is used to declare the child settings, including [MentionFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MentionFieldSettings.html), which map the `Name` property of each item to the visible text in the suggestion list.
+
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
 
@@ -169,7 +171,7 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
 
 <SfMention TItem="PersonData" DataSource="@EmailData">
     <TargetComponent>
-        <div id="commentsMention" placeHolder="Type @@ and tag user" ></div>
+        <div id="commentsMention" placeholder="Type @@ and tag user" ></div>
     </TargetComponent>
     <ChildContent>
         <MentionFieldSettings Text="Name"></MentionFieldSettings>
@@ -196,13 +198,12 @@ Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor*
     {
         public string Name { get; set; }
         public string EmailId { get; set; }
-        public string EmployeeImage { get; set; }
     }
-    List<PersonData> EmailData = new List<PersonData> {
-    new PersonData() { Name="Selma Rose", EmployeeImage="7", EmailId="selma@gmail.com" },
-    new PersonData() { Name="Russo Kay", EmployeeImage="8", EmailId="russo@gmail.com" },
-    new PersonData() { Name="Camden Kate", EmployeeImage="9", EmailId="camden@gmail.com" }
-  };
+    private List<PersonData> EmailData = new() {
+        new PersonData() { Name = "Selma Rose", EmailId = "selma@gmail.com" },
+        new PersonData() { Name = "Russo Kay", EmailId = "russo@gmail.com" },
+        new PersonData() { Name = "Camden Kate", EmailId = "camden@gmail.com" }
+    };
 }
 
 {% endhighlight %}
@@ -250,9 +251,16 @@ dotnet run
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVHtngtBXKIWQSM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Mention Component](images/blazor-mention.webp)" %}
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Mention).
+
 ## Mention target
 
-The `Target` property of the Blazor Mention component allows you to specify an element on the page to which the mention element should be attached. This can be useful when you want to display the mention element in a specific location on the page. For example, you might use the `Target` property to attach the mention element to a specific div element or to a specific input field or to a specific textarea field. To specify the target element, you can pass a CSS selector, a DOM element.
+The Blazor Mention exposes two related APIs for attaching the suggestion popup to a target element — the inline [TargetComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_TargetComponent) template and the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_Target) property. The table below summarizes how each API attaches the popup to the page.
+
+| API | Description |
+| --- | --- |
+| [TargetComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_TargetComponent) | Inline template that defines which element `SfMention` listens to; the suggestion popup attaches to the first element of the template. |
+| [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_Target) | Selector string that identifies an existing element on the page; `SfMention` listens to user input on that element and opens the suggestion list at its cursor position when the mention character is typed. |
 
 In the below example, the `Target` property of the Blazor Mention component is set to the CSS selector `#mentionTarget`, which matches the textarea element with an id of `mentionTarget`. The mention element will be appended to the textarea element as a child element, allowing the user to select or mention a specific entity within the textarea.
 
@@ -261,7 +269,7 @@ In the below example, the `Target` property of the Blazor Mention component is s
 
 @using Syncfusion.Blazor.DropDowns
 
-<textarea id="mentionTarget" placeHolder="Type @@ and tag user"></textarea>
+<textarea id="mentionTarget" placeholder="Type @@ and tag user"></textarea>
 
 <SfMention TItem="PersonData" Target="#mentionTarget" DataSource="@EmailData">
     <ChildContent>
@@ -289,13 +297,12 @@ In the below example, the `Target` property of the Blazor Mention component is s
     {
         public string Name { get; set; }
         public string EmailId { get; set; }
-        public string EmployeeImage { get; set; }
     }
-    List<PersonData> EmailData = new List<PersonData> {
-    new PersonData() { Name="Selma Rose", EmployeeImage="7", EmailId="selma@gmail.com" },
-    new PersonData() { Name="Russo Kay", EmployeeImage="8", EmailId="russo@gmail.com" },
-    new PersonData() { Name="Camden Kate", EmployeeImage="9", EmailId="camden@gmail.com" }
-  };
+    private List<PersonData> EmailData = new() {
+        new PersonData() { Name = "Selma Rose", EmailId = "selma@gmail.com" },
+        new PersonData() { Name = "Russo Kay", EmailId = "russo@gmail.com" },
+        new PersonData() { Name = "Camden Kate", EmailId = "camden@gmail.com" }
+    };
 }
 
 {% endhighlight %}
