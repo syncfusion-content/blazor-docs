@@ -150,9 +150,7 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
-@using GanttChart.Components.Model
 @using System.Text.Json
-@using GanttChart.Components.Service
 @using System.IO
 @inject IJSRuntime JsInterop
 <div class="col-lg-12 control-section" id="gantt-control-section">
@@ -212,8 +210,6 @@ The following code example shows how to integrate the Gantt Chart with AI to pre
         private SfGantt<TaskInfoModel> Gantt = new();
         private List<TaskInfoModel> TaskCollection { get; set; } = new();
         private bool showMessage;
-        private Dictionary<string, string> riskAnalyzeContent = new();
-        private Dictionary<string, string> riskAnalyzePriority = new();
         private Dictionary<string, DateTime> milestoneDates = new();
         protected override void OnInitialized()
         {
@@ -608,7 +604,7 @@ namespace GanttChart.Components.Model
       "ParentId": 6,
       "Predecessor": "7,8"
     }
-  ],
+  ]
 }
 
 {% endhighlight %}
@@ -624,10 +620,6 @@ If the AI service fails to return a valid response, the Gantt Chart displays an 
 - **Network issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
-
-## Performance considerations
-
-When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
 
 ![Progress Predictor](../ai/images/progress-predictor.gif)
 

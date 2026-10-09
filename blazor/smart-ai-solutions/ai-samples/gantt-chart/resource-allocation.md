@@ -115,8 +115,8 @@ builder.Services.AddSingleton<AzureAIService>();
 
 var app = builder.Build();
 
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ## Register Syncfusion Blazor Service
@@ -496,10 +496,6 @@ If the AI service fails to return a valid response, the Gantt Chart displays an 
 - **Network issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
-
-## Performance considerations
-
-When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
 
 ![Resource Allocation](../images/resource_allocation.gif)
 
