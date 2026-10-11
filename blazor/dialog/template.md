@@ -141,8 +141,8 @@ The Dialog content area supports extensive customization through the `Content` p
 
     public class LogInDetails
     {
-        public string Password { get; set; }
-        public string Email { get; set; }
+        public string? Password { get; set; }
+        public string? Email { get; set; }
     }
 
     private LogInDetails LogInModel = new LogInDetails();
