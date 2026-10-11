@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor ProgressBar Range
 
-The range represents the entire span of the Progress Bar and it can be defined using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Minimum) and the [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) properties.
+The range represents the entire span of the ProgressBar and is defined using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Minimum) and [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) properties. The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Value) property should be a number between `Minimum` and `Maximum`.
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
@@ -18,4 +18,4 @@ The range represents the entire span of the Progress Bar and it can be defined u
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Range](images/blazor-determinate-progressbar.webp)
+![Blazor ProgressBar with a custom range](images/blazor-determinate-progressbar.webp)

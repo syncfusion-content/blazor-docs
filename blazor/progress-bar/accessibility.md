@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor ProgressBar Accessibility Examples | Syncfusion®
-description: Learn about accessibility in Syncfusion Blazor ProgressBar with keyboard navigation, screen reader support, and WCAG 2.2 compliance.
+title: Blazor ProgressBar Accessibility | Syncfusion®
+description: Learn about accessibility in Syncfusion Blazor ProgressBar, including ARIA attributes, keyboard interaction, and WCAG 2.2 compliance.
 platform: Blazor
 control: ProgressBar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor ProgressBar Accessibility
 
-The Blazor ProgressBar Component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor ProgressBar component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor ProgressBar component is outlined below.
 
@@ -39,19 +39,37 @@ The accessibility compliance for the Blazor ProgressBar component is outlined be
 
 ## Keyboard interaction
 
-The Blazor ProgressBar component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ProgressBar component.
+The Blazor ProgressBar component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/meter/) guideline for the `progressbar` role, making it easier for people who use assistive technologies (AT) and those who completely rely on keyboard navigation.
+
+### Accessibility attributes
+
+The ProgressBar component exposes the following ARIA attributes so assistive technologies can announce its state:
+
+| Attribute | Description |
+| --- | --- |
+| `role="progressbar"` | Identifies the element as a progress bar to assistive technologies. |
+| `aria-valuenow` | Indicates the current progress value. |
+| `aria-valuemin` | Indicates the minimum progress value. |
+| `aria-valuemax` | Indicates the maximum progress value. |
+| `aria-label` | Provides an accessible name when no visible label is present (recommended for indeterminate or decorative progress). |
+
+### Keyboard interaction
+
+The ProgressBar element is included in the page tab sequence so it can receive keyboard focus. The following keyboard shortcuts apply when the ProgressBar has focus:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the ProgressBar element. |
-| <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the ProgressBar. |
+| <kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Opens the browser print dialog when the ProgressBar is focused. |
 
 ## Ensuring accessibility
 
-The Blazor ProgressBar component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor ProgressBar component's accessibility levels are validated through automated [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) checks performed with Playwright as part of the Syncfusion accessibility test pipeline.
 
-The accessibility compliance of the Blazor ProgressBar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/progress-bar) in a new window to evaluate the accessibility of the Blazor ProgressBar component with accessibility tools.
+The accessibility compliance of the Blazor ProgressBar component is demonstrated in the following sample. Open the [ProgressBar accessibility sample](https://blazor.syncfusion.com/accessibility/progress-bar) in a new window to evaluate the component with accessibility tools.
 
 ## See also
 
 * [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Blazor ProgressBar Getting Started](getting-started)
+* [ARIA `progressbar` pattern (W3C)](https://www.w3.org/WAI/ARIA/apg/patterns/meter/)
