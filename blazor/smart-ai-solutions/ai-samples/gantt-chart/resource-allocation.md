@@ -492,9 +492,9 @@ namespace GanttChart.Components.Models
 
 If the AI service fails to return a valid response, the Gantt Chart displays an error message ("Something went wrong."). Common issues include:
 
-- **Invalid API key or endpoint**: Verify that `openAIApiKey`, `azureOpenAIKey`, or the Ollama `Endpoint` is correct and the service is accessible.
-- **Model unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
-- **Network issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
+- **Invalid API key or endpoint**: Verify that `azureOpenAIKey` is correct and the service is accessible.
+- **Model unavailable**: Ensure the specified `azureOpenAIModel` is deployed and supported.
+- **Network issues**: Check connectivity to the Azure OpenAI endpoint.
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
 
