@@ -7,14 +7,14 @@ control: Message
 documentation: ug
 ---
 
-# Variants in Blazor Message
+# Variants in the Blazor Message Component
 
-The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the [Variant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Variant) property.
+The Message component provides predefined appearance [`variants`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html) for different use cases. The variants of the message can be changed based on the [Variant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Variant) property.
 
-The available variants are **Text**, **Outlined** and **Filled**. The default variant type for messages is **Text**.
-* **Text** - The severity is differentiated using a text color and a light background color.
-* **Outlined** - The severity is differentiated using a text color and a border without a background.
-* **Filled** - The severity is differentiated using a text color and a dark background color.
+The available [`variants`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html) are [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html#fields), [`Outlined`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html#fields) and [`Filled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html#fields). The default variant type for messages is [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html#fields).
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html#fields) - The [severity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageSeverity.html) is differentiated using a text color and a light background color.
+* [`Outlined`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html#fields) - The [severity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageSeverity.html) is differentiated using a text color and a border without a background.
+* [`Filled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageVariant.html#fields) - The [severity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.MessageSeverity.html) is differentiated using a text color and a dark background color.
 
 The following example demonstrates the default message with different variant types.
 
@@ -61,9 +61,6 @@ The following example demonstrates the default message with different variant ty
   margin: 10px;
 }
 
-.msg-variant-section {
-  display: flex;
-}
 </style>
     
 {% endhighlight %}
@@ -74,3 +71,42 @@ The following example demonstrates the default message with different variant ty
 ![Message Outlined Variant](./images/variants-outlined.webp)
 
 ![Message Text Variant](./images/variants-text.webp)
+
+N> Message variant styles such as colors and borders are determined by the active Syncfusion theme. When you switch to a different theme, the appearance of all variants is updated automatically.
+
+## Change Variant Dynamically
+
+The Message variant can also be changed dynamically at runtime using C# code. Bind the [Variant](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Variant) property to a field and update its  on user interactions.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Notifications
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="MessageVariant"
+                TItem="MessageVariant"
+                DataSource="@Variants"
+                @bind-Value="CurrentVariant">
+</SfDropDownList>
+
+<SfMessage Severity="MessageSeverity.Info"
+           Variant="@CurrentVariant">
+    Please read the comments carefully.
+</SfMessage>
+
+@code {
+    private MessageVariant CurrentVariant = MessageVariant.Filled;
+
+    private List<MessageVariant> Variants = new()
+    {
+        MessageVariant.Filled,
+        MessageVariant.Outlined,
+        MessageVariant.Text
+    };
+}
+    
+{% endhighlight %}
+{% endtabs %}
+
+![Message Text Variant](./images/message-dynamic-variant.webp)
