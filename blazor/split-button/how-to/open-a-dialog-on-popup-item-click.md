@@ -29,12 +29,8 @@ In the following example, the dialog opens when selecting the Update item.
 <SfDialog Content="@Content" Header="@Header" Width="250px" Height="150px" Visible="false" @ref="DialogObj">
     <DialogPositionData X="300" Y="200"></DialogPositionData>
     <DialogButtons>
-        <DialogButton OnClick="@click">
-            <DialogButton Content="OK" IsPrimary="true"></DialogButton>
-        </DialogButton>
-        <DialogButton OnClick="@click">
-            <DialogButton Content="Cancel"></DialogButton>
-        </DialogButton>
+           <DialogButton Content="OK" IsPrimary="true" OnClick="@click"></DialogButton>
+           <DialogButton Content="Cancel" OnClick="@click"></DialogButton>
     </DialogButtons>
 </SfDialog>
 
@@ -45,14 +41,14 @@ In the following example, the dialog opens when selecting the Update item.
 
     private void click(object args)
     {
-        DialogObj.Hide();
+        DialogObj.HideAsync();
     }
 
     private void select(MenuEventArgs args)
     {
         if (args.Item.Text == "Update")
         {
-            DialogObj.Show();
+            DialogObj.ShowAsync();
         }
     }
 }
