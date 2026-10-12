@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Ribbon in WASM App | Syncfusion
-description: Learn how to get started with the Blazor Ribbon in WASM App and explore setup, configuration, and core feature examples for building ribbon interfaces.
+description: Learn how to get started with the Blazor Ribbon in WASM App and explore setup, configuration, and core feature examples for building Blazor Ribbon interfaces.
 control: Ribbon
 platform: Blazor
 documentation: ug
@@ -148,7 +148,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 {% endhighlight %}
 {% endtabs %}
 
-Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Ribbon functionality.
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Blazor Ribbon functionality.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -162,9 +162,9 @@ Include the required [script references](https://blazor.syncfusion.com/documenta
 
 Open a Razor file located in the **~/Pages/*.razor** (for example, **Home.razor**) and add the [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component inside the razor file.
 
-### Adding a Ribbon Tab
+### Adding a Blazor Ribbon Tab
 
-In the Ribbon component, options are organized into tabs for easy access. You can use the [RibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTabs.html) tag directive to group all the tabs and [RibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTab.html) tag directive to define each ribbon tab as shown below:
+In the Blazor Ribbon component, options are organized into tabs for easy access. You can use the [RibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTabs.html) tag directive to group all the tabs and [RibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTab.html) tag directive to define each ribbon tab as shown below:
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -178,9 +178,9 @@ In the Ribbon component, options are organized into tabs for easy access. You ca
 {% endhighlight %}
 {% endtabs %}
 
-### Adding a Ribbon Group
+### Adding a Blazor Ribbon Group
 
-To define a ribbon group under each tab, you can use the [RibbonGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroups.html) tag directive like below. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
+To define a Blazor Ribbon group under each tab, you can use the [RibbonGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroups.html) tag directive like below. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -198,9 +198,9 @@ To define a ribbon group under each tab, you can use the [RibbonGroups](https://
 {% endhighlight %}
 {% endtabs %}
 
-### Adding a Ribbon Item
+### Adding a Blazor Ribbon Item
 
-You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCollection.html) tag directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) tag directive with the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property to specify the type of item to be rendered, using the [RibbonItemType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) such as Button, a DropDown, a ComboBox, and more.
+You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCollection.html) tag directive to define each Blazor Ribbon collection that contains one or more items. To define each ribbon item, you can use the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) tag directive with the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property to specify the type of item to be rendered, using the [RibbonItemType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) such as Button, a DropDown, a ComboBox, and more.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
