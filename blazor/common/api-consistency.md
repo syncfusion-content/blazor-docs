@@ -1,7 +1,7 @@
 ---
 layout: post
 title: API consistency in Blazor components | Syncfusion®
-description: Learn the common API names (appearance, value, data binding, event, and method) shared across Syncfusion Blazor components.
+description: Learn the common API names (appearance, value, data binding, event, configuration, and method) shared across Syncfusion Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
@@ -11,16 +11,46 @@ documentation: ug
 
 This document lists common API names that appear across multiple [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). It helps new users recognize familiar property, event, and method patterns when moving between components, so knowledge from one component can be applied to another.
 
-Each table groups APIs that share a name and explains what each API does. The supported components column lists every component in which the API is available, but the exact behavior, accepted values, and event payload differ by component. Always check the individual component documentation for parameter details and code examples.
+Each table groups APIs that share a name and explains what each API does. The supported components column lists the components covered in this guide that expose the API. The exact behavior, accepted values, and event payload can differ by component, so always check the individual component documentation for parameter details and code examples.
 
-The guide is organized into the following sections:
+The guide begins with the naming conventions shared across components, followed by these sections:
 
 1. Common appearance and layout APIs
 2. Common value and selection APIs
-3. Common data and binding APIs
+3. Common data binding APIs
 4. Common interaction and event APIs
 5. Common configuration APIs
 6. Common method APIs
+
+## Naming conventions
+
+Syncfusion Blazor components follow shared naming patterns, so the purpose of an API can often be recognized from its name alone. The tables in this guide follow these conventions.
+
+### Properties
+
+| Pattern | Meaning | Examples |
+| --- | --- | --- |
+| `Allow*` | Turns on a user-facing interaction or feature. | `AllowFiltering`, `AllowPaging`, `AllowResizing`, `AllowSorting` |
+| `Enable*` | Turns on a rendering mode or component behavior. | `EnableAdaptiveUI`, `EnableHtmlSanitizer`, `EnablePersistence`, `EnableRtl` |
+| `Show*` | Shows or hides a specific part of the UI. | `ShowClearButton`, `ShowColumnChooser`, `ShowTodayButton`, `ShowTooltip` |
+| `Popup*` | Configures the popup surface of dropdown-style components. | `PopupHeight`, `PopupWidth` |
+| `*Settings` | Groups related options into a single configuration object. | `SelectionSettings` |
+| `*Attributes` | Passes additional HTML attributes to the rendered element. | `HtmlAttributes`, `InputAttributes` |
+
+### Events
+
+| Pattern | Meaning | Examples |
+| --- | --- | --- |
+| Present participle (`*ing`) | Fires before an action occurs. These events can often be cancelled through the event arguments. | `RowCreating`, `RowSelecting` |
+| Past tense (`*ed`) | Fires after an action has completed. | `Created`, `Destroyed`, `DataBound`, `RowSelected` |
+| `On*` / past-tense pair | `On*` fires as an action starts. | `OnOpen`, `OnClose` |
+
+### Methods
+
+| Pattern | Meaning | Examples |
+| --- | --- | --- |
+| `*Async` | Public methods are asynchronous and return a `Task`, so they should be awaited. | `ClearSelectionAsync`, `FocusAsync`, `RefreshAsync` |
+| Paired verbs | Opposite operations use matching verb pairs. | `ShowAsync` / `HideAsync`, `ExpandAllAsync` / `CollapseAllAsync` |
 
 ## 1) Common appearance and layout APIs
 
@@ -37,7 +67,7 @@ The guide is organized into the following sections:
 | --- | --- | --- |
 | `Value` | Gets or sets the current value; commonly supports two-way binding. | Calendar, CheckBox, Chip, ColorPicker, AutoComplete, ComboBox, DatePicker, DateTimePicker, DropDownList, DropDownTree, InPlaceEditor, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, OtpInput, ProgressBar, RadioButton, Rating, RichTextEditor, Slider, Switch, TextArea, TextBox, TimePicker |
 | `Placeholder` | Shows hint text when no value is entered or selected. | DatePicker, DateRangePicker, DateTimePicker, AutoComplete, ComboBox, DropDownList, DropDownTree, MaskedTextBox, MultiColumnComboBox, MultiSelect, OtpInput, RichTextEditor, TextArea, TextBox, TimePicker |
-| `FilterBarPlaceholder` | Shows placeholder text inside a filter/search box. | AutoComplete, ComboBox, DropDownList, DropDownTree, ListBox, MultiSelect |
+| `FilterBarPlaceholder` | Shows placeholder text inside a filter/search box. | AutoComplete, ComboBox, DropDownList, DropDownTree, ListBox, MultiSelect, QueryBuilder |
 | `DebounceDelay` | Delays filtering or search operations to reduce input churn. | AutoComplete, ComboBox, DropDownList, MultiColumnComboBox, MultiSelect |
 | `FilterType` | Controls how text matches are evaluated during filtering or search. | AutoComplete, ComboBox, DropDownList, DropDownTree, Mention, MultiColumnComboBox |
 | `IgnoreCase` | Controls whether case is ignored during filtering or search. | AutoComplete, ComboBox, DropDownList, DropDownTree, MultiColumnComboBox |
@@ -67,7 +97,6 @@ The guide is organized into the following sections:
 | `Destroyed` | Fires when the component is disposed or destroyed. | Accordion, AppBar, AutoComplete, Calendar, CheckBox, Chip, ColorPicker, ComboBox, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, DropDownList, DropDownTree, Gantt, Grid, ImageEditor, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, Mention, MultiColumnComboBox, MultiSelect, NumericTextBox, PivotView, QueryBuilder, RichTextEditor, Sidebar, Slider, Splitter, Tab, TextArea, TextBox, TimePicker, Toast, Toolbar, Tooltip, TreeView |
 | `Blur` | Fires when the component loses focus. | AutoComplete, BlockEditor, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, RichTextEditor, TextArea, TextBox, TimePicker |
 | `Focus` | Fires when the component gains focus. | AutoComplete, BlockEditor, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, RichTextEditor, TextArea, TextBox, TimePicker |
-| `ValueChanged` | Fires when the bound value changes. | AutoComplete, Calendar, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, InPlaceEditor, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, ProgressBar, RadioButton, RichTextEditor, Slider, Switch, TextArea, TextBox, TimePicker, Uploader |
 | `ValueChange` | Fires when the component value changes. The event payload and timing differ by component. | AutoComplete, Calendar, CheckBox, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, InPlaceEditor, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, RadioButton, RichTextEditor, Slider, Switch, TextArea, TextBox, TimePicker, Uploader |
 | `DataBound` | Fires after data binding is complete. | AutoComplete, ComboBox, DropDownList, Gantt, Grid, MultiSelect, PivotView, QueryBuilder, TreeView |
 | `OnActionBegin` | Fires before a data operation or component action begins. | AutoComplete, ComboBox, DropDownList, Gantt, Grid, InPlaceEditor, ListBox, ListView, Mention, MultiColumnComboBox, MultiSelect, PivotView, RichTextEditor, Schedule, TreeGrid |
@@ -76,7 +105,8 @@ The guide is organized into the following sections:
 | `RowCreated` | Fires after a row is created. | Gantt, Grid, TreeGrid |
 | `OnOpen` / `Opened` | Fires when a popup, dialog, tooltip, sidebar, or menu-like overlay is opened (or is about to open). | AutoComplete, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, Dialog, DropDownButton, DropDownList, Menu, MultiSelect, Sidebar, SplitButton, SpeedDial, Toast, Tooltip |
 | `OnClose` / `Closed` | Fires when a popup, dialog, tooltip, sidebar, or overlay is closed (or is about to close). | AutoComplete, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, Dialog, DropDownButton, DropDownList, Menu, MultiSelect, Sidebar, SplitButton, SpeedDial, Toast, Tooltip |
-| `RowSelected` / `RowSelecting` | Fires after or before row selection. | Gantt, Grid, PivotView |
+| `RowSelected` / `RowSelecting` | Fires after or before row selection. | Gantt, Grid, TreeGrid, PivotView |
+| `RowDataBound` | Fires after a row has been bound with data. | Gantt, Grid, TreeGrid |
 
 ## 5) Common configuration APIs
 
@@ -109,33 +139,31 @@ The guide is organized into the following sections:
 | `AllowReordering` | Enables reordering of columns or tab items. | Gantt, Grid, Tab |
 | `AllowExcelExport` | Enables Excel export. | Gantt, Grid, PivotView, TreeGrid |
 | `AllowPdfExport` | Enables PDF export. | Gantt, Grid, PivotView, TreeGrid, TreeMap |
-| `ShowColumnMenu` | Displays a column menu. | Gantt, Grid |
+| `ShowColumnMenu` | Displays a column menu. | Gantt, Grid, TreeGrid |
 | `ShowColumnChooser` | Displays the column chooser UI. | Gantt, Grid, TreeGrid |
 | `EnableAdaptiveUI` | Enables adaptive or responsive UI mode. | Gantt, Grid, Schedule, TreeGrid |
 | `EnableContextMenu` | Enables the context menu. | DocumentEditor, Gantt, Spreadsheet |
 | `EnablePersistence` | Persists state across page reloads. The persisted state differs by component. | Accordion, Breadcrumb, Calendar, Carousel, CheckBox, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, AutoComplete, ComboBox, DropDownList, DropDownTree, FileManager, Gantt, Grid, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, NumericTextBox, Pager, PivotView, QueryBuilder, RadioButton, Ribbon, RichTextEditor, Sidebar, Signature, Slider, Splitter, Switch, Tab, TextArea, TextBox, TimePicker, TreeView, Uploader |
-| `EnableVirtualization` | Enables virtualization for large data sets. | AutoComplete, ComboBox, DropDownList, DropDownTree, FileManager, Grid, ListView, MultiColumnComboBox, MultiSelect, PivotView, TreeView |
+| `EnableVirtualization` | Enables virtualization for large data sets. | AutoComplete, ComboBox, DropDownList, DropDownTree, FileManager, Grid, ListView, MultiColumnComboBox, MultiSelect, PivotView, TreeGrid, TreeView |
 | `ShowTooltip` | Toggles whether tooltips are displayed by the component. | FileManager, Grid, PivotView, Rating, RichTextEditor, SpeechToText, Stepper |
 | `EnableHtmlSanitizer` | Enables sanitization of HTML or text content to reduce XSS risk. | BlockEditor, FileManager, PivotView, RichTextEditor, Uploader |
 | `AllowRowDragAndDrop` | Enables row drag-and-drop or row reordering. | Gantt, Grid, TreeGrid |
 | `Tooltip` | Configures tooltip-related content or behavior for the component. | Tooltip, RichTextEditor, Grid, PivotView, Rating |
 | `Orientation` | Controls horizontal or vertical layout/orientation. | Menu, Slider, Splitter, Stepper, Timeline |
 | `Visible` | Controls whether the component is shown or hidden. | Dialog, Message, ProgressBar, Rating, Skeleton, SpeedDial, Splitter |
-| `GridLines` | Controls whether or how grid lines are displayed. | DashboardLayout, Gantt, Grid, MultiColumnComboBox, TreeGrid |
+| `GridLines` | Controls whether or how grid lines are displayed. | Gantt, Grid, MultiColumnComboBox, TreeGrid |
 | `OverscanCount` | Controls the extra rendered items beyond the visible viewport during virtualization. | Gantt, Grid, TreeGrid |
 | `SelectionSettings` | Configures selection behavior and selection mode. | Gantt, Grid, TreeGrid |
-| `RowDataBound` | Fires after a row has been bound with data. | Gantt, Grid, TreeGrid |
 
 ## 6) Common method APIs
 
 | API name | Purpose | Supported components |
 | --- | --- | --- |
 | `RefreshAsync` | Re-renders or refreshes the component so that pending state changes are applied. | DashboardLayout, DropDownTree, Gantt, Kanban, Pager, PivotView, Signature, Tab, Toast, Toolbar, Tooltip, TreeMap |
-| `FocusAsync` | Sets keyboard focus to the component. | Button, ColorPicker, AutoComplete, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DocumentEditor, DropDownList, MaskedTextBox, MultiColumnComboBox, MultiSelect, ProgressButton, RichTextEditor, TextArea, TextBox, TimePicker |
+| `FocusAsync` | Sets keyboard focus to the component. | Button, ColorPicker, AutoComplete, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DocumentEditor, DropDownList, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, ProgressButton, RichTextEditor, TextArea, TextBox, TimePicker |
 | `PrintAsync` | Invokes printing for the component or its content. | BlockEditor, DocumentEditor, RichTextEditor, TreeMap |
 | `ExportAsync` | Exports the component or its content when supported. | ImageEditor, TreeMap |
 | `ClearSelectionAsync` | Clears the current selection. | FileManager, Gantt, Grid, ImageEditor, TreeGrid |
 | `ExpandAllAsync` / `CollapseAllAsync` | Expands or collapses all relevant nodes or rows. | Gantt, TreeView, TreeGrid |
 | `HideAsync` / `ShowAsync` | Hides or shows a popup-style component or overlay. | Dialog, SpeedDial, Toast |
-| `OpenAsync` / `CloseAsync` | Opens or closes a popup-style component programmatically. In some components, `OpenAsync` also loads or refreshes the popup content. | ContextMenu, DocumentEditor, ImageEditor, Menu, Tooltip |
-| `GetPersistDataAsync` | Retrieves the persisted state payload. | Calendar, DatePicker, DateTimePicker, DashboardLayout, Gantt, MaskedTextBox, PivotView, TextArea, TextBox, TimePicker |
+| `GetPersistDataAsync` | Retrieves the persisted state payload. | Calendar, DatePicker, DateTimePicker, DashboardLayout, Gantt, Grid, MaskedTextBox, PivotView, TextArea, TextBox, TimePicker, TreeGrid |
