@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported Syncfusion A2UI Components
+# Supported Syncfusion Blazor A2UI Components
 
 The Syncfusion A2UI for Blazor package ships a catalog of **60+ Syncfusion Blazor Components** in `Syncfusion.Blazor.A2UI.SyncfusionComponents.SyncfusionComponentFactory`. When the 18 A2UI primitives from `Syncfusion.Blazor.A2UI.Catalog.BasicComponentFactory` are included, the catalog exposes a single `"syncfusion-a2ui-catalog"` for the agent to pick from.
 
