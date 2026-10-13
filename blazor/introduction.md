@@ -150,7 +150,7 @@ padding-top: 20px;
 .sf-icon-file-manager:before {
     content: "\e711";
 }
-.sf-icon-sunburstchart:before {
+.sf-icon-chart:before {
     content: "\e758";
 }
 .sf-icon-dashboard-layout:before {
@@ -487,7 +487,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/chart-sdk/blazor/treemap/getting-started-webapp" aria-label="Blazor TreeMap Component"><span class="sf-home-icon sf-icon-treemap"></span>TreeMap</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/chart-sdk/blazor/bullet-chart/getting-started-with-web-app" aria-label="Blazor Bullet Chart Component"><span class="sf-home-icon sf-icon-bullet-chart"></span>Bullet Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/gantt-sdk/blazor/kanban/getting-started-with-web-app" aria-label="Blazor Kanban Component"><span class="sf-home-icon sf-icon-kanban"></span>Kanban</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/chart-sdk/blazor/sunburst-chart/getting-started-with-web-app" aria-label="Blazor Kanban Component"><span class="sf-home-icon sf-icon-sunburstchart"></span>Sunburst Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://help.syncfusion.com/chart-sdk/blazor/sunburst-chart/getting-started-with-web-app" aria-label="Blazor Kanban Component"><span class="sf-home-icon sf-icon-chart"></span>Sunburst Chart</a></div>
         <div><p class="controlcategory">BUTTONS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/button/getting-started" aria-label="Blazor Button Component"><span class="sf-home-icon sf-icon-button"></span>Button</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/button-group/getting-started" aria-label="Blazor Button Group Component"><span class="sf-home-icon sf-icon-button-group"></span>Button Group</a></div>
