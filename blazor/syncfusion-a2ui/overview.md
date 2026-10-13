@@ -19,7 +19,7 @@ The package is built on top of the framework-agnostic `Syncfusion.A2UI.Core` run
 
 In short, the package converts chat-based agent responses into fully functional Blazor user interfaces without requiring manual component development.
 
-N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be published on NuGet. The package is feature-complete for the listed components, but the API, catalog ID, and validation schemas may evolve before the first stable release. **Syncfusion.A2UI.Core** and **Syncfusion.Blazor.A2UI** are both at `preview`. The **A2UI v0.9 wire format** is stable; minor additive changes (new components, new properties) are expected.
+N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be published on NuGet. The package is feature-complete for the listed components, but the API, catalog ID, and validation schemas may evolve before the first stable release. **[Syncfusion.A2UI.Core](https://www.nuget.org/packages/Syncfusion.A2UI.Core)** and **[Syncfusion.Blazor.A2UI](https://www.nuget.org/packages/Syncfusion.Blazor.A2UI)** are both at `preview`. The **A2UI v0.9 wire format** is stable; minor additive changes (new components, new properties) are expected.
 
 ## Prerequisites
 
