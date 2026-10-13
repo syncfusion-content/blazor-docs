@@ -117,11 +117,11 @@ This package contains the Blazor SmartRichTextEditor for Blazor applications. Th
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartRichTextEditor">Syncfusion.Blazor.SmartRichTextEditor</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartRichTextEditor" aria-label="Blazor SmartRichTextEditor NuGet Package">Syncfusion.Blazor.SmartRichTextEditor</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp">Smart Rich Text Editor</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-rich-text-editor/getting-started-webapp" aria-label="Blazor Smart Rich Text Editor Component">Smart Rich Text Editor</a></li>
 </ul>
 </td>
 <td>
@@ -131,14 +131,14 @@ This package contains the Blazor SmartRichTextEditor for Blazor applications. Th
 </td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.AI">Syncfusion.Blazor.AI</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat">Syncfusion.Blazor.InteractiveChat</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter">Syncfusion.Blazor.MarkdownConverter</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor">Syncfusion.Blazor.RichTextEditor</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.AI" aria-label="Blazor AI NuGet Package">Syncfusion.Blazor.AI</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat" aria-label="Blazor InteractiveChat NuGet Package">Syncfusion.Blazor.InteractiveChat</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MarkdownConverter" aria-label="Blazor MarkdownConverter NuGet Package">Syncfusion.Blazor.MarkdownConverter</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor" aria-label="Blazor Rich Text Editor NuGet Package">Syncfusion.Blazor.RichTextEditor</a></li>
 </ul>
 </td>
 </tr>
@@ -257,11 +257,11 @@ The Blazor BlockEditor is a modern, block-based content editor for composing ric
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.BlockEditor">Syncfusion.Blazor.BlockEditor</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.BlockEditor" aria-label="Blazor Block Editor NuGet Package">Syncfusion.Blazor.BlockEditor</a>
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/block-editor/getting-started">Block Editor</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/block-editor/getting-started" aria-label="Blazor Block Editor Component">Block Editor</a></li>
 </ul>
 </td>
 <td>
@@ -271,13 +271,13 @@ The Blazor BlockEditor is a modern, block-based content editor for composing ric
 </td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core">Syncfusion.Blazor.Core</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons" aria-label="Blazor Split Button NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
 </ul>
 </td>
 </tr>
@@ -751,13 +751,13 @@ The Blazor Diagram component is a high-speed, robust library for crafting, editi
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/">Syncfusion.Blazor.Diagram</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/" aria-label="Blazor Diagram NuGet Package">Syncfusion.Blazor.Diagram</a>
 </td>
 <td>
 <ul>
-<li><a href="https://help.syncfusion.com/diagram-sdk/blazor/getting-started-with-web-app">Diagram</a></li>
-<li><a href="https://help.syncfusion.com/diagram-sdk/blazor/overview">Overview Panel</a></li>
-<li><a href="https://help.syncfusion.com/diagram-sdk/blazor/symbol-palette/symbol-palette">Symbol Palette</a></li>
+<li><a href="https://help.syncfusion.com/diagram-sdk/blazor/getting-started-with-web-app" aria-label="Blazor Diagram Component">Diagram</a></li>
+<li><a href="https://help.syncfusion.com/diagram-sdk/blazor/overview" aria-label="Blazor Diagram Overview Documentation">Overview Panel</a></li>
+<li><a href="https://help.syncfusion.com/diagram-sdk/blazor/symbol-palette/symbol-palette" aria-label="Blazor Diagram Symbol Palette Documentation">Symbol Palette</a></li>
 </ul>
 </td>
 <td>
@@ -769,11 +769,11 @@ The Blazor Diagram component is a high-speed, robust library for crafting, editi
 </td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a> (Utilizing from v19.4.0.38)</li>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
+<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank" aria-label="Blazor Newtonsoft NuGet Package">Newtonsoft.Json</a> (Utilizing from v19.4.0.38)</li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
 </ul>
 </td>
 </tr>
@@ -903,31 +903,31 @@ The Blazor Gantt is designed to visualize and edit the project schedule, and tra
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/">Syncfusion.Blazor.Gantt</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/" aria-label="Blazor Gantt NuGet Package">Syncfusion.Blazor.Gantt</a>
 </td>
 <td>
-<a href="https://help.syncfusion.com/gantt-sdk/blazor/gantt-chart/getting-started-with-web-app">Gantt Chart</a>
+<a href="https://help.syncfusion.com/gantt-sdk/blazor/gantt-chart/getting-started-with-web-app" aria-label="Blazor Gantt Chart Component">Gantt Chart</a>
 </td>
 <td>
 SfGantt
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorfilemanager">Syncfusion.Blazor.FileManager</a> (Utilized up to v18.4.0.49)</li>
-<li><a href="#syncfusionblazorgrid">Syncfusion.Blazor.Grid</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorlayouts">Syncfusion.Blazor.Layouts</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorrichtexteditor">Syncfusion.Blazor.RichTextEditor</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
-<li><a href="#syncfusionblazortreegrid">Syncfusion.Blazor.TreeGrid</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcalendars" aria-label="Blazor Calendar NuGet Package">Syncfusion.Blazor.Calendars</a></li>
+<li><a href="#syncfusionblazordata" aria-label="Blazor Data NuGet Package">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns" aria-label="Blazor DropDown NuGet Package">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorfilemanager" aria-label="Blazor FileManager NuGet Package">Syncfusion.Blazor.FileManager</a> (Utilized up to v18.4.0.49)</li>
+<li><a href="#syncfusionblazorgrid" aria-label="Blazor Grid NuGet Package">Syncfusion.Blazor.Grid</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorlayouts" aria-label="Blazor Layout NuGet Package">Syncfusion.Blazor.Layouts</a></li>
+<li><a href="#syncfusionblazorlists" aria-label="Blazor List NuGet Package">Syncfusion.Blazor.Lists</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorrichtexteditor" aria-label="Blazor RichTextEditor NuGet Package">Syncfusion.Blazor.RichTextEditor</a></li>
+<li><a href="#syncfusionblazorspinner" aria-label="Blazor Spinner NuGet Package">Syncfusion.Blazor.Spinner</a></li>
+<li><a href="#syncfusionblazortreegrid" aria-label="Blazor TreeGrid NuGet Package">Syncfusion.Blazor.TreeGrid</a></li>
 </ul>
 </td>
 </tr>
@@ -1807,12 +1807,12 @@ The Rich Text Editor component is the HTML and markdown editor that provides the
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/">Syncfusion.Blazor.RichTextEditor</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/" aria-label="Blazor RichTextEditor NuGet Package">Syncfusion.Blazor.RichTextEditor</a>
 </td>
 <td>
 <ul>
-<li><a href="https://help.syncfusion.com/rich-text-editor-sdk/blazor/rich-text-editor/getting-started-webapp">RichTextEditor</a></li>
-<li><a href="https://help.syncfusion.com/rich-text-editor-sdk/blazor/markdown-editor/getting-started-webapp">Markdown Editor</a></li>
+<li><a href="https://help.syncfusion.com/rich-text-editor-sdk/blazor/rich-text-editor/getting-started-webapp" aria-label="Blazor Rich Text Editor Component">RichTextEditor</a></li>
+<li><a href="https://help.syncfusion.com/rich-text-editor-sdk/blazor/markdown-editor/getting-started-webapp" aria-label="Blazor Markdown Editor Component">Markdown Editor</a></li>
 </ul>
 </td>
 <td>
@@ -1820,12 +1820,12 @@ SfRichTextEditor
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="#syncfusionblazorcore" aria-label="Blazor Core NuGet Package">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons" aria-label="Blazor Button NuGet Package">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs" aria-label="Blazor Input NuGet Package">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazornavigations" aria-label="Blazor Navigation NuGet Package">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorpopups" aria-label="Blazor Popup NuGet Package">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorsplitbuttons" aria-label="Blazor SplitButton NuGet Package">Syncfusion.Blazor.SplitButtons</a></li>
 </ul>
 </td>
 </tr>
