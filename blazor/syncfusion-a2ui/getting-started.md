@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion A2UI for Blazor
+# Getting Started with Syncfusion Blazor A2UI
 
 This section explains how to include the [Syncfusion A2UI for Blazor](https://a2ui.org/specification/v0.9-a2ui/) component in a Blazor App using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/). The Syncfusion A2UI for Blazor package converts streamed [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) messages into a `SurfaceModel` that is rendered as native Syncfusion Blazor components — **DataGrid**, **Chart**, **Scheduler**, **Calendar**, **RichTextEditor**, **Diagram**, **Kanban**, **DocumentEditorContainer**, and more.
 
