@@ -18,7 +18,7 @@ Both approaches create a Blazor Web App with Interactive Server rendering and an
 
 ## What is Replit?
 
-[Replit](https://replit.com) is a browser based, AI     powered development environment (agentic UI builder) that lets you write, run, and deploy applications entirely in the cloud. It requires no local setup and is well suited for users who are new to software development, or who want to prototype and iterate quickly without configuring local development tools.
+[Replit](https://replit.com) is a browser based, AI powered development environment (agentic UI builder) that lets you write, run, and deploy applications entirely in the cloud. It requires no local setup and is well suited for users who are new to software development, or who want to prototype and iterate quickly without configuring local development tools.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ Before you begin, ensure you have:
 
 * A free or paid [Replit account](https://replit.com).
 * A Replit environment with the .NET SDK.
-* A valid [Syncfusion license key](https://help.syncfusion.com/document-processing/licensing/overview), either a trial or a commercial key.
+* A valid [Syncfusion license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview), either a trial or a commercial key.
 
 ## Create an Empty project in Replit
 
@@ -169,7 +169,7 @@ Open `Components/_Imports.razor` and add the Syncfusion namespaces:
 
 ## Register the Blazor service
 
-Open the **Program.cs** file and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top. 
+Open the **Program.cs** file and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
 {% highlight C# tabtitle="Program.cs" %}
@@ -307,7 +307,7 @@ Replit allows you to publish your application to a live public URL without leavi
 
 ## See also
 
-* [Getting started with the Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)
-* [Blazor DataGrid documentation](https://blazor.syncfusion.com/documentation/datagrid/overview)
+* [Getting started with the Blazor DataGrid](https://help.syncfusion.com/grid-sdk/blazor/data-grid/getting-started)
+* [Blazor DataGrid documentation](https://help.syncfusion.com/grid-sdk/blazor/data-grid/getting-started)
 * [Replit Agent Skills](https://docs.replit.com/features/agent/skills)
 * [Replit documentation](https://docs.replit.com/)
