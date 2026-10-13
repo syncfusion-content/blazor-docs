@@ -26,27 +26,22 @@ Follow these steps to validate the Syncfusion<sup style="font-size:70%">&reg;</s
 * Open the LicenseKeyValidation.ps1 PowerShell script in a text or code editor and update the parameters as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="v34.1.29 and later" %}
+{% highlight c# tabtitle="PowerShell" %}
 // Replace the parameters with the desired platform, version, and actual license key.
 
-$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"UIComponent" /version:"34.1.29" /licensekey:"Your License Key"
-
-Write-Host $result
-{% endhighlight %}
-
-{% highlight c# tabtitle="Before v34.1.29" %}
-// Replace the parameters with the desired platform, version, and actual license key.
-
-$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"Blazor" /version:"26.2.4" /licensekey:"Your License Key"
+$result = & $PSScriptRoot"\LicenseKeyValidatorConsole.exe" /platform:"Blazor" /version:"34.1.29" /licensekey:"Your License Key"
 
 Write-Host $result
 {% endhighlight %}
 {% endtabs %}
 
 * Update the parameters in the script:
-   * **Platform:** Set /platform:"**UIComponent**" for v34.1.29 and later, or /platform:"**Blazor**" for earlier versions (use the relevant Syncfusion platform as needed).
-   * **Version:** Set /version:"26.2.4" (match the Syncfusion package version used in the build).
-   * **License key:** Set /licensekey:"Your License Key" (inject via secure variable or secret).
+  
+  **Platform:** Modify the value for `/platform:` to the actual platform `"Blazor"`.
+  
+  **Version:**  Change the value for `/version:` to the required version (e.g., `"34.1.29"`).
+  
+  **License Key:** Replace the value for `/licensekey:` with your actual license key (e.g., `"Your License Key"`).
 
 ## Azure Pipelines (YAML)
 
@@ -127,7 +122,7 @@ pipeline {
 
 * Register the license key properly by calling RegisterLicense("License Key") method with the license key. 
 
-* Once the license key is registered, it can be validated by using the ValidateLicense("Platform.Blazor") method. This ensures that the license key is valid for the platform and version you are using. For reference, please check the following example.
+* Once the license key is registered, it can be validated by using the `ValidateLicense(Platform.Blazor)` method for version prior to v34.1.29, or the `ValidateLicense(new[] { Platform.Blazor })` method for v34.1.29 and later. This ensures that the license key is valid for the platform and version you are using. Refer to the following example.
 
 {% tabs %}
 {% highlight c# tabtitle="v34.1.29 and later" %}
@@ -138,7 +133,7 @@ SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 
 //Validate the registered license key.
 // The array overload allows validating against multiple platforms in a single call.
-bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.UIComponent });
+bool isValid = SyncfusionLicenseProvider.ValidateLicense(new[] { Platform.Blazor });
 {% endhighlight %}
 
 {% highlight c# tabtitle="Before v34.1.29" %}
@@ -151,8 +146,6 @@ SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.Blazor);
 {% endhighlight %}
 {% endtabs %}
-
-N> Use `Platform.UIComponent` for UI component license validation in v34.1.29 and later. `Platform.Blazor` is not supported from v34.1.29 onwards.
 
 * If the ValidateLicense() method returns true, registered license key is valid and can proceed with deployment.
 
