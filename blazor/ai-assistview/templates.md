@@ -215,8 +215,6 @@ You can use the [ResponseAnimationTemplate](https://help.syncfusion.com/cr/blazo
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptRequested="@PromptRequest">
-        <AssistViews>
-            <AssistView>
                 <ResponseAnimationTemplate>
                     <div class="assistview-loading-status">
                         <div class="assistview-grid-icon">
@@ -227,8 +225,6 @@ You can use the [ResponseAnimationTemplate](https://help.syncfusion.com/cr/blazo
                         <span class="assistview-loading-label">Generating</span>
                     </div>
                 </ResponseAnimationTemplate>
-            </AssistView>
-        </AssistViews>
     </SfAIAssistView>
 </div>
 
@@ -279,7 +275,7 @@ You can use the [ResponseAnimationTemplate](https://help.syncfusion.com/cr/blazo
     .assistview-grid-icon span:nth-child(8) { animation-delay: 0.7s; }
     .assistview-grid-icon span:nth-child(9) { animation-delay: 0.8s; }
 
-    @keyframes assistview-pulse {
+    @@keyframes assistview-pulse {
         0%,
         100% {
             opacity: 0.25;
