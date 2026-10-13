@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# AI Integration with Syncfusion A2UI
+# AI Integration with Syncfusion Blazor A2UI
 
 This page shows the production wiring between a Syncfusion A2UI Blazor host and a remote [A2UI v0.9](https://a2ui.org/specification/v0.9-a2ui/) agent that speaks the [A2A (Agent-to-Agent) protocol](https://a2a-protocol.org/) over [JSON-RPC 2.0](https://www.jsonrpc.org/specification). A2UI is a **transport-agnostic** JSON message format that describes UI surfaces — it does not define a transport. A2A is the transport that A2UI v0.9 reference agents ship over, and the `message/send` method used by the snippet below is part of **A2A**, not A2UI. The [Getting Started](./getting-started) page showed how to render a Syncfusion surface from a static A2UI v0.9 message list. This page covers the next step: connecting your Blazor app to a remote A2A agent so the agent's responses drive the surface in real time, and the user's interactions inside the surface are forwarded back to the agent.
 
