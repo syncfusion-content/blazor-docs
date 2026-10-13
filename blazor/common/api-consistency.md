@@ -41,7 +41,7 @@ The guide is organized into the following sections:
 | `DebounceDelay` | Delays filtering or search operations to reduce input churn. | AutoComplete, ComboBox, DropDownList, MultiColumnComboBox, MultiSelect |
 | `FilterType` | Controls how text matches are evaluated during filtering or search. | AutoComplete, ComboBox, DropDownList, DropDownTree, Mention, MultiColumnComboBox |
 | `IgnoreCase` | Controls whether case is ignored during filtering or search. | AutoComplete, ComboBox, DropDownList, DropDownTree, MultiColumnComboBox |
-| `Min` / `Max` | Restricts the selectable date or time range. The exact semantics differ by component, but the common range-limiting pattern is shared across the calendar and time-picker family. | Calendar, DatePicker, DateRangePicker, DateTimePicker, TimePicker |
+| `Min` / `Max` | Restricts the selectable date or time range. The exact semantics differ by component, but the common range-limiting pattern is shared across the calendar and time-picker family. | Calendar, DatePicker, DateRangePicker, DateTimePicker, NumericTextBox, Slider, TimePicker |
 | `FirstDayOfWeek` | Sets the first day of the week used in calendar views. | Calendar, DatePicker, DateRangePicker, DateTimePicker, Schedule |
 | `CalendarMode` | Switches the calendar system, such as Gregorian or Hijri. | Calendar, DatePicker, DateRangePicker, DateTimePicker |
 | `ShowTodayButton` | Shows or hides the Today button in calendar-based pickers. | Calendar, DatePicker, DateRangePicker, DateTimePicker |
@@ -70,8 +70,8 @@ The guide is organized into the following sections:
 | `ValueChanged` | Fires when the bound value changes. | AutoComplete, Calendar, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, InPlaceEditor, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, ProgressBar, RadioButton, RichTextEditor, Slider, Switch, TextArea, TextBox, TimePicker, Uploader |
 | `ValueChange` | Fires when the component value changes. The event payload and timing differ by component. | AutoComplete, Calendar, CheckBox, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, DropDownList, InPlaceEditor, ListBox, MaskedTextBox, MultiColumnComboBox, MultiSelect, NumericTextBox, RadioButton, RichTextEditor, Slider, Switch, TextArea, TextBox, TimePicker, Uploader |
 | `DataBound` | Fires after data binding is complete. | AutoComplete, ComboBox, DropDownList, Gantt, Grid, MultiSelect, PivotView, QueryBuilder, TreeView |
-| `OnActionBegin` | Fires before a data operation or component action begins. | AutoComplete, ComboBox, DropDownList, Gantt, Grid, InPlaceEditor, ListBox, Mention, MultiColumnComboBox, MultiSelect, PivotView, RichTextEditor, Schedule, TreeGrid |
-| `OnActionComplete` | Fires after a data operation or component action completes. | AutoComplete, ComboBox, DropDownList, Gantt, Grid, InPlaceEditor, ListBox, Mention, MultiColumnComboBox, MultiSelect, PivotView, RichTextEditor, TreeGrid |
+| `OnActionBegin` | Fires before a data operation or component action begins. | AutoComplete, ComboBox, DropDownList, Gantt, Grid, InPlaceEditor, ListBox, ListView, Mention, MultiColumnComboBox, MultiSelect, PivotView, RichTextEditor, Schedule, TreeGrid |
+| `OnActionComplete` | Fires after a data operation or component action completes. | AutoComplete, ComboBox, DropDownList, Gantt, Grid, InPlaceEditor, ListBox, ListView, Mention, MultiColumnComboBox, MultiSelect, PivotView, RichTextEditor, TreeGrid |
 | `RowCreating` | Fires before a row is created. | Gantt, Grid, TreeGrid |
 | `RowCreated` | Fires after a row is created. | Gantt, Grid, TreeGrid |
 | `OnOpen` / `Opened` | Fires when a popup, dialog, tooltip, sidebar, or menu-like overlay is opened (or is about to open). | AutoComplete, ColorPicker, ComboBox, DatePicker, DateRangePicker, DateTimePicker, Dialog, DropDownButton, DropDownList, Menu, MultiSelect, Sidebar, SplitButton, SpeedDial, Toast, Tooltip |
@@ -86,7 +86,7 @@ The guide is organized into the following sections:
 | `FullScreen` | Enables full-screen popup rendering on mobile or tablet devices. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
 | `OpenOnFocus` | Opens the popup automatically when the input receives focus. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
 | `EnableMask` | Enables masked input behavior. | DatePicker, DateTimePicker, TimePicker |
-| `FloatLabelType` | Configures floating label behavior. | DatePicker, DateRangePicker, DateTimePicker, DropDownTree, TimePicker |
+| `FloatLabelType` | Configures floating label behavior. | AutoComplete, ComboBox, DropDownList, DatePicker, DateRangePicker, DateTimePicker, DropDownTree, MaskedTextBox, MultiSelect, MultiColumnComboBox, NumericTextBox, TextArea, TextBox, TimePicker |
 | `Format` | Configures display formatting for the selected value. | Calendar, DatePicker, DateRangePicker, DateTimePicker, TimePicker |
 | `InputFormats` | Configures accepted input parsing formats. | DatePicker, DateRangePicker, DateTimePicker, TimePicker |
 | `HtmlAttributes` | Provides additional HTML attributes for the component root element or wrapper. | Accordion, AppBar, AutoComplete, Breadcrumb, Button, Calendar, Carousel, CheckBox, Chip, ColorPicker, ComboBox, ContextMenu, DatePicker, DateRangePicker, DateTimePicker, Dialog, DropDownButton, DropDownList, DropDownTree, FileManager, ImageEditor, InPlaceEditor, ListBox, ListView, MaskedTextBox, MultiColumnComboBox, MultiSelect, OtpInput, ProgressButton, RadioButton, Rating, Sidebar, Signature, SpeechToText, SplitButton, Splitter, Switch, TextArea, TextBox, TimePicker, Tooltip, Uploader |
