@@ -41,7 +41,7 @@ Syncfusion Blazor components follow shared naming patterns, so the purpose of an
 
 | Pattern | Meaning | Examples |
 | --- | --- | --- |
-| Present participle (`*ing`) | Fires before an action occurs. These events can often be cancelled through the event arguments. | `RowCreating`, `RowSelecting` |
+| Present participle (`*ing`) | Fires before an action occurs. These events can often be canceled through the event arguments. | `RowCreating`, `RowSelecting` |
 | Past tense (`*ed`) | Fires after an action has completed. | `Created`, `Destroyed`, `DataBound`, `RowSelected` |
 | `On*` / past-tense pair | `On*` fires as an action starts. | `OnOpen`, `OnClose` |
 
@@ -146,7 +146,7 @@ Syncfusion Blazor components follow shared naming patterns, so the purpose of an
 | `EnablePersistence` | Persists state across page reloads. The persisted state differs by component. | Accordion, Breadcrumb, Calendar, Carousel, CheckBox, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, AutoComplete, ComboBox, DropDownList, DropDownTree, FileManager, Gantt, Grid, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, NumericTextBox, Pager, PivotView, QueryBuilder, RadioButton, Ribbon, RichTextEditor, Sidebar, Signature, Slider, Splitter, Switch, Tab, TextArea, TextBox, TimePicker, TreeView, Uploader |
 | `EnableVirtualization` | Enables virtualization for large data sets. | AutoComplete, ComboBox, DropDownList, DropDownTree, FileManager, Grid, ListView, MultiColumnComboBox, MultiSelect, PivotView, TreeGrid, TreeView |
 | `ShowTooltip` | Toggles whether tooltips are displayed by the component. | FileManager, Grid, PivotView, Rating, RichTextEditor, SpeechToText, Stepper |
-| `EnableHtmlSanitizer` | Enables sanitization of HTML or text content to reduce XSS risk. | BlockEditor, FileManager, PivotView, RichTextEditor, Uploader |
+| `EnableHtmlSanitizer` | Enables sanitizing of HTML content to help prevent XSS attacks. | BlockEditor, FileManager, PivotView, RichTextEditor, Uploader |
 | `AllowRowDragAndDrop` | Enables row drag-and-drop or row reordering. | Gantt, Grid, TreeGrid |
 | `Tooltip` | Configures tooltip-related content or behavior for the component. | Tooltip, RichTextEditor, Grid, PivotView, Rating |
 | `Orientation` | Controls horizontal or vertical layout/orientation. | Menu, Slider, Splitter, Stepper, Timeline |
