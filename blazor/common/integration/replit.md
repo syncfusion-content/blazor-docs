@@ -282,7 +282,7 @@ If you need to store sensitive information (API keys, database URLs), use Replit
 
 1. Click the **Secrets** icon (lock icon) in the left sidebar
 2. Add your secret with a key and value (e.g., `SYNCFUSION_LICENSE_KEY=your_key_here`)
-3. Access it in your code using `process.env.SYNCFUSION_LICENSE_KEY`
+3. Access it in your code using `Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY")`
 
 ## Publish the Application in Replit
 
