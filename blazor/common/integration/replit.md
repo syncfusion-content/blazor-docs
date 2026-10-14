@@ -14,7 +14,7 @@ This guide shows two ways to create a [Blazor DataGrid](https://www.syncfusion.c
 * **Replit Agent:** Import the Blazor DataGrid skill and ask Agent to build the application from a prompt.
 * **Shell:** Create and configure the Blazor application manually with .NET CLI commands and code.
 
-Both approaches create a Blazor Web App with Interactive Server rendering and an order Grid with paging, sorting, and filtering.
+Both approaches create a Blazor Web App with Interactive Server rendering and DataGrid component.
 
 ## What is Replit?
 
@@ -70,7 +70,7 @@ Example prompt:
 {% tabs %}
 {% highlight bash tabtitle="Prompt" %}
 
-Create a Syncfusion Blazor DataGrid component in a Blazor Web App using Interactive Server render mode in .NET 10, with sorting functionality and the Fluent 2 theme.
+Create a Syncfusion Blazor DataGrid component in a Blazor Web App using Interactive Server render mode in .NET10, with sorting functionality and the Fluent 2 theme.
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,7 +159,7 @@ For details about Syncfusion Blazor package options, see [NuGet packages](https:
 Open `Components/_Imports.razor` and add the Syncfusion namespaces:
 
 {% tabs %}
-{% highlight razor tabtitle="/_Imports.razor" %}
+{% highlight razor tabtitle="Components/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -258,7 +258,7 @@ Open `Components/Pages/Home.razor` and replace its contents with the following e
 In this shell, run this command from the project directory.
 
 {% tabs %}
-{% highlight bash tabtitle="NET.CLI" %}
+{% highlight bash tabtitle=".NET CLI" %}
 
 dotnet run --urls "http://0.0.0.0:${PORT:-3000}"
 
@@ -308,6 +308,6 @@ Replit allows you to publish your application to a live public URL without leavi
 ## See also
 
 * [Getting started with the Blazor DataGrid](https://help.syncfusion.com/grid-sdk/blazor/data-grid/getting-started)
-* [Blazor DataGrid documentation](https://help.syncfusion.com/grid-sdk/blazor/data-grid/getting-started)
+* [Blazor DataGrid documentation](https://help.syncfusion.com/grid-sdk/blazor/data-grid/overview)
 * [Replit Agent Skills](https://docs.replit.com/features/agent/skills)
 * [Replit documentation](https://docs.replit.com/)
