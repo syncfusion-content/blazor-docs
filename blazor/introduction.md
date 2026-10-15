@@ -572,6 +572,19 @@ padding-top: 20px;
 
 * If a feature is not available, request it in the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
 
+* Join the [Syncfusion Blazor forum](https://www.syncfusion.com/forums/blazor-components) to discuss components, ask questions, and share suggestions with other developers and the Syncfusion team.
+
+## Learning Resources
+
+The following resources help you get productive with the Blazor components quickly:
+
+* **[Getting Started documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)** — step-by-step instructions for creating a Blazor app and adding your first component.
+* **[Online sample browser](https://blazor.syncfusion.com/demos/)** — Explore hundreds of live demos with source code for Syncfusion Blazor components, covering common usage scenarios.
+* **[Video tutorials](https://www.syncfusion.com/tutorial-videos/blazor/blazor-server-app)** — the Syncfusion Blazor YouTube playlist with component walkthroughs and feature deep dives.
+* **[Blogs and articles](https://www.syncfusion.com/blogs/category/blazor)** — tips, release highlights, and how-to articles from the Blazor team.
+* **[Knowledge Base](https://support.syncfusion.com/kb/web/category/67)** — answers to common questions and solutions to frequently encountered scenarios.
+* **[Support](https://support.syncfusion.com)** — create a support ticket, or ask questions on Stack Overflow using the `syncfusion-blazor` tag.
+
 ## See also
 
 * Product Development
