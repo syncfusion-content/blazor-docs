@@ -583,7 +583,6 @@ The following resources help you get productive with the Blazor components quick
 * **[Video tutorials](https://www.syncfusion.com/tutorial-videos/blazor/blazor-server-app)** — The Syncfusion Blazor YouTube Playlist with component walkthrough and feature deep dives.
 * **[Blogs and articles](https://www.syncfusion.com/blogs/category/blazor)** — Tips, release highlights, and how-to articles from the Blazor team.
 * **[Knowledge Base](https://support.syncfusion.com/kb/web/category/67)** — Answers to common questions and solutions to frequently encountered scenarios.
-* **[Support](https://support.syncfusion.com)** — Create a support ticket, or ask questions on Stack Overflow using the `syncfusion-blazor` tag.
 
 ## See also
 
