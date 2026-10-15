@@ -41,6 +41,17 @@ Blazor Components is an enterprise-grade, native UI components library for creat
 
 * After becoming familiar with the basics of a component, integrate it into the application. A practical next step is to review the code snippets in the [online sample browser](https://blazor.syncfusion.com/demos/), which contains hundreds of examples. It is likely there is a sample that matches the intended usage scenario.
 
+## Learning Resources
+
+The following resources help you get productive with the Blazor components quickly:
+
+* **[Getting Started documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)** — step-by-step instructions for creating a Blazor app and adding your first component.
+* **[Online sample browser](https://blazor.syncfusion.com/demos/)** — hundreds of live demos with source code for every component, covering common usage scenarios.
+* **[Video tutorials](https://www.youtube.com/playlist?list=PLFXZ9rZ6rXF_X7pJf9XdI9lWNoViloQ9W)** — the Syncfusion Blazor YouTube playlist with component walkthroughs and feature deep dives.
+* **[Blogs and articles](https://www.syncfusion.com/blogs/category/blazor)** — tips, release highlights, and how-to articles from the Blazor team.
+* **[Knowledge Base](https://www.syncfusion.com/kb/blazor-components)** — answers to common questions and solutions to frequently encountered scenarios.
+* **[Support](https://support.syncfusion.com)** — create a support ticket, or ask questions on Stack Overflow using the `syncfusion-blazor` tag.
+
 ## Components List
 
 <style>
