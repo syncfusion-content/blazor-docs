@@ -50,6 +50,7 @@ The following resources help you get productive with the Blazor components quick
 * **[Video tutorials](https://www.youtube.com/playlist?list=PLFXZ9rZ6rXF_X7pJf9XdI9lWNoViloQ9W)** — the Syncfusion Blazor YouTube playlist with component walkthroughs and feature deep dives.
 * **[Blogs and articles](https://www.syncfusion.com/blogs/category/blazor)** — tips, release highlights, and how-to articles from the Blazor team.
 * **[Knowledge Base](https://www.syncfusion.com/kb/blazor-components)** — answers to common questions and solutions to frequently encountered scenarios.
+* **[Forums](https://www.syncfusion.com/forums/blazor)** — join the Syncfusion Blazor community forum to discuss the components, ask questions, and share suggestions with other developers and the Syncfusion team.
 * **[Support](https://support.syncfusion.com)** — create a support ticket, or ask questions on Stack Overflow using the `syncfusion-blazor` tag.
 
 ## Components List
