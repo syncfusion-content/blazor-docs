@@ -37,7 +37,7 @@ Before you begin, ensure you have:
 4. To rename the project, click the project name dropdown located at the top of the Replit workspace, select **Edit project details**, and enter a name such as `datagrid-app`. <br/>
 ![Edit project details in Replit](./images/edit-project-details-replit.webp)
 
-## Create a Blazor DataGrid Application in Replit
+## Create a Blazor DataGrid application in Replit
 
 This section explains how to add a simple Blazor DataGrid application to the current Replit project and integrate the Blazor DataGrid component with the minimum required setup using either of the following approaches.
 
@@ -88,7 +88,7 @@ The agent will:
 
 ![Files Panel in Replit](./images/files-tab-replit.webp)
 
-## Run the Application
+## Run the application
 
 Once the agent finishes generating the application code, click the **Run** button (▶) at the top of the Replit workspace. The Blazor DataGrid application will be built and rendered in the preview pane, as shown below.
 
@@ -276,7 +276,7 @@ The Blazor DataGrid application will be built and rendered in the preview pane, 
 
 {% endtabcontents %}
 
-## Environment Variables in Replit
+## Environment variables in Replit
 
 If you need to store sensitive information (API keys, database URLs), use Replit Secrets:
 
@@ -284,7 +284,7 @@ If you need to store sensitive information (API keys, database URLs), use Replit
 2. Add your secret with a key and value (e.g., `SYNCFUSION_LICENSE_KEY=your_key_here`)
 3. Access it in your code using `Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY")`
 
-## Publish the Application in Replit
+## Publish the application in Replit
 
 Replit allows you to publish your application to a live public URL without leaving the browser. To deploy your application:
 
