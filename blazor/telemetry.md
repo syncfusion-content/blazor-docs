@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion<sup>&reg;</sup> Telemetry
 
-Syncfusion<sup>&reg;</sup> Telemetry library collects **anonymous usage data** to improve product quality and user experience. This data helps us better understand product usage, feature adoption, usage trends, and make informed decisions about future product planning. 
+Syncfusion<sup>®</sup> Telemetry, available from **v34.2.2** onwards, collects **anonymous usage data** to improve product quality and developer experience. This data helps us understand product usage patterns, feature adoption, and usage trends, enabling informed decisions for 
 
 Telemetry is **enabled by default**. However, you can disable it at any time if required. 
 
@@ -129,7 +129,7 @@ Syncfusion<sup>&reg;</sup> does not collect:
 
 ## How to Disable Telemetry (Opt-out)? 
 
-You can disable telemetry in Syncfusion<sup>&reg;</sup> Blazor products by calling the `Telemetry.Disable()` API before using any Syncfusion<sup>&reg;</sup> product APIs in your application. 
+You can disable telemetry in Syncfusion<sup>&reg;</sup> Blazor products by calling the `Telemetry.Disable()` API before using any Syncfusion<sup>&reg;</sup> product APIs in your application. For a Blazor Web App (Interactive WebAssembly), call `Telemetry.Disable()` in the `Program.cs` file of both the **Server** and **Client** projects.
 
 ### Step 1: Add the telemetry namespace 
 
