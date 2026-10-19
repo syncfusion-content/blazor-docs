@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Ribbon | Syncfusion
-description: Learn how to show additional information in the Blazor Ribbon by adding tooltips that appear when the user hovers over a Ribbon item.
+description: Learn how to show additional information in the Blazor Ribbon by adding tooltips that appear when the user hovers over a Blazor Ribbon item.
 control: Ribbon
 platform: Blazor
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Tooltip in Blazor Ribbon
 
-The Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item. The tooltip can be configured using the [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_TooltipSettings) property within the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) directive.
+The Blazor Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item. The tooltip can be configured using the [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_TooltipSettings) property within the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) directive.
 
 ## Adding Title
 
-You can use the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Title) property to set the tooltip title for each Ribbon item.
+You can use the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Title) property to set the tooltip title for each Blazor Ribbon item.
 
 ## Adding Content
 
-You can use the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Content) property to set the tooltip content for each Ribbon item.
+You can use the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Content) property to set the tooltip content for each Blazor Ribbon item.
 
 ## Adding Icon
 
@@ -204,4 +204,4 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Tooltip Template](./images/tooltip/ribbon_tooltip_template.webp)
+![Blazor Ribbon Tooltip Template](./images/tooltip/ribbon_tooltip_template.webp)

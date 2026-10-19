@@ -9,11 +9,11 @@ documentation: ug
 
 # Style and Appearance in Blazor Ribbon
 
-The Ribbon component provides several properties to customize its visual appearance, allowing control over dimensions, layout modes, styling, and behavior.
+The Blazor Ribbon component provides several properties to customize its visual appearance, allowing control over dimensions, layout modes, styling, and behavior.
 
 ## Setting width
 
-Specify the width for the Ribbon component using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_Width) property.
+Specify the width for the Blazor Ribbon component using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_Width) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Ribbon
@@ -29,7 +29,7 @@ Specify the width for the Ribbon component using the [Width](https://help.syncfu
 Use the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ActiveLayout) property to switch between different layout modes. The Ribbon supports two layout types:
 
 - **Classic**: Displays tabs and groups in a traditional multi-row format
-- **Simplified**: Displays all ribbon items in a single row for a more compact appearance
+- **Simplified**: Displays all Blazor Ribbon items in a single row for a more compact appearance
 
 ```cshtml
 @using Syncfusion.Blazor.Ribbon
@@ -42,7 +42,7 @@ Use the [ActiveLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 
 ## Setting minimized mode
 
-Use the [IsMinimized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_IsMinimized) property to minimize or collapse the Ribbon. When set to `true`, the ribbon collapses to show only tabs, saving screen space while keeping tab navigation accessible. Users can expand the ribbon by clicking on a tab.
+Use the [IsMinimized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_IsMinimized) property to minimize or collapse the Blazor Ribbon. When set to `true`, the ribbon collapses to show only tabs, saving screen space while keeping tab navigation accessible. Users can expand the Blazor Ribbon by clicking on a tab.
 
 ```cshtml
 @using Syncfusion.Blazor.Ribbon
@@ -52,7 +52,7 @@ Use the [IsMinimized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ri
 
 ## Customization using CSS class
 
-Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_CssClass) property to customize the appearance of the Ribbon component with custom styles.
+Use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_CssClass) property to customize the appearance of the Blazor Ribbon component with custom styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Ribbon
