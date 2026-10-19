@@ -33,15 +33,15 @@ Syncfusion Blazor components follow shared naming patterns, so the purpose of an
 | `Allow*` | Turns on a user-facing interaction or feature. | `AllowFiltering`, `AllowPaging`, `AllowResizing`, `AllowSorting` |
 | `Enable*` | Turns on a rendering mode or component behavior. | `EnableAdaptiveUI`, `EnableHtmlSanitizer`, `EnablePersistence`, `EnableRtl` |
 | `Show*` | Shows or hides a specific part of the UI. | `ShowClearButton`, `ShowColumnChooser`, `ShowTodayButton`, `ShowTooltip` |
-| `Popup*` | Configures the popup surface of dropdown-style components. | `PopupHeight`, `PopupWidth` |
-| `*Settings` | Groups related options into a single configuration object. | `SelectionSettings` |
+| `Popup*` | Configures the popup surface of dropdown-style components. | `PopupHeight`, `PopupWidth`, `PopupContent`, `PopupDisplayMode` |
+| `*Settings` | Groups related options into a single configuration object. | `EditSettings`, `FilterSettings`, `KeySettings`, `SelectionSettings`, `SearchSettings`, `SortSettings`, `PageSettings` |
 | `*Attributes` | Passes additional HTML attributes to the rendered element. | `HtmlAttributes`, `InputAttributes` |
 
 ### Events
 
 | Pattern | Meaning | Examples |
 | --- | --- | --- |
-| Present participle (`*ing`) | Fires before an action occurs. These events can often be canceled through the event arguments. | `RowCreating`, `RowSelecting` |
+| Present participle (`*ing`) | Fires before an action occurs. These events can often be canceled through the event arguments. | `Expanding`, `Collapsing`, `Filtering`,  `Resizing`, `RowCreating`, `RowSelecting`,  `CellSelecting`, `RowDeleting`, `RowEditing` |
 | Past tense (`*ed`) | Fires after an action has completed. | `Created`, `Destroyed`, `DataBound`, `RowSelected` |
 | `On*` / past-tense pair | `On*` fires as an action starts. | `OnOpen`, `OnClose` |
 
@@ -50,7 +50,7 @@ Syncfusion Blazor components follow shared naming patterns, so the purpose of an
 | Pattern | Meaning | Examples |
 | --- | --- | --- |
 | `*Async` | Public methods are asynchronous and return a `Task`, so they should be awaited. | `ClearSelectionAsync`, `FocusAsync`, `RefreshAsync` |
-| Paired verbs | Opposite operations use matching verb pairs. | `ShowAsync` / `HideAsync`, `ExpandAllAsync` / `CollapseAllAsync` |
+| Paired verbs | Opposite operations use matching verb pairs. | `ShowAsync` / `HideAsync`, `ExpandAllAsync` / `CollapseAllAsync`, `ShowPopupAsync` /`HidePopupAsync`, `AddEventAsync`/`DeleteEventAsync` |
 
 ## 1) Common appearance and layout APIs
 
