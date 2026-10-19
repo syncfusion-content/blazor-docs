@@ -41,7 +41,7 @@ Syncfusion Blazor components follow shared naming patterns, so the purpose of an
 
 | Pattern | Meaning | Examples |
 | --- | --- | --- |
-| Present participle (`*ing`) | Fires before an action occurs. These events can often be cancelled through the event arguments. | `Expanding`, `Collapsing`, `Filtering`,  `Resizing`, `RowCreating`, `RowSelecting`,  `CellSelecting`, `RowDeleting`, `RowEditing` |
+| Present participle (`*ing`) | Fires before an action occurs. These events can often be canceled through the event arguments. | `Expanding`, `Collapsing`, `Filtering`,  `Resizing`, `RowCreating`, `RowSelecting`,  `CellSelecting`, `RowDeleting`, `RowEditing` |
 | Past tense (`*ed`) | Fires after an action has completed. | `Created`, `Destroyed`, `DataBound`, `RowSelected` |
 | `On*` / past-tense pair | `On*` fires as an action starts. | `OnOpen`, `OnClose` |
 
