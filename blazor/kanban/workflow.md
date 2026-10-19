@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Workflow in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about workflow in Syncfusion Blazor Kanban component and much more details.
+description: Learn how the Syncfusion Blazor Kanban workflow restricts card movement between columns and how to disable drag and drop for specific columns.
 platform: Blazor
 control: Kanban
 documentation: ug
