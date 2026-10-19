@@ -578,11 +578,11 @@ padding-top: 20px;
 
 The following resources help you get productive with the Blazor components quickly:
 
-* **[Getting Started documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)** — Step-by-step instructions for creating a Blazor app and adding your first component.
-* **[Online sample browser](https://blazor.syncfusion.com/demos/)** — Explore hundreds of live demos with source code for Syncfusion Blazor components, covering common usage scenarios.
-* **[Video tutorials](https://www.syncfusion.com/tutorial-videos/blazor/blazor-server-app)** — The Syncfusion Blazor YouTube Playlist with component walkthrough and feature deep dives.
-* **[Blogs and articles](https://www.syncfusion.com/blogs/category/blazor)** — Tips, release highlights, and how-to articles from the Blazor team.
-* **[Knowledge Base](https://support.syncfusion.com/kb/web/category/67)** — Answers to common questions and solutions to frequently encountered scenarios.
+* **[Getting Started documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)** - Step-by-step instructions for creating a Blazor app and adding your first component.
+* **[Online sample browser](https://blazor.syncfusion.com/demos/)** - Explore hundreds of live demos with source code for Syncfusion Blazor components, covering common usage scenarios.
+* **[Video tutorials](https://www.syncfusion.com/tutorial-videos/blazor/blazor-server-app)** - The Syncfusion Blazor YouTube Playlist with component walkthrough and feature deep dives.
+* **[Blogs and articles](https://www.syncfusion.com/blogs/category/blazor)** - Tips, release highlights, and how-to articles from the Blazor team.
+* **[Knowledge Base](https://support.syncfusion.com/kb/web/category/67)** - Answers to common questions and solutions to frequently encountered scenarios.
 
 ## See also
 
