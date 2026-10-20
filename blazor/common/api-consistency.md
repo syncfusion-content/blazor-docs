@@ -151,7 +151,7 @@ Some events, such as `Focus`, `Blur`, and `ValueChange`, are named for the actio
 | `EnablePersistence` | Persists state across page reloads. The persisted state differs by component. | Accordion, Breadcrumb, Calendar, Carousel, CheckBox, ColorPicker, DashboardLayout, DatePicker, DateRangePicker, DateTimePicker, Dialog, DocumentEditor, DocumentEditorContainer, AutoComplete, ComboBox, DropDownList, DropDownTree, FileManager, Gantt, Grid, InPlaceEditor, Kanban, ListBox, ListView, MaskedTextBox, NumericTextBox, Pager, PivotView, QueryBuilder, RadioButton, Ribbon, RichTextEditor, Sidebar, Signature, Slider, Splitter, Switch, Tab, TextArea, TextBox, TimePicker, TreeView, Uploader |
 | `EnableVirtualization` | Enables virtualization for large data sets. | AutoComplete, ComboBox, DropDownList, DropDownTree, FileManager, Grid, ListView, MultiColumnComboBox, MultiSelect, PivotView, TreeGrid, TreeView |
 | `ShowTooltip` | Toggles whether tooltips are displayed by the component. | FileManager, Grid, PivotView, Rating, RichTextEditor, SpeechToText, Stepper |
-| `EnableHtmlSanitizer` | Sanitizes HTML content to help prevent cross-site scripting (XSS) attacks. Sanitization does not replace server-side validation. | BlockEditor, FileManager, PivotView, RichTextEditor, Uploader |
+| `EnableHtmlSanitizer` | Sanitizes HTML content to help prevent cross-site scripting (XSS) attacks. It does not replace server-side validation. | BlockEditor, FileManager, PivotView, RichTextEditor, Uploader |
 | `AllowRowDragAndDrop` | Enables row drag-and-drop or row reordering. | Gantt, Grid, TreeGrid |
 | `Orientation` | Controls horizontal or vertical layout/orientation. | Menu, Slider, Splitter, Stepper, Timeline |
 | `Visible` | Controls whether the component is shown or hidden. | Dialog, Message, ProgressBar, Rating, Skeleton, SpeedDial, Splitter |
@@ -175,4 +175,4 @@ Some events, such as `Focus`, `Blur`, and `ValueChange`, are named for the actio
 ## See also
 
 - [Blazor Web App getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-- [API reference](https://help.syncfusion.com/cr/blazor/)
+- [API reference](https://help.syncfusion.com/cr/blazor)
