@@ -63,6 +63,8 @@ Set `EnableWebMcp` to `true`. Optionally set `Name` on the component's `WebMcpSe
 
 `EnableWebMcp` turns registration on. `Name` becomes the prefix for the tool names. If you omit it, the component `ID` is used, then a generated ID.
 
+![Blazor DataGrid - WebMCP enabled](images/blazor-datagrid-webmcp-enabled.png)
+
 ## Verify the tools
 
 Call `GetWebMcpToolsAsync` to list the tools the component registered.
@@ -126,9 +128,13 @@ Call `GetWebMcpToolsAsync` to list the tools the component registered.
 
 Pass a list of names to `GetWebMcpToolsAsync` to inspect specific tools only.
 
+![Blazor DataGrid - registered WebMCP tools](images/blazor-datagrid-registered-webmcp-tools.png)
+
 ## Try a first prompt
 
 With your agent connected, ask for something the component can do, for example "Go to page 2 of the orders grid." The agent picks the matching tool, the component runs it, and the grid changes on screen.
+
+![Blazor DataGrid - page navigation by WebMCP tool](images/blazor-datagrid-webmcp-page-navigation.png)
 
 ## See also
 

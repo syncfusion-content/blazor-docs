@@ -29,6 +29,8 @@ When WebMCP is enabled, a component publishes a set of tools such as "go to page
 4. When an agent calls a tool, the component raises `OnWebMcpExecute`. Your handler can cancel the call or ask for user confirmation.
 5. The built-in handler, or your custom `OnExecute` handler, runs and returns the result to the agent.
 
+![Blazor DataGrid - WebMCP execution flow](images/blazor-datagrid-webmcp-execution-flow.png)
+
 N> WebMCP registration runs in the browser. Use an interactive render mode. Static server-side rendering does not register tools.
 
 ## How it compares

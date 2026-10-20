@@ -85,6 +85,8 @@ Tools that return document or data content are disabled by default, so you opt i
 {% endhighlight %}
 {% endtabs %}
 
+![Blazor DataGrid - configured WebMCP tools](images/blazor-datagrid-configured-webmcp-tools.png)
+
 ## Custom tools
 
 Set `Command` to `Custom` to expose an action the component does not provide. A custom tool needs a `Name`, a `Description`, an `InputSchema`, and an `OnExecute` handler.
@@ -154,6 +156,8 @@ Set `Command` to `Custom` to expose an action the component does not provide. A 
 
 {% endhighlight %}
 {% endtabs %}
+
+![Blazor DataGrid - custom WebMCP tool result](images/blazor-datagrid-custom-webmcp-tool-result.png)
 
 ## Control tool execution
 
@@ -244,6 +248,8 @@ Use the event only to decide whether the call may proceed, and put side effects 
 
 {% endhighlight %}
 {% endtabs %}
+
+![Blazor DataGrid - WebMCP confirmation dialog](images/blazor-datagrid-webmcp-confirmation-dialog.png)
 
 ## Inspect tools
 
