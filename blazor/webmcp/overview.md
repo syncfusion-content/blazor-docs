@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WebMCP for Blazor Components | AI Coding Assistant
+title: WebMCP for Blazor Components | Syncfusion AI Coding Assistant
 description: Learn how WebMCP lets a browser-based AI agent operate Syncfusion Blazor components through named tools registered with the page.
 platform: Blazor
 control: WebMCP

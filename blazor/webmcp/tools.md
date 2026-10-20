@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Configure WebMCP Tools in Blazor Components | Syncfusion
-description: Enable, disable, rename, and replace built-in WebMCP tools, add custom tools, and gate each call with OnWebMcpExecute.
+description: Enable, disable, rename, and replace built-in WebMCP tools, add custom tools, and gate each call with the execute event.
 platform: Blazor
 control: WebMCP
 documentation: ug
 ---
 
-# WebMCP Tools
+# Configure WebMCP Tools in Blazor Components
 
 Each component ships built-in tools. You can enable, disable, rename, or replace them, add custom tools, and gate every call through one event. Tools are declared inside `WebMcpSettings` > `WebMcpTools` > `WebMcpTool` child tags. The tags are prefixed with the component name, for example `GridWebMcpTool`.
 

@@ -7,7 +7,7 @@ control: WebMCP
 documentation: ug
 ---
 
-# WebMCP FAQ
+# WebMCP Frequently Asked Questions
 
 ## Registration and visibility
 
