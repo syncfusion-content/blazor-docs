@@ -174,6 +174,6 @@ Some events, such as `Focus`, `Blur`, and `ValueChange`, are named for the actio
 
 ## See also
 
-- [Blazor component index](/blazor/introduction)
+- [Syncfusion Blazor component index](/blazor/introduction)
 - [Blazor Web App getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 - [API reference](https://help.syncfusion.com/cr/blazor/)
