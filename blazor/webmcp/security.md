@@ -20,12 +20,12 @@ Treat every tool call as input from an untrusted caller. The agent acts on behal
 ## Gate changes to data
 
 * **Separate read tools from write tools.** Read tools are low risk. For a built-in tool that edits, deletes, redacts, protects, or saves, set `ShowConfirmationDialog` to `true` in `OnWebMcpExecute`.
-* **Confirm custom tools yourself.** `ShowConfirmationDialog` does not show a dialog for a custom tool. Ask inside `OnExecute`, and run the write only after the user accepts. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
-* **Keep side effects out of the event.** The event runs before confirmation. Do the work in the tool handler so it only runs once the user agrees.
+* **Confirm custom tools yourself.** `ShowConfirmationDialog` does not show a dialog for a custom tool. Ask inside `OnWebMcpExecute`, and set `Result` only after the user accepts. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
+* **Keep built-in side effects out of the event.** For a built-in tool, the event runs before the component dialog. Set `ShowConfirmationDialog` or `Cancel`, and leave the write to the component. Custom tool work has no other handler, so it belongs in this event, after your own confirmation.
 
 ## Validate and authorize
 
-* **Validate arguments.** In `OnWebMcpExecute` and in custom `OnExecute` handlers, check `Arguments` against what your app allows, and set `Cancel` to `true` for anything out of range or not permitted for the signed-in user.
+* **Validate arguments.** In `OnWebMcpExecute`, check `Arguments` against what your app allows, and set `Cancel` to `true` for anything out of range or not permitted for the signed-in user.
 * **Authorize in the app, not in the prompt.** Role checks belong in the event handler. An agent instruction is not an access control.
 * **Write precise descriptions and schemas.** A clear `Description` and a strict `InputSchema` help the agent pick the right tool and send valid arguments.
 
