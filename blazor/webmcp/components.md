@@ -56,18 +56,30 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 | Group | Tools |
 | --- | --- |
-| Read data | `GetSelectedRecords`, `GetSelectedRowIndexes`, `GetSelectedRowCellIndexes`, `GetFilteredRecords`, `GetCurrentViewRecords`, `GetCellValue`, `GetEditState`, `IsDirty` |
+| Read data | `GetSelectedRecords`, `GetSelectedRowIndexes`, `GetSelectedRowCellIndexes`, `GetFilteredRecords`, `GetCurrentViewRecords`, `GetCellValue` |
+| Read edit state | `GetEditState`, `IsDirty` |
 | Read columns | `GetColumnByField`, `GetColumnByUid`, `GetVisibleColumns`, `GetHiddenColumns`, `GetColumnFieldNames`, `GetColumnIndexByField`, `GetUidByColumnField` |
-| Navigate and search | `NavigateToPage`, `UpdatePageSize`, `ScrollIntoView`, `FocusGrid`, `FindAndHighlight`, `SearchText` |
+| Paging | `NavigateToPage`, `UpdatePageSize` |
+| Scroll and focus | `ScrollIntoView`, `FocusGrid` |
+| Search | `FindAndHighlight`, `SearchText` |
 | Sort | `SortByColumn`, `SortColumns`, `SortColumnsWithClear`, `ClearSorting`, `ClearSortingByFields` |
 | Filter | `FilterByColumn`, `ClearFiltering` |
-| Select | `SelectRows`, `SelectRowsByRange`, `ClearSelection`, `SelectCell`, `SelectCells`, `SelectCellsByRange`, `ClearCellSelection` |
-| Edit | `SetCellValue`, `SetRowData`, `EditCell`, `SaveCell`, `DeleteRow`, `CrudLifecycle`, `BatchEditWorkflow`, `UpdateGridData`, `ReorderRow`, `UndoRedoHistory` |
-| Group | `GroupByColumn`, `UngroupColumn`, `ExpandAllGroups`, `CollapseAllGroups`, `ClearGrouping` |
-| Columns | `ShowColumns`, `HideColumns`, `ReorderColumn`, `ReorderColumns`, `ReorderColumnByIndex`, `ReorderColumnByTargetIndex`, `AutoFitColumns`, `OpenColumnChooser` |
-| Detail rows and merging | `ExpandCollapseDetailRow`, `ExpandAllDetailRows`, `CollapseAllDetailRows`, `MergeCells`, `MergeCellsBulk`, `UnmergeCells`, `UnmergeCellsBulk`, `UnmergeAll` |
-| Export, print, clipboard | `ExcelExport`, `PdfExport`, `PrintGrid`, `CopyToClipboard`, `PasteFromClipboard` |
-| Rendering and state | `PreventRender`, `ShowSpinner`, `HideSpinner`, `RefreshGrid`, `RefreshColumns`, `RefreshHeader`, `PersistGridState`, `UpdateExternalMessage` |
+| Select rows | `SelectRows`, `SelectRowsByRange`, `ClearSelection` |
+| Select cells | `SelectCell`, `SelectCells`, `SelectCellsByRange`, `ClearCellSelection` |
+| Edit cells | `SetCellValue`, `SetRowData`, `EditCell`, `SaveCell` |
+| Edit rows | `DeleteRow`, `CrudLifecycle`, `BatchEditWorkflow`, `UpdateGridData`, `ReorderRow` |
+| History | `UndoRedoHistory` |
+| Group | `GroupByColumn`, `UngroupColumn`, `ClearGrouping` |
+| Expand groups | `ExpandAllGroups`, `CollapseAllGroups` |
+| Column visibility | `ShowColumns`, `HideColumns`, `OpenColumnChooser` |
+| Reorder columns | `ReorderColumn`, `ReorderColumns`, `ReorderColumnByIndex`, `ReorderColumnByTargetIndex`, `AutoFitColumns` |
+| Detail rows | `ExpandCollapseDetailRow`, `ExpandAllDetailRows`, `CollapseAllDetailRows` |
+| Merge cells | `MergeCells`, `MergeCellsBulk`, `UnmergeCells`, `UnmergeCellsBulk`, `UnmergeAll` |
+| Export | `ExcelExport`, `PdfExport` |
+| Print | `PrintGrid` |
+| Clipboard | `CopyToClipboard`, `PasteFromClipboard` |
+| Rendering | `PreventRender`, `ShowSpinner`, `HideSpinner`, `RefreshGrid`, `RefreshColumns`, `RefreshHeader` |
+| State | `PersistGridState`, `UpdateExternalMessage` |
 
 ## Scheduler
 
