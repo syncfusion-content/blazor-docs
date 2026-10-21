@@ -27,11 +27,11 @@ Tool names are prefixed with the `Name` of the `WebMcpSettings`, falling back to
 
 ### My `OnExecute` handler does not run
 
-Confirm the tool entry uses `Command="Custom"` with a `Name`, `InputSchema`, and `OnExecute`, and that `Cancel` was not set in `OnWebMcpExecute`. If a confirmation dialog is shown, the handler runs only after the user accepts.
+Confirm the tool entry uses `Command="Custom"` with a `Name`, `InputSchema`, and `OnExecute`, and that `Cancel` was not set in `OnWebMcpExecute`. `ShowConfirmationDialog` does not show a dialog for a custom tool. Confirm inside `OnExecute` if the write should wait for the user. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
 
 ### Why does my side effect run before the user confirms?
 
-Work placed inside `OnWebMcpExecute` runs before the confirmation dialog. Keep the event as a gate and move the work into the tool's `OnExecute` handler.
+Work placed inside `OnWebMcpExecute` runs before any confirmation. Keep the event as a gate and move the work into the tool's `OnExecute` handler. For a custom tool, that handler must ask the user itself. The component dialog is only for built-in tools.
 
 ## Customization and support
 

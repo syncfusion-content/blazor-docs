@@ -168,10 +168,12 @@ The order of work for each call is:
 1. The component resolves the tool.
 2. `OnWebMcpExecute` runs.
 3. If `Cancel` is `true`, execution stops and a cancellation response is returned.
-4. If `ShowConfirmationDialog` is `true`, the user is asked to confirm.
+4. If `ShowConfirmationDialog` is `true`, the component asks the user to confirm a built-in tool. Custom tools do not get that dialog.
 5. The built-in handler, or the tool's `OnExecute` handler, runs and returns the result.
 
-Use the event only to decide whether the call may proceed, and put side effects in the tool's own handler, which runs after confirmation. Work done inside the event would run before the user confirms.
+Use the event only to decide whether the call may proceed, and put side effects in the tool's own handler. Work done inside the event would run before the user confirms.
+
+N> `ShowConfirmationDialog` is applied by the component for built-in tools only. It does not show a dialog for a custom tool. To confirm a custom tool, show your own UI inside `OnExecute` and run the write only after the user accepts. See [Confirm a custom tool](#confirm-a-custom-tool), [Security and best practices](./security), and the [FAQ](./faq).
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -215,6 +217,8 @@ Use the event only to decide whether the call may proceed, and put side effects 
           "required": ["orderId"] }
         """;
 
+    private bool UserCanFlagOrders { get; set; } = true;
+
     private List<Order> Orders = Enumerable.Range(1, 12).Select(i => new Order
     {
         OrderID = 10000 + i,
@@ -223,12 +227,13 @@ Use the event only to decide whether the call may proceed, and put side effects 
         Flagged = false
     }).ToList();
 
-    // Gate only: ask for confirmation. The work happens in FlagOrderAsync after the user confirms.
+    // Gate only. ShowConfirmationDialog does not confirm a custom tool.
+    // Cancel a call the signed-in user is not allowed to make. Confirm the write in OnExecute.
     private void OnToolExecuting(GridWebMcpExecuteEventArgs args)
     {
-        if (args.Name.EndsWith("flagOrder"))
+        if (args.Name.EndsWith("flagOrder") && !UserCanFlagOrders)
         {
-            args.ShowConfirmationDialog = true;
+            args.Cancel = true;
         }
     }
 
@@ -243,6 +248,86 @@ Use the event only to decide whether the call may proceed, and put side effects 
 
         order.Flagged = true;
         return Task.FromResult("Order flagged.");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+For a built-in write tool, set `ShowConfirmationDialog` in `OnWebMcpExecute`. The component shows the dialog and runs the built-in handler only after the user accepts.
+
+## Confirm a custom tool
+
+A custom tool ignores `ShowConfirmationDialog`. Ask in `OnExecute`, and change data only when the user accepts. This sample uses `window.confirm` through `IJSRuntime`. Replace that call with a Syncfusion dialog if the page already uses one.
+
+{% tabs %}
+{% highlight razor tabtitle="Orders.razor" %}
+
+@page "/orders"
+@rendermode InteractiveServer
+@inject IJSRuntime JS
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" EnableWebMcp="true" AllowPaging="true">
+    <GridWebMcpSettings Name="orders">
+        <GridWebMcpTools>
+            <GridWebMcpTool Command="GridWebMcpToolCommand.Custom"
+                            Name="flagOrder"
+                            Description="Flags an order for review by its order ID."
+                            InputSchema="@FlagSchema"
+                            OnExecute="FlagOrderAsync" />
+        </GridWebMcpTools>
+    </GridWebMcpSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="110"></GridColumn>
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="140"></GridColumn>
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Format="C2" Width="120"></GridColumn>
+        <GridColumn Field="@nameof(Order.Flagged)" HeaderText="Flagged" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; } = string.Empty;
+        public double Freight { get; set; }
+        public bool Flagged { get; set; }
+    }
+
+    private const string FlagSchema = """
+        { "type": "object",
+          "properties": { "orderId": { "type": "integer", "description": "The order I "type": "object",
+          "properties": { "orderId": { "type": "integer", "description": "The order ID to flag." } },
+          "required": ["orderId"] }
+        """;
+
+    private List<Order> Orders = Enumerable.Range(1, 12).Select(i => new Order
+    {
+        OrderID = 10000 + i,
+        CustomerID = $"CUST{i:00}",
+        Freight = 20 + i * 3.5,
+        Flagged = false
+    }).ToList();
+
+    private async Task<string> FlagOrderAsync(WebMcpToolArgs args)
+    {
+        var orderId = int.Parse(args.Arguments["orderId"]?.ToString() ?? "0");
+        var order = Orders.FirstOrDefault(o => o.OrderID == orderId);
+        if (order is null)
+        {
+            return "Order not found.";
+        }
+
+        var accepted = await JS.InvokeAsync<bool>("confirm", $"Flag order {orderId}?");
+        if (!accepted)
+        {
+            return "Cancelled.";
+        }
+
+        order.Flagged = true;
+        return "Order flagged.";
     }
 }
 

@@ -26,7 +26,7 @@ When WebMCP is enabled, a component publishes a set of tools such as "go to page
 1. Set `EnableWebMcp` to `true` on the component. It is `false` by default.
 2. Optionally add a `WebMcpSettings` child tag to name the registration scope and to enable, disable, or customize tools.
 3. The component registers its enabled tools with the browser.
-4. When an agent calls a tool, the component raises `OnWebMcpExecute`. Your handler can cancel the call or ask for user confirmation.
+4. When an agent calls a tool, the component raises `OnWebMcpExecute`. Your handler can cancel the call. For a built-in tool, it can also set `ShowConfirmationDialog`. A custom tool does not get that dialog. Confirm a custom write inside its `OnExecute` handler. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
 5. The built-in handler, or your custom `OnExecute` handler, runs and returns the result to the agent.
 
 ![Blazor DataGrid - WebMCP execution flow](images/blazor-datagrid-webmcp-execution-flow.png)

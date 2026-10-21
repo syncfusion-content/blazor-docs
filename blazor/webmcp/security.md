@@ -19,7 +19,8 @@ Treat every tool call as input from an untrusted caller. The agent acts on behal
 
 ## Gate changes to data
 
-* **Separate read tools from write tools.** Read tools are low risk. For tools that edit, delete, redact, protect, or save, set `ShowConfirmationDialog` to `true` in `OnWebMcpExecute`.
+* **Separate read tools from write tools.** Read tools are low risk. For a built-in tool that edits, deletes, redacts, protects, or saves, set `ShowConfirmationDialog` to `true` in `OnWebMcpExecute`.
+* **Confirm custom tools yourself.** `ShowConfirmationDialog` does not show a dialog for a custom tool. Ask inside `OnExecute`, and run the write only after the user accepts. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
 * **Keep side effects out of the event.** The event runs before confirmation. Do the work in the tool handler so it only runs once the user agrees.
 
 ## Validate and authorize
