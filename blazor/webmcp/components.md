@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebMCP Supported Blazor Components and Tools | Syncfusion
-description: Browse the built-in WebMCP tools for Data Grid, Scheduler, Chart, Gantt, Diagram, File Manager, Rich Text Editor, PDF Viewer, Document Editor, and Spreadsheet.
+description: Browse built-in WebMCP tools for Data Grid, Scheduler, Chart, Gantt, Diagram, and the other supported Blazor components.
 platform: Blazor
 control: WebMCP
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # WebMCP Supported Components
 
-Ten components support WebMCP. Each one uses the same settings, tools, and event pattern, with its own command enum.
+The components below support WebMCP. Each one uses the same settings, tools, and event pattern, with its own command enum. The tool counts in the table are a guide. Call `GetWebMcpToolsAsync` to see what a component instance registers.
 
 | Component | Command enum | Built-in tools |
 | --- | --- | --- |
@@ -25,32 +25,6 @@ Ten components support WebMCP. Each one uses the same settings, tools, and event
 | Spreadsheet | `SpreadsheetWebMcpToolCommand` | 49 |
 
 Select a built-in tool with its command enum, for example `Command="GridWebMcpToolCommand.NavigateToPage"`. See [Tools](./tools) for how to enable, disable, rename, or replace a command.
-
-## PDF Viewer
-
-| Group | Tools |
-| --- | --- |
-| Read state | `GetViewerState`, `GetPageDetails`, `GetDocumentInfo` |
-| Read content (off by default) | `GetBookmarks`, `GetAnnotations`, `GetFormFields`, `GetSearchTextPositions`, `GetPageText` |
-| Navigate and view | `GoToPage`, `GoToBookmark`, `SetZoom`, `FitToPage` |
-| Search | `SearchText`, `SearchNext` |
-| Annotations | `AddAnnotation`, `EditAnnotation`, `DeleteAnnotations`, `Redact`, `UndoRedo` |
-| Form fields | `AddFormFields`, `UpdateFormFields`, `DeleteFormFields`, `ImportFormFields`, `ExportFormFields` |
-| Pages | `RotatePages`, `MovePages`, `InsertBlankPages`, `DeletePages`, `DuplicatePages`, `ExtractPages` |
-| Output | `Print`, `Download` |
-
-## Spreadsheet
-
-| Group | Tools |
-| --- | --- |
-| Read | `GetActiveSheet`, `GetSelection`, `GetCellValue`, `GetWorkbookInfo`, `Find`, `FindAll`, `ListCharts`. `GetRangeData` is opt-in |
-| Edit cells | `UpdateCell`, `UpdateCells`, `ClearRange`, `Replace`, `Autofill`, `SelectRange` |
-| Format | `SetCellFormat`, `SetNumberFormat`, `SetBorders`, `MergeCells`, `UnmergeCells`, `SetColumnWidth`, `SetRowHeight` |
-| Sort and filter | `SortRange`, `FilterByCellValue`, `ClearFilter`, `ClearAllFilters`, `ReapplyFilters` |
-| Rules and names | `AddConditionalFormat`, `ClearConditionalFormats`, `AddDataValidation`, `RemoveDataValidation`, `AddDefinedName`, `RemoveDefinedName` |
-| Links and charts | `AddHyperlink`, `RemoveHyperlink`, `InsertChart`, `DeleteChart` |
-| Rows, columns, sheets | `InsertRow`, `InsertColumn`, `InsertSheet`, `DeleteSheet`, `DuplicateSheet`, `MoveSheet`, `ProtectSheet`, `UnprotectSheet` |
-| Workbook | `Calculate`, `Refresh`, `Undo`, `Redo`, `Save` |
 
 ## Data Grid
 
@@ -81,9 +55,11 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 | Rendering | `PreventRender`, `ShowSpinner`, `HideSpinner`, `RefreshGrid`, `RefreshColumns`, `RefreshHeader` |
 | State | `PersistGridState`, `UpdateExternalMessage` |
 
+
 ## Scheduler
 
 `CreateEvent`, `UpdateEvent`, `DeleteEvent`, `ChangeView`, `NavigateDate`.
+
 
 ## Chart
 
@@ -94,6 +70,7 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 | Axes and annotations | `AddChartAxis`, `UpdateChartAxis`, `RemoveChartAxis`, `AddChartAnnotation`, `UpdateChartAnnotation`, `RemoveChartAnnotation` |
 | Interaction | `ShowChartTooltip`, `HideChartTooltip`, `ShowChartCrosshair`, `HideChartCrosshair`, `ConfigureChartZoom`, `ResetChartZoom`, `SelectChartPoints`, `ClearChartSelection`, `AnimateChart` |
 | Appearance and output | `UpdateChartTitle`, `UpdateChartProperties`, `ExportChart`, `PrintChart` |
+
 
 ## Gantt
 
@@ -109,9 +86,11 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 | Dialogs and layout | `OpenAddDialog`, `OpenEditDialog`, `CancelEdit`, `SetSplitterPosition`, `ShowColumn`, `HideColumn`, `ReorderColumns`, `OpenColumnChooser` |
 | State and rendering | `SetPersistedData`, `ResetPersistedData`, `Refresh`, `RefreshColumns`, `ShowSpinner`, `HideSpinner`, `CopyToClipboard` |
 
+
 ## Diagram
 
 `GetDiagramCatalog`, `CreateDiagramNode`, `CreateDiagramConnector`, `DragNode`, `ManageNodeSelection`, `EnableEditingMode`, `ArrangeAndAlignObjects`, `DeleteFromDiagram`, `ManageUndoRedo`, `ManageClipboardOperations`, `ExportAndImportDiagrams`, `ArrangeZOrder`, `NavigateAndZoomDiagram`, `ManageGroupsAndHierarchies`, `ManageAnnotationsAndLabels`, `ManagePorts`, `ApplyLayoutToNodes`, `CreateUmlSequenceDiagram`.
+
 
 ## File Manager
 
@@ -122,6 +101,7 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 | File operations | `CreateFolder`, `RenameFile`, `DeleteFiles`, `UploadFiles`, `DownloadFiles` |
 | Menu and toolbar | `EnableMenuItems`, `DisableMenuItems`, `EnableToolbarItems`, `DisableToolbarItems` |
 
+
 ## Rich Text Editor
 
 | Group | Tools |
@@ -130,6 +110,21 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 | Insert | `InsertContent`, `InsertLink`, `InsertTable`, `InsertImage`, `InsertBR` |
 | Format | `FormatSelectedContent`, `SetBlockType`, `SetTextAlignment`, `SetCodeBlock`, `ApplyNumberedListFormat`, `ApplyBulletedListFormat`, `ClearFormatting` |
 | Dialogs and history | `ShowDialog`, `CloseDialog`, `UndoLastAction`, `RedoLastAction`, `PrintContent` |
+
+
+## PDF Viewer
+
+| Group | Tools |
+| --- | --- |
+| Read state | `GetViewerState`, `GetPageDetails`, `GetDocumentInfo` |
+| Read content (off by default) | `GetBookmarks`, `GetAnnotations`, `GetFormFields`, `GetSearchTextPositions`, `GetPageText` |
+| Navigate and view | `GoToPage`, `GoToBookmark`, `SetZoom`, `FitToPage` |
+| Search | `SearchText`, `SearchNext` |
+| Annotations | `AddAnnotation`, `EditAnnotation`, `DeleteAnnotations`, `Redact`, `UndoRedo` |
+| Form fields | `AddFormFields`, `UpdateFormFields`, `DeleteFormFields`, `ImportFormFields`, `ExportFormFields` |
+| Pages | `RotatePages`, `MovePages`, `InsertBlankPages`, `DeletePages`, `DuplicatePages`, `ExtractPages` |
+| Output | `Print`, `Download` |
+
 
 ## Document Editor
 
@@ -142,8 +137,23 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 | Character format | `Get` and `Set` pairs for `CharacterFormatBold`, `Italic`, `Underline`, `Strikethrough`, `FontFamily`, `FontSize`, `FontColor`, `BaselineAlignment`, `HighlightColor` |
 | Paragraph format | `Get` and `Set` pairs for `ParagraphFormatTextAlignment`, `LeftIndent`, `RightIndent`, `FirstLineIndent`, `BeforeSpacing`, `AfterSpacing`, `LineSpacing`, `LineSpacingType`, `ListLevelNumber`, `OutlineLevel`, `Bidi`, `ContextualSpacing`. `GetParagraphFormatListText` is read-only |
 
+
+## Spreadsheet
+
+| Group | Tools |
+| --- | --- |
+| Read | `GetActiveSheet`, `GetSelection`, `GetCellValue`, `GetWorkbookInfo`, `Find`, `FindAll`, `ListCharts`. `GetRangeData` is opt-in |
+| Edit cells | `UpdateCell`, `UpdateCells`, `ClearRange`, `Replace`, `Autofill`, `SelectRange` |
+| Format | `SetCellFormat`, `SetNumberFormat`, `SetBorders`, `MergeCells`, `UnmergeCells`, `SetColumnWidth`, `SetRowHeight` |
+| Sort and filter | `SortRange`, `FilterByCellValue`, `ClearFilter`, `ClearAllFilters`, `ReapplyFilters` |
+| Rules and names | `AddConditionalFormat`, `ClearConditionalFormats`, `AddDataValidation`, `RemoveDataValidation`, `AddDefinedName`, `RemoveDefinedName` |
+| Links and charts | `AddHyperlink`, `RemoveHyperlink`, `InsertChart`, `DeleteChart` |
+| Rows, columns, sheets | `InsertRow`, `InsertColumn`, `InsertSheet`, `DeleteSheet`, `DuplicateSheet`, `MoveSheet`, `ProtectSheet`, `UnprotectSheet` |
+| Workbook | `Calculate`, `Refresh`, `Undo`, `Redo`, `Save` |
+
+
 ## See also
 
-* [Getting started](./getting-started)
-* [Tools](./tools)
-* API reference and live samples for each component's `WebMcpSettings`, `WebMcpTool`, and `WebMcpExecuteEventArgs`
+* [Getting started with WebMCP](./getting-started) shows how to enable registration and inspect the tools for one instance.
+* [Configure WebMCP tools](./tools) shows how to enable, disable, or rename a command from the lists below.
+* [Security and best practices](./security) explains how to limit write tools before an agent can call them.
