@@ -36,9 +36,6 @@ Treat every tool call as input from an untrusted caller. The agent acts on behal
 
 ## See also
 
-* [WebMCP overview](./overview) explains what an in-browser agent can do once tools are registered.
-* [Getting started with WebMCP](./getting-started) shows how to enable registration on an interactive render mode.
 * [Control tool execution](./tools#control-tool-execution) shows how to cancel a call or ask the user to confirm a built-in tool.
 * [Confirm a custom tool](./tools#confirm-a-custom-tool) shows how to ask before a custom tool changes data.
-* [Supported components](./components) lists the write tools you may want to disable or confirm.
 * [WebMCP FAQ](./faq) covers confirmation timing and why a custom tool does not show the built-in dialog.

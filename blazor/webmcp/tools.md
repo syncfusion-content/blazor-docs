@@ -349,9 +349,6 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
 
 ## See also
 
-* [WebMCP overview](./overview) explains how registered tools are discovered and called.
 * [Getting started with WebMCP](./getting-started) shows how to enable registration before you customize tools.
 * [Security and best practices](./security) explains how to confirm writes and validate arguments in `OnWebMcpExecute`.
 * [Supported components](./components) lists the built-in commands you can select with `Command`.
-* [WebMCP FAQ](./faq) answers questions about custom tool results and built-in tool overrides.
-* Explore the [Data Grid feature tour](https://www.syncfusion.com/blazor-components/blazor-datagrid) for the component used in these samples.

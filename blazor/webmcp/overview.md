@@ -60,17 +60,5 @@ WebMCP is available for the Data Grid, Scheduler, Chart, Gantt, Diagram, File Ma
 ## See also
 
 * [Getting started with WebMCP](./getting-started) shows how to enable registration and list the tools an agent can call.
-* [Configure WebMCP tools](./tools) covers enabling, disabling, and renaming built-in tools, and adding custom tools.
-* [Security and best practices](./security) explains how to limit exposed tools and confirm changes before they run.
 * [Supported components](./components) lists the built-in tools for each component that supports WebMCP.
-* [WebMCP FAQ](./faq) answers common questions about registration, confirmation, and custom tool results.
-* Explore the [Data Grid feature tour](https://www.syncfusion.com/blazor-components/blazor-datagrid) for the component used in these samples.
-* Explore the [Scheduler feature tour](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler).
-* Explore the [Chart feature tour](https://www.syncfusion.com/blazor-components/blazor-charts).
-* Explore the [Gantt feature tour](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart).
-* Explore the [Diagram feature tour](https://www.syncfusion.com/diagram-sdk/blazor-diagram).
-* Explore the [File Manager feature tour](https://www.syncfusion.com/blazor-components/blazor-file-manager).
-* Explore the [Rich Text Editor feature tour](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor).
-* Explore the [PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer).
-* Explore the [Document Editor feature tour](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor).
-* Explore the [Spreadsheet feature tour](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor).
+* [Configure WebMCP tools](./tools) covers enabling, disabling, and renaming built-in tools, and adding custom tools.

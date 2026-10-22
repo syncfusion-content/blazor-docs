@@ -140,7 +140,4 @@ With your agent connected, ask for something the component can do, for example "
 
 * [WebMCP overview](./overview) explains how a component registers tools and how an agent calls them.
 * [Configure WebMCP tools](./tools) shows how to enable, disable, rename, and add tools after registration works.
-* [Security and best practices](./security) covers what to check before you enable tools that change data.
 * [Supported components](./components) lists the built-in tools you can call from an agent prompt.
-* [WebMCP FAQ](./faq) covers missing tools, name collisions, and confirmation timing.
-* Explore the [Data Grid feature tour](https://www.syncfusion.com/blazor-components/blazor-datagrid) for the component used in this sample.

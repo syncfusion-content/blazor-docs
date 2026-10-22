@@ -45,8 +45,6 @@ The browser API is experimental and Chromium-only. Use it where you control the 
 
 ## See also
 
-* [WebMCP overview](./overview) explains how tools are registered and how a call is handled.
 * [Getting started with WebMCP](./getting-started) shows the setup to check when tools do not appear.
 * [Configure WebMCP tools](./tools) covers custom tools, confirmation, and the registered name format.
 * [Security and best practices](./security) explains how to limit tools and confirm changes to data.
-* [Supported components](./components) lists the built-in commands for each supported component.
