@@ -46,7 +46,7 @@ WebMCP is separate from the [Syncfusion Blazor MCP Server](../mcp). The MCP Serv
 
 ## Supported components
 
-WebMCP is available for the Data Grid, Scheduler, Chart, Gantt, Diagram, File Manager, Rich Text Editor, PDF Viewer, Document Editor, and Spreadsheet. Tool lists for each component are in the [Components](./components) topic.
+WebMCP is available for the Data Grid, Scheduler, Chart, Gantt, Diagram, File Manager, Rich Text Editor, PDF Viewer, Document Editor, and Spreadsheet. Tool lists are in the [Components](./components) topic. Feature tours for each component are in [See also](#see-also).
 
 ## Terms used in this guide
 
