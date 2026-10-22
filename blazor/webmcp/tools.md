@@ -20,10 +20,12 @@ A built-in tool is selected with `Command`. The properties below apply to every 
 | Property | Purpose | Default |
 | --- | --- | --- |
 | `Command` | Built-in command to configure, or `Custom` for your own tool | `None` |
-| `Name` | Registered tool name. Required for custom tools. Optional override for built-in tools | Generated |
+| `Name` | Registered tool name. Required for custom tools. Optional override for built-in tools. Use PascalCase, for example `FlagOrder` | Generated |
 | `Description` | Text the agent reads to decide when to call the tool | Built-in text |
-| `InputSchema` | JSON schema for the tool's arguments. Required for custom tools | Built-in schema |
+| `InputSchema` | JSON schema for the tool's arguments. Required for custom tools. On a built-in command, a value set here is ignored | Built-in schema |
 | `Enabled` | Whether the tool is registered with the browser | `true` |
+
+The registered name is `{prefix}_{tool}`. The prefix is the `Name` on `WebMcpSettings`, or the component `ID` when `Name` is empty. The tool part is the built-in command, or the `Name` you set on a custom tool. With `Name="orders"`, `SetCellValue` is registered as `orders_SetCellValue`, and a custom tool named `FlagOrder` is registered as `orders_FlagOrder`. Match that full string, or use `EndsWith("_SetCellValue")`, so a partial suffix does not match another tool. Call `GetWebMcpToolsAsync` and read `Name` if you need the exact value for an instance.
 
 Tools that return document or data content are disabled by default, so you opt in deliberately. Examples are PDF Viewer `GetBookmarks`, `GetAnnotations`, `GetFormFields`, `GetSearchTextPositions`, and `GetPageText`, and Spreadsheet `GetRangeData`.
 
@@ -41,7 +43,7 @@ Tools that return document or data content are disabled by default, so you opt i
         <GridWebMcpTools>
             <GridWebMcpTool Command="GridWebMcpToolCommand.ExcelExport" Enabled="false" />
             <GridWebMcpTool Command="GridWebMcpToolCommand.Custom"
-                            Name="getSelectedOrders"
+                            Name="GetSelectedOrders"
                             Description="Returns the orders selected in the grid."
                             InputSchema="@SelectedSchema"
                             Enabled="true" />
@@ -79,7 +81,7 @@ Tools that return document or data content are disabled by default, so you opt i
 
     private async Task OnToolExecuting(GridWebMcpExecuteEventArgs args)
     {
-        if (!args.Name.EndsWith("getSelectedOrders"))
+        if (!args.Name.EndsWith("_GetSelectedOrders"))
         {
             return;
         }
@@ -110,7 +112,7 @@ Set `Command` to `Custom` to expose an action the component does not provide. A 
     <GridWebMcpSettings Name="orders">
         <GridWebMcpTools>
             <GridWebMcpTool Command="GridWebMcpToolCommand.Custom"
-                            Name="flagOrder"
+                            Name="FlagOrder"
                             Description="Flags an order for review by its order ID."
                             InputSchema="@FlagSchema" />
         </GridWebMcpTools>
@@ -149,12 +151,18 @@ Set `Command` to `Custom` to expose an action the component does not provide. A 
 
     private void OnToolExecuting(GridWebMcpExecuteEventArgs args)
     {
-        if (!args.Name.EndsWith("flagOrder"))
+        if (!args.Name.EndsWith("_FlagOrder"))
         {
             return;
         }
 
-        var orderId = int.Parse(args.Arguments["orderId"]?.ToString() ?? "0");
+        if (!int.TryParse(args.Arguments["orderId"]?.ToString(), out var orderId))
+        {
+            args.Cancel = true;
+            args.Result = "orderId must be an integer.";
+            return;
+        }
+
         var order = Orders.FirstOrDefault(o => o.OrderID == orderId);
         if (order is null)
         {
@@ -171,6 +179,8 @@ Set `Command` to `Custom` to expose an action the component does not provide. A 
 {% endtabs %}
 
 ![Blazor DataGrid - custom WebMCP tool result](images/blazor-datagrid-custom-webmcp-tool-result.png)
+
+N> This sample writes without asking the user, so you can see the result path. Do not copy it for a write tool. Confirm first, as in [Confirm a custom tool](#confirm-a-custom-tool).
 
 ## Control tool execution
 
@@ -225,13 +235,13 @@ For a built-in write tool, set `ShowConfirmationDialog` and leave the work to th
 
     private void OnToolExecuting(GridWebMcpExecuteEventArgs args)
     {
-        if (args.Name.EndsWith("SetCellValue") && !UserCanEditOrders)
+        if (args.Name.EndsWith("_SetCellValue") && !UserCanEditOrders)
         {
             args.Cancel = true;
             return;
         }
 
-        if (args.Name.EndsWith("SetCellValue"))
+        if (args.Name.EndsWith("_SetCellValue"))
         {
             args.ShowConfirmationDialog = true;
         }
@@ -258,7 +268,7 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
     <GridWebMcpSettings Name="orders">
         <GridWebMcpTools>
             <GridWebMcpTool Command="GridWebMcpToolCommand.Custom"
-                            Name="flagOrder"
+                            Name="FlagOrder"
                             Description="Flags an order for review by its order ID."
                             InputSchema="@FlagSchema" />
         </GridWebMcpTools>
@@ -297,12 +307,18 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
 
     private async Task OnToolExecuting(GridWebMcpExecuteEventArgs args)
     {
-        if (!args.Name.EndsWith("flagOrder"))
+        if (!args.Name.EndsWith("_FlagOrder"))
         {
             return;
         }
 
-        var orderId = int.Parse(args.Arguments["orderId"]?.ToString() ?? "0");
+        if (!int.TryParse(args.Arguments["orderId"]?.ToString(), out var orderId))
+        {
+            args.Cancel = true;
+            args.Result = "orderId must be an integer.";
+            return;
+        }
+
         var order = Orders.FirstOrDefault(o => o.OrderID == orderId);
         if (order is null)
         {
@@ -335,4 +351,4 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
 
 * [Security and best practices](./security)
 * [Supported components](./components)
-* API reference for the `WebMcpTool` and `WebMcpExecuteEventArgs` classes of each component
+* [FAQ](./faq)

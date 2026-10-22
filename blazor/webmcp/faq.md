@@ -21,7 +21,7 @@ The tool may be disabled. Content-returning tools such as PDF Viewer `GetPageTex
 
 ### Why do tool names collide on a page with several components?
 
-Tool names are prefixed with the `Name` of the `WebMcpSettings`, falling back to the component `ID`. Give each instance a distinct `Name`.
+Tool names are `{prefix}_{tool}`. The prefix is the `Name` of the `WebMcpSettings`, or the component `ID` when `Name` is empty. With `Name="orders"`, the built-in `SetCellValue` tool is registered as `orders_SetCellValue`. Give each instance a distinct `Name`. See [Configure tools](./tools#configure-tools).
 
 ## Execution and confirmation
 
@@ -37,9 +37,7 @@ For a built-in tool, work placed inside `OnWebMcpExecute` runs before the compon
 
 ### Can I rename or replace a built-in tool?
 
-Yes for `Name` and `Description`. There is no per-tool handler to replace the built-in action. Cancel the call in `OnWebMcpExecute`, or register a custom tool and set `Result` yourself.
-
-N> Whether a built-in tool's `InputSchema` can be overridden is not yet decided. Treat a custom `InputSchema` on a built-in command as ignored until the API confirms otherwise.
+Yes for `Name` and `Description`. There is no per-tool handler to replace the built-in action. Cancel the call in `OnWebMcpExecute`, or register a custom tool and set `Result` yourself. `InputSchema` on a built-in command is ignored. The component keeps its built-in schema. Set `InputSchema` only on a custom tool.
 
 ### Is WebMCP production-ready?
 

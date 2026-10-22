@@ -37,4 +37,4 @@ Treat every tool call as input from an untrusted caller. The agent acts on behal
 ## See also
 
 * [Control tool execution](./tools#control-tool-execution)
-* `OnWebMcpExecute` and `WebMcpExecuteEventArgs` in each component's API reference
+* [Confirm a custom tool](./tools#confirm-a-custom-tool)

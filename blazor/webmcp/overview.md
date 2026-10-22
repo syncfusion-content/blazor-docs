@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WebMCP for Blazor Components | Syncfusion AI Coding Assistant
+title: WebMCP for Blazor Components | Syncfusion
 description: Learn how WebMCP lets a browser-based AI agent operate Syncfusion Blazor components through named tools registered with the page.
 platform: Blazor
 control: WebMCP
@@ -39,10 +39,10 @@ N> WebMCP registration runs in the browser. Use an interactive render mode. Stat
 | --- | --- | --- |
 | WebMCP | In the user's browser, on the live component | Letting an in-browser agent operate the UI the user already has open |
 | MCP server | On a server or local process, outside the page | Giving agents access to data, files, and services without a UI |
-| AI-powered components | Inside the component, as built-in AI features | Features you ship to users directly, such as assistive panels |
-| A2UI | Agent-generated interface description rendered by the host | Letting an agent compose new UI rather than drive existing UI |
+| [AI-powered components](https://blazor.syncfusion.com/documentation/ai-coding-assistant/overview) | Inside the component, as built-in AI features | Features you ship to users directly, such as assistive panels |
+| [A2UI](https://a2ui.org/) | Agent-generated interface description rendered by the host | Letting an agent compose new UI rather than drive existing UI |
 
-WebMCP is separate from the [Syncfusion Blazor MCP Server](https://blazor.syncfusion.com/documentation/mcp). The MCP Server supplies documentation and code generation to an IDE. WebMCP exposes the running component to an agent in the browser.
+WebMCP is separate from the [Syncfusion Blazor MCP Server](../mcp). The MCP Server supplies documentation and code generation to an IDE. WebMCP exposes the running component to an agent in the browser.
 
 ## Supported components
 
@@ -54,12 +54,12 @@ WebMCP is available for the Data Grid, Scheduler, Chart, Gantt, Diagram, File Ma
 | --- | --- |
 | Tool | A named action with a description and input schema that an agent can call |
 | Built-in tool | A tool shipped with the component, selected with a `Command` value |
-| Custom tool | A tool you define with `Command="Custom"`, your own name, schema, and handler |
-| Prefix | The `Name` of the WebMCP settings, used to keep tool names unique per component instance |
+| Custom tool | A tool you define with `Command="Custom"`, your own PascalCase name, schema, and result set in `OnWebMcpExecute` |
+| Prefix | The `Name` of the WebMCP settings. The registered tool name is `{prefix}_{tool}`, for example `orders_SetCellValue` |
 
 ## See also
 
-* [Quick start](./getting-started)
+* [Getting started](./getting-started)
 * [Tools](./tools)
 * [Security and best practices](./security)
 * [Components](./components)
