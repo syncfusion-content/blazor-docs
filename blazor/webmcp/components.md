@@ -135,7 +135,7 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 | Find and insert | `FindAll`, `InsertText`, `Paste`, `InsertImage`, `InsertHyperlink`, `InsertEditingRegion` |
 | Bookmarks | `GetBookmarks`, `InsertBookmark`, `SelectBookmark` |
 | Character format | `Get` and `Set` pairs for `CharacterFormatBold`, `Italic`, `Underline`, `Strikethrough`, `FontFamily`, `FontSize`, `FontColor`, `BaselineAlignment`, `HighlightColor` |
-| Paragraph format | `Get` and `Set` pairs for `ParagraphFormatTextAlignment`, `LeftIndent`, `RightIndent`, `FirstLineIndent`, `BeforeSpacing`, `AfterSpacing`, `LineSpacing`, `LineSpacingType`, `ListLevelNumber`, `OutlineLevel`, `Bidi`, `ContextualSpacing`. `GetParagraphFormatListText` is read-only |
+| Paragraph format | `Get` and `Set` pairs for `ParagraphFormatTextAlignment`, `LeftIndent`, `RightIndent`, `FirstLineIndent`, `BeforeSpacing`, `AfterSpacing`, `LineSpacing`, `LineSpacingType`, `ListLevelNumber`, `OutlineLevel`, `ContextualSpacing`. `GetParagraphFormatListText` is read-only |
 
 
 ## Spreadsheet
@@ -155,5 +155,5 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 ## See also
 
 * [Getting started with WebMCP](./getting-started) shows how to enable registration and inspect the tools for one instance.
-* [Configure WebMCP tools](./tools) shows how to enable, disable, or rename a command from the lists below.
+* [Configure WebMCP tools](./tools) shows how to enable, disable, or rename a command from the lists above.
 * [Security and best practices](./security) explains how to limit write tools before an agent can call them.
