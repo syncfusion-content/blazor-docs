@@ -158,7 +158,6 @@ Set `Command` to `Custom` to expose an action the component does not provide. A 
 
         if (!int.TryParse(args.Arguments["orderId"]?.ToString(), out var orderId))
         {
-            args.Cancel = true;
             args.Result = "orderId must be an integer.";
             return;
         }
@@ -314,7 +313,6 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
 
         if (!int.TryParse(args.Arguments["orderId"]?.ToString(), out var orderId))
         {
-            args.Cancel = true;
             args.Result = "orderId must be an integer.";
             return;
         }
@@ -342,6 +340,8 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
 {% endtabs %}
 
 ![Blazor DataGrid - WebMCP confirmation dialog](images/blazor-datagrid-webmcp-confirmation-dialog.png)
+
+N> If you rename a built-in tool with `Name`, match the new registered name instead of `_SetCellValue`.
 
 ## Inspect tools
 
