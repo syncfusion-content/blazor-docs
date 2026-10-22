@@ -36,5 +36,6 @@ Treat every tool call as input from an untrusted caller. The agent acts on behal
 
 ## See also
 
-* [Control tool execution](./tools#control-tool-execution)
-* `OnWebMcpExecute` and `WebMcpExecuteEventArgs` in each component's API reference
+* [Control tool execution](./tools#control-tool-execution) shows how to cancel a call or ask the user to confirm a built-in tool.
+* [Confirm a custom tool](./tools#confirm-a-custom-tool) shows how to ask before a custom tool changes data.
+* [WebMCP FAQ](./faq) covers confirmation timing and why a custom tool does not show the built-in dialog.

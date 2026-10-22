@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with WebMCP for Blazor Components | Syncfusion
-description: Enable WebMCP on a Syncfusion Blazor component, list the registered tools, and try a first agent prompt.
+description: Enable WebMCP on a Syncfusion Blazor component, list the registered tools, and try a first agent prompt in an interactive render mode.
 platform: Blazor
 control: WebMCP
 documentation: ug
@@ -15,8 +15,8 @@ Enable WebMCP on a component with one property, then confirm its tools are regis
 
 Before you begin, ensure you have:
 
-* A Blazor app with the Syncfusion<sup style="font-size:70%">&reg;</sup> component already rendering. Use an interactive render mode. Static SSR does not run the browser registration. See [interactive render mode](https://blazor.syncfusion.com/documentation/common/interactive-render-mode).
-* A Chromium-based browser with WebMCP available, and an agent or extension that can call WebMCP tools.
+* A Blazor app with the Syncfusion<sup style="font-size:70%">&reg;</sup> component already rendering. Use an interactive render mode. Static SSR does not run the browser registration. See [interactive render mode](../common/interactive-render-mode).
+* A Chromium-based browser with the WebMCP origin trial or `chrome://flags/#enable-webmcp` enabled. The API is experimental, so confirm it in the browser versions you support. You also need an agent or extension that can call WebMCP tools.
 
 ## Enable WebMCP
 
@@ -138,5 +138,6 @@ With your agent connected, ask for something the component can do, for example "
 
 ## See also
 
-* [Tools](./tools) for customizing what is exposed
-* [Security and best practices](./security) before enabling write tools
+* [WebMCP overview](./overview) explains how a component registers tools and how an agent calls them.
+* [Configure WebMCP tools](./tools) shows how to enable, disable, rename, and add tools after registration works.
+* [Supported components](./components) lists the built-in tools you can call from an agent prompt.
