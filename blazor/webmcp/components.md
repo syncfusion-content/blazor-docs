@@ -154,6 +154,18 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 ## See also
 
-* [Getting started](./getting-started)
-* [Tools](./tools)
-* [Security and best practices](./security)
+* [WebMCP overview](./overview) explains how these components register tools with the browser.
+* [Getting started with WebMCP](./getting-started) shows how to enable registration and inspect the tools for one instance.
+* [Configure WebMCP tools](./tools) shows how to enable, disable, or rename a command from the lists below.
+* [Security and best practices](./security) explains how to limit write tools before an agent can call them.
+* [WebMCP FAQ](./faq) covers name collisions when more than one of these components is on the page.
+* Explore the [Data Grid feature tour](https://www.syncfusion.com/blazor-components/blazor-datagrid).
+* Explore the [Scheduler feature tour](https://www.syncfusion.com/scheduler-sdk/blazor-scheduler).
+* Explore the [Chart feature tour](https://www.syncfusion.com/blazor-components/blazor-charts).
+* Explore the [Gantt feature tour](https://www.syncfusion.com/gantt-sdk/blazor-gantt-chart).
+* Explore the [Diagram feature tour](https://www.syncfusion.com/diagram-sdk/blazor-diagram).
+* Explore the [File Manager feature tour](https://www.syncfusion.com/blazor-components/blazor-file-manager).
+* Explore the [Rich Text Editor feature tour](https://www.syncfusion.com/rich-text-editor-sdk/blazor-rich-text-editor).
+* Explore the [PDF Viewer feature tour](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer).
+* Explore the [Document Editor feature tour](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor).
+* Explore the [Spreadsheet feature tour](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor).
