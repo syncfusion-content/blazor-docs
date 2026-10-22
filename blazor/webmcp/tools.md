@@ -349,6 +349,9 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
 
 ## See also
 
+* [Overview](./overview)
+* [Getting started](./getting-started)
 * [Security and best practices](./security)
 * [Supported components](./components)
 * [FAQ](./faq)
+* [Data Grid feature tour](https://www.syncfusion.com/blazor-components/blazor-datagrid)

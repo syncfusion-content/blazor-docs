@@ -9,7 +9,7 @@ documentation: ug
 
 # WebMCP Supported Components
 
-Ten components support WebMCP. Each one uses the same settings, tools, and event pattern, with its own command enum.
+The components below support WebMCP. Each one uses the same settings, tools, and event pattern, with its own command enum. The tool counts in the table are a guide. Call `GetWebMcpToolsAsync` to see what a component instance registers.
 
 | Component | Command enum | Built-in tools |
 | --- | --- | --- |

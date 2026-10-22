@@ -45,6 +45,8 @@ The browser API is experimental and Chromium-only. Use it where you control the 
 
 ## See also
 
+* [Overview](./overview)
 * [Getting started](./getting-started)
 * [Tools](./tools)
 * [Security and best practices](./security)
+* [Supported components](./components)

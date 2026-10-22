@@ -138,5 +138,9 @@ With your agent connected, ask for something the component can do, for example "
 
 ## See also
 
-* [Tools](./tools) for customizing what is exposed
-* [Security and best practices](./security) before enabling write tools
+* [Overview](./overview)
+* [Tools](./tools)
+* [Security and best practices](./security)
+* [Supported components](./components)
+* [FAQ](./faq)
+* [Data Grid feature tour](https://www.syncfusion.com/blazor-components/blazor-datagrid)

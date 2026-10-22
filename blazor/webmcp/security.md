@@ -36,5 +36,9 @@ Treat every tool call as input from an untrusted caller. The agent acts on behal
 
 ## See also
 
+* [Overview](./overview)
+* [Getting started](./getting-started)
 * [Control tool execution](./tools#control-tool-execution)
 * [Confirm a custom tool](./tools#confirm-a-custom-tool)
+* [Supported components](./components)
+* [FAQ](./faq)
