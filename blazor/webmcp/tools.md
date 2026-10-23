@@ -235,13 +235,13 @@ For a built-in write tool, set `ShowConfirmationDialog` and leave the work to th
 
     private void OnToolExecuting(GridWebMcpExecuteEventArgs args)
     {
-        if (args.Name.EndsWith("_SetCellValue") && !UserCanEditOrders)
+        if (args.Name.EndsWith("SetCellValue") && !UserCanEditOrders)
         {
             args.Cancel = true;
             return;
         }
 
-        if (args.Name.EndsWith("_SetCellValue"))
+        if (args.Name.EndsWith("SetCellValue"))
         {
             args.ShowConfirmationDialog = true;
         }
