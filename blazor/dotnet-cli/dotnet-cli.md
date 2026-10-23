@@ -54,7 +54,7 @@ The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNe
 
 Run `sf help` for a short command map, or `sf help blazor` for the Blazor command map and package aliases.
 
-![Help output in the Syncfusion .NET CLI](images/show-help.png)
+![Help output in the Syncfusion .NET CLI](images/cli-help-output.png)
 
 To update the tool to the latest release, run:
 
@@ -143,7 +143,7 @@ N> A complete direct command does not open the wizard. When a name is missing in
 
 13. Review the configured values and confirm to create the project.
 
-    ![Configured Blazor project values in the Syncfusion .NET CLI](images/configured-blazor.png)
+    ![Configured Blazor project values in the Syncfusion .NET CLI](images/cli-configured-blazor-values.png)
 
 N> For WebAssembly and Auto render modes, the CLI places the interactive demo pages, package references, imports, and service registration in the generated `.Client` project. The host project also receives `AddSyncfusionBlazor()` and the Syncfusion import so prerendering works.
 
@@ -229,7 +229,7 @@ dotnet run --project ./MyApp/MyApp.csproj
 
 N> `--post-action generate` runs the official template and writes project files without silently restoring or building. `--post-action build` restores and builds the project during creation.
 
-![Generated Blazor project in the Syncfusion .NET CLI](images/sample-generated.png)
+![Generated Blazor project in the Syncfusion .NET CLI](images/cli-generated-blazor-project.png)
 
 ## Manage packages in an existing project
 
@@ -254,7 +254,7 @@ sf search grid --framework blazor
 
 Use `--details` on the list command for package descriptions, release status, registration requirements, documentation links, and whether a generated sample is available.
 
-![Available packages in the Syncfusion .NET CLI](images/list-of-avilable-package.png)
+![Available packages in the Syncfusion .NET CLI](images/cli-list-available-packages.png)
 
 ## Options reference
 
