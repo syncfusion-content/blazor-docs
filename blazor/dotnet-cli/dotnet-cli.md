@@ -52,6 +52,10 @@ The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNe
     sf --version
     ```
 
+Run `sf help` for a short command map, or `sf help blazor` for the Blazor command map and package aliases.
+
+![Help output in the Syncfusion .NET CLI](images/show-help.png)
+
 To update the tool to the latest release, run:
 
 ```bash
@@ -137,6 +141,10 @@ Run `sf new`, or select **Create a new project** from the main menu. The Blazor 
 
 N> A complete direct command does not open the wizard. When a name is missing in an interactive terminal, the wizard supplies a default and collects the remaining unspecified inputs. Missing required values in scripts produce an error.
 
+13. Review the configured values and confirm to create the project.
+
+    ![Configured Blazor project values in the Syncfusion .NET CLI](images/configured-blazor.png)
+
 N> For WebAssembly and Auto render modes, the CLI places the interactive demo pages, package references, imports, and service registration in the generated `.Client` project. The host project also receives `AddSyncfusionBlazor()` and the Syncfusion import so prerendering works.
 
 N> Demo pages are generated as `<Component>Demo.razor` so they never collide with component type names. Creation is transactional until generation completes; failures roll back the newly created directory.
@@ -220,6 +228,8 @@ dotnet run --project ./MyApp/MyApp.csproj
 ```
 
 N> `--post-action generate` runs the official template and writes project files without silently restoring or building. `--post-action build` restores and builds the project during creation.
+
+![Generated Blazor project in the Syncfusion .NET CLI](images/sample-generated.png)
 
 ## Manage packages in an existing project
 
