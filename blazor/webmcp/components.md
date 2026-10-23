@@ -58,7 +58,9 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 ## Scheduler
 
-`CreateEvent`, `UpdateEvent`, `DeleteEvent`, `ChangeView`, `NavigateDate`.
+| Group | Tools |
+| --- | --- |
+| Events and navigation | `CreateEvent`, `UpdateEvent`, `DeleteEvent`, `ChangeView`, `NavigateDate` |
 
 
 ## Chart
@@ -89,7 +91,14 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 ## Diagram
 
-`GetDiagramCatalog`, `CreateDiagramNode`, `CreateDiagramConnector`, `DragNode`, `ManageNodeSelection`, `EnableEditingMode`, `ArrangeAndAlignObjects`, `DeleteFromDiagram`, `ManageUndoRedo`, `ManageClipboardOperations`, `ExportAndImportDiagrams`, `ArrangeZOrder`, `NavigateAndZoomDiagram`, `ManageGroupsAndHierarchies`, `ManageAnnotationsAndLabels`, `ManagePorts`, `ApplyLayoutToNodes`, `CreateUmlSequenceDiagram`.
+| Group | Tools |
+| --- | --- |
+| Read | `GetDiagramCatalog` |
+| Nodes and connectors | `CreateDiagramNode`, `CreateDiagramConnector`, `DragNode`, `DeleteFromDiagram` |
+| Selection and editing | `ManageNodeSelection`, `EnableEditingMode`, `ArrangeAndAlignObjects`, `ArrangeZOrder` |
+| Groups, labels, and ports | `ManageGroupsAndHierarchies`, `ManageAnnotationsAndLabels`, `ManagePorts` |
+| History and clipboard | `ManageUndoRedo`, `ManageClipboardOperations` |
+| Layout and navigation | `ApplyLayoutToNodes`, `NavigateAndZoomDiagram`, `ExportAndImportDiagrams`, `CreateUmlSequenceDiagram` |
 
 
 ## File Manager

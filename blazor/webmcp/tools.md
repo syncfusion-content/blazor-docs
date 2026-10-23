@@ -9,9 +9,7 @@ documentation: ug
 
 # Configure WebMCP Tools in Blazor Components
 
-Each component ships built-in tools. You can enable, disable, or rename them, add custom tools, and handle every call in one component event. Tools are declared inside `WebMcpSettings` > `WebMcpTools` > `WebMcpTool` child tags. The tags are prefixed with the component name, for example `GridWebMcpTool`.
-
-There is no `OnExecute` callback on `WebMcpTool`. Custom work, cancellation, confirmation, and the result all belong in `OnWebMcpExecute`.
+Each component ships built-in tools. You can enable, disable, or rename them, add custom tools, and handle every call in `OnWebMcpExecute`. Tools are declared inside `WebMcpSettings` > `WebMcpTools` > `WebMcpTool` child tags. The tags are prefixed with the component name, for example `GridWebMcpTool`.
 
 ## Configure tools
 
@@ -22,10 +20,10 @@ A built-in tool is selected with `Command`. The properties below apply to every 
 | `Command` | Built-in command to configure, or `Custom` for your own tool | `None` |
 | `Name` | Registered tool name. Required for custom tools. Optional override for built-in tools. Use PascalCase, for example `FlagOrder` | Generated |
 | `Description` | Text the agent reads to decide when to call the tool | Built-in text |
-| `InputSchema` | JSON schema for the tool's arguments. Required for custom tools. On a built-in command, a value set here is ignored | Built-in schema |
+| `InputSchema` | Object schema for the tool's arguments. Required for custom tools. Pass an object whose `type` is `object`, not a JSON string | Built-in schema |
 | `Enabled` | Whether the tool is registered with the browser | `true` |
 
-The registered name is `{prefix}_{tool}`. The prefix is the `Name` on `WebMcpSettings`, or the component `ID` when `Name` is empty. The tool part is the built-in command, or the `Name` you set on a custom tool. With `Name="orders"`, `SetCellValue` is registered as `orders_SetCellValue`, and a custom tool named `FlagOrder` is registered as `orders_FlagOrder`. Match that full string, or use `EndsWith("_SetCellValue")`, so a partial suffix does not match another tool. Call `GetWebMcpToolsAsync` and read `Name` if you need the exact value for an instance.
+The registered name is `{Prefix}_{Tool}`. The prefix is the `Name` on `WebMcpSettings`, or the component `ID` when `Name` is empty. Use PascalCase for that name. The tool part is the built-in command, or the `Name` you set on a custom tool. With `Name="Orders"`, `SetCellValue` is registered as `Orders_SetCellValue`, and a custom tool named `FlagOrder` is registered as `Orders_FlagOrder`. Match that full string, or use `EndsWith("_SetCellValue")`, so a partial suffix does not match another tool. Call `GetWebMcpToolsAsync` and read `Name` if you need the exact value for an instance.
 
 Tools that return document or data content are disabled by default, so you opt in deliberately. Examples are PDF Viewer `GetBookmarks`, `GetAnnotations`, `GetFormFields`, `GetSearchTextPositions`, and `GetPageText`, and Spreadsheet `GetRangeData`.
 
@@ -34,12 +32,11 @@ Tools that return document or data content are disabled by default, so you opt i
 
 @page "/orders"
 @rendermode InteractiveServer
-@using System.Text.Json
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="grid" DataSource="@Orders" EnableWebMcp="true" AllowPaging="true">
     <GridEvents TValue="Order" OnWebMcpExecute="OnToolExecuting" />
-    <GridWebMcpSettings Name="orders">
+    <GridWebMcpSettings Name="Orders">
         <GridWebMcpTools>
             <GridWebMcpTool Command="GridWebMcpToolCommand.ExcelExport" Enabled="false" />
             <GridWebMcpTool Command="GridWebMcpToolCommand.Custom"
@@ -69,7 +66,11 @@ Tools that return document or data content are disabled by default, so you opt i
 
     private SfGrid<Order> grid = default!;
 
-    private const string SelectedSchema = """{ "type": "object", "properties": {} }""";
+    private object SelectedSchema { get; set; } = new
+    {
+        type = "object",
+        properties = new { }
+    };
 
     private List<Order> Orders = Enumerable.Range(1, 12).Select(i => new Order
     {
@@ -87,7 +88,7 @@ Tools that return document or data content are disabled by default, so you opt i
         }
 
         var selected = await grid.GetSelectedRecordsAsync();
-        args.Result = JsonSerializer.Serialize(selected);
+        args.Result = selected;
     }
 }
 
@@ -109,7 +110,7 @@ Set `Command` to `Custom` to expose an action the component does not provide. A 
 
 <SfGrid DataSource="@Orders" EnableWebMcp="true" AllowPaging="true">
     <GridEvents TValue="Order" OnWebMcpExecute="OnToolExecuting" />
-    <GridWebMcpSettings Name="orders">
+    <GridWebMcpSettings Name="Orders">
         <GridWebMcpTools>
             <GridWebMcpTool Command="GridWebMcpToolCommand.Custom"
                             Name="FlagOrder"
@@ -135,11 +136,15 @@ Set `Command` to `Custom` to expose an action the component does not provide. A 
         public bool Flagged { get; set; }
     }
 
-    private const string FlagSchema = """
-        { "type": "object",
-          "properties": { "orderId": { "type": "integer", "description": "The order ID to flag." } },
-          "required": ["orderId"] }
-        """;
+    private object FlagSchema { get; set; } = new
+    {
+        type = "object",
+        properties = new
+        {
+            orderId = new { type = "integer", description = "The order ID to flag." }
+        },
+        required = new[] { "orderId" }
+    };
 
     private List<Order> Orders = Enumerable.Range(1, 12).Select(i => new Order
     {
@@ -180,21 +185,17 @@ Set `Command` to `Custom` to expose an action the component does not provide. A 
 
 ![Blazor DataGrid - custom WebMCP tool result](images/blazor-datagrid-custom-webmcp-tool-result.png)
 
-N> This sample writes without asking the user, so you can see the result path. Do not copy it for a write tool. Confirm first, as in [Confirm a custom tool](#confirm-a-custom-tool).
-
 ## Control tool execution
 
-Every call raises `OnWebMcpExecute`. This is the only handler. The event arguments expose `Name`, `Arguments`, `ShowConfirmationDialog`, `Cancel`, and, on some components, `Result`.
+Every call triggers `OnWebMcpExecute`. The event arguments expose `Name`, `Arguments`, `ShowConfirmationDialog`, `Cancel`, and `Result`.
 
 The order of work for each call is:
 
 1. The component resolves the tool.
 2. `OnWebMcpExecute` runs.
 3. If `Cancel` is `true`, execution stops and a cancellation response is returned.
-4. If `ShowConfirmationDialog` is `true`, the component asks the user to confirm a built-in tool. Custom tools do not get that dialog.
+4. If `ShowConfirmationDialog` is `true`, the component asks the user to confirm a writable tool.
 5. For a built-in tool, the component handler runs and returns the result. For a custom tool, the result is the value you set on `Result` in this event.
-
-N> `ShowConfirmationDialog` is applied by the component for built-in tools only. It does not show a dialog for a custom tool. Ask inside `OnWebMcpExecute`, and set `Result` only after the user accepts. See [Confirm a custom tool](#confirm-a-custom-tool), [Security and best practices](./security), and the [FAQ](./faq).
 
 For a built-in write tool, set `ShowConfirmationDialog` and leave the work to the component. Do not change data in the event for that call. The component runs its handler only after the user accepts.
 
@@ -207,7 +208,7 @@ For a built-in write tool, set `ShowConfirmationDialog` and leave the work to th
 
 <SfGrid DataSource="@Orders" EnableWebMcp="true" AllowPaging="true">
     <GridEvents TValue="Order" OnWebMcpExecute="OnToolExecuting" />
-    <GridWebMcpSettings Name="orders" />
+    <GridWebMcpSettings Name="Orders" />
     <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="110"></GridColumn>
@@ -253,7 +254,7 @@ For a built-in write tool, set `ShowConfirmationDialog` and leave the work to th
 
 ## Confirm a custom tool
 
-A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and set `Result` only when the user accepts. This sample uses `window.confirm` through `IJSRuntime`. Replace that call with a Syncfusion dialog if the page already uses one.
+Trigger `OnWebMcpExecute` for a custom tool, and set `Result` only when the user accepts. This sample uses `window.confirm` through `IJSRuntime`. Replace that call with a Syncfusion dialog if the page already uses one.
 
 {% tabs %}
 {% highlight razor tabtitle="Orders.razor" %}
@@ -265,7 +266,7 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
 
 <SfGrid DataSource="@Orders" EnableWebMcp="true" AllowPaging="true">
     <GridEvents TValue="Order" OnWebMcpExecute="OnToolExecuting" />
-    <GridWebMcpSettings Name="orders">
+    <GridWebMcpSettings Name="Orders">
         <GridWebMcpTools>
             <GridWebMcpTool Command="GridWebMcpToolCommand.Custom"
                             Name="FlagOrder"
@@ -291,11 +292,15 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
         public bool Flagged { get; set; }
     }
 
-    private const string FlagSchema = """
-        { "type": "object",
-          "properties": { "orderId": { "type": "integer", "description": "The order ID to flag." } },
-          "required": ["orderId"] }
-        """;
+    private object FlagSchema { get; set; } = new
+    {
+        type = "object",
+        properties = new
+        {
+            orderId = new { type = "integer", description = "The order ID to flag." }
+        },
+        required = new[] { "orderId" }
+    };
 
     private List<Order> Orders = Enumerable.Range(1, 12).Select(i => new Order
     {
@@ -352,3 +357,4 @@ A custom tool ignores `ShowConfirmationDialog`. Ask in `OnWebMcpExecute`, and se
 * [Getting started with WebMCP](./getting-started) shows how to enable registration before you customize tools.
 * [Security and best practices](./security) explains how to confirm writes and validate arguments in `OnWebMcpExecute`.
 * [Supported components](./components) lists the built-in commands you can select with `Command`.
+in commands you can select with `Command`.

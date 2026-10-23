@@ -16,7 +16,7 @@ Enable WebMCP on a component with one property, then confirm its tools are regis
 Before you begin, ensure you have:
 
 * A Blazor app with the Syncfusion<sup style="font-size:70%">&reg;</sup> component already rendering. Use an interactive render mode. Static SSR does not run the browser registration. See [interactive render mode](../common/interactive-render-mode).
-* A Chromium-based browser with the WebMCP origin trial or `chrome://flags/#enable-webmcp` enabled. The API is experimental, so confirm it in the browser versions you support. You also need an agent or extension that can call WebMCP tools.
+* A Chromium-based browser with the WebMCP origin trial or `chrome://flags/#enable-webmcp` enabled. The API is experimental, so confirm it in the browser versions you support.
 
 ## Enable WebMCP
 
@@ -30,7 +30,7 @@ Set `EnableWebMcp` to `true`. Optionally set `Name` on the component's `WebMcpSe
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" EnableWebMcp="true" AllowPaging="true">
-    <GridWebMcpSettings Name="orders" />
+    <GridWebMcpSettings Name="Orders" />
     <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="110"></GridColumn>
@@ -86,7 +86,7 @@ Call `GetWebMcpToolsAsync` to list the tools the component registered.
 </ul>
 
 <SfGrid @ref="grid" DataSource="@Orders" EnableWebMcp="true" AllowPaging="true">
-    <GridWebMcpSettings Name="orders" />
+    <GridWebMcpSettings Name="Orders" />
     <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="110"></GridColumn>
