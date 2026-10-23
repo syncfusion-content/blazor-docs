@@ -13,8 +13,6 @@ The Syncfusion<sup>®</sup> .NET CLI (`sf`) is a cross-platform command line too
 
 N> The Syncfusion<sup>®</sup> .NET CLI is currently in preview and is installed with the `--prerelease` flag.
 
-N> Package removal (`sf remove`) is temporarily disabled across all platforms while improvements are in progress.
-
 You can use the CLI to perform the following actions:
 
 * Create a Blazor Web App (Server, WebAssembly, or Auto render mode) or a standalone Blazor WebAssembly app, optionally containing generated Syncfusion<sup>®</sup> component demo pages.
