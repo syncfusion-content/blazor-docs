@@ -21,17 +21,17 @@ The tool may be disabled. Content-returning tools such as PDF Viewer `GetPageTex
 
 ### Why do tool names collide on a page with several components?
 
-Tool names are `{prefix}_{tool}`. The prefix is the `Name` of the `WebMcpSettings`, or the component `ID` when `Name` is empty. With `Name="orders"`, the built-in `SetCellValue` tool is registered as `orders_SetCellValue`. Give each instance a distinct `Name`. See [Configure tools](./tools#configure-tools).
+Tool names are `{Prefix}_{Tool}`. The prefix is the `Name` of the `WebMcpSettings`, or the component `ID` when `Name` is empty. Use PascalCase for that name. With `Name="Orders"`, the built-in `SetCellValue` tool is registered as `Orders_SetCellValue`. Give each instance a distinct `Name`. See [Configure tools](./tools#configure-tools).
 
 ## Execution and confirmation
 
 ### My custom tool returns nothing
 
-`WebMcpTool` does not have an `OnExecute` callback. Handle the call in `OnWebMcpExecute`, match `args.Name`, and set `args.Result`. Also confirm the tool entry uses `Command="Custom"` with a `Name` and `InputSchema`, and that `Cancel` was not set. `ShowConfirmationDialog` does not show a dialog for a custom tool. Ask in the event before you set `Result`. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
+Trigger `OnWebMcpExecute`, match `args.Name`, and set `args.Result`. Also confirm the tool entry uses `Command="Custom"` with a `Name` and an object `InputSchema`, and that `Cancel` was not set. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
 
 ### Why does my side effect run before the user confirms?
 
-For a built-in tool, work placed inside `OnWebMcpExecute` runs before the component dialog. Use the event to set `ShowConfirmationDialog` or `Cancel`, and leave the write to the component. A custom tool has no second handler, so ask in the event and change data only after the user accepts.
+For a built-in tool, work placed inside `OnWebMcpExecute` runs before the component dialog. Use the event to set `ShowConfirmationDialog` or `Cancel`, and leave the write to the component. For a custom tool, trigger `OnWebMcpExecute` and change data only after the user accepts.
 
 ## Customization and support
 
