@@ -357,4 +357,3 @@ Trigger `OnWebMcpExecute` for a custom tool, and set `Result` only when the user
 * [Getting started with WebMCP](./getting-started) shows how to enable registration before you customize tools.
 * [Security and best practices](./security) explains how to confirm writes and validate arguments in `OnWebMcpExecute`.
 * [Supported components](./components) lists the built-in commands you can select with `Command`.
-in commands you can select with `Command`.
