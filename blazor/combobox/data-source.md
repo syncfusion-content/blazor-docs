@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Source in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Data Source in Syncfusion Blazor ComboBox component and much more.
+title: Data Source in Blazor ComboBox | Syncfusion®
+description: Load Blazor ComboBox data from local arrays or remote services through the DataSource property or DataManager with OData, Web API, and URL adaptors.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Data Source in Blazor ComboBox Component
+# Data Source in Blazor ComboBox
 
 The ComboBox loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
@@ -72,7 +72,7 @@ In the following example, the Name property is mapped to the Text field and the 
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBKsLLcKnxcdvLv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Blazor ComboBox Items](./images/blazor-combobox-binding-items.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhHjnhgLbUFEzQC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Blazor ComboBox Items](./images/blazor-combobox-binding-items.webp)" %}
 
 ### Array of complex data
 
@@ -119,7 +119,7 @@ public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrqiLVwKHwhTfxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding Complex Items with Blazor ComboBox](./images/blazor-combobox-complex-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVnDnhgrPutbGCz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Binding Complex Items with Blazor ComboBox](./images/blazor-combobox-complex-data.webp)" %}
 
 ## Binding remote data
 
@@ -155,7 +155,7 @@ In the following sample, the first six records are retrieved from the Orders ent
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthUChrmAnbDTsys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Data Binding](./images/blazor-combobox-binding-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVRNHrgBkDqblbJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with Data Binding](./images/blazor-combobox-binding-data.webp)" %}
 
 ### Web API Adaptor
 
@@ -182,11 +182,11 @@ Use the WebApiAdaptor to bind the ComboBox to a Web API endpoint (including serv
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBgiVLwKnloDWBQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Web API Data](./images/blazor-combobox-web-api-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBHXnVKBkBgQedI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with Web API Data](./images/blazor-combobox-web-api-data.webp)" %}
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) supports custom adaptors, which allow performing manual operations on the data. This is useful for implementing custom data binding and editing operations in the ComboBox component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) supports custom adaptors, which allow performing manual operations on the data. This is useful for implementing custom data binding and editing operations in the Blazor ComboBox component.
 
 For custom data binding in the ComboBox, the DataAdaptor class is used as the base class for a custom adaptor.
 
@@ -294,11 +294,11 @@ The following example demonstrates remote data binding with offline mode enabled
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBACrBQKGCrmiJb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox in Offline Mode](./images/blazor-combobox-web-api-data.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBxtdBKhuKaJKQF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox in Offline Mode](./images/blazor-combobox-web-api-data.webp)" %}
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0).
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the Blazor ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0).
 
 ```csharp
 
@@ -310,11 +310,11 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 </SfComboBox>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrKihrcgcMdJUXG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBnNnLUrYpqeIVv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.webp)" %}
 
 ## Binding ExpandoObject
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the Blazor ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
 
 ```csharp
 
@@ -345,7 +345,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ## Binding DynamicObject
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the Blazor ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
 
 ```csharp
 
@@ -395,7 +395,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ## Binding ObservableCollection
 
-Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
+Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0) data to the Blazor ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 
@@ -433,11 +433,11 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgCBVcAmhLLFOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with observable collection data binding](./images/blazor_combobox_observable-collection.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthdjdLghuIjzTtA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with observable collection data binding](./images/blazor_combobox_observable-collection.webp)" %}
 
 ## Entity Framework
 
-You need to follow the below steps to consume data from the **Entity Framework** in the ComboBox component.
+You need to follow the below steps to consume data from the **Entity Framework** in the Blazor ComboBox component.
 
 ### Create DBContext class
 
@@ -549,7 +549,7 @@ namespace EFDropDown.Controllers
 }
 ```
 
-### Configure ComboBox component using Web API adaptor
+### Configure Blazor ComboBox component using Web API adaptor
 
 Now, configure the ComboBox using the **SfDataManager** to interact with the created Web API and consume data. To interact with a Web API, use WebApiAdaptor.
 
@@ -570,7 +570,7 @@ Now, configure the ComboBox using the **SfDataManager** to interact with the cre
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBqiBLcAGhEHVHQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLnjdrUVEHsDxfD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Configure cascading in the Blazor ComboBox component
 

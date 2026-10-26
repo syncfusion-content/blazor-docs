@@ -1,46 +1,91 @@
 ---
 layout: post
-title: Manage NuGet packages in Blazor Playground | Syncfusion
-description: Learn here all about how to install, remove, and upgrade NuGet packages in Syncfusion Blazor Playground to optimize load time, add features and more details.
+title: Manage NuGet Packages in Blazor Playground | Syncfusion®
+description: Learn how to install, remove, and upgrade NuGet packages in Blazor Playground to load only the components you need and optimize initial load time.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Manage NuGet packages
+# Manage NuGet Packages in Blazor Playground
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Playground is preconfigured with the `Syncfusion.Blazor` package for immediate component rendering. This loads the full library, which can impact initial load time. For better performance, install individual NuGet packages to load only the components required.
+The [Blazor Playground](https://blazorplayground.syncfusion.com) is preconfigured with the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) meta package, which bundles all [Blazor components](https://www.syncfusion.com/blazor-components) for immediate use. Because this loads the full library, it can impact initial load time. For better performance, uninstall the meta package and install only the individual NuGet packages required for your components
 
-## Adding NuGet packages
+N> Uninstall the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) package before installing individual packages to avoid duplication and reduce payload size.
 
-* Open the NuGet Asset Manager sidebar.
-* Search for the desired package, select a version, and click the Install NuGet button. The Playground restores packages automatically.
+## Add NuGet packages
 
-N> Uninstall the `Syncfusion.Blazor` package before installing individual packages to avoid duplication and reduce payload size.
+1\. Open the **NuGet Asset Manager** sidebar.
+2\. Search for the desired package and select a version.
+3\. Click the **Install NuGet** button. The Playground restores packages automatically.
 
-For example, uninstall `Syncfusion.Blazor` and install the latest [Syncfusion.Blazor.Calendars](https://blazor.syncfusion.com/documentation/nuget-packages#syncfusionblazorcalendars).
+The following example demonstrates how to install the individual NuGet package [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
 
-![Syncfusion Blazor Playground with NuGet Package](images/adding_package.webp)
+![Blazor Playground with NuGet Package](images/adding_package.webp)
 
-* Add rendering code in the editor.
+4\. Add rendering code in the editor.
 
-```csharp
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Calendars
-<SfCalendar TValue="DateTime"></SfCalendar>
-```
-* Press the Run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
+{% tabs %}
+{% highlight razor tabtitle="_Index.razor" %}
 
-### Remove packages
+@using Syncfusion.Blazor.Grids
 
-Click the `Remove` button next to the installed package details to uninstall it.
+<PageTitle>DataGrid</PageTitle>
 
-![Syncfusion Blazor Playground with Delete Package](images/delete_Package.webp)
+<SfGrid DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100" />
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="100" />
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" />
+    </GridColumns>
+</SfGrid>
 
-### Control NuGet versioning
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 12).Select(i => new Order {
+            OrderID = 1000 + i,
+            CustomerID = new[] { "ALFKI","ANATR","ANTON","BLONP","BOLID" }[Random.Shared.Next(5)],
+            OrderDate = DateTime.Today.AddDays(-i),
+            Freight = Math.Round(25 + 15 * Random.Shared.NextDouble(), 2)
+        }).ToList();
+
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
+        
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhHjoWbHhPsUJbE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+## Remove packages
+
+Click the **Remove** button next to the installed package details to uninstall it.
+
+![Blazor Playground with Delete Package](images/delete_Package.webp)
+
+## Control NuGet versioning
 
 Upgrade or downgrade packages by searching for the package name and selecting a specific version. The Playground handles installation or updates automatically.
 
-N> Maintain consistent versions across all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages to avoid compatibility issues.
+![Blazor Playground NuGet Asset Manager showing version selection for upgrading or downgrading a package](images/upgrade_downgrade.webp)
 
-![Syncfusion Blazor Playground with Upgrade and Downgrade](images/upgrade_downgrade.webp)
+N> Maintain consistent versions across all Blazor packages to avoid compatibility issues.
+
+## See also
+
+* [Getting Started with Blazor Playground](./getting-started)
+* [Working with components in Blazor Playground](./working-with-components)
+* [Features and capabilities of Blazor Playground](./end-user-capabilities)

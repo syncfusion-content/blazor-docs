@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orientations in Blazor Stepper Component | Syncfusion
+title: Orientations in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Orientations with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
@@ -9,7 +9,7 @@ documentation: ug
 
 # Orientations in Blazor Stepper Component
 
-The Stepper component supports the display of steps in both horizontal and vertical orientations by using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property.
+The Blazor Stepper component supports the display of steps in both horizontal and vertical orientations by using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property.
 
 ## Horizontal
 
@@ -57,7 +57,7 @@ In horizontal orientation, the steps are displayed in a side-by-side manner by s
 
 ```
 
-![Blazor Stepper Component with Horizontal Orientation](./images/Blazor-horizontal.png)
+![Blazor Stepper Component with Horizontal Orientation](./images/Blazor-horizontal.webp)
 
 ## Vertical
 
@@ -111,4 +111,4 @@ You can display the steps one below the other vertically by setting the [Orienta
 
 ```
 
-![Blazor Stepper Component with Vertical Orientation](./images/Blazor-vertical.png)
+![Blazor Stepper Component with Vertical Orientation](./images/Blazor-vertical.webp)

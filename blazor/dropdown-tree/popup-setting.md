@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Popup Setting in Syncfusion Blazor Dropdown Tree component and much more.
+title: Popup Setting in Blazor Dropdown Tree | Syncfusion®
+description: Customize the Blazor Dropdown Tree popup with width, height, and dimension settings to fit your layout.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Popup Setting in Dropdown Tree
+# Popup Setting in Blazor Dropdown Tree
 
 ## Change the popup width
 
@@ -49,7 +49,51 @@ In the following sample, the `PopupWidth` is set as `300px`.
 }
 ```
 
-![Blazor Dropdown Tree with customizing popup width](./images/blazor-dropdowntree-component-popup-width.PNG)
+![Blazor Dropdown Tree with customizing popup width](./images/blazor-dropdowntree-component-popup-width.webp)
+
+## Render popup in a custom container
+
+Use the `AppendTo` property to render the Dropdown Tree popup inside a specific container instead of the default `document.body`. This is useful when the component is placed inside dialogs, side panels, containers with overflow restrictions, or custom stacking contexts.
+
+Specify a valid CSS selector in the `AppendTo` property. When the selector matches an element, the popup is appended to that element. If the selector is null, empty, or no matching element is found, the popup is rendered in the default location.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div id="popupHost">
+    <SfDropDownTree TItem="EmployeeData" TValue="string"  AppendTo="@AppendTarget" Placeholder="Select an employee">
+        <DropDownTreeField TItem="EmployeeData" ID="Id" DataSource="@Data" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+    </SfDropDownTree>
+</div>
+
+@code {
+    private string AppendTarget = "#popupHost";
+    private List<EmployeeData> Data = new List<EmployeeData>
+    {
+        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
+        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
+        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
+        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
+        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
+        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
+    };
+    class EmployeeData
+    {
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public string? PId { get; set; }
+    }
+}
+```
+
+> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup element will be appended to `document.body`.
 
 ## Change the popup height
 
@@ -89,13 +133,11 @@ Customize the height of the popup using the [PopupHeight](https://help.syncfusio
 }
 ```
 
-![Blazor Dropdown Tree with customizing popup height](./images/blazor-dropdowntree-component-popup-height.PNG)
+![Blazor Dropdown Tree with customizing popup height](./images/blazor-dropdowntree-component-popup-height.webp)
 
 ## Change the popup ZIndex
 
-Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ZIndex) value of the component popup element.
-
-Defaults to `1000`
+Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ZIndex) of the component popup element. The default ZIndex is `1000`.
 
 ## Popup height based on available space
 
@@ -208,7 +250,7 @@ You can programmatically open and close the popup by accessing the [`ShowPopupAs
 }
 ```
 
-![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component-open.PNG)
+![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component-open.webp)
 
 ## Show popup on initial loading
 
@@ -251,7 +293,7 @@ You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/
     }
 }
 ```
-![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component.png)
+![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component.webp)
 
 ## Preventing opening and closing
 
@@ -301,4 +343,4 @@ Prevent the popup open and close in the event argument [PopupEventArgs.cancel](h
 }
 ```
 
-![Blazor Dropdown Tree with Preventing opening and closing](./images/blazor-dropdowntree-component-prevent-open.png)
+![Blazor Dropdown Tree with Preventing opening and closing](./images/blazor-dropdowntree-component-prevent-open.webp)

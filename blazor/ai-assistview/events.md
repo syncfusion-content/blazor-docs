@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Events with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Events in Blazor AI AssistView | Syncfusion®
+description: Handle Blazor AI AssistView events like Created and PromptRequested to trigger actions when component loads or user submits a prompt.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Events in Blazor AI AssistView component
+# Events in Blazor AI AssistView
 
 This section describes the AI AssistView events that will be triggered when appropriate actions are performed. The following events are available in the AI AssistView component.
 
@@ -195,6 +195,39 @@ The [AttachmentRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 @code {
     private void AttachmentRemoved(RemovingEventArgs args)
+    {
+        // Your required action here
+    }
+    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
+    {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+
+## AttachmentRemoving
+
+The [AttachmentRemoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentRemoving) event is triggered when an attached file is being removed in the AI AssistView.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Inputs
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView AttachmentRemoving="AttachmentRemoving" AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void AttachmentRemoving(AttachmentRemovingEventArgs args)
     {
         // Your required action here
     }

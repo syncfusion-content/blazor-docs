@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Disabled Items in Blazor DropDownList Component | Syncfusion
-description: Checkout and learn here all about Disabled Items in Syncfusion Blazor DropDownList component and much more.
+title: Disabled Items in Blazor Dropdown List | Syncfusion®
+description: Disable specific or all items in Blazor Dropdown List using field mapping or the disable item API at runtime.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Disabled Items in Blazor DropDownList Component
+# Disabled Items in Blazor Dropdown List
 
 The [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) supports disabling individual items for scenario-specific control. Map a boolean field in your data model to the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_Disabled) property of the field settings to render items as non-interactive. Disabled items cannot be selected or focused through keyboard navigation.
 
@@ -19,7 +19,7 @@ In the following sample, items are rendered as disabled based on the value of th
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVfZRsLzvcQPnwt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVxjRraBxXQbElB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable Item Method
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resize in Blazor TextArea Component | Syncfusion
-description: Check out and learn about the Resize feature of the Syncfusion Blazor TextArea component and explore much more functionality.
+title: Resize in Blazor TextArea | Syncfusion
+description: Control Blazor TextArea resizing with ResizeMode options for vertical, horizontal, both, or none directions.
 platform: Blazor
 control: TextArea
 documentation: ug
 ---
 
-# Resize in Blazor TextArea Component
+# Resize in Blazor TextArea
 
 The TextArea supports resizing so users can adjust the control to fit varying content lengths. Configure resizing behavior using the [ResizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ResizeMode) property:
 
@@ -23,12 +23,12 @@ N> In Razor, enums are typically referenced with the @ prefix (for example, @Res
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' ResizeMode='Resize.Both'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' ResizeMode='@Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhTjHsgMqknhFJF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Resize](./images/blazor-textarea-resize.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVRNwtMzswuJcgJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea with Resize](./images/blazor-textarea-resize.webp)" %}
 
 ## Width
 
@@ -37,9 +37,9 @@ Customize the width of the TextArea using the [Width](https://help.syncfusion.co
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='Resize.Both'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='@Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLTjRCACTsLJegK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Custom Width and Resize](./images/blazor-textarea-resize-width.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVdDcDWzLrHUkQN?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea with Custom Width and Resize](./images/blazor-textarea-resize-width.webp)" %}

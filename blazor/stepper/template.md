@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Template in Blazor Stepper Component | Syncfusion
+title: Template in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Template with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
@@ -9,7 +9,7 @@ documentation: ug
 
 # Template in Blazor Stepper Component
 
-The Stepper component allows you to customize the default appearance and content of each step, creating a personalized experience for the user. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Template) tag directive to set the template content for the steps.
+The Blazor Stepper component allows you to customize the default appearance and content of each step, creating a personalized experience for the user. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Template) tag directive to set the template content for the steps.
 
 The `StepperStep` tag directive options and current step index are passed as `step` and `currentStep` properties in the template context for customization.
 
@@ -98,4 +98,4 @@ The `StepperStep` tag directive options and current step index are passed as `st
 
 ```
 
-![Blazor Stepper Component with Template](./images/Blazor-template.png)
+![Blazor Stepper Component with Template](./images/Blazor-template.webp)

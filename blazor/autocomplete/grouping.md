@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in Blazor AutoComplete Component | Syncfusion
-description: Learn how to group items in the Syncfusion Blazor AutoComplete component using the GroupBy field, fixed group headers, and group header templates.
+title: Grouping in Blazor AutoComplete | Syncfusion®
+description: Group Blazor AutoComplete items by a category field using AutoCompleteFieldSettings.GroupBy, with inline and fixed group headers and custom templates.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Grouping in Blazor AutoComplete Component
+# Grouping in Blazor AutoComplete
 
 The [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) supports grouping list items by category. Map the category field using [AutoCompleteFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_GroupBy). Group headers are shown both inline and as fixed headers. The fixed header updates dynamically while scrolling the suggestion list to reflect the current group.
 
@@ -23,7 +23,7 @@ In the following sample, vegetables are grouped by category using the `AutoCompl
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhqMhMfLJxZyQGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete Grouping](./images/blazor-autocomplete-grouping.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrnDnMsraYLoVXf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete Grouping](./images/blazor-autocomplete-grouping.webp)" %}
 
 ## Fixed group header
 

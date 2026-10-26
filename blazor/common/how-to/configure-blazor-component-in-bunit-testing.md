@@ -1,361 +1,383 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor components in bUnit tests | Syncfusion
-description: Learn how to configure Syncfusion Blazor components in bUnit using xUnit or NUnit, register required services, write unit tests and explore to more details.
+title: Getting Started with bUnit Testing for Blazor Components | Syncfusion®
+description: Learn how to configure and write bUnit tests for Blazor components using xUnit, NUnit, and MSTest with step-by-step setup instructions.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# How to configure Syncfusion® Blazor components in bUnit testing
+# Getting Started with bUnit Testing for Blazor Components
 
-This section explains how to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components for unit testing with bUnit.
+This guide demonstrates how to test [Blazor components](https://www.syncfusion.com/blazor-components) using [bUnit](https://bunit.dev/docs/getting-started/index.html). It helps validate component behavior, verify rendered HTML output, and ensure that components function correctly through isolated, in-memory unit testing.
 
-## Configure bUnit with xUnit Test Project
+N> bUnit is a third-party, open-source testing library maintained by the community. bUnit is not maintained by Syncfusion.
 
-### Create xUnit Test Project
+## Prerequisites
 
-1. Open Visual Studio 2022 and create a new `xUnit Test Project`.
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later (this guide uses .NET 10)
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later, or [Visual Studio Code](https://code.visualstudio.com/) with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
-    ![xUnit project creation dialog in Visual Studio 2022](images/bunit/xunit-project.webp)
+## Set up the Blazor application
 
-2. Specify the project name and click the `Next` button.
+If you already have a Blazor project, proceed to the [Set up the bUnit test project](#set-up-the-bunit-test-project) section. Otherwise, create one using the following Blazor getting started guides.
 
-    ![Specify the xUnit project name](images/bunit/xunit-project-name.webp)
+* [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 
-3. Select the target framework and click the `Create` button.
+This guide covers bUnit testing with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. If you do not have an existing Blazor project with the Blazor DataGrid configured, follow the [Getting Started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) guide to create and configure the application before proceeding.
 
-    ![Select the target framework for the xUnit project](images/bunit/xunit-target-framework.webp)
+## Set up the bUnit test project
 
-4. Right-click the project in Solution Explorer and select `Manage NuGet Packages`.
+### Install the template
 
-    ![Open Manage NuGet Packages on the xUnit project](images/bunit/xunit-manage-nuget-package.webp)
+Install the [bunit.template](https://www.nuget.org/packages/bunit.template) from NuGet using this command. This step is the same regardless of the test framework you choose.
 
-5. Search for `bunit` and install both NuGet packages in the test project.
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
 
-    ![Install the bUnit NuGet packages in the xUnit project](images/bunit/xunit-bunit-install.webp)
+dotnet new install bunit.template
 
-### Add Existing Blazor App and Configure it on xUnit Project
+{% endhighlight %}
+{% endtabs %}
 
-1. Right-click the solution and select `Add -> Existing Project`. Browse and add your existing Blazor project.
+This template needs to be installed only once. If it is already installed, you can skip this step.
 
-    ![Add an existing Blazor project to the solution](images/bunit/xunit-add-existing-project.webp)
+### Create a new test project
 
-    N> Refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation, if you don't have any existing application.
+Open a terminal and create a new bUnit test project by running the command for your preferred test framework.
 
-2. Right-click the xUnit project and select `Add -> Project Reference`, then select the added project.
+{% tabs %}
+{% highlight bash tabtitle="xUnit" %}
 
-    ![Add a project reference to the xUnit project](images/bunit/xunit-add-project-reference.webp)
+dotnet new bunit --framework xunit -o BlazorXUnitTesting
+cd BlazorXUnitTesting
 
-3. Add the following Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample to the `~/Pages/Home.razor` or `~/Pages/Index.razor` file in the Blazor project for testing purposes. You can test any Blazor component from your app instead of this example.
+{% endhighlight %}
+{% highlight bash tabtitle="NUnit" %}
 
-    ```cshtml
-    @using Syncfusion.Blazor.Buttons
+dotnet new bunit --framework nunit -o BlazorNUnitTesting
+cd BlazorNUnitTesting
 
-    <SfButton @onclick="OnButtonClick">My Button</SfButton>
+{% endhighlight %}
+{% highlight bash tabtitle="MSTest" %}
 
-    <span class="alert alert-info">Count: @clickCount</span>
+dotnet new bunit --framework mstest -o BlazorMSTestTesting
+cd BlazorMSTestTesting
 
-    @code {
-        private int clickCount = 0;
+{% endhighlight %}
+{% endtabs %}
 
-        [Parameter]
-        public int Step { get; set; } = 1;
+### Install packages
 
-        private void OnButtonClick()
-        {
-            clickCount += Step;
-        }
-    }
-    ```
+Install the required packages through NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), or the integrated terminal in Visual Studio Code (`dotnet add package`), or the .NET CLI.
 
-4. Add the below bUnit test cases in the `~/UnitTest1.cs` file on xUnit project.
+**Syncfusion packages**
 
-    ```c#
-    using Xunit;
-    using Bunit;
-    using {Your App namespace}.Pages;
-    using Syncfusion.Blazor;
-    using Syncfusion.Blazor.Buttons;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.AspNetCore.Components;
-    using Microsoft.Extensions.DependencyInjection.Extensions;
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-    namespace BlazorXUnitTesting
-    {
-        public class UnitTest1
-        {
-            [Fact]
-            public void TestIndex()
-            {
-                using var testContext = new TestContext();
+**Testing package**
 
-                // Add Syncfusion Blazor service.
-                testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
-                testContext.Services.AddOptions();
+* [bunit](https://www.nuget.org/packages/bunit)
 
-                // Rendering application Home component (~/Pages/Home.razor).
-                var indexComponent = testContext.RenderComponent<Home>();
-                // Find Syncfusion Button component.
-                var sfButton = indexComponent.FindComponent<SfButton>();
-                // Find span element.
-                var span = indexComponent.Find("span.alert.alert-info");
+You can install the required packages by using the following .NET CLI commands.
 
-                // Assert
-                // Testing span element markup.
-                span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
 
-                // Click Syncfusion Button component.
-                sfButton.Find(".e-btn").Click();
+dotnet add package Syncfusion.Blazor.Grid -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package bunit --version 2.7.2
 
-                // Testing span element markup again.
-                span.MarkupMatches("<span class=\"alert alert-info\">Count: 1</span>");
-            }
-        }
-    }
-    ```
+{% endhighlight %}
+{% endtabs %}
 
-    From the above code snippet:
+N> This guide was tested with bUnit version 2.7.2. Always verify the latest stable version on [GitHub Releases](https://github.com/bunit-dev/bUnit/releases).
 
-    * Created a new `TestContext` and added Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
+### Add the test project to your existing project
 
-    ```c#
-    using var testContext = new TestContext();
+Add a project reference from your test project to your Blazor app project so the tests can access your components. Ensure you run this command from within the test project directory (e.g., `BlazorXUnitTesting`).
 
-    // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
-    testContext.Services.AddOptions();
-    ```
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
 
-    * Rendered the Blazor application's `Home` component which we added in the 3rd step.
+dotnet add reference ../path/to/YourBlazorApp/YourBlazorApp.csproj
 
-    ```c#
-    // Rendering application Home component (~/Pages/Home.razor).
-    var indexComponent = testContext.RenderComponent<Home>();
-    ```
+{% endhighlight %}
+{% endtabs %}
 
-    * Find Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and span element from the rendered `Home` component.
+Replace `../path/to/YourBlazorApp/YourBlazorApp.csproj` with the actual relative path to your Blazor application's `.csproj` file.
 
-    ```c#
-    // Find Syncfusion Button component.
-    var sfButton = indexComponent.FindComponent<SfButton>();
-    // Find span element.
-    var span = indexComponent.Find("span.alert.alert-info");
-    ```
+### Write a bUnit test
 
-    * Test the span element's markup at initial state.
+Create a `TestBase` class that serves as the base for all test classes. It registers the Blazor service, enables options support, and sets the JS interop to Loose mode so that JavaScript calls from Blazor components are accepted without throwing errors during testing.
 
-    ```c#
-    // Testing span element markup.
-    span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
-    ```
+The `TestBase` base class differs by framework: `xUnit` inherits bUnit's `TestContext`, whereas `NUnit` and `MSTest` inherit bUnit's `BunitContext`.
 
-    * Find the button element from Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and trigger the click action. Test the span element's markup state after the button click.
+{% tabs %}
+{% highlight csharp tabtitle="xUnit/TestBase.cs" %}
 
-    ```c#
-    // Click Syncfusion Button component.
-    sfButton.Find(".e-btn").Click();
-    // Testing span element markup again.
-    span.MarkupMatches("<span class=\"alert alert-info\">Count: 1</span>");
-    ```
+using Bunit;
+using Microsoft.Extensions.DependencyInjection;
+using Syncfusion.Blazor;
 
-5. Right-click the xUnit project and select `Run Tests`. The test cases run and report the results.
-
-    ![xUnit test case results](images/bunit/xunit-test-run.webp)
-
-## Configure bUnit with NUnit Test Project
-
-### Create NUnit Test Project
-
-1. Open Visual Studio 2022 and create a new `NUnit 3 Test Project`.
-
-    ![NUnit project creation dialog in Visual Studio 2022](images/bunit/nunit-project.webp)
-
-2. Specify the project name and click the `Next` button.
-
-    ![Specify the NUnit project name](images/bunit/nunit-project-name.webp)
-
-3. Select the target framework and click the `Create` button.
-
-    ![Select the target framework for the NUnit project](images/bunit/nunit-target-framework.webp)
-
-4. Right-click the project in Solution Explorer and select `Manage NuGet Packages`.
-
-    ![Open Manage NuGet Packages on the NUnit project](images/bunit/nunit-manage-nuget-package.webp)
-
-5. Search for `bunit` and install both NuGet packages in the test project.
-
-    ![Install the bUnit NuGet packages in the NUnit project](images/bunit/nunit-bunit-install.webp)
-
-### Add existing Blazor App and configure it on NUnit project
-
-1. Right-click the solution and select `Add -> Existing Project`. Browse and add your existing Blazor project.
-
-    ![Add an existing Blazor project to the solution](images/bunit/nunit-add-existing-project.webp)
-
-    N> Refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation, if you don't have any existing application.
-
-2. Right-click the NUnit project and select `Add -> Project Reference`, then select the added project.
-
-    ![Add a project reference to the NUnit project](images/bunit/nunit-add-project-reference.webp)
-
-3. Add the following Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample to the `~/Pages/Home.razor` or `~/Pages/Index.razor` file in the Blazor project for testing purposes. You can test any component from your app instead of this example.
-
-    ```cshtml
-    @using Syncfusion.Blazor.Buttons
-
-    <SfButton @onclick="OnButtonClick">My Button</SfButton>
-
-    <span class="alert alert-info">Count: @clickCount</span>
-
-    @code {
-        private int clickCount = 0;
-
-        [Parameter]
-        public int Step { get; set; } = 1;
-
-        private void OnButtonClick()
-        {
-            clickCount += Step;
-        }
-    }
-    ```
-
-4. Add the below bUnit test cases in the `~/UnitTest1.cs` file on NUnit project.
-
-    ```c#
-    using Bunit;
-    using NUnit.Framework;
-    using {Your App namespace}.Pages;
-    using Syncfusion.Blazor;
-    using Syncfusion.Blazor.Buttons;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.AspNetCore.Components;
-    using Microsoft.Extensions.DependencyInjection.Extensions;
-    
-
-    namespace BlazorNUnitTesting
-    {
-        public class Tests
-        {
-            [Test]
-            public void TestIndex()
-            {
-                // Arrange
-                using var testContext = new Bunit.TestContext();
-
-                // Add Syncfusion Blazor service.
-                testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
-                testContext.Services.AddOptions();
-
-                // Rendering application Home component (~/Pages/Home.razor).
-                var indexComponent = testContext.RenderComponent<Home>();
-                // Find Syncfusion Button component.
-                var sfButton = indexComponent.FindComponent<SfButton>();
-                // Find span element.
-                var span = indexComponent.Find("span.alert.alert-info");
-
-                // Assert
-                // Testing span element markup.
-                span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
-
-                // Click Syncfusion Button component.
-                sfButton.Find(".e-btn").Click();
-
-                // Testing span element markup again.
-                span.MarkupMatches("<span class=\"alert alert-info\">Count: 1</span>");
-            }
-        }
-    }
-    ```
-
-    From the above code snippet:
-
-    * Created a new `TestContext` and added Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
-
-    ```c#
-    using var testContext = new Bunit.TestContext();
-
-    // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
-    testContext.Services.AddOptions();
-    ```
-
-    * Rendered the Blazor application's `Home` component which we added in the 3rd step.
-
-    ```c#
-    // Rendering application Home component (~/Pages/Home.razor).
-    var indexComponent = testContext.RenderComponent<Home>();
-    ```
-
-    * Find Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and span element from the rendered `Home` component.
-
-    ```c#
-    // Find Syncfusion Button component.
-    var sfButton = indexComponent.FindComponent<SfButton>();
-    // Find span element.
-    var span = indexComponent.Find("span.alert.alert-info");
-    ```
-
-    * Test the span element's markup at initial state.
-
-    ```c#
-    // Testing span element markup.
-    span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
-    ```
-
-    * Find the button element from Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and trigger the click action. Test the span element's markup state after the button click.
-
-    ```c#
-    // Click Syncfusion Button component.
-    sfButton.Find(".e-btn").Click();
-    // Testing span element markup again.
-    span.MarkupMatches("<span class=\"alert alert-info\">Count: 1</span>");
-    ```
-
-5. Right-click the NUnit project and select `Run Tests`. The test cases run and report the results.
-
-    ![NUnit test case results](images/bunit/nunit-test-run.webp)
-
-## Passing parameters to the Blazor component during testing
-
-Set component parameters using the `SetParametersAndRender` method.
-
-```c#
-using Microsoft.AspNetCore.Components;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-[Fact]
-public void TestParameter()
+public abstract class TestBase : TestContext
 {
-    using var testContext = new TestContext();
-
-    // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
-    testContext.Services.AddOptions();
-
-    // Rendering application Home component (~/Pages/Home.razor).
-    var indexComponent = testContext.RenderComponent<Home>();
-    // Set Index component parameter Step value.
-    indexComponent.SetParametersAndRender(parameters => parameters.Add(p => p.Step, 5));
-
-    // Find Syncfusion Button component.
-    var sfButton = indexComponent.FindComponent<SfButton>();
-    // Find span element.
-    var span = indexComponent.Find("span.alert.alert-info");
-
-    // Assert
-    // Testing span element markup initial state.
-    span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
-
-    // Click Syncfusion Button component.
-    sfButton.Find(".e-btn").Click();
-
-    // Testing span element markup again.
-    span.MarkupMatches("<span class=\"alert alert-info\">Count: 5</span>");
+    protected TestBase()
+    {
+        Services.AddSyncfusionBlazor();
+        // Explicitly register options support, as the bUnit test context does not add it by default.
+        Services.AddOptions();
+        JSInterop.Mode = JSRuntimeMode.Loose;
+    }
 }
-```
 
-## See Also
+{% endhighlight %}
+{% highlight csharp tabtitle="NUnit/TestBase.cs" %}
 
-* [Create a new bUnit test project](https://bunit.dev/docs/getting-started/create-test-project.html?tabs=xunit)
-* [Test components in ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/test)
+using Bunit;
+using Microsoft.Extensions.DependencyInjection;
+using Syncfusion.Blazor;
+
+public abstract class TestBase : BunitContext
+{
+    protected TestBase()
+    {
+        Services.AddSyncfusionBlazor();
+        // Explicitly register options support, as the bUnit test context does not add it by default.
+        Services.AddOptions();
+        JSInterop.Mode = JSRuntimeMode.Loose;
+    }
+}
+
+{% endhighlight %}
+{% highlight csharp tabtitle="MSTest/TestBase.cs" %}
+
+using Bunit;
+using Microsoft.Extensions.DependencyInjection;
+using Syncfusion.Blazor;
+
+public abstract class TestBase : BunitContext
+{
+    protected TestBase()
+    {
+        Services.AddSyncfusionBlazor();
+        // Explicitly register options support, as the bUnit test context does not add it by default.
+        Services.AddOptions();
+        JSInterop.Mode = JSRuntimeMode.Loose;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Each test class inherits from `TestBase` and uses the assertion style idiomatic to its framework: `Assert.Equal` for xUnit, `Assert.That(..., Is.EqualTo(...))` for NUnit, and `Assert.AreEqual` for MSTest. The following tests cover the key behaviors of the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component.
+
+{% tabs %}
+{% highlight csharp tabtitle="xUnit/DataGridTests.cs" %}
+
+using System.Linq;
+using Bunit;
+// Replace with your actual project namespace, e.g., MyApp.Components.Pages
+using BlazorApp.Components.Pages;
+using Xunit;
+
+public class DataGridTests : TestBase
+{
+    [Fact]
+    public void DataGrid_DataSource_Count()
+    {
+        var comp = Render<Home>();
+        var instance = comp.Instance;
+        // Validate DataSource Count as 75 which is based on DataGrid getting started code example
+        Assert.Equal(75, instance.Orders.Count); 
+    }
+
+    [Fact]
+    public void DataGrid_Paging_Is_Configured()
+    {
+        var comp = Render<Home>();
+        // Pager exists
+        var pager = comp.Find(".e-pager");
+        Assert.NotNull(pager);
+        // Validate first page row count (PageSize = 12) which is based on DataGrid getting started code example
+        var rows = comp.FindAll(".e-row");
+        Assert.Equal(12, rows.Count);
+    }
+
+    [Fact]
+    public void DataGrid_Column_Definition_Check()
+    {
+        var comp = Render<Home>();
+        // Validate column header count as 5 which is based on DataGrid getting started code example
+        var headers = comp.FindAll(".e-headercell");
+        Assert.Equal(5, headers.Count);
+        Assert.Equal("Order ID", headers[0].TextContent.Trim());
+        Assert.Equal("Customer Name", headers[1].TextContent.Trim());
+        Assert.Equal("Order Date", headers[2].TextContent.Trim());
+        Assert.Equal("Freight", headers[3].TextContent.Trim());
+        Assert.Equal("Ship Country", headers[4].TextContent.Trim());
+    }
+
+    [Fact]
+    public void DataGrid_Field_Value_Check()
+    {
+        var comp = Render<Home>();
+        var instance = comp.Instance;
+        var firstData = instance.Orders.First();
+        var firstRowCells = comp.Find(".e-row").Children;
+        // OrderID
+        Assert.Equal(firstData.OrderID.ToString(), firstRowCells[0].TextContent.Trim());
+        // CustomerID
+        Assert.Equal(firstData.CustomerID, firstRowCells[1].TextContent.Trim());
+        // ShipCountry
+        Assert.Equal(firstData.ShipCountry, firstRowCells[4].TextContent.Trim());
+    }
+}
+
+{% endhighlight %}
+{% highlight csharp tabtitle="NUnit/DataGridTests.cs" %}
+
+using System.Linq;
+using NUnit.Framework;
+using Bunit;
+// Replace with your actual project namespace, e.g., MyApp.Components.Pages
+using BlazorApp.Components.Pages;
+
+[TestFixture]
+public class DataGridTests : TestBase
+{
+    [Test]
+    public void DataGrid_DataSource_Count()
+    {
+        var comp = Render<Home>();
+        var instance = comp.Instance;
+        // Validate DataSource Count as 75 which is based on DataGrid getting started code example
+        Assert.That(instance.Orders.Count, Is.EqualTo(75));
+    }
+
+    [Test]
+    public void DataGrid_Paging_Is_Configured()
+    {
+        var comp = Render<Home>();
+        var pager = comp.Find(".e-pager");
+        Assert.That(pager, Is.Not.Null);
+        // Validate first page row count (PageSize = 12) which is based on DataGrid getting started code example
+        var rows = comp.FindAll(".e-row");
+        Assert.That(rows.Count, Is.EqualTo(12));
+    }
+
+    [Test]
+    public void DataGrid_Column_Definition_Check()
+    {
+        var comp = Render<Home>();
+        var headers = comp.FindAll(".e-headercell");
+        // Validate column header count as 5 which is based on DataGrid getting started code example
+        Assert.That(headers.Count, Is.EqualTo(5));
+        Assert.That(headers[0].TextContent.Trim(), Is.EqualTo("Order ID"));
+        Assert.That(headers[1].TextContent.Trim(), Is.EqualTo("Customer Name"));
+        Assert.That(headers[2].TextContent.Trim(), Is.EqualTo("Order Date"));
+        Assert.That(headers[3].TextContent.Trim(), Is.EqualTo("Freight"));
+        Assert.That(headers[4].TextContent.Trim(), Is.EqualTo("Ship Country"));
+    }
+
+    [Test]
+    public void DataGrid_Field_Value_Check()
+    {
+        var comp = Render<Home>();
+        var instance = comp.Instance;
+        var firstData = instance.Orders.First();
+        var firstRowCells = comp.Find(".e-row").Children;
+        Assert.That(firstRowCells[0].TextContent.Trim(), Is.EqualTo(firstData.OrderID.ToString()));
+        Assert.That(firstRowCells[1].TextContent.Trim(), Is.EqualTo(firstData.CustomerID));
+        Assert.That(firstRowCells[4].TextContent.Trim(), Is.EqualTo(firstData.ShipCountry));
+    }
+}
+
+{% endhighlight %}
+{% highlight csharp tabtitle="MSTest/DataGridTests.cs" %}
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+using Bunit;
+// Replace with your actual project namespace, e.g., MyApp.Components.Pages
+using BlazorApp.Components.Pages;
+
+[TestClass]
+public class DataGridTests : TestBase
+{
+    // Validate DataSource count as 75 which is based on DataGrid getting started code example
+    [TestMethod]
+    public void DataGrid_DataSource_Count()
+    {
+        var comp = Render<Home>();
+        var instance = comp.Instance;
+        Assert.AreEqual(75, instance.Orders.Count);
+    }
+
+    [TestMethod]
+    public void DataGrid_Paging_Is_Configured()
+    {
+        var comp = Render<Home>();
+        // Pager exists
+        var pager = comp.Find(".e-pager");
+        Assert.IsNotNull(pager);
+        // Validate first page row count (PageSize = 12) which is based on DataGrid getting started code example
+        var rows = comp.FindAll(".e-row");
+        Assert.AreEqual(12, rows.Count);
+    }
+
+    [TestMethod]
+    public void DataGrid_Column_Definition_Check()
+    {
+        var comp = Render<Home>();
+        // Validate column header count as 5 which is based on DataGrid getting started code example
+        var headers = comp.FindAll(".e-headercell");
+        Assert.AreEqual(5, headers.Count);
+        Assert.AreEqual("Order ID", headers[0].TextContent.Trim());
+        Assert.AreEqual("Customer Name", headers[1].TextContent.Trim());
+        Assert.AreEqual("Order Date", headers[2].TextContent.Trim());
+        Assert.AreEqual("Freight", headers[3].TextContent.Trim());
+        Assert.AreEqual("Ship Country", headers[4].TextContent.Trim());
+    }
+
+    [TestMethod]
+    public void DataGrid_Field_Value_Check()
+    {
+        var comp = Render<Home>();
+        var instance = comp.Instance;
+        var firstData = instance.Orders.First();
+        var firstRowCells = comp.Find(".e-row").Children;
+        Assert.AreEqual(firstData.OrderID.ToString(), firstRowCells[0].TextContent.Trim());
+        Assert.AreEqual(firstData.CustomerID, firstRowCells[1].TextContent.Trim());
+        Assert.AreEqual(firstData.ShipCountry, firstRowCells[4].TextContent.Trim());
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Run the tests
+
+You can execute the bUnit tests to validate the behavior of your Blazor application.
+
+From the test project directory, run the following command to execute all tests.
+
+{% tabs %}
+{% highlight bash tabtitle=".NET CLI" %}
+
+dotnet test
+
+{% endhighlight %}
+{% endtabs %}
+
+After running the tests, the test execution completes with a `Passed` status in the console, indicating that all tested component behaviors pass as expected. bUnit renders components in-memory. No browser or running server is required.
+
+![bUnit xUnit test results showing all tests passed](./images/bunit-xunit-testcase.webp)
+*Test results shown for xUnit. NUnit and MSTest produce similar output with framework-specific test runner formatting.*
+
+## See also
+
+* [Test Blazor components](https://learn.microsoft.com/en-us/aspnet/core/blazor/test)
+* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)

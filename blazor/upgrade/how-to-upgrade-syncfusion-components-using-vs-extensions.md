@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Upgrade Blazor components to the latest version | Syncfusion
+title: Upgrade Blazor components to latest version | Syncfusion®
 description: Learn how to upgrade Blazor components to latest version with the Blazor migration add-in for Visual Studio, including version selection and licensing notes.
 platform: Blazor
 control: Common
 documentation: ug
 ---
 
-# Upgrade Syncfusion® Blazor components to latest version
+# Upgrade Blazor components to latest version
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor migration add-in for Visual Studio updates an existing Syncfusion Blazor application from one Essential Studio<sup style="font-size:70%">&reg;</sup> version to another. This reduces the amount of manual work required when migrating the Syncfusion<sup style="font-size:70%">&reg;</sup> version.
 
-Use the following steps to upgrade the Syncfusion version in a Syncfusion Blazor application using Visual Studio 2022 or Visual Studio 2026:
+Use the following steps to upgrade the Syncfusion version in a Blazor application using Visual Studio 2022 or Visual Studio 2026:
 
-N> Before use the Syncfusion Blazor Project Migration, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
+N> Before use the Blazor Project Migration, check whether the Syncfusion® Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
 
-1. Open the Syncfusion Blazor application that uses Syncfusion components.
+1. Open the Blazor application that uses Blazor components.
 
 2. In Solution Explorer, right-click the project, choose **Syncfusion Blazor**, and then select **Migrate Syncfusion Blazor project from another version...** to open the Migration Wizard.
 
-    ![Open the Syncfusion Blazor Migration Wizard from Solution Explorer](images/migrationaddin.webp)
+    ![Open the Blazor Migration Wizard from Solution Explorer](images/migrationaddin.webp)
 
 3. In the Syncfusion Project Migration window, select the required Syncfusion Blazor version to migrate to.
 
@@ -29,4 +29,4 @@ N> Before use the Syncfusion Blazor Project Migration, check whether the Syncfus
 
 4. Select **Migrate**. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages are updated to the chosen version in the project.
 
-5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup style="font-size:70%">&reg;</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup style="font-size:70%">&reg;</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) post for understanding the licensing changes introduced in Essential Studio.

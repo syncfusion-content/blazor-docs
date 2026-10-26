@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a Blazor WebAssembly App with prerendering | Syncfusion
+title: Create a Blazor WebAssembly App with prerendering | Syncfusion®
 description: Learn how to enable prerendering for a hosted Blazor WebAssembly app, resolve HttpClient issues, and configure routing.
 platform: blazor
 control: Common
@@ -17,7 +17,7 @@ Install the [.NET SDK](https://dotnet.microsoft.com/en-us/download) (7.0 or late
 
 ## Create a new project for Blazor WebAssembly ASP.NET Core Hosted application
 
-1. Create a new [Blazor WebAssembly ASP.NET Core Hosted application](https://blazor.syncfusion.com/documentation/getting-started/blazor-core-hosted#create-a-blazor-aspnet-core-hosted-webassembly-app-in-visual-studio).
+1. Create a new [Blazor WebAssembly ASP.NET Core Hosted application](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app#create-a-new-blazor-webassembly-standalone-app).
 
 2. Delete `~/wwwroot/index.html` file in the Client project.
 
@@ -78,7 +78,7 @@ Install the [.NET SDK](https://dotnet.microsoft.com/en-us/download) (7.0 or late
             });
     ```
 
-7. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Server/Program.cs` file.
+7. Add the Blazor service in the `~/Server/Program.cs` file.
 
     ```c#
     using Syncfusion.Blazor;
@@ -97,7 +97,7 @@ When the index page injects `HttpClient` and prerender on the server, the client
 
 E> ***InvalidOperationException***: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service registers the HttpClient by default. In `WebAssemblyPrerendered` mode, requests require an absolute URI or a configured BaseAddress.
+The Blazor service registers the HttpClient by default. In `WebAssemblyPrerendered` mode, requests require an absolute URI or a configured BaseAddress.
 
 If you configure with absolute URI in the `~/Client/Pages/Index.razor` file, you will face another runtime error.
 

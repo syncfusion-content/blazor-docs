@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization of the Predefined Dialogs in Blazor| Syncfusion
-description: Learn how to customize Syncfusion Blazor Predefined Dialogs, including action buttons, close icons, and custom content integration.
+title: Customization of Predefined Dialogs in Blazor | Syncfusion®
+description: Discover how to customize Blazor Predefined Dialogs, including action buttons, close icons, and dialog appearance to match your application requirements.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
@@ -106,7 +106,7 @@ The following example demonstrates how to render a custom TextBox component insi
 
 ## Predefined Dialog Styling and Customization
 
-The Syncfusion Blazor Predefined Dialog component provides extensive customization capabilities through CSS classes and properties. The below guidelines demonstrate how to implement comprehensive styling for different Dialog types including Alert dialogs with predefined styles and fully custom dialogs.
+The Blazor Predefined Dialog component provides extensive customization capabilities through CSS classes and properties. The below guidelines demonstrate how to implement comprehensive styling for different Dialog types including Alert dialogs with predefined styles and fully custom dialogs.
 
 ## Alert Predefined Dialog Customization
 

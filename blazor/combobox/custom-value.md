@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding Custom Value to the Blazor ComboBox Popup | Syncfusion
-description: Learn how to add custom values to the Syncfusion Blazor ComboBox component using the AllowCustom property and AddItemsAsync method.
+title: Custom Value in Blazor ComboBox | Syncfusion®
+description: Allow users to enter custom values in the Blazor ComboBox using the AllowCustom property and AddItemsAsync method for adding dynamic items.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Add a Custom Value to Blazor ComboBox Popup
+# Custom Value in Blazor ComboBox
 
 ## What is a Custom Value?
 
@@ -95,4 +95,4 @@ The following example demonstrates a scenario where users can select an existing
 
 N> Custom values can also be committed using the keyboard by pressing **Enter** when the desired text is typed in the input field.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBnjMBqrTWEjiBq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhdDwsZJmFrgTLf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.webp)" %}

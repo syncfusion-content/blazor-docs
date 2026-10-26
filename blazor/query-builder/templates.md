@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about templates in Syncfusion Blazor QueryBuilder component and much more.
+title: Templates in Blazor Query Builder | Syncfusion
+description: Customize Blazor Query Builder value editors and layout using ValueTemplate and other template options.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Templates in Blazor QueryBuilder Component
+# Templates in Blazor Query Builder
 
 This section describes the template options available in the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) to customize editors and layout.
 
@@ -85,7 +85,7 @@ Use a value template to render a custom editor for a column’s value field. Def
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBdtzLczZeswWRy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a value template](./images/templates/blazor-querybuilder-value-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVnZmtaKtARGnFw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Query Builder with a value template](./images/templates/blazor-querybuilder-value-template.webp)" %}
 
 ## Column Template
 
@@ -239,7 +239,7 @@ In the following sample, the DropDownList component is used as a custom editor f
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrRNTLGTzptPYJT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a column template](./images/templates/blazor-querybuilder-column-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrxtctaUmSnqJqC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Query Builder with a column template](./images/templates/blazor-querybuilder-column-template.webp)" %}
 
 ## Header Template
 
@@ -360,6 +360,6 @@ In the following sample, the DropDownList is used to switch the group condition 
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVRtzBQKQWXawOw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Query Builder with a header template](./images/templates/blazor-querybuilder-header-template.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLdXwtYAZGLMfnM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Query Builder with a header template](./images/templates/blazor-querybuilder-header-template.webp)" %}
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

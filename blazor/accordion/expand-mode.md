@@ -1,22 +1,18 @@
 ---
 layout: post
-title: Expand Mode in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Expand Mode in Syncfusion Blazor Accordion component and much more.
+title: Expand Mode in Blazor Accordion | Syncfusion®
+description: Choose Single or Multiple expand mode in Blazor Accordion to control whether one or several panels can be open at the same time.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Expand Mode in Blazor Accordion Component
-
- The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports the two listed types of expand modes while expanding or collapsing the item.
-
-* Single
-* Multiple
+# Expand Mode in Blazor Accordion
+The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports two expand modes that control how the items open and close: `Single` and `Multiple`. The mode is set with the [`ExpandMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) parameter on `SfAccordion`.
 
 ## Single
 
-The property enables to expand only one Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
+The property enables to expand only one Blazor Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
 
 ```cshtml
 
@@ -31,7 +27,7 @@ The property enables to expand only one Accordion item at a time. If you expand 
 </SfAccordion>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUWhiqKztxpXDo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Component with Single Expand Mode](./images/blazor-accordion-single-expand-mode.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBdXdMiMwaoNJVC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component with Single Expand Mode](./images/blazor-accordion-single-expand-mode.webp)" %}
 
 ## Multiple
 
@@ -54,11 +50,11 @@ The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVgsVsqApsKInXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Component with Multiple Expand Mode](./images/blazor-accordion-multiple-expand-mode.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhdZdMsMvNCUZhi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component with Multiple Expand Mode](./images/blazor-accordion-multiple-expand-mode.webp)" %}
 
 ## Expanding the items
 
-By default, accordion items were in collapsed state on initial load. To expand a particular item(s) on initial load, either use the [ExpandedIndices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandedIndices) property or [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) option within the [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) tag helper. In the following code example, the `ExpandedIndices` is used to expand the second and third item.
+By default, Blazor Accordion items were in collapsed state on initial load. To expand a particular item(s) on initial load, either use the [ExpandedIndices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandedIndices) property or [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) option within the [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) tag helper. In the following code example, the `ExpandedIndices` is used to expand the second and third item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -121,4 +117,13 @@ By default, accordion items were in collapsed state on initial load. To expand a
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhUWVCKqpKMrZBu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Component with Expanding Items](./images/blazor-accordion-expand-items.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrxXnWWWbNnuvlg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Accordion Component with Expanding Items](./images/blazor-accordion-expand-items.webp)" %}
+## See also
+
+* [Getting Started with Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started)
+* [Data Binding in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/data-binding)
+* [Content Render Mode in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/content-render-mode)
+* [Accessibility in Blazor Accordion](https://blazor.syncfusion.com/documentation/accordion/accessibility)
+* [SfAccordion API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html)
+* [AccordionItem API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html)
+* [AccordionEvents API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html)

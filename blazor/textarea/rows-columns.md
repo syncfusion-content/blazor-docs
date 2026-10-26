@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows and Columns count in Blazor TextArea Component | Syncfusion
-description: Learn about adjusting the rows and columns of the Syncfusion  Blazor TextArea component and much more.
+title: Rows and Columns in Blazor TextArea | Syncfusion
+description: Set Blazor TextArea dimensions with RowCount and ColumnCount for initial visible lines and width in your UI.
 platform: Blazor
 control: TextArea
 documentation: ug
 ---
 
-# Rows and Columns in Blazor TextArea Component
+# Rows and Columns in Blazor TextArea
 
 The TextArea size can be tailored for layout and readability using properties that map to native textarea behavior. The rows setting controls the initial visible number of lines (vertical size), and the columns setting represents the initial visible width in characters per line (approximate, depending on font and CSS). These settings affect only the initial visible area; content can still exceed the view, and scrollbars may appear based on overflow settings.
 
@@ -16,10 +16,10 @@ The TextArea size can be tailored for layout and readability using properties th
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter your comments' RowCount= "3" ColumnCount = '35' ></SfTextArea>
-<SfTextArea Placeholder='Enter your comments' RowCount= "5" ColumnCount = '40' ></SfTextArea>
+<SfTextArea Placeholder='Enter your comments' RowCount="3" ColumnCount="35"></SfTextArea>
+<SfTextArea Placeholder='Enter your comments' RowCount="5" ColumnCount="40"></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLpNnWUWKSXAMrN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Row and Column](./images/blazor-textarea-rows-columns.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrxNQjCTLwonSzf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TextArea with Row and Column](./images/blazor-textarea-rows-columns.webp)" %}

@@ -547,7 +547,7 @@ Apply the following code to the `Schedule.razor` file to create the custom form.
     </ScheduleTemplates>
 </SfSchedule>
 ```
-More details about the editor template are available in the [Editor Template](https://blazor.syncfusion.com/documentation/scheduler/editor-template#customizing-event-editor-using-template) documentation.
+More details about the editor template are available in the [Editor Template](https://help.syncfusion.com/scheduler-sdk/blazor/schedule/editor-template#customizing-event-editor-using-template) documentation.
 
 ## Add toast notifications
 
@@ -614,7 +614,7 @@ Bind the `OnActionBegin` event of the `SfSchedule` component to a method that ha
 
 The complete code for this example is available in the [GitHub repository](https://github.com/syncfusion/blazor-showcase-stay-reservation).
 
-Try the live demo: [https://blazor.syncfusion.com/showcase/stay-reservation](https://blazor.syncfusion.com/showcase/stay-reservation)
+Try the live demo: [https://blazor.syncfusion.com/showcase/stay-reservation](https://showcase.syncfusion.com/blazor/stay-reservation)
 
 ## Summary
 

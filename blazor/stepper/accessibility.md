@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Stepper Component | Syncfusion
+title: Accessibility in Blazor Stepper Component | Syncfusion®
 description: Checkout and learn about Accessibility and Keyboard interaction with Blazor Stepper component and more details.
 platform: Blazor
 control: Stepper
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Stepper component
 
-The Blazor Stepper component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Stepper component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Stepper component is outlined below.
 
@@ -39,17 +39,17 @@ The accessibility compliance for the Blazor Stepper component is outlined below.
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the Stepper component:
+The following ARIA attributes are used in the Blazor Stepper component:
 
 | Attributes | Purpose |
 | --- | --- |
 | `aria-label` | Attribute provide a descriptive text that labels the interactive element for accessibility. |
-| `aria-current` | Attribute denotes the currently active step in the Stepper. |
+| `aria-current` | Attribute denotes the currently active step in the Blazor Stepper. |
 | `aria-disabled`| Indicates when the step is disabled and cannot be interacted. |
 
 ## Keyboard interaction
 
-The following keyboard shortcuts are supported by the Stepper component.
+The following keyboard shortcuts are supported by the Blazor Stepper component.
 
 | Windows | Mac | **To do this** |
 | --- | --- | --- |
@@ -69,4 +69,4 @@ The accessibility compliance of the Blazor Stepper component is shown in the fol
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

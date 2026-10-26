@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Responsive Modes in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about responsive modes in Syncfusion Blazor Tabs component and much more.
+title: Responsive Modes in Blazor Tabs | Syncfusion
+description: Handle overflowing tab items in Blazor Tabs using Scrollable or Popup responsive modes for various screen sizes.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Responsive Modes in Blazor Tabs Component
+# Responsive Modes in Blazor Tabs
 
-The following section explains about rendering tab when its width exceeds the viewable area or particularly in a given width. The available modes are as follows:
+This section explains how to render the Tabs when the tab items exceed the viewable area or a given width. The available modes are:
 
-* Scrollable
-* Popup
+* **Scrollable**
+* **Popup**
 
 ## Scrollable
 
@@ -23,11 +23,11 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 * By default, navigation icon in the left direction is disabled, you can see the overflowed items by moving in the right direction.
 * By clicking the arrow or by holding the arrow continuously, you can see the overflowed items.
 
-![Scrolling in Blazor Tabs](images/blazor-tabs-scroll.gif)
+![Scrolling in Blazor Tabs](images/blazor-tabs-scroll.webp)
 
-* In devices the navigation icons are not available. You can touch and swipe to see the overflowed items of the Tab header.
+* On touch devices the navigation icons are not available. You can touch and swipe to see the overflowed items of the Tab header.
 
-![Touch Scroll in Blazor Tabs](images/blazor-tabs-touch-scroll.gif)
+![Touch Scroll in Blazor Tabs](./images/blazor-tabs-touch-scroll.webp)
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -78,17 +78,17 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </SfTab>
 ```
 
-![Scrolling in Blazor Tabs](./images/blazor-tabs-scrolling.png)
+![Scrolling in Blazor Tabs](./images/blazor-tabs-scrolling.webp)
 
 ## Popup
 
-The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) in which the Tab container holds the items that can be placed within the available space. The rest of the overflowing items for which there is no space to fit within the viewing area are moved to overflow popup container.
+`Popup` is the second type of [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) in which the Tab container shows the items that fit within the available space. The items that do not fit are moved to an overflow popup container.
 
-* The items placed in popup can be viewed by opening the popup with the help of drop-down icon given at the end of the Tab header.
+* The items placed in the popup can be viewed by opening the popup using the drop-down icon at the end of the Tab header.
 
 * If the popup height exceeds the height of the visible area, you can scroll through the popup items and select one.
 
-![Blazor Tabs with Popup](images/blazor-tabs-popup.gif)
+![Blazor Tabs with Popup](./images/blazor-tabs-popup.webp)
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -139,4 +139,4 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 </SfTab>
 ```
 
-![Blazor Tabs with Popup](./images/blazor-tabs-popup.png)
+![Blazor Tabs with Popup](./images/blazor-tabs-popup.webp)

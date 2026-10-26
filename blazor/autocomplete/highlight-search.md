@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Highlight search in Blazor AutoComplete component | Syncfusion
-description: Check out how to highlight search text in the Syncfusion Blazor AutoComplete component, including template-based highlighting and CSS customization.
+title: Highlight Search in Blazor AutoComplete | Syncfusion®
+description: Highlight matching characters in the Blazor AutoComplete suggestion list by enabling the Highlight property or by using a custom item template.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Highlight Search Blazor AutoComplete Component
+# Highlight Search in Blazor AutoComplete
 
-Highlight the search text in the suggested list items of the AutoComplete component by using the `Highlight` property. The default value is `false`. When set to `true`, the component highlights the characters that match the current search query in the suggestion list. The rendered markup uses the `e-highlight` CSS class for the matched segments.
+Highlight the search text in the suggested list items of the Blazor AutoComplete component by using the `Highlight` property. The default value is `false`. When set to `true`, the component highlights the characters that match the current search query in the suggestion list. The rendered markup uses the `e-highlight` CSS class for the matched segments.
 
 {% highlight Razor %}
 
@@ -17,7 +17,7 @@ Highlight the search text in the suggested list items of the AutoComplete compon
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhRjdCihuACMIFn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.webp)" %}
 
 ## Highlight with template
 
@@ -34,7 +34,7 @@ Use the `HighLightSearch` method within an item template to highlight matched te
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVnZRsiBYPeDMld?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_autocomplete_highLightSearch-method.webp)" %}
 
 ## Change the highlight style
 
@@ -44,6 +44,6 @@ Customize the appearance of the highlighted text using the `.e-highlight` class.
 
 {% include_relative code-snippet/highlight-search/highlight-style.razor %}
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ![Blazor AutoComplete custom highlight style using the e-highlight class](./images/highlight-search/blazor_autocomplete_highlight-style.webp)

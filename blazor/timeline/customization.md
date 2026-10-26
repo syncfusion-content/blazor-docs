@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Customization in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about customization in Syncfusion Blazor Timeline component and more details.
+title: Customization in Blazor Timeline | Syncfusion
+description: Customize Blazor Timeline item dots, connectors, borders, and spacing using CSS and item properties.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Customization in Blazor Timeline Component
+# Customization in Blazor Timeline
 
-Customize the Timeline item's dot size, connectors, dot borders, and dot outer space to personalize its appearance. This section details various methods for styling the items.
+Customize the Blazor  Timeline item's dot size, connectors, dot borders, and dot outer space to personalize its appearance. This section details various methods for styling the items.
 
 ## Connector Styling
 
 ### Common Styling
 
-Define styles applicable to all Timeline item connectors. The CSS selector `.e-timeline-item.e-connector::after` targets the pseudo-element representing the connector line for each item.
+Define styles to apply to all Blazor Timeline item connectors. The CSS selector `.e-timeline-item.e-connector::after` targets the pseudo-element representing the connector line for each item.
 
 ```cshtml
 
@@ -59,11 +59,11 @@ Define styles applicable to all Timeline item connectors. The CSS selector `.e-t
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrSsXCtVJSVQymc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Common Customized Connector](./images/Blazor-connector-common.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVntGDVBLchdTzO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Common Customized Connector](./images/Blazor-connector-common.webp)" %}
 
 ### Individual Styling
 
-Apply unique styles to individual connectors to differentiate specific items within the Timeline. 
+Apply unique styles to individual connectors to differentiate specific items within the Blazor  Timeline. 
 
 ```cshtml
 
@@ -111,13 +111,13 @@ Apply unique styles to individual connectors to differentiate specific items wit
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVIijCXVzSGcbwr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Individual Customized Connector](./images/Blazor-connector-individual.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLnNQtBhgtaANRu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Individual Customized Connector](./images/Blazor-connector-individual.webp)" %}
 
 ## Dot Styling
 
 ### Dot Color
 
-Modify the color of the dots to highlight specific Timeline items. The `.e-dot` class targets the circular indicator for each item.
+Modify the color of the dots to highlight specific Blazor  Timeline items. The `.e-dot` class targets the circular indicator for each item.
 
 ```cshtml
 
@@ -173,7 +173,7 @@ Modify the color of the dots to highlight specific Timeline items. The `.e-dot` 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBosDWNVzniYHpT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot color](./images/Blazor-custom-dot-color.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrHZwNLrAAIlCFH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Customized Dot color](./images/Blazor-custom-dot-color.webp)" %}
 
 ### Dot Size
 
@@ -237,11 +237,11 @@ Adjust the dot size using the `--dot-size` CSS variable, making it larger or sma
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhoMDCZhJdwIyCf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot size](./images/Blazor-custom-dot-size.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhxZQDVLgdsINnd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Customized Dot size](./images/Blazor-custom-dot-size.webp)" %}
 
 ### Dot Shadow
 
-Add shadow effects to Timeline dots for visual engagement using the `--dot-outer-space` and `--dot-border` CSS variables. These variables define the spacing and border around the dot, contributing to the shadow effect.
+Add shadow effects to Blazor  Timeline dots for visual engagement using the `--dot-outer-space` and `--dot-border` CSS variables to control the spacing and border around the dot, along with the `box-shadow` CSS property to define the shadow.
 
 ```cshtml
 
@@ -292,11 +292,11 @@ Add shadow effects to Timeline dots for visual engagement using the `--dot-outer
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrIsDWZVzchTIyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot shadow](./images/Blazor-custom-dot-shadow.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBdNwjVBAPQUfTC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Customized Dot shadow](./images/Blazor-custom-dot-shadow.webp)" %}
 
 ### Dot Variant
 
-Achieve desired dot variants by customizing the border, outline, and background colors of Timeline dots. This example demonstrates using pseudo-elements with `content` for visual differentiation, combined with styling of `--dot-size`, `--dot-radius`, and background/outline colors.
+Achieve desired dot variants by customizing the outline and background colors of Blazor  Timeline dots. This example demonstrates using pseudo-elements with `content` for visual differentiation, combined with styling of `--dot-size`, `--dot-radius`, and background/outline colors.
 
 ```cshtml
 
@@ -368,11 +368,11 @@ Achieve desired dot variants by customizing the border, outline, and background 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIMjWjrJQutWVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot variant](./images/Blazor-custom-dot-variant.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBRjmNBLzXFGKcF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Customized Dot variant](./images/Blazor-custom-dot-variant.webp)" %}
 
 ### Dot Outline
 
-Adding the `e-outline` class to the Timeline's [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_CssClass) property enables dots to have a distinct outline style, visually emphasizing each item.
+Adding the `e-outline` class to the Blazor Timeline's [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_CssClass) property enables dots to have a distinct outline style, visually emphasizing each item.
 
 ```cshtml
 
@@ -416,4 +416,4 @@ Adding the `e-outline` class to the Timeline's [`CssClass`](https://help.syncfus
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryCZitBflzyNaY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component with Customized Dot outline](./images/Blazor-custom-dot-outline.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVRZGNLLTJDHhpv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Timeline Component with Customized Dot outline](./images/Blazor-custom-dot-outline.webp)" %}

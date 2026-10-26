@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Groq AI Integration with Blazor Smart TextArea | Syncfusion
-description: Learn how to implement a custom AI service using the Groq API with the Syncfusion Blazor Smart TextArea component in a Blazor App.
+title: Groq AI Integration with Blazor Smart TextArea | Syncfusion®
+description: Learn how to implement a custom AI service using the Groq API with the Blazor Smart TextArea component in a Blazor App.
 platform: Blazor
 control: Smart TextArea
 documentation: ug
@@ -9,12 +9,12 @@ documentation: ug
 
 # Groq AI Integration with Blazor Smart TextArea
 
-The Syncfusion Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the Groq AI service with the Smart TextArea using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
+The Blazor Smart TextArea component provides AI-powered autocompletion for context-aware text input, typically using OpenAI or Azure OpenAI. This guide explains how to integrate the Groq AI service with the Smart TextArea using the `IChatInferenceService` interface, enabling custom AI-driven responses in a Blazor Web App.
 
 ## Setting Up Groq
 
 1. **Create a Groq Account**  
-   Visit [Groq Cloud Console](https://console.groq.com), sign up or sign in, and complete the verification process.
+   Visit [Groq Cloud Console](https://console.groq.com/home), sign up or sign in, and complete the verification process.
 2. **Obtain an API Key**  
    Navigate to [API Keys](https://console.groq.com/keys) in the Groq Console and click "Create API Key."
 3. **Review Model Specifications**  
@@ -182,9 +182,8 @@ using Syncfusion.Blazor;
 using Syncfusion.Blazor.AI;
 
 var builder = WebApplication.CreateBuilder(args);
+....
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<GroqService>();
@@ -241,5 +240,5 @@ If the Groq AI integration does not work, try the following:
 
 ## See Also
 
-- [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
+- [Getting Started with Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
 - [Customizing Smart TextArea Suggestions](https://blazor.syncfusion.com/documentation/smart-textarea/customization)

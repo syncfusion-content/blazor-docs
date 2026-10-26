@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor MultiSelect Dropdown | Syncfusion
-description: Learn here all about style and appearance in Syncfusion Blazor MultiSelect Dropdown component and more.
+title: Style and Appearance in Blazor MultiSelect Dropdown | Syncfusion
+description: Customize Blazor MultiSelect Dropdown appearance, including read-only state and CSS classes for styling today.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Style and appearance in Blazor MultiSelect Dropdown Component
+# Style and Appearance in Blazor MultiSelect Dropdown
 
 The following content outlines the CSS structure and properties that can be used to customize the component’s appearance.
 
@@ -21,6 +21,8 @@ Use the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropD
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLRXwXPUHoxGEpi?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown with Readonly property](./images/style/blazor_multiselect_readonly-property.webp)
 
 ## Disabled state
@@ -32,6 +34,8 @@ Control interactivity with the [Enabled](https://help.syncfusion.com/cr/blazor/S
 {% include_relative code-snippet/style/Disable-property.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhdNQtOCouPOFPL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect DropDown with Disable property](./images/style/blazor_multiselect_disable-property.webp)
 
@@ -45,17 +49,21 @@ Customize the text color of a disabled component by targeting `.e-multiselect.e-
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBnXmZFKaJijFxm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown with disabled component text color](./images/style/blazor_multiselect_disabled-text-color.webp)
 
 ## Change remove icon color in chip
 
-To change the remove icon color in a chip within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect component, you can use the following CSS style to customize it.
+To change the remove icon color in a chip within the Blazor MultiSelect Dropdown component, you can use the following CSS style to customize it.
 
 {% highlight cshtml %}
 
 {% include_relative code-snippet/style/remove-icon-chip-color.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrRNGNFAkyPBSeg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor Multiselect DropDown with remove icon color in chip](./images/style/blazor_multiselect_remove-icon-chip-color.webp)
 
@@ -69,7 +77,7 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
-![Blazor MultiSelect with dropdown icon](./images/style/blazor_Multiselect_dropdown-icon.webp)
+![Blazor MultiSelect Dropdown with dropdown icon](./images/style/blazor_Multiselect_dropdown-icon.webp)
 
 To style only a specific instance, set a custom class via [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_CssClass) and scope the CSS to that class.
 
@@ -78,6 +86,8 @@ To style only a specific instance, set a custom class via [CssClass](https://hel
 {% include_relative code-snippet/style/dropdown-icon-using-cssclass.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVxZcDFKOYrwFmJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Adding icons in popup items
 
@@ -89,7 +99,9 @@ Display icons in list items by mapping a field to [IconCss](https://help.syncfus
 
 {% endhighlight %}
 
-![Blazor MultiSelect with icons in popup items](./images/style/blazor_Multiselect_adding-icon-popup-items.webp)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhdtcNbAYabGimm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+![Blazor MultiSelect Dropdown with icons in popup items](./images/style/blazor_Multiselect_adding-icon-popup-items.webp)
 
 ## Customizing the background color of the container
 
@@ -100,6 +112,8 @@ Customize the appearance of the container element within the multiselect compone
 {% include_relative code-snippet/style/container-background-color.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhxZmDFphMakueU?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown container background color](./images/style/blazor_multiselect_background-color-of-container.webp)
 
@@ -113,24 +127,28 @@ Customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearanc
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrRXQXPfLTLnwzF?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown icon color](./images/style/blazor_multiselect_icon-color.webp)
 
 ## CssClass
 
 Specifies the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_CssClass) name that can be appended with the root element of the MultiSelect. One or more custom CSS classes can be added to a MultiSelect.
 
-Some of the possible values are
+Some of the possible values are:
 
-* `e-success`, which denotes the component in success state that is added green color to the multiselect's input field.
-* `e-warning`, which denotes the component in warning state that is added orange color to the multiselect's input field.
-* `e-error`, which denotes the component in error state that is added red color to the multiselect's input field.
-* `e-outline`, which supports only in material theme.
+* `e-success`: applies a green color to the MultiSelect input field, indicating a success state.
+* `e-warning`: applies an orange color to the MultiSelect input field, indicating a warning state.
+* `e-error`: applies a red color to the MultiSelect input field, indicating an error state.
+* `e-outline`: supported only in the Material theme.
 
 {% highlight Razor %}
 
 {% include_relative code-snippet/style/cssClass-property.razor %}
 
 {% endhighlight %} 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhRZQjvpVxyoLIb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown with CssClass property](./images/style/blazor_multiselect_cssClass-property.webp)
 
@@ -145,6 +163,8 @@ Customize the appearance of the delimiter container element within the multisele
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhxtQXPpLQSuGwx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown delimiter container appearance](./images/style/blazor_multiselect__appearance-of-delimiter-container.webp)
 
 ## Customizing the appearance of chips
@@ -156,6 +176,8 @@ Customize the appearance of the chips within the multiselect component by target
 {% include_relative code-snippet/style/appearance-of-chips.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBHNQXPJrOihOrs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown chip appearance](./images/style/blazor_multiselect_appearance-of-chips.webp)
 
@@ -169,6 +191,8 @@ Customize the color of the multiselect component when it is in a focused state a
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLHDwtbfUsFpYrx?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown outline theme focus color](./images/style/blazor_multiselect_outline-theme-color.webp)
 
 
@@ -181,6 +205,8 @@ Customize the background color and text color of list items within the multisele
 {% include_relative code-snippet/style/background-color.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrdXwNFTKeIaNbr?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown focus, hover, and active item colors](./images/style/blazor_multiselect_backgroung-color.webp)
 
@@ -196,6 +222,8 @@ Customize the appearance of the popup element within the multiselect component b
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBxNmDvfAnjoWTp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown popup appearance](./images/style/blazor_multiselect_appearance-of-popup.webp)
 
 ## Change HTML attributes
@@ -209,6 +237,8 @@ If you configured both the property and equivalent input attribute, then the com
 {% include_relative code-snippet/style/htmlAttributes-property.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhnNwjPzTTsTBDY?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown with HtmlAttributes property](./images/style/blazor_multiselect_htmlAttributes-property.webp)
 
@@ -224,6 +254,8 @@ In the following sample, the font family of the MultiSelect, ListItem text in Dr
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhntwDFTfofpSwz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown with custom font family](./images/style/blazor_MultiSelect_font-family.webp)
 
 ## Show a tooltip on list items
@@ -238,6 +270,8 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBRtmZvTJQrPhHh?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown displays tooltip](./images/blazor-multiselect-dropdown-tooltip.webp)
 
 ## Change the width
@@ -249,6 +283,8 @@ Set the component width using the [Width](https://help.syncfusion.com/cr/blazor/
 {% include_relative code-snippet/style/width-property.razor %}
 
 {% endhighlight %} 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLdDGZlfzYCGbxp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown with Width property](./images/style/blazor_multiselect_width-property.webp)
 
@@ -264,7 +300,7 @@ In the following sample, State are grouped according on its category using `Disa
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLptHMLzPvxxvrZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdDmjlfIMKVMbf?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Disable item method
 
@@ -285,6 +321,8 @@ Change the color of the checkbox by targeting the CSS classes `.e-checkbox-wrapp
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBRZGXvTeVjFMwm?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown with customized checkbox](./images/style/blazor_multiselect_cutomizing-checkbox.webp)
 
 ## InputAttributes
@@ -296,6 +334,8 @@ Add extra input attributes to the root element via `InputAttributes`. If both a 
 {% include_relative code-snippet/style/inputAttributes-property.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrRZGDPTyKbCPvI?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown with InputAttributes property](./images/style/blazor_multiselect_inputAttributes-property.webp)
 
@@ -309,6 +349,8 @@ By default, selected items are hidden from the list. Set [HideSelectedItem](http
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrdtctvTyxqGrpA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ![Blazor MultiSelect Dropdown with HideSelectedItem property](./images/style/blazor_multiselect_hideSelectedItem-property.webp)
 
 ## Show or hide the popup after selection
@@ -320,6 +362,8 @@ Use [EnableCloseOnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 {% include_relative code-snippet/style/enableCloseOnSelect-property.razor %}
 
 {% endhighlight %} 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLnjwXPfSdFxLfg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown with EnableCloseOnSelect property](./images/style/blazor_multiselect_enableCloseOnSelect-property.webp)
 
@@ -333,7 +377,9 @@ Clear the value programmatically by calling `ClearAsync()` on the component inst
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with ClearAsync method](./images/style/blazor_multiselect_clearAsync-method.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHDcXvfxtVhHBT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+![Blazor MultiSelect Dropdown with ClearAsync method](./images/style/blazor_multiselect_clearAsync-method.webp)
 
 ## Programmatically show and hide spinner
 
@@ -345,7 +391,9 @@ Show or hide the built-in spinner by calling `ShowSpinnerAsync()` and `HideSpinn
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with show/hide spinner methods](./images/style/blazor_multiselect_show-hide-spinnerAsync-method.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBdZwjkMSAPMYLT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
+![Blazor MultiSelect Dropdown with show/hide spinner methods](./images/style/blazor_multiselect_show-hide-spinnerAsync-method.webp)
 
 ## Programmatically focus in and focus out
 
@@ -357,14 +405,18 @@ Move focus in and out programmatically by calling `FocusAsync()` and `FocusOutAs
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBHXcNkMyRiCyNa?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
+
 ## Popup opening on click
 
-Use the `OpenOnClick` property to control whether clicking the component opens the popup automatically. The default value is true.
+The dropdown popup opens automatically when the user clicks inside the input. To disable this behavior, set the [OpenOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_OpenOnClick) property to `false`. The default value is `true`.
 
 {% highlight Razor %}
 
 {% include_relative code-snippet/style/openOnClick-property.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrRtQNasowaUsxj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ![Blazor MultiSelect Dropdown with OpenOnClick property](./images/style/blazor_multiselect_openOnClick-property.webp)

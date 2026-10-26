@@ -1,7 +1,7 @@
 ---
 layout: post
-title: File Upload Configuration in Blazor File Upload Component | Syncfusion
-description: Checkout and learn here all about File Upload Configuration in Syncfusion Blazor File Upload component and much more.
+title: File Upload Configuration in Blazor File Upload | Syncfusion
+description: Configure Blazor File Upload behavior with properties for extensions, multiple files, auto upload, and sequential upload.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # File Upload Configuration
 
-The Syncfusion Blazor FileUpload component offers a wide range of properties to configure its behavior and appearance.
+The Blazor FileUpload component offers a wide range of properties to configure its behavior and appearance.
 
 ## ID
 
-The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ID) property is used to provide a unique identifier for the FileUpload component. This is useful for referencing the component in JavaScript or CSS, and for ensuring accessibility.
+The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_ID) property is used to provide a unique identifier for the Blazor File Upload component. This is useful for referencing the component in JavaScript or CSS, and for ensuring accessibility.
 
 ```cshtml
 <SfUploader ID="myFileUploadComponent" name="UploadFiles" />
@@ -21,7 +21,7 @@ The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUplo
 
 > Note: Ensure the `ID` is unique across your application. When using AsyncSettings, the `name` must match the controller's save method parameter name.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjryjYhTgSOYvHEJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVHXQDEzUIfNuRG?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -35,7 +35,7 @@ The [`AllowedExtensions`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 >Note: Multiple extensions should be separated by commas.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryjOhzKHgiZDmV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrRjQjYTAemUpBL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -49,7 +49,7 @@ The [`AllowMultiple`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 >Note: When `AllowMultiple` is `false`, only one file can be selected at a time.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVojOhTKxefALsN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVRXwtOJKnDrngs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -63,7 +63,7 @@ The [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Input
 
 If [`AutoUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) is `false`, you'll typically need to upload a file manually on upload button click.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrStOhTKnuyPkKt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrRXmjEfqHINosH?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -77,7 +77,7 @@ The [`SequentialUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 >Note: This property is only effective when `AllowMultiple` is `true`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhSjkLpqQTZKrlg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrxNGXupqHwwkrs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -91,13 +91,13 @@ The [`DirectoryUpload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 >Note: Browser support for directory upload may vary.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLeDOBfgceWwSNY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBRNGjYfgcXGFNT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
 ## Enabled
 
-The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Enabled) property controls whether the FileUpload component is interactive or disabled. This is useful for temporarily preventing file uploads, for example, until certain form conditions are met.
+The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Enabled) property controls whether the Blazor File Upload component is interactive or disabled. This is useful for temporarily preventing file uploads, for example, until certain form conditions are met.
 
 ```cshtml
 <SfUploader Enabled="false" />
@@ -105,7 +105,7 @@ The [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.S
 
 >Note: When disabled, users cannot interact with the upload area.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLeNkVfKcOhxybv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVxjQDuTgcqQbhT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -119,7 +119,7 @@ The [`MaxFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 
 >Note: The value is in bytes. Make sure your server-side configuration also handles maximum file sizes appropriately.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVStkLpqlnsPFdX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBxNwZkJUcwiRvj?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ---
@@ -132,7 +132,7 @@ The [`MinFileSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inpu
 <SfUploader MinFileSize="1024" /> @* 1 KB *@
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVotaVTUYsmdyXM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhxDwjYpgPXMBJu?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
@@ -146,7 +146,7 @@ The [`EnableHtmlSanitizer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 >Note: It's recommended to keep this property `true` for security reasons, especially in public-facing applications.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBeNYVfUOhomymd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrRtmDETUvlrVzS?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## EnablePersistence
 
@@ -169,13 +169,13 @@ The [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs
 <SfUploader EnableRtl="true" />
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhINEhJpCTkMvdI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVnZwNYzUuOtNls?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
 ## HtmlAttributes
 
-The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_HtmlAttributes) property allows you to add custom HTML attributes to the root element of the FileUpload component. This is useful for applying custom styling, data attributes, or other HTML properties not directly exposed as Blazor parameters.
+The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_HtmlAttributes) property allows you to add custom HTML attributes to the root element of the Blazor File Upload component. This is useful for applying custom styling, data attributes, or other HTML properties not directly exposed as Blazor parameters.
 
 ```cshtml
 <SfUploader HtmlAttributes="@(new Dictionary<string, object>() { { "data-custom-attribute", "fileupload-data" }, { "class", "my-custom-uploader" } })" />
@@ -183,13 +183,13 @@ The [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 >Note: This property accepts a `Dictionary<string, object>`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLoDYrpTrbUcwZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBdjcDOJJDLwHRc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
 ## InputAttributes
 
-The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_InputAttributes) property allows you to add custom HTML attributes specifically to the underlying `input type="file"` element within the FileUpload component. This is useful for applying browser-specific input attributes or custom event handlers.
+The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_InputAttributes) property allows you to add custom HTML attributes specifically to the underlying `input type="file"` element within the Blazor File Upload component. This is useful for applying browser-specific input attributes or custom event handlers.
 
 ```cshtml
 <SfUploader InputAttributes="@(new Dictionary<string, object>() { { "accept", "image/*" } })" />
@@ -197,13 +197,13 @@ The [`InputAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 >Note: This property accepts a `Dictionary<string, object>`. Be cautious not to override essential attributes managed by the component.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBetuhfzUNEgeqP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhnDQNEJTtlIzvw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ---
 
 ## TabIndex
 
-The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_TabIndex) property specifies the tab order of the FileUpload component relative to other focusable elements on the page. This is important for keyboard navigation and accessibility.
+The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_TabIndex) property specifies the tab order of the Blazor File Upload component relative to other focusable elements on the page. This is important for keyboard navigation and accessibility.
 
 ```cshtml
 <input type="text" TabIndex="1" /><br />
@@ -213,12 +213,12 @@ The [`TabIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.
 
 >Note: A value of 0 means the element will be focused in the default tab order. Negative values remove the element from the tab order.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhotYhzzqUHHLgt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhntctETTMTDYZB?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 
 ## Preloaded files
 
-The FileUpload component supports displaying a list of files that are already available on the server as ["UploaderUploadedFiles"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderUploadedFiles.html#properties) files. This is useful for editing scenarios where users need to see and potentially remove existing files before uploading new ones.
+The Blazor File Upload component supports displaying a list of files that are already available on the server as ["UploaderUploadedFiles"](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderUploadedFiles.html#properties) files. This is useful for editing scenarios where users need to see and potentially remove existing files before uploading new ones.
 
 ```cshtml
  <SfUploader>
@@ -230,5 +230,5 @@ The FileUpload component supports displaying a list of files that are already av
 </SfUploader>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBytuBzpzikFnSt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVHXQjufzMPnzDz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 

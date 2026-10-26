@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with MAUI Blazor App in Visual Studio | Syncfusion
-description: Check out the documentation for getting started with MAUI Blazor App and Syncfusion Blazor Components in Visual Studio and much more.
+title: Getting Started with MAUI Blazor App in Visual Studio | Syncfusion®
+description: Check out the documentation for getting started with MAUI Blazor App and Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Blazor Hybrid App
 
-This section explains how to create and run the .NET Multi-platform Blazor App UI (.NET MAUI Blazor App) with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to create and run the .NET Multi-platform Blazor App UI (.NET MAUI Blazor App) with Blazor components.
 
 To get started quickly with a .NET MAUI Blazor App, review the following video.
 
@@ -26,12 +26,12 @@ Visual Studio provides the **.NET MAUI Blazor App** template to create .NET MAUI
 
 * .NET SDK 8.0 or above
 * [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/) with the required workloads:
-   * [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin)
+   * [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-10.0&tabs=visual-studio)
    * ASP.NET and web development
 
 ## Create a new .NET MAUI Blazor App in Visual Studio
 
-Create a **.NET MAUI Blazor App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0) documentation.
+Create a **.NET MAUI Blazor App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-10.0) documentation.
 
 ## BlazorWebView in .NET MAUI Blazor App
 
@@ -59,14 +59,14 @@ In `MainPage.xaml`, the `BlazorWebView` is added and points to the root of the B
 {% endhighlight %}
 {% endtabs %}
 
-For more details, refer to the [Create a .NET MAUI Blazor App](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. 
+For more details, refer to the [Create a .NET MAUI Blazor App](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview?view=net-maui-10.0#create-a-net-maui-blazor-app) topic. 
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in the App
+## Install Blazor Grid and Themes NuGet in the App
 
-To add the **Blazor DataGrid** component to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes). Alternatively, run the following commands in the Package Manager Console to achieve the same.
+To add the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes). Alternatively, run the following commands in the Package Manager Console to achieve the same.
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -74,11 +74,11 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
+N> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet package list with component details.
 
-## Add Import Namespaces
+## Add import namespaces
 
-Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces:
+After the packages are installed, open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -89,17 +89,17 @@ Open the `~/_Imports.razor` file and import the `Syncfusion.Blazor` and `Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion Blazor Service
+## Register the Blazor service
 
-Register the Syncfusion Blazor service in the `MauiProgram.cs` file of the MAUI Blazor App.
+Register the Blazor service in the `MauiProgram.cs` file of the MAUI Blazor App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 3" %}
 
-    using Syncfusion.Blazor;
-    ....
-    builder.Services.AddSyncfusionBlazor();
-    ....
+using Syncfusion.Blazor;
+....
+builder.Services.AddSyncfusionBlazor();
+....
 
 {% endhighlight %}
 {% endtabs %}
@@ -122,9 +122,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in the Blazor application. Also, see [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in the Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
+## Add Blazor component
 
-Add a Syncfusion Blazor component to any Razor file in the Blazor project. The example below adds the Blazor Grid component into `Pages/Home.razor` file.
+Add a Blazor component to any Razor file in the Blazor project. The example below adds the Blazor Grid component into `Pages/Home.razor` file.
 
 {% tabs %}
 {% highlight razor %}
@@ -161,13 +161,13 @@ In the Visual Studio toolbar, click the **Windows Machine** to build and run the
 
 ![Build and run MAUI Blazor App](images/maui/windows-machine-mode.webp)
 
-N> To run the application on Android or iOS, refer to [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0#run-the-app-in-the-android-emulator) for setup instructions.
+N> To run the application on Android or iOS, refer to [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-10.0#run-the-app-in-the-android-emulator) for setup instructions.
 
-![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-datagrid.webp)
+![MAUI Blazor App with Blazor Components](images/maui/maui-blazor-datagrid.webp)
 
 N> Download the demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-App-using-Syncfusion-Blazor-Components).
 
-## How to use images in .NET MAUI Blazor Application
+## How to use images in .NET MAUI Blazor application
 
 Add images to the `wwwroot` folder of the application and reference them using the `img` tag in the Blazor App.
 
@@ -181,13 +181,13 @@ In the following example, images are added under the `images` folder in the `www
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI Blazor App with added image](images\maui\maui-image.webp)
+![MAUI Blazor App with added image](images/maui/maui-image.webp)
 
 ## Troubleshooting
 
 ### How to solve deployment errors in Windows?
 
-If the error dialog “There were deployment errors” appears, enable Developer Mode. For more details, refer to [Enable your device for development](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
+If the error dialog “There were deployment errors” appears, enable Developer Mode. For more details, refer to [Enable your device for development](https://learn.microsoft.com/en-us/windows/advanced-settings/developer-mode).
 
 ![Enable developer mode in system settings](images/maui/enable-developer-mode.webp)
 
@@ -195,7 +195,7 @@ If the error dialog “There were deployment errors” appears, enable Developer
 
 ### How to solve deployment errors in iOS?
 
-In iOS, code is statically compiled ahead of time. Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor assemblies in the `MtouchExtraArgs` tag for the iOS Release configuration in the project when deploying to a real device.
+In iOS, code is statically compiled ahead of time. Configure Blazor assemblies in the `MtouchExtraArgs` tag for the iOS Release configuration in the project when deploying to a real device.
 
 ```
 <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) And $(Configuration.Contains('Release')) ">

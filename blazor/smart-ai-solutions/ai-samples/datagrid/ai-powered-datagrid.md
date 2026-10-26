@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Generate AI insights with Blazor DataGrid and AI models | Syncfusion
-description: Learn how to use Syncfusion Blazor DataGrid with Azure OpenAI or Ollama to analyze sales orders, generate AI insights, and highlight flagged records.
+title: Generate AI insights with Blazor DataGrid and AI models | Syncfusion®
+description: Learn how to use Blazor DataGrid with Azure OpenAI or Ollama to analyze sales orders, generate AI insights, and highlight flagged records.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor DataGrid, AI insights, sales order analysis, Syncfusion Blazor AI
+keywords: Blazor DataGrid, AI insights, sales order analysis, Blazor AI
 ---
 
 # Generate AI insights with Blazor DataGrid and AI models
@@ -16,7 +16,7 @@ If you have not created a Blazor application yet, refer to the [Blazor getting s
 
 ## Prerequisites
 
-Install the required Syncfusion and AI service NuGet packages based on the selected AI service.
+Install the required Blazor and AI service NuGet packages based on the selected AI service.
 
 ### For Azure OpenAI
 
@@ -50,14 +50,18 @@ Install-Package OllamaSharp
 
 ### Syncfusion packages
 
-- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
-- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+- [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+- [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons)
+- [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 - [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Spinner -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 
@@ -66,9 +70,9 @@ Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 
 ## Add stylesheet and script resources
 
-Include the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+Include the Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-- For **.NET 8, .NET 9, or .NET 10** Blazor Server apps, add the references to **~/Components/App.razor**.
+Add the stylesheet and script references to **~/Components/App.razor** for Blazor Web Apps using the Interactive Server render mode.
 
 {% tabs %}
 {% highlight html tabtitle="App.razor" %}
@@ -161,9 +165,9 @@ var app = builder.Build();
 
 N> Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service
+## Register Blazor service
 
-Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuration depends on the app's **Interactive Render Mode**:
+Add the Blazor service to the **~/Program.cs** file. The configuration depends on the app's **Interactive Render Mode**:
 
 - **Server mode**: Register the service in the single **~/Program.cs** file.
 - **WebAssembly or Auto mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
@@ -495,3 +499,5 @@ N> In addition to standard errors, applications should **validate AI responses**
 When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
 
 ![AI-powered DataGrid in Blazor](../images/ai-powered-blazor-datagrid.webp)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/AI%20Powered%20DataGrid/DataGridAI)

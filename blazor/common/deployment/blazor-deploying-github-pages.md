@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy Blazor WASM with Components on GitHub Pages | Syncfusion
+title: Deploy Blazor WASM with Components on GitHub Pages | Syncfusion®
 description: A comprehensive guide to deploying Blazor components to GitHub Pages with full configuration steps and practical examples.
 platform: Blazor
 control: Common
@@ -294,7 +294,7 @@ Configure your repository to serve the branch by following the steps below.
    - **Folder:** `/ (root)`
 4. Click **Save**.
 
-Your application will be live at a GitHub Pages within minutes.
+Your application will be live on GitHub Pages within minutes and can be accessed using the following URL format: `https://<username>.github.io/<repository-name>/`.
 
 ## See Also
 

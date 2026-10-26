@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Templates in Syncfusion Blazor Dropdown Tree component and much more.
+title: Templates in Blazor Dropdown Tree | Syncfusion®
+description: Customize Blazor Dropdown Tree list items, selected values, headers, and footers using templates for design.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Templates in Blazor Dropdown Tree Component
+# Templates in Blazor Dropdown Tree
 
 The Dropdown Tree has been provided with several options to customize each list item, header, and footer elements.
 
@@ -61,7 +61,7 @@ The variable `context` holds the data of the current node.
 }
 ```
 
-![Blazor Dropdown Tree with ItemTemplate.](./images/template/blazor-dropdowntree-item-template.png)
+![Blazor Dropdown Tree with ItemTemplate.](./images/template/blazor-dropdowntree-item-template.webp)
 
 ## Value template
 
@@ -111,7 +111,7 @@ The template expression can be provided directly inside the `ValueTemplate`, as 
 
 ```
 
-![Blazor Dropdown Tree with ValueTemplate.](./images/template/blazor-dropdowntree-value-template.png)
+![Blazor Dropdown Tree with ValueTemplate.](./images/template/blazor-dropdowntree-value-template.webp)
 
 ## Header template
 
@@ -171,7 +171,7 @@ In the following sample, the header is customized with the custom element.
 </style>
 ```
 
-![Blazor Dropdown Tree with HeaderTemplate.](./images/template/blazor-dropdowntree-header-template.png)
+![Blazor Dropdown Tree with HeaderTemplate.](./images/template/blazor-dropdowntree-header-template.webp)
 
 ## Footer template
 
@@ -232,11 +232,11 @@ In the following sample, the footer element displays the total number of employe
 </style>
 ```
 
-![Blazor Dropdown Tree with Footer Template.](./images/template/blazor-dropdowntree-footer-template.png)
+![Blazor Dropdown Tree with Footer Template.](./images/template/blazor-dropdowntree-footer-template.webp)
 
 ## No records template
 
-The Dropdown Tree is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [`NoRecordsTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_NoRecordsTemplate) property.
+The Dropdown Tree provides support to customize the design of the popup list content when no data is found and no matches are found on search with the help of [`NoRecordsTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_NoRecordsTemplate) property.
 
 In the following sample, popup list content displays the notification of no data available.
 
@@ -267,11 +267,11 @@ In the following sample, popup list content displays the notification of no data
 }
 ```
 
-![Blazor Dropdown Tree without Data.](./images/template/blazor-dropdowntree-nodata-template.png)
+![Blazor Dropdown Tree without Data.](./images/template/blazor-dropdowntree-nodata-template.webp)
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [`ActionFailureTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ActionFailureTemplate) property.
+There is also an option to customize the design of the popup list content when the data fetch request fails at the remote server. This can be achieved using the [`ActionFailureTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ActionFailureTemplate) property.
 
 In the following sample, when the data fetch request fails, the Dropdown Tree displays the notification.
 
@@ -284,8 +284,8 @@ In the following sample, when the data fetch request fails, the Dropdown Tree di
         <DropDownTreeField TItem="TreeData" Query="@employeeQuery" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
             <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
-        <DropDownTreeField TItem="TreeData" Query="@orderQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
-            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svs" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+        <DropDownTreeField TItem="TreeData" Query="@orderQuery" ID="OrderID" Text="ShipName" ParentID="EmployeeID">
+            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
     </ChildContent>
     <ActionFailureTemplate>
@@ -316,7 +316,7 @@ In the following sample, when the data fetch request fails, the Dropdown Tree di
 }
 ```
 
-![Blazor Dropdown Tree with Action Failure Template.](./images/template/blazor-dropdowntree-failure-template.png)
+![Blazor Dropdown Tree with Action Failure Template.](./images/template/blazor-dropdowntree-failure-template.webp)
 
 ## Placeholder
 
@@ -353,13 +353,13 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 }
 ```
 
-![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-placeholder.png)
+![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-placeholder.webp)
 
 ## FloatLabel
 
-Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FloatLabelType) property to specify the floating label behavior of the Dropdown Tree that the `Placeholder` text floats above the TextBox based on the following values. `FloatLabelType` is applicable only when `Placeholder` is used. `FloatLabelType` is depends on `Placeholder`. Default value of `FloatLabelType` is `Never`.
+Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FloatLabelType) property to specify the floating label behavior of the Dropdown Tree. The `Placeholder` text floats above the TextBox based on the following values. `FloatLabelType` is applicable only when `Placeholder` is used. `FloatLabelType` depends on `Placeholder`. The default value of `FloatLabelType` is `Never`.
 
-The floating label supports the types of actions as follow.
+The floating label supports the following types of actions.
 
 Type     | Description
 ------------ | -------------
@@ -401,7 +401,7 @@ The `FloatLabelType` as `Auto` is demonstrated in the following code sample.
 }
 ```
 
-![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-float-label.png)
+![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-float-label.webp)
 
 ## SelectedItem template
 
@@ -419,7 +419,6 @@ In this example, the custom text provided is displayed instead of the text of th
  
     </ChildContent>
 <SelectedItemTemplate>
- 
         @if (context != null && context.Value != null && context.Value.Count>0)
         {
             string content = $"{context.Value.Count} item{(context.Value.Count == 1 ? "" : "s")} selected";
@@ -458,4 +457,4 @@ In this example, the custom text provided is displayed instead of the text of th
 }
 ```
 
-![Blazor Dropdown Tree with SelectedItem template.](./images/template/blazor-dropdowntree-selecteditem-template.png)
+![Blazor Dropdown Tree with SelectedItem template.](./images/template/blazor-dropdowntree-selecteditem-template.webp)

@@ -1,24 +1,23 @@
 ---
 layout: post
-title: Configure services in Blazor Playground | Syncfusion
-description: Learn here all about how to configure services and dependency injection in Blazor Playground by updating register source file via the Services button.
+title: Configure Services in Blazor Playground | Syncfusion®
+description: Learn how to configure services and dependency injection in Blazor Playground by registering services in Program.cs and injecting them into Blazor components.
 platform: Blazor
 control: Common
 documentation: ug
 ---
-# Configure services in Blazor Playground
 
-You can add or modify services in Blazor Playground using the Services button in the app bar.
+# Configure Services in Blazor Playground
 
-* Open the Services button to edit Program.cs and the `ConfigureServices` method.
-* Add or update service registrations in `ConfigureServices`.
-* Inject the service into components as needed.
+You can add or modify services in [Blazor Playground](https://blazorplayground.syncfusion.com) using the **Services** button in the app bar.
 
-For example:
+The following example creates a `CounterService` class, registers it in `Program.cs`, and injects it into `_Index.razor` to manage a counter with increment and decrement actions.
 
-* Add a class file by clicking '+' button and include the following code snippet.
+1\. Click the **+** button to add a new file and include the `CounterService` code.
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="CounterService.cs"  %}
+
 using System;
 using System.Text;
 using System.Linq;
@@ -44,10 +43,15 @@ namespace Playground.User
         }
     }
 }
-```
-* Click the Services button to open Program.cs and register the service in the `ConfigureServices` method.
 
-```csharp
+{% endhighlight %}
+{% endtabs %}
+
+2\. Click the **Services** button to open `Program.cs` and register the service in `ConfigureServices`.
+
+{% tabs %}
+{% highlight csharp tabtitle="Program.cs" %}
+
 using System;
 using System.Text;
 using System.Linq;
@@ -73,11 +77,14 @@ namespace Playground.User
         }
     }
 }
-```
 
-* Inject the service in the `_Index.razor` file.
+{% endhighlight %}
+{% endtabs %}
 
-```csharp
+3\. Inject the service into `_Index.razor` file.
+
+{% tabs %}
+{% highlight razor tabtitle="_Index.razor" %}
 
 <h3>Counter</h3>
 
@@ -101,7 +108,17 @@ namespace Playground.User
     }
 }
 
-```
-* Press the Run button to execute the code. The output appears in the result view.
+{% endhighlight %}
+{% endtabs %}
 
-![Syncfusion Blazor Playground with adding services](images/add_services.webp)
+4\. Press the **Run** button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output appears in the result view.
+
+![Blazor Playground with adding services](images/add_services.webp)
+
+## See also
+
+* [Getting Started with Blazor Playground](./getting-started)
+* [Working with components in Blazor Playground](./working-with-components)
+* [Manage NuGet packages in Blazor Playground](./managing-nuget-packages)
+* [Features and capabilities of Blazor Playground](./end-user-capabilities)
+

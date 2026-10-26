@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about content in Syncfusion Blazor Tooltip component and much more details.
+title: Content in Blazor Tooltip | Syncfusion
+description: Display simple text, HTML, or template content in Blazor Tooltip based on target interaction for rich content.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Content in Blazor Tooltip Component
+# Content in Blazor Tooltip
 
 The Blazor Tooltip component allows you to display additional information when users hover over or interact with elements on your web page. Here's how you can explore and implement various content within your Tooltip to enhance its functionality and appearance.
 
@@ -31,7 +31,7 @@ The simplest way to use a Tooltip is with a string of text using the [Content](h
 
 This displays a simple text message when users hover over the button.
 
-![Blazor Tooltip with Content](images/blazor-tooltip-string-content.gif)
+![Blazor Tooltip with Content](images/blazor-tooltip-string-content.webp)
 
 ## Using the Title Attribute
 
@@ -47,7 +47,7 @@ You can also use the **title** attribute of the target element as the Tooltip co
         <SfButton ID="btn1" Content="Show Tooltip 1" title="Go green and save energy!"></SfButton>
         <SfButton ID="btn2" Content="Show Tooltip 2" title="Plant trees to combat climate change!"></SfButton>
         <button title="Recycle to reduce waste">Recycle Tips</button>
-        <a href="#" title="Switch to renewable energy">Renewable Energy</a>
+        <a href="#" aria-label="Switch to renewable energy" title="Switch to renewable energy">Renewable Energy</a>
     </div>
 </SfTooltip>
 
@@ -55,18 +55,19 @@ You can also use the **title** attribute of the target element as the Tooltip co
 
 This approach is useful when you want to enhance existing HTML title attributes with a more stylish Tooltip.
 
-![Blazor Tooltip with Content](images/blazor-tooltip-title-content.gif)
+![Blazor Tooltip with Content](images/blazor-tooltip-title-content.webp)
 
 
 ## Using Template
 
-The Tooltip's Template property enables you to completely customize the layout and incorporate custom elements into the Tooltip. You can insert any content or HTML elements as Tooltip content by specifying them within the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property of the Tooltip component. Additionally, the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property supports the `RenderFragment` type, enabling dynamic and interactive content within the Tooltip.
+The Tooltip's Template property enables you to completely customize the layout and incorporate custom elements into the Tooltip. You can insert any content or HTML elements as Tooltip content by specifying them within the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property of the Blazor Tooltip component. Additionally, the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property supports the `RenderFragment` type, enabling dynamic and interactive content within the Tooltip.
 
 Check out the following code example to see how to include an HTML template inside the Tooltip.
 
 ```cshtml
-@using Syncfusion.Blazor.Buttons;
-@using Syncfusion.Blazor.Popups;
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
+
 <SfTooltip CssClass="e-tooltip-css" OpensOn="Click" Target="#btn">
     <ContentTemplate>
         <div id='democontent' class='democontent'>
@@ -76,7 +77,7 @@ Check out the following code example to see how to include an HTML template insi
                     <div style='float:left;width:57%'>
                         The
                             <a href='https://en.wikipedia.org/wiki/Eastern_bluebird' target='blank'> Eastern Bluebird
-                            </a> 
+                            </a>
                                 is easily found in open fields and sparse woodland areas, including along woodland edges.These are
                             <i>
                                 cavity-nesting birds
@@ -93,7 +94,7 @@ Check out the following code example to see how to include an HTML template insi
                     </p>
                 </div>
                     <p>Source:<br />
-                        <a href='https://en.wikipedia.org/wiki/Eastern_bluebird' target='_blank'>https://en.wikipedia.org/wiki/Eastern_bluebird</a>
+                        <a href='https://en.wikipedia.org/wiki/Eastern_bluebird' aria-label="Eastern Bluebird on Wikipedia" target='_blank'>https://en.wikipedia.org/wiki/Eastern_bluebird</a>
                     </p>
             </div>
         </div>
@@ -126,7 +127,7 @@ Check out the following code example to see how to include an HTML template insi
 </style>
 ```
 
-![Blazor Tooltip with Template](images/blazor-tooltip-template.gif)
+![Blazor Tooltip with Template](images/blazor-tooltip-template.webp)
 
 
 ## Dynamic Content with RenderFragment
@@ -178,7 +179,7 @@ The SfTooltip is used to display dynamic content generated using a RenderFragmen
 
 This approach gives you full control over the Tooltip's content, allowing for interactive elements and dynamic data.
 
-![Blazor Tooltip with Template](images/blazor-tooltip-renderfragment-content.gif)
+![Blazor Tooltip with Template](images/blazor-tooltip-renderfragment-content.webp)
 
 ##  Rendering HTML content using MarkupString
 
@@ -215,6 +216,6 @@ By default, the Tooltip can show any kind of formatted content. To improve its l
 
 This is useful when you need to render HTML content that's stored as a string, perhaps from a database or API.
 
-![Blazor Tooltip with Content](images/blazor-tooltip-with-content.gif)
+![Blazor Tooltip with Content](images/blazor-tooltip-with-content.webp)
 
 By using these different content options, you can create Tooltips that range from simple text hints to rich, interactive information displays, enhancing the user experience of your Blazor application.

@@ -1,119 +1,26 @@
 ---
 layout: post
-title: Resource allocation with Blazor Gantt Chart and AI models | Syncfusion
-description: Learn how to use the Syncfusion Blazor Gantt Chart with OpenAI, Azure OpenAI, or Ollama for automatic resource allocation. Explore to more details.
+title: Gantt Chart Resource Allocation with Azure OpenAI | Syncfusion®
+description: Learn how to integrate Syncfusion Blazor Gantt Chart with Azure OpenAI to automatically resolve resource overallocation and optimize task assignments.
 platform: Blazor
 control: AI Integration
 documentation: ug
-keywords: Blazor Gantt Chart, AI resource allocation, Syncfusion Blazor AI
+keywords: Blazor Gantt Chart, Azure OpenAI, Resource Allocation, Syncfusion Blazor AI
 ---
 
-# Resource allocation with Blazor Gantt Chart and AI models
+# Resource Allocation with Blazor Gantt Chart and Azure OpenAI
 
-This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package to automatic resource reallocation in a Syncfusion Blazor Gantt Chart component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, while Ollama provides self-hosted or cloud-based AI capabilities for analyzing relationships in datasets. This sample demonstrates how to efficiently manage resource overallocation by reallocating available resources to tasks.
+This guide demonstrates how to use the [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package for automatic resource reallocation in a Syncfusion Blazor Gantt Chart component. The [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI) package enables integration with AI models to process and structure data, This sample demonstrates how to efficiently manage resource overallocation by reallocating available resources to tasks.
 
 ## Prerequisites
 
-Ensure the following NuGet packages are installed based on the selected AI service.
-
-### For OpenAI
-- Microsoft.Extensions.AI
-- Microsoft.Extensions.AI.OpenAI
+Install the required Blazor and AI service NuGet packages based on the selected AI service.
 
 ### For Azure OpenAI
-- Microsoft.Extensions.AI
-- Microsoft.Extensions.AI.OpenAI
-- Azure.AI.OpenAI
 
-### For Ollama
-- Microsoft.Extensions.AI
-- OllamaSharp
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
-Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI  # For OpenAI or Azure OpenAI
-Install-Package Azure.AI.OpenAI  # For Azure OpenAI
-Install-Package OllamaSharp  # For Ollama
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add stylesheet and script resources
-
-Include the theme stylesheet and script from NuGet via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of the main page:
-
-- For **.NET 6** Blazor Server apps, add to **~/Pages/_Layout.cshtml**.
-- For **.NET 8 or .NET 9 or .NET 10** Blazor Server apps, add to **~/Components/App.razor**.
-
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-<body>
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-```
-
-> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for methods to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different approaches to adding script references in your Blazor application.
-
-## Configure AI service
-
-Choose one of the following AI services (OpenAI, Azure OpenAI, or Ollama) based on requirements:
-- **OpenAI**: Cloud-based, general-purpose AI models with minimal setup.
-- **Azure OpenAI**: Enterprise-grade deployment with enhanced security and scalability.
-- **Ollama**: Self-hosted, privacy-focused AI models.
-
-Follow the instructions for the selected service to register the AI model in the application.
-
-### OpenAI
-
-Generate an API key from OpenAI and set `openAIApiKey`. Specify the desired model (for example, `gpt-3.5-turbo`, `gpt-4`) in `openAIModel`.
-
-- Install the required NuGet packages:
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Microsoft.Extensions.AI
-Install-Package Microsoft.Extensions.AI.OpenAI
-
-{% endhighlight %}
-{% endtabs %}
-
-- Add the following to the **~/Program.cs** file in the Blazor Web App:
-
-{% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
-
-using Syncfusion.Blazor.AI;
-using Microsoft.Extensions.AI;
-using Syncfusion.Blazor.SmartComponents;
-using OpenAI;
-
-var builder = WebApplication.CreateBuilder(args);
-
-string openAIApiKey = "API-KEY";
-string openAIModel = "OPENAI_MODEL";
-OpenAIClient openAIClient = new OpenAIClient(openAIApiKey);
-IChatClient openAIChatClient = openAIClient.GetChatClient(openAIModel).AsIChatClient();
-builder.Services.AddChatClient(openAIChatClient);
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-
-var app = builder.Build();
-
-{% endhighlight %}
-{% endtabs %}
-
-### Azure OpenAI
-
-Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
-
-- Install the required NuGet packages:
+- [Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI)
+- [Microsoft.Extensions.AI.OpenAI](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI)
+- [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -125,85 +32,102 @@ Install-Package Azure.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
-- Add the following to the **~/Program.cs** file in the Blazor Web App:
+### Syncfusion packages
 
-{% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
-
-using Syncfusion.Blazor.AI;
-using Azure.AI.OpenAI;
-using Microsoft.Extensions.AI;
-using System.ClientModel;
-
-var builder = WebApplication.CreateBuilder(args);
-
-string azureOpenAIKey = "AZURE_OPENAI_KEY";
-string azureOpenAIEndpoint = "AZURE_OPENAI_ENDPOINT";
-string azureOpenAIModel = "AZURE_OPENAI_MODEL";
-AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-     new Uri(azureOpenAIEndpoint),
-     new ApiKeyCredential(azureOpenAIKey)
-);
-IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
-builder.Services.AddChatClient(azureOpenAIChatClient);
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
-
-var app = builder.Build();
-
-{% endhighlight %}
-{% endtabs %}
-
-### Ollama
-
-To use Ollama for self-hosted AI models:
-
-1. **Download and install Ollama**: Visit [Ollama's official website](https://ollama.com) and install the application for the operating system.
-2. **Install a model**: Choose a model from the [Ollama Library](https://ollama.com/library) (for example, `llama2:13b`, `mistral:7b`).
-3. **Configure the application**: Provide the `Endpoint` URL (for example, `http://localhost:11434`) and `ModelName` (for example, `llama2:13b`).
-
-- Install the required NuGet packages:
+- [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt)
+- [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
+- [Syncfusion.Blazor.AI](https://www.nuget.org/packages/Syncfusion.Blazor.AI)
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Microsoft.Extensions.AI
-Install-Package OllamaSharp
+Install-Package Syncfusion.Blazor.Gantt -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.AI -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-- Add the following to the **~/Program.cs** file in the Blazor Web App:
+## Add stylesheet and script resources
+
+Include the Blazor theme stylesheet and required scripts using NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+Add the stylesheet and script references to **~/Components/App.razor** for Blazor Web Apps using the Interactive Server render mode.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WebApp" hl_lines="7 8 9 11 12 13" %}
+{% highlight html tabtitle="App.razor" %}
 
-using Syncfusion.Blazor.AI;
+    <head>
+        ....
+        <!-- Blazor theme stylesheet -->
+        <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        ....
+        <!-- Blazor core script -->
+        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    </body>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Explore the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for methods to reference themes ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)). Refer to the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic for different approaches to adding script references in your Blazor application.
+
+
+## Configure Azure OpenAI
+
+Deploy an Azure OpenAI Service resource and model as described in [Microsoft’s documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource). Obtain values for `azureOpenAIKey`, `azureOpenAIEndpoint`, and `azureOpenAIModel`.
+
+
+- Add the following configuration in **~/Program.cs** file in the Blazor Web App: 
+
+{% tabs %}
+{% highlight C# tabtitle="Program.cs" %}
+
+using Azure.AI.OpenAI;
 using Microsoft.Extensions.AI;
-using OllamaSharp;
+using Syncfusion.Blazor.AI;
+using System.ClientModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string ModelName = "MODEL_NAME";
-IChatClient chatClient = new OllamaApiClient("http://localhost:11434", ModelName);
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+string azureOpenAIKey = "AZURE_OPENAI_KEY";
+string azureOpenAIEndpoint = "AZURE_OPENAI_ENDPOINT";
+string azureOpenAIModel = "AZURE_OPENAI_DEPLOYMENT";
+
+AzureOpenAIClient azureClient =
+    new AzureOpenAIClient(
+        new Uri(azureOpenAIEndpoint),
+        new ApiKeyCredential(azureOpenAIKey));
+
+IChatClient chatClient =
+    azureClient.GetChatClient(azureOpenAIModel)
+               .AsIChatClient();
+
 builder.Services.AddChatClient(chatClient);
-builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
+
+builder.Services.AddSingleton<SyncfusionAIService>();
+builder.Services.AddSingleton<AzureAIService>();
 
 var app = builder.Build();
 
 {% endhighlight %}
 {% endtabs %}
 
-- **Verify connectivity**: Ensure the Ollama server is running and accessible at the specified endpoint (for example, `http://localhost:11434`) before starting the application.
 
-## Register Syncfusion Blazor service
+## Register Syncfusion Blazor Service
 
 Add the Syncfusion Blazor service to the **~/Program.cs** file. The configuration depends on the app’s **Interactive Render Mode**:
 
 - **Server mode**: Register the service in the single **~/Program.cs** file.
-- **WebAssembly or Auto mode**: Register the service in both the server-side **~/Program.cs** and client-side **~/Program.cs** files.
+
 
 {% tabs %}
-{% highlight C# tabtitle="Server (~/_Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle="Package Manager" %}
 
 using Syncfusion.Blazor;
 
@@ -216,29 +140,21 @@ builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
 
-{% endhighlight %}
-{% highlight C# tabtitle="Client (~/_Program.cs)" hl_lines="2 5" %}
-
-using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.Services.AddSyncfusionBlazor();
-
-await builder.Build().RunAsync();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Integrated Gantt Chart with AI
 
-The following code example show hot to integrate the Gantt Chart with AI for automatic resource allocation
+
+## Integrate Gantt Chart with AI
+
+
+The following code example shows how to integrate the Gantt Chart with AI for automatic resource allocation:
 
 {% tabs %}
 {% highlight C# tabtitle="Home.razor" %}
 
 @inject AzureAIService OpenAIService
-@using GanttChart.Components.Model
-@using GanttChart.Components.Service
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -252,8 +168,8 @@ The following code example show hot to integrate the Gantt Chart with AI for aut
             <SfButton CssClass="e-flat" IsPrimary="true" IconCss="e-icons e-refresh" IconPosition=@IconPosition.Right OnClick="Reload">Something went wrong.</SfButton>
         </div>
     }
-    <div style="position: relative">
-        <SfGantt @ref="Gantt" ViewType="ViewType.ResourceView" ShowOverallocation="true" DataSource="@TaskCollection" Width="100%" TreeColumnIndex="1" WorkUnit="WorkUnit.Hour" AllowUnscheduledTasks="true">
+    <div>
+        <SfGantt @ref="Gantt" ViewType="ViewType.ResourceView" ShowOverallocation="true" DataSource="@TaskCollection" Width="900px"  Height="550px" TreeColumnIndex="1"  AllowUnscheduledTasks="true">
             <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
             ParentID="ParentId" Work="Work" TaskType="TaskType">
             </GanttTaskFields>
@@ -285,7 +201,7 @@ The following code example show hot to integrate the Gantt Chart with AI for aut
                             progressClassName = "e-custom-progress";
                         }
                         <div class="e-gantt-child-taskbar e-gantt-child-taskbar-inner-div @taskbarClassName" style="height:22px;" tabindex=-1>
-                            <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar @progressClassName" style="height:22px;width:@(taskModel.ProgressWidth + "px");text-align: right;border-radius: 0px;">
+                            <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar @progressClassName" style="height:22px; width:@(taskModel.ProgressWidth + "px");text-align: right;border-radius: 0px;">
                             </div>
                         </div>
                     }
@@ -323,16 +239,15 @@ The following code example show hot to integrate the Gantt Chart with AI for aut
 {% endhighlight %}
 {% highlight C# tabtitle="Home.razor.cs" %}
 
-using GanttChart.Components.Model;
 using Microsoft.JSInterop;
 using Syncfusion.Blazor.Gantt;
 using System.Text.Json;
 
-namespace GanttChart.Components.Pages
+namespace BlazorApp1.Components.Pages
 {
     public partial class Home
     {
-        public  SfGantt<GanttModel.TaskInfoModel> Gantt;
+        private SfGantt<GanttModel.TaskInfoModel> Gantt;
         private List<GanttModel.TaskInfoModel> TaskCollection { get; set; }
         private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; }
         private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; }
@@ -348,24 +263,35 @@ namespace GanttChart.Components.Pages
         private string GeneratePrompt(List<GanttModel.TaskInfoModel> TaskCollection, List<GanttModel.ResourceInfoModel> ResourceCollection, List<GanttModel.AssignmentModel> AssignmentCollection)
         {
             return @"Here's a revised prompt to ensure the AI provides the results in JSON format:
-    Function as an AI assistant responsible for optimizing resource assignments in a project management system. Your goal is to prevent overlapping task assignments for each resource, ensuring no resource is double-booked.
-    1. **Check Task Assignments:** Review the start and end dates of tasks assigned to each resource to identify overlaps.
-    2. **Resolve Conflicts:** Reassign conflicting tasks to other available resources without scheduling conflicts, ensuring each task is assigned to a resource.
-    3. **Provide Updated Assignments:** Return the updated assignments.
-    Please return a JSON object with the following:
-    - **AssignmentCollection:** Updated resource assignments.
-    - **TaskIds:** List of task IDs where resource assignments have changed.
-    The response must be in JSON format only, with no additional explanations or content.
-    Here is the dataset:
-    - Task Collection Data: " + JsonSerializer.Serialize(TaskCollection) + @"
-    - Resource Collection Data: " + JsonSerializer.Serialize(ResourceCollection) + @"
-    - Assignment Collection Data: " + JsonSerializer.Serialize(AssignmentCollection) + @"
-    Note: Ensure the response is a JSON string and does not include any extra information.";
+                Function as an AI assistant responsible for optimizing resource assignments in a project management system. Your goal is to prevent overlapping task assignments for each resource, ensuring no resource is double-booked.
+                1. **Check Task Assignments:** Review the start and end dates of tasks assigned to each resource to identify overlaps.
+                2. **Resolve Conflicts:** Reassign conflicting tasks to other available resources without scheduling conflicts, ensuring each task is assigned to a resource.
+                3. **Provide Updated Assignments:** Return the updated assignments.
+                Please return a JSON object with the following:
+                - **AssignmentCollection:** Updated resource assignments.
+                - **TaskIds:** List of task IDs where resource assignments have changed.
+                The response must be in JSON format only, with no additional explanations or content.
+                Here is the dataset:
+                - Task Collection Data: " + JsonSerializer.Serialize(TaskCollection) + @"
+                - Resource Collection Data: " + JsonSerializer.Serialize(ResourceCollection) + @"
+                - Assignment Collection Data: " + JsonSerializer.Serialize(AssignmentCollection) + @"
+                Note: Ensure the response is a JSON string and does not include any extra information.";
         }
+
+        /// <summary>
+        /// Reloads the current page and restores the application to its initial state.
+        /// </summary>
+        /// <remarks>
         private async Task Reload()
         {
             await JsInterop.InvokeVoidAsync("window.location.reload");
         }
+
+        /// <summary>
+        /// Sends the current task, resource, and assignment data to the AI service
+        /// and automatically optimizes resource allocation by resolving
+        /// resource overallocation conflicts.
+        /// </summary>
         private async Task OpenAIHandler()
         {
             await Gantt.ShowSpinnerAsync();
@@ -425,7 +351,7 @@ namespace GanttChart.Components.Pages
 using Microsoft.Extensions.AI;
 using Syncfusion.Blazor.AI;
 
-namespace GanttChart.Components.Service
+namespace GanttChart.Components.Services
 {
     public class AzureAIService
     {
@@ -487,25 +413,25 @@ namespace GanttChart.Components.Service
 {% endhighlight %}
 {% highlight C# tabtitle="GanttModel.cs" %}
 
-namespace GanttChart.Components.Model
+namespace GanttChart.Components.Models
 {
     public class GanttModel
     {
         public class ResourceInfoModel
         {
             public int Id { get; set; }
-            public string Name { get; set; }
+            public string? Name { get; set; }
             public double MaxUnit { get; set; }
         }
 
         public class TaskInfoModel
         {
             public int Id { get; set; }
-            public string Name { get; set; }
-            public string TaskType { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
             public DateTime StartDate { get; set; }
             public DateTime? EndDate { get; set; }
-            public string Duration { get; set; }
+            public string? Duration { get; set; }
             public int Progress { get; set; }
             public int? ParentId { get; set; }
             public double? Work { get; set; }
@@ -559,56 +485,19 @@ namespace GanttChart.Components.Model
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="Program.cs" %}
-
-using GanttChart.Components;
-using GanttChart.Components.Service;
-using Microsoft.Extensions.AI;
-using OpenAI;
-using Syncfusion.Blazor;
-using Syncfusion.Blazor.AI;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-
-#region AI Integration
-// Open AI Service.
-
-string apiKey = "API-KEY";
-string modelName = "OPENAI_MODEL";
-OpenAIClient client = new OpenAIClient(apiKey);
-IChatClient chatClient = openAIClient.GetChatClient(modelName).AsIChatClient();
-builder.Services.AddChatClient(chatClient);
-
-builder.Services.AddSingleton<SyncfusionAIService>();
-builder.Services.AddSingleton<AzureAIService>();
-#endregion
-
-var app = builder.Build();
-app.Run();
-
-{% endhighlight %}
 {% endtabs %}
+
 
 ## Error handling and troubleshooting
 
-If the AI service fails to return a valid response, the TreeGrid displays an error message (“Oops! Please try again!”). Common issues include:
+If the AI service fails to return a valid response, the Gantt Chart displays an error message ("Something went wrong."). Common issues include:
 
-- **Invalid API key or endpoint**: Verify that `openAIApiKey`, `azureOpenAIKey`, or the Ollama `Endpoint` is correct and the service is accessible.
-- **Model unavailable**: Ensure the specified `openAIModel`, `azureOpenAIModel`, or `ModelName` is deployed and supported.
-- **Network issues**: Check connectivity to the AI service endpoint, especially for self-hosted Ollama instances.
+- **Invalid API key or endpoint**: Verify that `azureOpenAIKey` is correct and the service is accessible.
+- **Model unavailable**: Ensure the specified `azureOpenAIModel` is deployed and supported.
+- **Network issues**: Check connectivity to the Azure OpenAI endpoint.
 - **Large datasets**: Processing large datasets may cause timeouts. Consider batching data or optimizing the prompt.
 
-## Performance considerations
 
-When handling large datasets, ensure the Ollama server has sufficient resources (CPU/GPU) to process requests efficiently. For datasets exceeding 10,000 records, consider splitting the data into smaller batches to avoid performance bottlenecks. Test the application with your specific dataset to determine optimal performance.
+![Resource Allocation](../images/resource-allocation.webp)
 
-## Sample code
-
-A complete working example is available in the [Syncfusion Blazor AI Samples GitHub repository](https://github.com/syncfusion/smart-ai-samples).
-
-![Resource allocation](../../ai/images/resource-allocation.webp)
+N> [View sample in GitHub](https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/GanttChart/ResourceOverallocation.razor)

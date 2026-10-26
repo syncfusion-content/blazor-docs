@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor AutoComplete component and much more.
+title: Filtering in Blazor AutoComplete | Syncfusion®
+description: Filter Blazor AutoComplete suggestions as the user types using StartsWith, EndsWith, or Contains match modes, with case sensitivity and diacritic options.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Filtering in Blazor AutoComplete
 
-The AutoComplete component provides built-in support for filtering data items when the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_AllowFiltering) property is enabled. Filtering begins as soon as start typing characters in the search box. The default value for `AllowFiltering` is `false`.
+The Blazor AutoComplete component provides built-in support for filtering data items when the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_AllowFiltering) property is enabled. Filtering begins as soon as start typing characters in the search box. The default value for `AllowFiltering` is `false`.
 
 ## Local data
 
-The following code demonstrates the filtering functionality with local data in the AutoComplete component.
+The following code demonstrates the filtering functionality with local data in the Blazor AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -27,7 +27,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 For remote data, a filter action request is made to the server (via the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and its configured adaptor) with each key press, depending on the [`DebounceDelay`](#debounce-delay).
 
-The code below demonstrates the filtering functionality with [`ODataAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the AutoComplete component using the [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+The code below demonstrates the filtering functionality with [`ODataAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the Blazor AutoComplete component using the [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 {% highlight cshtml %}
 
@@ -69,11 +69,11 @@ In the following example, `StartsWith` filter type has been mapped to the `Filte
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBKMhipBzHIgAvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBdjdCxivByeWfM?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.webp)" %}
 
 ## Minimum length
 
-Set a minimum character count required to trigger data filtering in the AutoComplete component by setting the [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property. This can reduce unnecessary filtering operations, especially with remote data.
+Set a minimum character count required to trigger data filtering in the Blazor AutoComplete component by setting the [`MinLength`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property. This can reduce unnecessary filtering operations, especially with remote data.
 
 In the following example, the search data will not be fetched (for either local or remote data) until the input contains at least three characters.
 
@@ -83,11 +83,11 @@ In the following example, the search data will not be fetched (for either local 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUsBsJhzbSDGTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBRtHWHMvzzCECq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.webp)" %}
 
 ## Multi-column filtering
 
-The AutoComplete component can visually present data across multiple columns. This layout support is enabled by adding the `e-multi-column` class to the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_CssClass) property.
+The Blazor AutoComplete component can visually present data across multiple columns. This layout support is enabled by adding the `e-multi-column` class to the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_CssClass) property.
 
 {% highlight cshtml %}
 
@@ -111,11 +111,11 @@ Achieve filtering across multiple data fields by passing a list of [`predicates`
 
 Data items can be filtered with or without case sensitivity using the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This is done by setting the optional `IgnoreCase` parameter within a [`Where` clause](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Where_Syncfusion_Blazor_Data_WhereFilter_). Set `IgnoreCase` to `false` for case-sensitive filtering.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACVWJhzFwRqep?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBnNxCiLuDFImFk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Custom filtering
 
-The AutoComplete component's filter queries can be customized using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Filtering) event. This event allows to implement custom logic, such as filtering text across multiple columns in the data source.
+The Blazor AutoComplete component's filter queries can be customized using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Filtering) event. This event allows to implement custom logic, such as filtering text across multiple columns in the data source.
 
 {% highlight cshtml %}
 
@@ -123,7 +123,7 @@ The AutoComplete component's filter queries can be customized using the [`Filter
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhKsLiprJawVKuX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhxNxMCBaMMcxFc?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Suggestion item count
 
@@ -137,7 +137,7 @@ Refer to the following example to restrict the suggestion list to 3 items.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMVWTLTmOENnq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLdXxsniPRmKSNw?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.webp)" %}
 
 ## AutoComplete with Google search results
 
@@ -153,13 +153,13 @@ The Blazor AutoComplete component offers functionality for displaying Google-lik
 
 ### Highlighting search characters using the Highlight property
 
-Highlight the search text within the suggested list items of the AutoComplete component by setting the [`Highlight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_Highlight) property to `true`. When enabled, characters that match the search query in the list items will be visually emphasized.
+Highlight the search text within the suggested list items of the Blazor AutoComplete component by setting the [`Highlight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_Highlight) property to `true`. When enabled, characters that match the search query in the list items will be visually emphasized.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthnDdCWrOiYpHRP?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.webp)" %}
 
 ### Highlighting search characters using a method
 
-Programmatically highlight the search text in the suggested list items of the AutoComplete component by using the `HighLightSearch` method. This method accepts several arguments, allowing for granular control over the highlighting process:
+Programmatically highlight the search text in the suggested list items of the Blazor AutoComplete component by using the `HighLightSearch` method. This method accepts several arguments, allowing for granular control over the highlighting process:
 
 *   `textValue`: The text content of the list item where highlighting needs to occur.
 *   `ignoreCase`: A boolean value which, when set to `true`, performs the search text comparison without considering casing.
@@ -172,4 +172,4 @@ Programmatically highlight the search text in the suggested list items of the Au
 
 {% endhighlight %} 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrxjRiWharqAuth?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.webp)" %}

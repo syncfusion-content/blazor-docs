@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Popup Setting in Syncfusion Blazor MultiSelect component and much more.
+title: Popup Setting in Blazor MultiSelect Dropdown | Syncfusion
+description: Allow users to resize and configure the Blazor MultiSelect Dropdown popup for better visibility today easily.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Popup Setting in MultiSelect
+# Popup Setting in Blazor MultiSelect Dropdown
 
 ## Popup resize
 
@@ -19,7 +19,7 @@ Dynamically adjust the size of the popup in the MultiSelect component by using t
 
 {% endhighlight %} 
 
-![Blazor MultiSelect with AllowResize property](./images/popup-setting/blazor_multiselect_resize.gif)
+![Blazor MultiSelect Dropdown with AllowResize property](./images/popup-setting/blazor_multiselect_resize.gif)
 
 ## Change the PopupHeight
 
@@ -69,9 +69,32 @@ Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel
 
 {% endhighlight %}
 
-![Blazor MultiSelect with preventing opening and closing](./images/popup-setting/blazor_MultiSelect_preventing-opening-closing.webp)
+![Blazor MultiSelect Dropdown with preventing opening and closing](./images/popup-setting/blazor_MultiSelect_preventing-opening-closing.webp)
 
 The following events are raised when opening and closing the popup.
+
+## Render popup in a custom container
+
+Use the `AppendTo` property to render the MultiSelect Dropdown popup inside a specific container instead of the default `document.body`. This is useful when the component is placed inside dialogs, side panels, containers with overflow restrictions, or custom stacking contexts.
+
+Specify a valid CSS selector in the `AppendTo` property. When the selector matches an element, the popup is appended to that element. If the selector is null, empty, or no matching element is found, the popup is rendered in the default location.
+
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.DropDowns
+
+<div id="popupHost">
+    <SfMultiSelect TValue="string[]" TItem="string" DataSource="@Items" AppendTo="@AppendTarget" Placeholder="Select items"></SfMultiSelect>
+</div>
+
+@code {
+    private string AppendTarget = "#popupHost";
+    private List<string> Items = new() { "One", "Two", "Three" };
+}
+
+{% endhighlight %}
+
+> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup element will be appended to `document.body`.
 
 ### OnOpen event
 
@@ -143,11 +166,11 @@ Adjust the popup height based on the available viewport space by handling the wi
 {% endhighlight %}
 {% endtabs %}
 
-![Popup height based on available space in Blazor MultiSelect](./images/popup-setting/blazor_multiselect_popup_resize.gif)
+![Popup height based on available space in Blazor MultiSelect Dropdown](./images/popup-setting/blazor_multiselect_popup_resize.gif)
 
 ## Programmatically opening and closing popup
 
-Open and close the popup programmatically by calling `ShowPopupAsync()` and `HidePopupAsync()` on the component instance. For example, bind button click events to these methods to toggle the popup.
+Open and close the popup programmatically by calling [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowPopupAsync) and [HidePopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_HidePopupAsync) on the component instance. For example, bind button click events to these methods to toggle the popup.
 
 {% highlight Razor %}
 
@@ -155,4 +178,4 @@ Open and close the popup programmatically by calling `ShowPopupAsync()` and `Hid
 
 {% endhighlight %} 
 
-![Show or hide popup in Blazor MultiSelect](./images/popup-setting/blazor_multiselect_show-or-hide-popup.gif)
+![Show or hide popup in Blazor MultiSelect Dropdown](./images/popup-setting/blazor_multiselect_show-or-hide-popup.gif)

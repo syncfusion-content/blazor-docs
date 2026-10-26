@@ -2,10 +2,10 @@
 @using Syncfusion.Blazor.Data
 
 <SfAutoComplete TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
-        <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
-        <AutoCompleteEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></AutoCompleteEvents>
-        <AutoCompleteFieldSettings Text="CustomerID" Value="CustomerID"></AutoCompleteFieldSettings>
-    </SfAutoComplete>
+    <SfDataManager Url="https://services.odata.org/Northwind/Northwind.svc/Orders/" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
+    <AutoCompleteEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></AutoCompleteEvents>
+    <AutoCompleteFieldSettings Text="CustomerID" Value="CustomerID"></AutoCompleteFieldSettings>
+</SfAutoComplete>
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();

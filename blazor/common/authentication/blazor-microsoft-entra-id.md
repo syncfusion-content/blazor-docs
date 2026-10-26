@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Securing Blazor DataGrid with Microsoft Entra ID | Syncfusion® 
-description: Step-by-step guide to integrating Microsoft Entra ID authentication with Syncfusion® Blazor components in a Blazor Web App.
+description: Step-by-step guide to integrating Microsoft Entra ID authentication with Blazor components in a Blazor Web App.
 platform: Blazor
 control: Common
 documentation: ug
@@ -23,7 +23,7 @@ Ensure that **HTTPS is enabled** during project creation, as Microsoft Entra ID 
 
 Install the following NuGet packages to use the **Blazor DataGrid** and enable authentication with **Microsoft Entra ID**.
 
-**Syncfusion® packages:**
+**Blazor packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -46,9 +46,9 @@ dotnet add package Microsoft.Identity.Web.UI
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® namespaces
+## Add required namespaces
 
-Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
+Open the `~/_Imports.razor` file and import the namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -220,15 +220,15 @@ Create a protected page that displays the **Blazor DataGrid** only after the use
 			<h1>Welcome!</h1>
 			<p>	
 			   Click the Login button below to sign in with Microsoft Entra ID.
-			   Once you’re logged in, the Syncfusion® Blazor DataGrid will be displayed below.
+			   Once you’re logged in, the Blazor DataGrid will be displayed below.
 			</p>
-			<a class="btn btn-primary" href="/MicrosoftIdentity/Account/SignIn">Login with Microsoft</a>
+			<a class="btn btn-primary" href="/MicrosoftIdentity/Account/SignIn" aria-label="Login with Microsoft Id">Login with Microsoft</a>
 		</div>
 	</NotAuthorized>
 	<Authorized>
 		<div class="d-flex justify-content-between align-items-center">
 			<h1>DataGrid</h1>
-			<a class="btn btn-secondary" href="/MicrosoftIdentity/Account/SignOut">Logout</a>
+			<a class="btn btn-secondary" href="/MicrosoftIdentity/Account/SignOut" aria-label="Logout an account">Logout</a>
 		</div>
 
 		<SfGrid DataSource="@Orders">
@@ -288,6 +288,8 @@ The application securely signs users in through **Microsoft Entra ID** and manag
 ![Blazor DataGrid with Microsoft Enta ID](images/blazor-datagrid-microsoftentraid.webp)
 
 This approach provides a secure, enterprise ready foundation for building modern Blazor applications with controlled access to data and UI components.   
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20Microsoft-Entra-ID)
 
 ## See also
 

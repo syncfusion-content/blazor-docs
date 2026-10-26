@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Template in Blazor File Upload Component | Syncfusion
-description: Learn how to customize the Syncfusion Blazor File Upload component's appearance using templates, including how to add a progress bar.
+title: Template in Blazor File Upload | Syncfusion
+description: Customize Blazor File Upload file list items using templates to control file name, size, status, and progress display.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Template in Blazor File Upload Component
+# Template in Blazor File Upload
 
 The Blazor File Upload component allows for the customization of the file list items by using a template. This provides the flexibility to define the structure and styling of individual file elements, such as the file name, size, and status. A custom template can create a tailored and visually appealing file upload interface that aligns with an application's design and user experience requirements.
 
-### With server-side API endpoint
+## With server-side API endpoint
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -30,7 +30,7 @@ The Blazor File Upload component allows for the customization of the file list i
     </UploaderTemplates>
 </SfUploader>
 ```
-### Without server-side API endpoint
+## Without server-side API endpoint
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -48,7 +48,7 @@ The Blazor File Upload component allows for the customization of the file list i
 </SfUploader>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrSZOLhhmAhbeZR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLntGNafPjyQoid?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Adding a progress bar using a template
 
@@ -205,6 +205,6 @@ When using a file upload template, the default progress bar is not displayed in 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLytYhhLmmEGpkj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBRXctEJbKBDChs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
-![Blazor File Upload with a custom template and progress bar](./images/blazor-template-progressbar.gif)
+![Blazor File Upload with a custom template and progress bar](./images/blazor-template-progressbar.webp)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Image Editor component | Syncfusion
-description: Learn about accessibility support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Accessibility in Blazor Image Editor | Syncfusion
+description: Learn how Blazor Image Editor supports keyboard navigation, screen readers, ARIA attributes, and axe-core validation.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Accessibility in Blazor Image Editor component
+# Accessibility in Blazor Image Editor
 
 The Blazor Image Editor component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -57,8 +57,8 @@ The Blazor Image Editor component's accessibility levels are validated using [ax
 
 The accessibility compliance of the Blazor Image Editor component is demonstrated in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/image-editor) in a new window to evaluate the Blazor Image Editor component with accessibility tools.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrICNDYqKacaGsS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBnNGZKhdZgfGyp?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

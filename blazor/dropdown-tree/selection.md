@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Selection in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor Dropdown Tree component and much more.
+title: Selection in Blazor Dropdown Tree | Syncfusion®
+description: Configure single and multi-selection behavior in Blazor Dropdown Tree with keyboard and mouse interaction.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Selection in Blazor Dropdown Tree Component
+# Selection in Blazor Dropdown Tree
 
-The Dropdown Tree has been provided with single and multi-selection support. Selection provides an interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction.
+The Dropdown Tree has been provided with single and multi-selection support. Selection provides interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction.
 
 ## Single Selection 
 
@@ -51,7 +51,7 @@ In the following example, you can select the single node only.
 }
 ```
 
-![Selection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-single-selection.png)
+![Selection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-single-selection.webp)
 
 ## Multi Selection 
 
@@ -93,4 +93,4 @@ In the following example, the [AllowMultiSelection](https://help.syncfusion.com/
 }
 ```
 
-![MultiSelection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-multi-selection.png)
+![MultiSelection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-multi-selection.webp)

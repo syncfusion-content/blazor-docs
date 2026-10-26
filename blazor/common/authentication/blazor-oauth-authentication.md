@@ -1,15 +1,21 @@
 ---
 layout: post
 title: Securing Blazor DataGrid with OAuth 2.0 | Syncfusion® 
-description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Syncfusion® Blazor components in a Blazor Web App.
+description: Step-by-step guide to integrate GitHub OAuth 2.0 authentication with Blazor DataGrid component in a Blazor Web App.
 platform: Blazor
-control: Common
+control: DataGrid
 documentation: ug
 ---
 
 # Securing Blazor DataGrid with GitHub OAuth 2.0
 
 This guide explains how to secure the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) in a **Blazor Web App** with **Interactive Server** using [GitHub OAuth 2.0](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps) authentication.
+
+## Prerequisites
+
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later.
+* [Visual Studio Code](https://code.visualstudio.com/).
+* A [GitHub account](https://github.com/) with a registered [GitHub OAuth application](https://github.com/settings/developers) (Client ID and Client Secret).
 
 ## Create a Blazor project
 
@@ -21,9 +27,9 @@ Ensure that **HTTPS is enabled** during project creation, as GitHub OAuth based 
 
 ## Install required packages
 
-Install the following NuGet packages to use the **Blazor DataGrid** and enable authentication with **GitHub OAuth**.
+Install the following NuGet packages to use the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) and enable authentication with **GitHub OAuth**.
 
-**Syncfusion® packages:**
+**Blazor packages:**
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -39,9 +45,9 @@ dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion® namespaces
+## Add required namespaces
 
-Open the `~/_Imports.razor` file and import the Syncfusion® namespaces.
+Open the `~/_Imports.razor` file and import the namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -208,11 +214,11 @@ Create a new Razor file named `LoginDisplay.razor` under the `Shared` folder ins
 <AuthorizeView>
     <Authorized>
         <div class="d-flex align-items-center">
-            <a class="btn btn-outline-secondary btn-sm" href="/account/logout">Logout</a>
+            <a class="btn btn-outline-secondary btn-sm" href="/account/logout" aria-label="Logout an account">Logout</a>
         </div>
     </Authorized>
     <NotAuthorized>
-        <a class="btn btn-primary btn-sm" href="/account/login?returnUrl=/">Login with GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/account/login?returnUrl=/" aria-label="Login with GitHub account">Login with GitHub</a>
     </NotAuthorized>
 </AuthorizeView>
 
@@ -245,7 +251,7 @@ To make the login and logout actions available throughout the application, add t
     ....
     <main>
         <div class="top-row px-4 d-flex justify-content-between align-items-center">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/aspnet/core/" aria-label="About ASP.NET Core documentation" target="_blank">About</a>
             <LoginDisplay />
         </div>
 
@@ -329,7 +335,7 @@ To allow components to receive authentication state, wrap the router inside **Ca
 
 ## Connect Blazor DataGrid 
 
-Create `SecureGrid.razor` page and render the **Blazor DataGrid** on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
+Create `SecureGrid.razor` page and render the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) on a secured Blazor page using the `[Authorize]` attribute, allowing access only to authenticated users.
 
 {% tabs %}
 {% highlight razor tabtitle="Pages/SecureGrid.razor"  %}
@@ -406,7 +412,7 @@ This section demonstrates how to dynamically render UI content based on the user
 
             <p>
                 Click the Login button below to sign in with GitHub.
-                Once you’re logged in, the Syncfusion® Blazor DataGrid will be displayed.
+                Once you’re logged in, the Blazor DataGrid will be displayed.
             </p>
 
             <a class="btn btn-primary" href="/account/login?returnUrl=/">
@@ -436,9 +442,11 @@ This example demonstrates how to integrate **GitHub OAuth** into a **Blazor Web 
 
 ![Blazor DataGrid with GitHub OAuth loginpage](images/oauth-authentication.webp)
 
-After successfully signing in, authenticated users can access protected pages and interact with the **Blazor DataGrid** component. 
+After successfully signing in, authenticated users can access protected pages and interact with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. 
 
 ![Blazor DataGrid with GitHub OAuth 2.0](images/oauth-datagrid.webp)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20OAuth)
 
 ## See also
 

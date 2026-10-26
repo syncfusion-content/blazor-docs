@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Globalization in Blazor SpeechToText Component | Syncfusion
-description: Checkout and learn about Globalization in Blazor SpeechToText component in Blazor Server App and Blazor WebAssembly App.
+title: Globalization in Blazor Speech To Text | Syncfusion®
+description: Enable Speech To Text localization to any culture and set right-to-left layout for languages like Arabic and Hebrew.
 platform: Blazor
 control: SpeechToText
 documentation: ug
 ---
 
-# Globalization in Blazor SpeechToText Component
+# Globalization in Blazor Speech To Text
 
 ## Localization
 
-The Blazor SpeechToText component can be localized to any culture by translating the text the corresponding culture. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. The following table provides the default text values for the SpeechToText component in the `en-US` culture.
+The Blazor SpeechToText component can be localized to any culture by translating the text the corresponding culture. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Blazor components. The following table provides the default text values for the SpeechToText component in the `en-US` culture.
 
 | Key                             | Text                                                  |
 | ------------------------------- | ----------------------------------------------------- |
@@ -32,4 +32,4 @@ The Blazor SpeechToText component can be localized to any culture by translating
 
 The Right-to-Left (RTL) feature reverses the text direction and layout of the SpeechToText component, which is essential for languages written from right to left, such as Arabic or Hebrew.
 
-For more details on enabling RTL across Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, refer to the [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) documentation.
+For more details on enabling RTL across Blazor components, refer to the [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) documentation.
