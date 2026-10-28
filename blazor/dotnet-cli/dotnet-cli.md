@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET CLI Overview for Blazor | Syncfusion®
-description: Learn to install and use the Syncfusion® .NET CLI (sf) to create Blazor apps with Syncfusion component demos and manage Syncfusion Blazor NuGet packages.
+description: Learn to install and use the Syncfusion® .NET CLI (sf) to create Blazor apps with Syncfusion component demos, manage Syncfusion Blazor NuGet packages, and register licenses.
 platform: Blazor
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Overview of the Syncfusion<sup>®</sup> .NET CLI
 
-The Syncfusion<sup>®</sup> .NET CLI (`sf`) is a cross-platform command line tool that creates Blazor projects and manages Syncfusion<sup>®</sup> Blazor NuGet packages from a terminal. After you install the CLI, you can run `sf` with no arguments to open an interactive menu, or run a direct command such as `sf new blazor` for scripted, prompt-free creation.
+The Syncfusion<sup>®</sup> .NET CLI (`sf`) is a cross-platform command line tool that creates Blazor projects, manages Syncfusion<sup>®</sup> Blazor NuGet packages, and registers licenses from a terminal. After you install the CLI, you can run `sf` with no arguments to open an interactive menu, or run a direct command such as `sf new blazor` for scripted, prompt-free creation.
 
 N> The Syncfusion<sup>®</sup> .NET CLI is currently in preview and is installed with the `--prerelease` flag.
 
@@ -18,6 +18,7 @@ You can use the CLI to perform the following actions:
 * Create a Blazor Web App (Server, WebAssembly, or Auto render mode) or a standalone Blazor WebAssembly app, optionally containing generated Syncfusion<sup>®</sup> component demo pages.
 * Add or update Syncfusion<sup>®</sup> Blazor NuGet package references in an existing project.
 * List available and installed packages, and search the package catalog.
+* Activate Syncfusion<sup>®</sup> licenses for the controls used in a sample, and view installed licenses.
 * Generate projects for Blazor, .NET MAUI, WPF, WinForms, and WinUI 3.
 
 This documentation covers the Blazor platform.
@@ -28,7 +29,7 @@ The following software is required before you install and use the CLI:
 
 * A [.NET SDK](https://dotnet.microsoft.com/download) that contains the ASP.NET Core Blazor templates. The CLI creates Blazor projects through the installed official `blazor` and `blazorwasm` templates; it does not carry its own copy of those templates.
 * Network access to the configured NuGet sources when restore or build is selected.
-* A valid Syncfusion<sup>®</sup> license registration for production applications. See the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+* A Syncfusion<sup>®</sup> account to activate licenses. Sign in is performed through the browser during license activation. See the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 N> The CLI reads each installed template's help output and offers only the target frameworks the installed template reports. .NET 10 (`net10.0`) is the default when available.
 
@@ -80,6 +81,10 @@ Run `sf` in an interactive terminal to open the main menu. The menu shows the cu
 | Discovery | List available packages | `sf list <platform> packages` |
 | Discovery | List installed packages in an existing project | `sf list <platform> installed` |
 | Discovery | Search for packages | `sf search` |
+| License management | Activate license | `sf license activate` |
+| License management | View installed licenses | `sf license view` |
+| License management | Sign in to Syncfusion | `sf login` |
+| License management | Sign out | `sf logout` |
 | Help and information | View CLI information | `sf info` |
 | Help and information | Show help | `sf help` |
 | Exit | Exit | `Ctrl+C` |
@@ -108,6 +113,10 @@ Complete direct commands remain usable without opening the menu. `--no-interacti
 | `sf list blazor packages` | List available packages in the Blazor package catalog |
 | `sf list blazor installed` | List installed packages in an existing project |
 | `sf search blazor <text>` | Search package aliases, IDs, names, and descriptions |
+| `sf login` | Sign in to Syncfusion through the browser |
+| `sf logout` | Sign out and clear the local session |
+| `sf license activate` | Download the license for the project's packages and register it in the project's startup code |
+| `sf license view` | Show the licenses cached for the project (no network call) |
 | `sf info` | Show CLI information |
 | `sf help blazor` | Show the Blazor command map and package aliases |
 | `sf --version` | Show the CLI version |
@@ -254,6 +263,103 @@ Use `--details` on the list command for package descriptions, release status, re
 
 ![Available packages in the Syncfusion .NET CLI](images/cli-list-available-packages.png)
 
+## Activate Syncfusion<sup>®</sup> licenses
+
+The CLI detects the Syncfusion<sup>®</sup> controls used in a project, downloads the matching license keys from your Syncfusion<sup>®</sup> account, and registers the keys in the project's startup code. For example, when a sample is created with the Chart component, the CLI registers the license for `Syncfusion.Blazor.Charts` in `Program.cs` so the build runs without a license warning.
+
+N> Open the Command Prompt or Terminal in the target sample's project directory before running the license activation command. The license operation is project-specific, and the command path must point to the intended sample.
+
+### How license activation works
+
+1. The CLI scans the project at the current directory or at the path you pass through `--path`. It identifies the platform from the project file (`.csproj`) and detects all Syncfusion<sup>®</sup> `PackageReference` entries whose IDs start with `Syncfusion.`.
+2. It checks your Syncfusion<sup>®</sup> account for entitlements that cover each detected package. When a paid or trial entitlement is available, the matching license keys are downloaded.
+3. The keys are cached in `syncfusion-license.txt` and metadata in `.syncfusion/license-meta.json` inside the project directory.
+4. The CLI inserts `SyncfusionLicenseProvider.RegisterLicense(...)` into the platform-specific startup file. For Blazor, the block is added to `Program.cs` before the application builder is created. The block is idempotent, so re-running the command refreshes the keys without duplicating the call.
+5. If a control in the project is not covered by a paid entitlement, the CLI prompts you to accept the Syncfusion<sup>®</sup> trial EULA and download a trial key for the missing packages. Pass `--yes` to accept the prompt automatically.
+
+### Activate a license through the interactive menu
+
+1. Open the Command Prompt or Terminal in the target sample's project directory.
+
+    ```bash
+    cd D:\CLI\BlazorSample
+    ```
+
+2. Run `sf` to open the main menu.
+
+    ```bash
+    sf
+    ```
+
+3. Under **License management**, select **Activate license**. The CLI focuses the **Activate License** entry and shows the navigation hint at the bottom of the screen.
+
+    ![Activate license option in the Syncfusion .NET CLI](images/cli-activate-license.png)
+
+4. If you are not signed in, the CLI opens your default browser to the Syncfusion<sup>®</sup> sign-in page. Complete sign in with your Syncfusion<sup>®</sup> account.
+
+    ![Syncfusion sign-in page in the browser](images/cli-license-sign-in.png)
+
+5. After sign in, the CLI checks your entitlements, downloads the matching keys for the Syncfusion<sup>®</sup> controls in the sample, and registers the keys in `Program.cs`.
+
+    ![License registered successfully in the Syncfusion .NET CLI](images/cli-license-registered.png)
+
+6. Rebuild the application so the newly registered license is applied. The CLI prints the following reminder at the end of the activation output.
+
+    > Note: Rebuild the application so the newly registered license is applied.
+
+### Activate a license using a direct command
+
+Run the activation command from the sample's project directory:
+
+```bash
+sf license activate
+```
+
+Pass `--path` to point the CLI at a specific project directory or `.csproj` file:
+
+```bash
+sf license activate --path ./MyApp
+sf license activate --path ./MyApp/MyApp.csproj
+```
+
+Use `--yes` to accept the trial EULA prompt without asking:
+
+```bash
+sf license activate --yes
+```
+
+Use `--file` to activate from an existing key file. With no value, the CLI reads `./syncfusion-license.txt` from the project directory. With an absolute path, the CLI uses the specified file instead:
+
+```bash
+sf license activate --file
+sf license activate --file C:\keys\syncfusion-license.txt
+```
+
+N> When a license key is supplied through `--file`, the CLI skips sign in and download and registers the keys already in the file. The file path must be absolute.
+
+### View installed licenses
+
+To see the licenses cached for the current project, run:
+
+```bash
+sf license view
+```
+
+The command reads the cached metadata, lists each product, the license type, the status, and the expiry date, and warns when a Syncfusion<sup>®</sup> package in the project is not covered.
+
+![View installed licenses in the Syncfusion .NET CLI](images/cli-view-installed-license-menu.png)
+
+The cached output reports the registered email, platform, major version, and one row per product.
+
+![Installed license details in the Syncfusion .NET CLI](images/cli-view-installed-license.png)
+
+### License operation notes
+
+* License activation is project-specific. The command path must point to the intended sample, because each project is detected through its `.csproj` and scanned independently.
+* The CLI writes `syncfusion-license.txt` and `.syncfusion/license-meta.json` to the project directory.
+* The startup file the CLI modifies by platform is `Program.cs` for Blazor, `MauiProgram.cs` for .NET MAUI, `App.xaml.cs` for WPF, `App.xaml.cs` for WinUI, and `Program.cs` (or `Application.xaml.vb` for VB) for WinForms.
+* Use `sf logout` to clear the local sign-in session. Use `sf login` to sign in again without running activation.
+
 ## Options reference
 
 ### Creation options
@@ -287,6 +393,15 @@ Use `--details` on the list command for package descriptions, release status, re
 | `--no-restore` | Skip `dotnet restore` after the action |
 | `--json` | Emit one JSON document |
 
+### License options
+
+| Option | Description |
+| --- | --- |
+| `-p`, `--path` | The project directory or `.csproj`/`.vbproj` to scan for Syncfusion<sup>®</sup> packages. Defaults to the current directory |
+| `-y`, `--yes` | Accept the trial EULA prompt automatically during activation |
+| `--file` | Activate from an existing key file. With no value, the CLI reads `./syncfusion-license.txt` from the project directory. With an absolute path, the CLI uses the specified file |
+| `--json` | Emit one JSON document instead of table output |
+
 ### Global options
 
 | Option | Description |
@@ -301,9 +416,13 @@ Use `--details` on the list command for package descriptions, release status, re
 
 ## FAQs
 
-**Does the CLI generate a license key?** No. Syncfusion<sup>®</sup> licensing requirements continue to apply. Refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) to generate and register a license key in your project.
+**Does the CLI register a license?** Yes. `sf license activate` scans the project for Syncfusion<sup>®</sup> `PackageReference` entries, downloads the matching license keys from your Syncfusion<sup>®</sup> account, and inserts `SyncfusionLicenseProvider.RegisterLicense(...)` into `Program.cs` (or the platform-specific startup file). The CLI signs you in through the browser the first time, or you can sign in ahead with `sf login`. For background information on Syncfusion<sup>®</sup> licensing, refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 **Does `sf add blazor grid` generate the Grid demo?** No. Package operations change NuGet references only; they do not generate control files. Use `sf new blazor --control grid` during creation, or generate demos from the creation wizard.
+
+**Where does the CLI register the license for Blazor?** In `Program.cs`, before the application builder is created. For .NET MAUI, WPF, WinUI, and WinForms, the CLI targets `MauiProgram.cs`, `App.xaml.cs`, `App.xaml.cs`, and `Program.cs` respectively.
+
+**Can I use my own key file?** Yes. Run `sf license activate --file C:\keys\syncfusion-license.txt` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
 
 **Which render modes are supported?** Blazor Web App supports Server, WebAssembly, and Auto interactive render modes, with per-page/component or global interactivity. Standalone WebAssembly apps use WebAssembly rendering automatically.
 
@@ -319,3 +438,4 @@ Use `--details` on the list command for package descriptions, release status, re
 * [Get started with Syncfusion Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Install Syncfusion Blazor NuGet packages](https://blazor.syncfusion.com/documentation/installation/install-nuget-packages)
 * [Interactive render modes in Blazor](https://blazor.syncfusion.com/documentation/common/interactive-render-mode)
+* [Syncfusion<sup>®</sup> licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
