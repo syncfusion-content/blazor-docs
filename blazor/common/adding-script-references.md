@@ -333,6 +333,10 @@ The following table lists the components and their script file names.
         <td>sf-sparkline.min.js</td>
     </tr>
     <tr>
+        <td>Sunburst Chart</td>
+        <td>sf-sunburst-chart.min.js</td>
+    </tr>
+    <tr>
         <td>TreeMap</td>
         <td>sf-treemap.min.js</td>
     </tr>
