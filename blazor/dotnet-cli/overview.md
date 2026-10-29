@@ -16,8 +16,7 @@ N> The Syncfusion<sup>®</sup> .NET CLI is currently in preview and is installed
 You can use the CLI to perform the following actions:
 
 * Create a Blazor Web App (Server, WebAssembly, or Auto render mode) or a standalone Blazor WebAssembly app, optionally containing generated Syncfusion<sup>®</sup> component demo pages. For details, refer to [Create a Blazor project](/blazor/dotnet-cli/create-project).
-* Add or update Syncfusion<sup>®</sup> Blazor NuGet package references in an existing project. For details, refer to [Manage packages](/blazor/dotnet-cli/manage-packages).
-* List available and installed packages, and search the package catalog. For details, refer to [Manage packages](/blazor/dotnet-cli/manage-packages).
+* Add, update, list, and search Syncfusion<sup>®</sup> Blazor NuGet packages in an existing project. For details, refer to [Manage packages](/blazor/dotnet-cli/manage-packages).
 * Activate Syncfusion<sup>®</sup> licenses for the controls used in a sample, and view installed licenses. For details, refer to [License activation](/blazor/dotnet-cli/licensing).
 * Configure an official Syncfusion<sup>®</sup> Model Context Protocol (MCP) server for AI coding clients. For details, refer to [MCP configuration](/blazor/dotnet-cli/configure-mcp).
 * Install official Syncfusion<sup>®</sup> component skills for AI agents. For details, refer to [AI skills installation](/blazor/dotnet-cli/install-skills).
@@ -37,37 +36,59 @@ N> The CLI reads each installed template's help output and offers only the targe
 
 N> Syncfusion<sup>®</sup> packages resolve from the official nuget.org feed, `https://api.nuget.org/v3/index.json`. Package installs resolve the latest stable release and write a concrete version, never `*`. Use `--version` to pin a release.
 
-## Installation
+## Installation and setup
 
 The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNet.CLI`.
 
 1. Open a terminal and run the following command. Add `--prerelease` while only preview versions are available.
 
-    ```bash
+    {% tabs %}
+    {% highlight bash tabtitle="Bash" %}
+
     dotnet tool install -g Syncfusion.DotNet.CLI --prerelease
-    ```
+
+    {% endhighlight %}
+    {% endtabs %}
 
 2. Verify the installation and print the CLI version.
 
-    ```bash
-    sf --version
-    ```
+    {% tabs %}
+    {% highlight bash tabtitle="Bash" %}
 
-Run `sf help` for a short command map, or `sf help blazor` for the Blazor command map and package aliases.
+    sf --version
+
+    {% endhighlight %}
+    {% endtabs %}
+
+3. Add the global tools directory to the `PATH` environment variable if the `sf` command is not found after installation. The .NET global tools are installed in `%USERPROFILE%\.dotnet\tools` (Windows) or `~/.dotnet/tools` (Linux/macOS), and this directory must be on the `PATH`.
+
+    | Environment variable | Value |
+    | --- | --- |
+    | `PATH` | `%USERPROFILE%\.dotnet\tools` |
+
+4. Run `sf help` for a short command map, or `sf help blazor` for the Blazor command map and package aliases.
 
 ![Help output in the Syncfusion .NET CLI](images/cli-help-output.png)
 
 To update the tool to the latest release, run:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
+
 dotnet tool update -g Syncfusion.DotNet.CLI --prerelease
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 To remove the tool, run:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
+
 dotnet tool uninstall -g Syncfusion.DotNet.CLI
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Initialize the CLI
 
@@ -91,19 +112,9 @@ Run `sf` in an interactive terminal to open the main menu. The menu shows the cu
 | License management | Sign out | `sf logout` |
 | Help and information | View CLI information | `sf info` |
 | Help and information | Show help | `sf help` |
-| Exit | Exit | `Ctrl+C` |
+| Help and information | Exit the interactive session | `Ctrl+C` |
 
 N> The `<platform>` text is a usage placeholder. Use `blazor` for Blazor.
-
-Use the following keys to navigate the interactive screens:
-
-| Key | Action |
-| --- | --- |
-| Up / Down | Move through the options |
-| Enter | Choose the focused option, or continue |
-| Space | Toggle a checkbox in a multi-selection list |
-| Escape | Cancel the current question and return to the menu |
-| `Ctrl+C` | Exit the interactive session |
 
 Complete direct commands remain usable without opening the menu. `--no-interactive` disables prompts in any command. Run `sf help blazor` to show the Blazor command map and package aliases.
 
@@ -141,7 +152,9 @@ Complete direct commands remain usable without opening the menu. `--no-interacti
 
 ## FAQs
 
-**Which platforms does the CLI support?** Blazor, .NET MAUI, WPF, WinForms, and WinUI 3. This documentation covers Blazor.
+**Which platforms does the CLI support?**
+
+Blazor, .NET MAUI, WPF, WinForms, and WinUI 3. This documentation covers Blazor.
 
 ## See also
 

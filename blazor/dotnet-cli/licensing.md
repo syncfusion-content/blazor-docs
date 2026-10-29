@@ -13,27 +13,66 @@ The CLI detects the Syncfusion<sup>®</sup> controls used in a project, download
 
 N> Open the Command Prompt or Terminal in the target sample's project directory before running the license activation command. The license operation is project-specific, and the command path must point to the intended sample.
 
-## How license activation works
+## Sign in requirements
 
-1. The CLI scans the project at the current directory or at the path you pass through `--path`. It identifies the platform from the project file (`.csproj`) and detects all Syncfusion<sup>®</sup> `PackageReference` entries whose IDs start with `Syncfusion.`.
-2. It checks your Syncfusion<sup>®</sup> account for entitlements that cover each detected package. When a paid or trial entitlement is available, the matching license keys are downloaded.
-3. The keys are cached in `syncfusion-license.txt` and metadata in `.syncfusion/license-meta.json` inside the project directory.
-4. The CLI inserts `SyncfusionLicenseProvider.RegisterLicense(...)` into the platform-specific startup file. For Blazor, the block is added to `Program.cs` before the application builder is created. The block is idempotent, so re-running the command refreshes the keys without duplicating the call.
-5. If a control in the project is not covered by a paid entitlement, the CLI prompts you to accept the Syncfusion<sup>®</sup> trial EULA and download a trial key for the missing packages. Pass `--yes` to accept the prompt automatically.
+License activation requires a signed-in Syncfusion<sup>®</sup> account with an entitlement that covers the packages used in the project:
+
+* A Syncfusion<sup>®</sup> account with a paid license, a free trial, or a free community license. Refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+* Sign in is performed through the browser. When a license command needs an authenticated session, the CLI opens the default browser on the Syncfusion<sup>®</sup> sign-in page, and completes sign in with your Syncfusion<sup>®</sup> account credentials.
+* When every control in the project is covered by a paid entitlement, the matching keys are downloaded without further prompts.
+* When a control in the project is not covered by a paid entitlement, the CLI prompts you to accept the Syncfusion<sup>®</sup> trial EULA and download a trial key for the missing packages.
+
+N> When a license key is supplied through `--file`, the CLI skips sign in and download and registers the keys already in the file. The file path must be absolute.
+
+## Sign in and sign out
+
+The CLI stores a local sign-in session so repeated license operations do not require a new browser sign in each time.
+
+To sign in without running an activation, run:
+
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
+
+sf login
+
+{% endhighlight %}
+{% endtabs %}
+
+The CLI opens the default browser on the Syncfusion<sup>®</sup> sign-in page. Complete sign in with your Syncfusion<sup>®</sup> account, and the CLI stores the session locally.
+
+To sign out and clear the local session, run:
+
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
+
+sf logout
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Signing out does not affect the licenses already registered in a project. The cached license keys and the `SyncfusionLicenseProvider.RegisterLicense(...)` call remain in place until you change or remove them.
 
 ## Activate a license through the interactive menu
 
 1. Open the Command Prompt or Terminal in the target sample's project directory.
 
-    ```bash
-    cd D:\CLI\BlazorSample
-    ```
+    {% tabs %}
+    {% highlight bash tabtitle="Bash" %}
+
+    cd ./BlazorSample
+
+    {% endhighlight %}
+    {% endtabs %}
 
 2. Run `sf` to open the main menu.
 
-    ```bash
+    {% tabs %}
+    {% highlight bash tabtitle="Bash" %}
+
     sf
-    ```
+
+    {% endhighlight %}
+    {% endtabs %}
 
 3. Under **License management**, select **Activate license**. The CLI focuses the **Activate License** entry and shows the navigation hint at the bottom of the screen.
 
@@ -55,39 +94,57 @@ N> Open the Command Prompt or Terminal in the target sample's project directory 
 
 Run the activation command from the sample's project directory:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
+
 sf license activate
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Pass `--path` to point the CLI at a specific project directory or `.csproj` file:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
+
 sf license activate --path ./MyApp
 sf license activate --path ./MyApp/MyApp.csproj
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Use `--yes` to accept the trial EULA prompt without asking:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
+
 sf license activate --yes
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Use `--file` to activate from an existing key file. With no value, the CLI reads `./syncfusion-license.txt` from the project directory. With an absolute path, the CLI uses the specified file instead:
 
-```bash
-sf license activate --file
-sf license activate --file C:\keys\syncfusion-license.txt
-```
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
 
-N> When a license key is supplied through `--file`, the CLI skips sign in and download and registers the keys already in the file. The file path must be absolute.
+sf license activate --file
+sf license activate --file "C:\Keys\syncfusion-license.txt"
+
+{% endhighlight %}
+{% endtabs %}
 
 ## View installed licenses
 
 To see the licenses cached for the current project, run:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Bash" %}
+
 sf license view
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The command reads the cached metadata, lists each product, the license type, the status, and the expiry date, and warns when a Syncfusion<sup>®</sup> package in the project is not covered.
 
@@ -96,13 +153,6 @@ The command reads the cached metadata, lists each product, the license type, the
 The cached output reports the registered email, platform, major version, and one row per product.
 
 ![Installed license details in the Syncfusion .NET CLI](images/cli-view-installed-license.png)
-
-## License operation notes
-
-* License activation is project-specific. The command path must point to the intended sample, because each project is detected through its `.csproj` and scanned independently.
-* The CLI writes `syncfusion-license.txt` and `.syncfusion/license-meta.json` to the project directory.
-* The startup file the CLI modifies by platform is `Program.cs` for Blazor, `MauiProgram.cs` for .NET MAUI, `App.xaml.cs` for WPF, `App.xaml.cs` for WinUI, and `Program.cs` (or `Application.xaml.vb` for VB) for WinForms.
-* Use `sf logout` to clear the local sign-in session. Use `sf login` to sign in again without running activation.
 
 ## License options
 
@@ -115,11 +165,13 @@ The cached output reports the registered email, platform, major version, and one
 
 ## FAQs
 
-**Does the CLI register a license?** Yes. `sf license activate` scans the project for Syncfusion<sup>®</sup> `PackageReference` entries, downloads the matching license keys from your Syncfusion<sup>®</sup> account, and inserts `SyncfusionLicenseProvider.RegisterLicense(...)` into `Program.cs` (or the platform-specific startup file). The CLI signs you in through the browser the first time, or you can sign in ahead with `sf login`. For background information on Syncfusion<sup>®</sup> licensing, refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+**Does the CLI register a license?**
 
-**Where does the CLI register the license for Blazor?** In `Program.cs`, before the application builder is created. For .NET MAUI, WPF, WinUI, and WinForms, the CLI targets `MauiProgram.cs`, `App.xaml.cs`, `App.xaml.cs`, and `Program.cs` respectively.
+Yes. `sf license activate` scans the project for Syncfusion<sup>®</sup> packages, downloads the matching license keys from your Syncfusion<sup>®</sup> account, and registers them in `Program.cs`. The CLI signs you in through the browser the first time, or you can sign in ahead with `sf login`. For background information on Syncfusion<sup>®</sup> licensing, refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
-**Can I use my own key file?** Yes. Run `sf license activate --file C:\keys\syncfusion-license.txt` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
+**Can I use my own key file?**
+
+Yes. Run `sf license activate --file "C:\Keys\syncfusion-license.txt"` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
 
 ## See also
 
