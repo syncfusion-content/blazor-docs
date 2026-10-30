@@ -137,6 +137,8 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 ## Document Editor
 
+The Syncfusion&reg; DOCX Editor component exposes WebMCP tools across six categories, giving AI agents full programmatic control over document content, formatting, navigation, and document management operations. Explore the Syncfusion&reg; Blazor DOCX Editor component with WebMCP integration through this [GitHub sample](https://github.com/SyncfusionExamples/Blazor-DOCX-Editor-Examples/tree/master/WebMcp/getting-started).
+
 | Group | Tools |
 | --- | --- |
 | Document | `SaveDocument`, `Print`, `GetPageCount`, `GoToPage` |
@@ -145,8 +147,6 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 | Bookmarks | `GetBookmarks`, `InsertBookmark`, `SelectBookmark` |
 | Character format | `Get` and `Set` pairs for `CharacterFormatBold`, `Italic`, `Underline`, `Strikethrough`, `FontFamily`, `FontSize`, `FontColor`, `BaselineAlignment`, `HighlightColor` |
 | Paragraph format | `Get` and `Set` pairs for `ParagraphFormatTextAlignment`, `LeftIndent`, `RightIndent`, `FirstLineIndent`, `BeforeSpacing`, `AfterSpacing`, `LineSpacing`, `LineSpacingType`, `ListLevelNumber`, `OutlineLevel`, `ContextualSpacing`. `GetParagraphFormatListText` is read-only |
-
-The Syncfusion&reg; DOCX Editor component exposes WebMCP tools across six categories, giving AI agents full programmatic control over document content, formatting, navigation, and document management operations. Explore the Syncfusion&reg; Blazor DOCX Editor component with WebMCP integration through this [GitHub sample](https://github.com/SyncfusionExamples/Blazor-DOCX-Editor-Examples/tree/master/WebMcp/getting-started).
 
 ## Spreadsheet
 
