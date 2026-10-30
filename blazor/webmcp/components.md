@@ -148,6 +148,7 @@ The Syncfusion&reg; DOCX Editor component exposes WebMCP tools across six catego
 | Character format | `Get` and `Set` pairs for `CharacterFormatBold`, `Italic`, `Underline`, `Strikethrough`, `FontFamily`, `FontSize`, `FontColor`, `BaselineAlignment`, `HighlightColor` |
 | Paragraph format | `Get` and `Set` pairs for `ParagraphFormatTextAlignment`, `LeftIndent`, `RightIndent`, `FirstLineIndent`, `BeforeSpacing`, `AfterSpacing`, `LineSpacing`, `LineSpacingType`, `ListLevelNumber`, `OutlineLevel`, `ContextualSpacing`. `GetParagraphFormatListText` is read-only |
 
+
 ## Spreadsheet
 
 | Group | Tools |
