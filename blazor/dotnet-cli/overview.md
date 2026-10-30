@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET CLI Overview for Blazor | Syncfusion®
-description: Learn to install and use the Syncfusion® .NET CLI (sf) to create Blazor apps with Syncfusion component demos, manage Syncfusion Blazor NuGet packages, and register licenses.
+description: Learn to install and use the Syncfusion® .NET CLI (sfdotnet) to create Blazor apps with Syncfusion component demos, manage Syncfusion Blazor NuGet packages, and register licenses.
 platform: Blazor
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -9,9 +9,7 @@ documentation: UG
 
 # Overview of the Syncfusion<sup>®</sup> .NET CLI
 
-The Syncfusion<sup>®</sup> .NET CLI (`sf`) is a cross-platform command line tool that creates Blazor projects, manages Syncfusion<sup>®</sup> Blazor NuGet packages, and registers licenses from a terminal. After you install the CLI, you can run `sf` with no arguments to open an interactive menu, or run a direct command such as `sf new blazor` for scripted, prompt-free creation.
-
-N> The Syncfusion<sup>®</sup> .NET CLI is currently in preview and is installed with the `--prerelease` flag.
+The Syncfusion<sup>®</sup> .NET CLI (`sfdotnet`) is a cross-platform command line tool that creates Blazor projects, manages Syncfusion<sup>®</sup> Blazor NuGet packages, and registers licenses from a terminal. After you install the CLI, you can run `sfdotnet` with no arguments to open an interactive menu, or run a direct command such as `sfdotnet new blazor` for scripted, prompt-free creation.
 
 You can use the CLI to perform the following actions:
 
@@ -40,12 +38,12 @@ N> Syncfusion<sup>®</sup> packages resolve from the official nuget.org feed, `h
 
 The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNet.Cli`.
 
-1. Open a terminal and run the following command. Add `--prerelease` while only preview versions are available.
+1. Open a terminal and run the following command:
 
     {% tabs %}
     {% highlight bash tabtitle="Bash" %}
 
-    dotnet tool install -g Syncfusion.DotNet.Cli --prerelease
+    dotnet tool install -g Syncfusion.DotNet.Cli
 
     {% endhighlight %}
     {% endtabs %}
@@ -55,18 +53,18 @@ The CLI is published as a .NET global tool with the package ID `Syncfusion.DotNe
     {% tabs %}
     {% highlight bash tabtitle="Bash" %}
 
-    sf --version
+    sfdotnet --version
 
     {% endhighlight %}
     {% endtabs %}
 
-3. Add the global tools directory to the `PATH` environment variable if the `sf` command is not found after installation. The .NET global tools are installed in `%USERPROFILE%\.dotnet\tools` (Windows) or `~/.dotnet/tools` (Linux/macOS), and this directory must be on the `PATH`.
+3. Add the global tools directory to the `PATH` environment variable if the `sfdotnet` command is not found after installation. The .NET global tools are installed in `%USERPROFILE%\.dotnet\tools` (Windows) or `~/.dotnet/tools` (Linux/macOS), and this directory must be on the `PATH`.
 
     | Environment variable | Value |
     | --- | --- |
     | `PATH` | `%USERPROFILE%\.dotnet\tools` |
 
-4. Run `sf help` for a short command map, or `sf help blazor` for the Blazor command map and package aliases.
+4. Run `sfdotnet help` for a short command map, or `sfdotnet help blazor` for the Blazor command map and package aliases.
 
 ![Help output in the Syncfusion .NET CLI](images/cli-help-output.png)
 
@@ -75,7 +73,7 @@ To update the tool to the latest release, run:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-dotnet tool update -g Syncfusion.DotNet.Cli --prerelease
+dotnet tool update -g Syncfusion.DotNet.Cli
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,51 +90,51 @@ dotnet tool uninstall -g Syncfusion.DotNet.Cli
 
 ## Initialize the CLI
 
-Run `sf` in an interactive terminal to open the main menu. The menu shows the current CLI version and groups the available operations.
+Run `sfdotnet` in an interactive terminal to open the main menu. The menu shows the current CLI version and groups the available operations.
 
 ![Syncfusion .NET CLI main menu](images/cli-main-menu.png)
 
 | Group | Operation | Command reference |
 | --- | --- | --- |
-| Project creation | Create a new project | `sf new` |
-| Package management | Add a package to an existing project | `sf add` |
-| Package management | Update a package in an existing project | `sf update` |
-| Discovery | List available packages | `sf list <platform> packages` |
-| Discovery | List installed packages in an existing project | `sf list <platform> installed` |
-| Discovery | Search for packages | `sf search` |
-| AI & Skills | Setup Model Context Protocol (MCP) | `sf mcp init` |
-| AI & Skills | Add component skills to AI Agent | `sf skills install` |
-| License management | Activate license | `sf license activate` |
-| License management | View installed licenses | `sf license view` |
-| License management | Sign in to Syncfusion | `sf login` |
-| License management | Sign out | `sf logout` |
-| Help and information | View CLI information | `sf info` |
-| Help and information | Show help | `sf help` |
+| Project creation | Create a new project | `sfdotnet new` |
+| Package management | Add a package to an existing project | `sfdotnet add` |
+| Package management | Update a package in an existing project | `sfdotnet update` |
+| Discovery | List available packages | `sfdotnet list <platform> packages` |
+| Discovery | List installed packages in an existing project | `sfdotnet list <platform> installed` |
+| Discovery | Search for packages | `sfdotnet search` |
+| AI & Skills | Setup Model Context Protocol (MCP) | `sfdotnet mcp init` |
+| AI & Skills | Add component skills to AI Agent | `sfdotnet skills install` |
+| License management | Activate license | `sfdotnet license activate` |
+| License management | View installed licenses | `sfdotnet license view` |
+| License management | Sign in to Syncfusion | `sfdotnet login` |
+| License management | Sign out | `sfdotnet logout` |
+| Help and information | View CLI information | `sfdotnet info` |
+| Help and information | Show help | `sfdotnet help` |
 | Help and information | Exit the interactive session | `Ctrl+C` |
 
 N> The `<platform>` text is a usage placeholder. Use `blazor` for Blazor.
 
-Complete direct commands remain usable without opening the menu. `--no-interactive` disables prompts in any command. Run `sf help blazor` to show the Blazor command map and package aliases.
+Complete direct commands remain usable without opening the menu. `--no-interactive` disables prompts in any command. Run `sfdotnet help blazor` to show the Blazor command map and package aliases.
 
 ## Available commands
 
 | Command | Purpose | For details, refer to |
 | --- | --- | --- |
-| `sf new blazor` | Create a new Blazor project | [Create a Blazor project](/blazor/dotnet-cli/create-project) |
-| `sf add blazor <package>` | Add a Syncfusion<sup>®</sup> package to an existing project | [Manage packages](/blazor/dotnet-cli/manage-packages) |
-| `sf update blazor <package>` | Update a package in an existing project | [Manage packages](/blazor/dotnet-cli/manage-packages) |
-| `sf list blazor packages` | List available packages in the Blazor package catalog | [Manage packages](/blazor/dotnet-cli/manage-packages) |
-| `sf list blazor installed` | List installed packages in an existing project | [Manage packages](/blazor/dotnet-cli/manage-packages) |
-| `sf search blazor <text>` | Search package aliases, IDs, names, and descriptions | [Manage packages](/blazor/dotnet-cli/manage-packages) |
-| `sf mcp init blazor` | Configure a project-local Syncfusion<sup>®</sup> MCP client | [MCP configuration](/blazor/dotnet-cli/configure-mcp) |
-| `sf skills install blazor` | Install Syncfusion<sup>®</sup> component skills for AI agents | [AI skills installation](/blazor/dotnet-cli/install-skills) |
-| `sf login` | Sign in to Syncfusion through the browser | [License activation](/blazor/dotnet-cli/licensing) |
-| `sf logout` | Sign out and clear the local session | [License activation](/blazor/dotnet-cli/licensing) |
-| `sf license activate` | Download the license for the project's packages and register it in the project's startup code | [License activation](/blazor/dotnet-cli/licensing) |
-| `sf license view` | Show the licenses cached for the project (no network call) | [License activation](/blazor/dotnet-cli/licensing) |
-| `sf info` | Show CLI information | |
-| `sf help blazor` | Show the Blazor command map and package aliases | |
-| `sf --version` | Show the CLI version | |
+| `sfdotnet new blazor` | Create a new Blazor project | [Create a Blazor project](/blazor/dotnet-cli/create-project) |
+| `sfdotnet add blazor <package>` | Add a Syncfusion<sup>®</sup> package to an existing project | [Manage packages](/blazor/dotnet-cli/manage-packages) |
+| `sfdotnet update blazor <package>` | Update a package in an existing project | [Manage packages](/blazor/dotnet-cli/manage-packages) |
+| `sfdotnet list blazor packages` | List available packages in the Blazor package catalog | [Manage packages](/blazor/dotnet-cli/manage-packages) |
+| `sfdotnet list blazor installed` | List installed packages in an existing project | [Manage packages](/blazor/dotnet-cli/manage-packages) |
+| `sfdotnet search blazor <text>` | Search package aliases, IDs, names, and descriptions | [Manage packages](/blazor/dotnet-cli/manage-packages) |
+| `sfdotnet mcp init blazor` | Configure a project-local Syncfusion<sup>®</sup> MCP client | [MCP configuration](/blazor/dotnet-cli/configure-mcp) |
+| `sfdotnet skills install blazor` | Install Syncfusion<sup>®</sup> component skills for AI agents | [AI skills installation](/blazor/dotnet-cli/install-skills) |
+| `sfdotnet login` | Sign in to Syncfusion through the browser | [License activation](/blazor/dotnet-cli/licensing) |
+| `sfdotnet logout` | Sign out and clear the local session | [License activation](/blazor/dotnet-cli/licensing) |
+| `sfdotnet license activate` | Download the license for the project's packages and register it in the project's startup code | [License activation](/blazor/dotnet-cli/licensing) |
+| `sfdotnet license view` | Show the licenses cached for the project (no network call) | [License activation](/blazor/dotnet-cli/licensing) |
+| `sfdotnet info` | Show CLI information | |
+| `sfdotnet help blazor` | Show the Blazor command map and package aliases | |
+| `sfdotnet --version` | Show the CLI version | |
 
 ## Global options
 
@@ -144,10 +142,10 @@ Complete direct commands remain usable without opening the menu. `--no-interacti
 | --- | --- |
 | `-h`, `--help` | Show command help |
 | `--version` | Show the CLI version |
-| `--interactive` | Allow prompts when running in an interactive terminal |
-| `--no-interactive` | Disable prompts |
+| `--interactive` | Allow interactive prompts (default when stdin is a terminal) |
+| `--no-interactive` | Disable interactive prompts; fail instead of prompting |
 | `--json` | Emit machine-readable output |
-| `--verbose` | Write diagnostics to stderr |
+| `--verbose` | Print detailed diagnostic output |
 | `--no-color` | Disable colored output |
 
 ## FAQs

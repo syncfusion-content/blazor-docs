@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create Blazor Projects using Syncfusion .NET CLI | Syncfusion®
-description: Learn here about how to create a Syncfusion® Blazor Web App or WebAssembly App using the Syncfusion® .NET CLI (sf) through the interactive wizard or direct commands.
+description: Learn here about how to create a Syncfusion® Blazor Web App or WebAssembly App using the Syncfusion® .NET CLI (sfdotnet) through the interactive wizard or direct commands.
 platform: Blazor
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -13,7 +13,7 @@ You can create a Blazor project through the interactive wizard or a direct comma
 
 ## Create a project using the interactive wizard
 
-Run `sf new`, or select **Create a new project** from the main menu. The Blazor creation flow collects these inputs, in this order:
+Run `sfdotnet new`, or select **Create a new project** from the main menu. The Blazor creation flow collects these inputs, in this order:
 
 1. **Platform:** Select **Blazor**.
 
@@ -27,8 +27,7 @@ Run `sf new`, or select **Create a new project** from the main menu. The Blazor 
 7. **HTTPS:** Select **Yes** or **No**. HTTPS is fixed to **Yes** when **Individual accounts** is chosen.
 8. **Project location and name:** Enter the parent directory and the project name. The project is created in `<location>/<name>`.
 9. **Setup:** Select whether to include demo pages. Demo pages are included by default.
-10. **Theme:** (Demo pages only) Select one of the Syncfusion component themes described in [Themes](#themes).
-11. **Components:** (Demo pages only) Choose one or more Syncfusion component demos from the following list. The picker starts with no components selected; use Space to select and Enter to continue after choosing at least one.
+10. **Components:** (Demo pages only) Choose one or more Syncfusion component demos from the following list. The picker starts with no components selected; use Space to select and Enter to continue after choosing at least one.
 
     | Component | Component ID |
     | --- | --- |
@@ -48,6 +47,7 @@ Run `sf new`, or select **Create a new project** from the main menu. The Blazor 
     | Scheduler | `scheduler` |
     | Spreadsheet | `spreadsheet` |
 
+11. **Theme:** (Demo pages only) Select one of the Syncfusion component themes described in [Themes](#themes).
 12. **Post-create:** Select **Generate only** or **Build project**.
 13. **Confirmation:** Review the selected values and confirm to create the project.
 
@@ -67,9 +67,9 @@ The CLI supports the following Syncfusion component themes:
 | --- | --- |
 | Fluent 2 | `fluent2.css` |
 | Bootstrap 5.3 | `bootstrap5.3.css` |
-| Bootstrap 5 | `bootstrap5.css` |
 | Material 3 | `material3.css` |
 | Tailwind 3 | `tailwind3.css` |
+| Bootstrap 5 | `bootstrap5.css` |
 
 These styles theme the Syncfusion components; they do not replace the CSS framework used by Microsoft's application shell.
 
@@ -80,7 +80,7 @@ To create a Blazor Web App with the interactive defaults (`web-app`, Server rend
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf new blazor -n MyApp
+sfdotnet new blazor -n MyApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +90,7 @@ To create a project with explicit options:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf new blazor -n MyApp --render-mode server --control grid charts
+sfdotnet new blazor -n MyApp --render-mode server --control grid charts
 
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +100,7 @@ To create a standalone Blazor WebAssembly app:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf new blazor -n ClientApp --app-type webassembly-standalone --control grid
+sfdotnet new blazor -n ClientApp --app-type webassembly-standalone --control grid
 
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +110,7 @@ To create an official minimal project without Syncfusion packages or demos:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf new blazor -n MyApp --control empty
+sfdotnet new blazor -n MyApp --control empty
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +120,7 @@ Repeat `--control` or list several component IDs to generate multiple demos:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf new blazor -n MyApp --control grid --control charts --post-action generate --no-interactive
+sfdotnet new blazor -n MyApp --control grid --control charts --post-action generate --no-interactive
 
 {% endhighlight %}
 {% endtabs %}
@@ -156,6 +156,12 @@ N> `--post-action generate` runs the official template and writes project files 
 | `--theme` | Syncfusion component theme, such as `fluent2` |
 | `--control` | One or more component IDs, or `empty`. Omit to create an empty project |
 | `--post-action` | Post-create action: `generate` or `build`. Defaults to `build` for direct commands |
+| `-v`, `--version` | The Syncfusion<sup>®</sup> NuGet package version for the created project |
+| `--source` | Package source; Syncfusion<sup>®</sup> packages require `https://api.nuget.org/v3/index.json` |
+| `--configfile` | The NuGet configuration file to use |
+| `--dry-run` | Preview the action without making changes |
+| `--no-restore` | Skip `dotnet restore` after creation |
+| `--no-build` | Skip `dotnet build` after creation |
 | `--no-interactive` | Disable interactive prompts |
 | `--json` | Emit a JSON document instead of table output |
 

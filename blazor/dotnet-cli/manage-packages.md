@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Manage Syncfusion Blazor NuGet Packages using .NET CLI | Syncfusion®
-description: Learn here about how to add, update, list, and search Syncfusion® Blazor NuGet packages in an existing project using the Syncfusion® .NET CLI (sf).
+description: Learn here about how to add, update, list, and search Syncfusion® Blazor NuGet packages in an existing project using the Syncfusion® .NET CLI (sfdotnet).
 platform: Blazor
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -20,7 +20,7 @@ Use the canonical package alias to add a Syncfusion<sup>®</sup> Blazor NuGet pa
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf add blazor grid --path ./MyApp
+sfdotnet add blazor grid --path ./MyApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +32,7 @@ Use the canonical package ID or an exact, unambiguous package display name inste
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf add blazor Syncfusion.Blazor.Grid --path ./MyApp
+sfdotnet add blazor Syncfusion.Blazor.Grid --path ./MyApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +44,7 @@ To update a package in an existing project, use the same alias, ID, or display n
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf update blazor grid --path ./MyApp
+sfdotnet update blazor grid --path ./MyApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,12 +56,12 @@ To list the packages available in the Blazor package catalog:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf list blazor packages
+sfdotnet list blazor packages
 
 {% endhighlight %}
 {% endtabs %}
 
-Use `--details` on the list command for package descriptions, release status, registration requirements, documentation links, and whether a generated sample is available.
+Use `--details` on the list command for package descriptions, release status, registration requirements, documentation links, and whether a generated sample is available. Use `--search <text>` to filter the listed packages by alias, name, package ID, or description.
 
 ![Available packages in the Syncfusion .NET CLI](images/cli-list-available-packages.png)
 
@@ -72,7 +72,7 @@ To list the Syncfusion<sup>®</sup> packages already installed in an existing pr
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf list blazor installed --path ./MyApp
+sfdotnet list blazor installed --path ./MyApp
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,12 +84,12 @@ To search the package catalog:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf search grid --framework blazor
+sfdotnet search grid --framework blazor
 
 {% endhighlight %}
 {% endtabs %}
 
-The search matches package aliases, IDs, names, and descriptions.
+The search matches package aliases, IDs, names, and descriptions. Use `--details` to include package descriptions, release status, registration requirements, and documentation links in the results.
 
 ## Package operation options
 
@@ -102,13 +102,17 @@ The search matches package aliases, IDs, names, and descriptions.
 | `--dry-run` | Preview the action without making changes |
 | `--force` | Allow supported overwrites |
 | `--no-restore` | Skip `dotnet restore` after the action |
+| `--build` | Build the changed project before committing the operation |
+| `--no-build` | Skip `dotnet build` after the action |
+| `--details` | Show package descriptions and details (list and search) |
+| `--search` | Filter the listed packages by alias, name, package ID, or description (list) |
 | `--json` | Emit one JSON document |
 
 ## FAQs
 
-**Does `sf add blazor grid` generate the Grid demo?**
+**Does `sfdotnet add blazor grid` generate the Grid demo?**
 
-No. Package operations change NuGet references only; they do not generate control files. Use `sf new blazor --control grid` during creation, or generate demos from the creation wizard.
+No. Package operations change NuGet references only; they do not generate control files. Use `sfdotnet new blazor --control grid` during creation, or generate demos from the creation wizard.
 
 ## See also
 

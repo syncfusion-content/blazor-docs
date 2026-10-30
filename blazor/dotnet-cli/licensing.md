@@ -1,7 +1,7 @@
 ---
 layout: post
 title: License Activation using Syncfusion .NET CLI | Syncfusion®
-description: Learn here about how to activate and view Syncfusion® licenses for Blazor projects using the Syncfusion® .NET CLI (sf) license commands.
+description: Learn here about how to activate and view Syncfusion® licenses for Blazor projects using the Syncfusion® .NET CLI (sfdotnet) license commands.
 platform: Blazor
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -33,7 +33,7 @@ To sign in without running an activation, run:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf login
+sfdotnet login
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +45,7 @@ To sign out and clear the local session, run:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf logout
+sfdotnet logout
 
 {% endhighlight %}
 {% endtabs %}
@@ -64,12 +64,12 @@ N> Signing out does not affect the licenses already registered in a project. The
     {% endhighlight %}
     {% endtabs %}
 
-2. Run `sf` to open the main menu.
+2. Run `sfdotnet` to open the main menu.
 
     {% tabs %}
     {% highlight bash tabtitle="Bash" %}
 
-    sf
+    sfdotnet
 
     {% endhighlight %}
     {% endtabs %}
@@ -97,7 +97,7 @@ Run the activation command from the sample's project directory:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf license activate
+sfdotnet license activate
 
 {% endhighlight %}
 {% endtabs %}
@@ -107,8 +107,8 @@ Pass `--path` to point the CLI at a specific project directory or `.csproj` file
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf license activate --path ./MyApp
-sf license activate --path ./MyApp/MyApp.csproj
+sfdotnet license activate --path ./MyApp
+sfdotnet license activate --path ./MyApp/MyApp.csproj
 
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +118,7 @@ Use `--yes` to accept the trial EULA prompt without asking:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf license activate --yes
+sfdotnet license activate --yes
 
 {% endhighlight %}
 {% endtabs %}
@@ -128,8 +128,8 @@ Use `--file` to activate from an existing key file. With no value, the CLI reads
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf license activate --file
-sf license activate --file "C:\Keys\syncfusion-license.txt"
+sfdotnet license activate --file
+sfdotnet license activate --file "C:\Keys\syncfusion-license.txt"
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +141,7 @@ To see the licenses cached for the current project, run:
 {% tabs %}
 {% highlight bash tabtitle="Bash" %}
 
-sf license view
+sfdotnet license view
 
 {% endhighlight %}
 {% endtabs %}
@@ -167,11 +167,11 @@ The cached output reports the registered email, platform, major version, and one
 
 **Does the CLI register a license?**
 
-Yes. `sf license activate` scans the project for Syncfusion<sup>®</sup> packages, downloads the matching license keys from your Syncfusion<sup>®</sup> account, and registers them in `Program.cs`. The CLI signs you in through the browser the first time, or you can sign in ahead with `sf login`. For background information on Syncfusion<sup>®</sup> licensing, refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+Yes. `sfdotnet license activate` scans the project for Syncfusion<sup>®</sup> packages, downloads the matching license keys from your Syncfusion<sup>®</sup> account, and registers them in `Program.cs`. The CLI signs you in through the browser the first time, or you can sign in ahead with `sfdotnet login`. For background information on Syncfusion<sup>®</sup> licensing, refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 
 **Can I use my own key file?**
 
-Yes. Run `sf license activate --file "C:\Keys\syncfusion-license.txt"` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
+Yes. Run `sfdotnet license activate --file "C:\Keys\syncfusion-license.txt"` with an absolute path. The CLI reads the keys from the file and registers them in the project's startup code without contacting the license service.
 
 ## See also
 
