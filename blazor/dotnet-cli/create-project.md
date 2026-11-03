@@ -182,6 +182,5 @@ No. Neither `--force` nor confirmation authorizes overwriting an existing destin
 ## See also
 
 * [Manage packages in an existing project](/blazor/dotnet-cli/manage-packages)
-* [License activation](/blazor/dotnet-cli/licensing)
 * [Get started with Syncfusion Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Interactive render modes in Blazor](https://blazor.syncfusion.com/documentation/common/interactive-render-mode)

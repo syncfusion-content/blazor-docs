@@ -117,5 +117,4 @@ No. Package operations change NuGet references only; they do not generate contro
 ## See also
 
 * [Create a Blazor project](/blazor/dotnet-cli/create-project)
-* [License activation](/blazor/dotnet-cli/licensing)
 * [Install Syncfusion Blazor NuGet packages](https://blazor.syncfusion.com/documentation/installation/install-nuget-packages)
