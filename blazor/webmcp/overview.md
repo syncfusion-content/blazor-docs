@@ -26,8 +26,8 @@ When WebMCP is enabled, a component publishes a set of tools such as "go to page
 1. Set `EnableWebMcp` to `true` on the component. It is `false` by default.
 2. Optionally add a `WebMcpSettings` child tag to name the registration scope and to enable, disable, or customize tools.
 3. The component registers its enabled tools with the browser.
-4. When an agent calls a tool, the component raises `OnWebMcpExecute`. This is the only handler. Cancel the call, or set `ShowConfirmationDialog` for a built-in tool. A custom tool does not get that dialog. Handle a custom tool in this event and set `Result`. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
-5. For a built-in tool, the component handler runs and returns the result. For a custom tool, the agent receives the `Result` you set. `WebMcpTool` does not have an `OnExecute` callback.
+4. When an agent calls a tool, the component triggers the `OnWebMcpExecute` event. This is the handler. Cancel the call, or set `ShowConfirmationDialog` for a writable tool. See [Confirm a custom tool](./tools#confirm-a-custom-tool).
+5. For a built-in tool, the component handler runs and returns the result. For a custom tool, the agent receives the `Result` you set in `OnWebMcpExecute`.
 
 ![Blazor DataGrid - WebMCP execution flow](images/blazor-datagrid-webmcp-execution-flow.png)
 
@@ -46,16 +46,7 @@ WebMCP is separate from the [Syncfusion Blazor MCP Server](../mcp). The MCP Serv
 
 ## Supported components
 
-WebMCP is available for the Data Grid, Scheduler, Chart, Gantt, Diagram, File Manager, Rich Text Editor, PDF Viewer, Document Editor, and Spreadsheet. Tool lists are in the [Components](./components) topic. Feature tours for each component are in [See also](#see-also).
-
-## Terms used in this guide
-
-| Term | Meaning |
-| --- | --- |
-| Tool | A named action with a description and input schema that an agent can call |
-| Built-in tool | A tool shipped with the component, selected with a `Command` value |
-| Custom tool | A tool you define with `Command="Custom"`, your own PascalCase name, schema, and result set in `OnWebMcpExecute` |
-| Prefix | The `Name` of the WebMCP settings. The registered tool name is `{prefix}_{tool}`, for example `orders_SetCellValue` |
+WebMCP is available for the Data Grid, Scheduler, Chart, Gantt, Diagram, File Manager, Rich Text Editor, PDF Viewer, Document Editor, and Spreadsheet. Tool lists are in the [Components](./components) topic.
 
 ## See also
 
