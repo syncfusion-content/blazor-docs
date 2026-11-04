@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET CLI Overview for Blazor | Syncfusion®
-description: Learn to install and use the Syncfusion® .NET CLI (sfdotnet) to create Blazor apps with Syncfusion component demos, manage Syncfusion Blazor NuGet packages, and register licenses.
+description: Learn to install and use the Syncfusion® .NET CLI (sfdotnet) to create Blazor apps with Syncfusion component demos, manage Syncfusion Blazor NuGet packages from a terminal.
 platform: Blazor
 control: Syncfusion<sup>®</sup> .NET CLI
 documentation: UG
@@ -9,13 +9,12 @@ documentation: UG
 
 # Overview of the Syncfusion<sup>®</sup> .NET CLI
 
-The Syncfusion<sup>®</sup> .NET CLI (`sfdotnet`) is a cross-platform command line tool that creates Blazor projects, manages Syncfusion<sup>®</sup> Blazor NuGet packages, and registers licenses from a terminal. After you install the CLI, you can run `sfdotnet` with no arguments to open an interactive menu, or run a direct command such as `sfdotnet new blazor` for scripted, prompt-free creation.
+The Syncfusion<sup>®</sup> .NET CLI (`sfdotnet`) is a cross-platform command line tool that creates Blazor projects, manages Syncfusion<sup>®</sup> Blazor NuGet packages from a terminal. After you install the CLI, you can run `sfdotnet` with no arguments to open an interactive menu, or run a direct command such as `sfdotnet new blazor` for scripted, prompt-free creation.
 
 You can use the CLI to perform the following actions:
 
 * Create a Blazor Web App (Server, WebAssembly, or Auto render mode) or a standalone Blazor WebAssembly app, optionally containing generated Syncfusion<sup>®</sup> component demo pages. For details, refer to [Create a Blazor project](/blazor/dotnet-cli/create-project).
 * Add, update, list, and search Syncfusion<sup>®</sup> Blazor NuGet packages in an existing project. For details, refer to [Manage packages](/blazor/dotnet-cli/manage-packages).
-* Activate Syncfusion<sup>®</sup> licenses for the controls used in a sample, and view installed licenses. For details, refer to [License activation](/blazor/dotnet-cli/licensing).
 * Configure an official Syncfusion<sup>®</sup> Model Context Protocol (MCP) server for AI coding clients. For details, refer to [MCP configuration](/blazor/dotnet-cli/configure-mcp).
 * Install official Syncfusion<sup>®</sup> component skills for AI agents. For details, refer to [AI skills installation](/blazor/dotnet-cli/install-skills).
 * Generate projects for Blazor, .NET MAUI, WPF, WinForms, and WinUI 3.
@@ -28,8 +27,6 @@ The following software is required before you install and use the CLI:
 
 * A [.NET SDK](https://dotnet.microsoft.com/download) that contains the ASP.NET Core Blazor templates. The CLI creates Blazor projects through the installed official `blazor` and `blazorwasm` templates; it does not carry its own copy of those templates.
 * Network access to the configured NuGet sources when restore or build is selected.
-* A Syncfusion<sup>®</sup> account to activate licenses. Sign in is performed through the browser during license activation. See the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
-
 N> The CLI reads each installed template's help output and offers only the target frameworks the installed template reports. .NET 10 (`net10.0`) is the default when available.
 
 N> Syncfusion<sup>®</sup> packages resolve from the official nuget.org feed, `https://api.nuget.org/v3/index.json`. Package installs resolve the latest stable release and write a concrete version, never `*`. Use `--version` to pin a release.
@@ -104,10 +101,6 @@ Run `sfdotnet` in an interactive terminal to open the main menu. The menu shows 
 | Discovery | Search for packages | `sfdotnet search` |
 | AI & Skills | Setup Model Context Protocol (MCP) | `sfdotnet mcp init` |
 | AI & Skills | Add component skills to AI Agent | `sfdotnet skills install` |
-| License management | Activate license | `sfdotnet license activate` |
-| License management | View installed licenses | `sfdotnet license view` |
-| License management | Sign in to Syncfusion | `sfdotnet login` |
-| License management | Sign out | `sfdotnet logout` |
 | Help and information | View CLI information | `sfdotnet info` |
 | Help and information | Show help | `sfdotnet help` |
 | Help and information | Exit the interactive session | `Ctrl+C` |
@@ -128,10 +121,6 @@ Complete direct commands remain usable without opening the menu. `--no-interacti
 | `sfdotnet search blazor <text>` | Search package aliases, IDs, names, and descriptions | [Manage packages](/blazor/dotnet-cli/manage-packages) |
 | `sfdotnet mcp init blazor` | Configure a project-local Syncfusion<sup>®</sup> MCP client | [MCP configuration](/blazor/dotnet-cli/configure-mcp) |
 | `sfdotnet skills install blazor` | Install Syncfusion<sup>®</sup> component skills for AI agents | [AI skills installation](/blazor/dotnet-cli/install-skills) |
-| `sfdotnet login` | Sign in to Syncfusion through the browser | [License activation](/blazor/dotnet-cli/licensing) |
-| `sfdotnet logout` | Sign out and clear the local session | [License activation](/blazor/dotnet-cli/licensing) |
-| `sfdotnet license activate` | Download the license for the project's packages and register it in the project's startup code | [License activation](/blazor/dotnet-cli/licensing) |
-| `sfdotnet license view` | Show the licenses cached for the project (no network call) | [License activation](/blazor/dotnet-cli/licensing) |
 | `sfdotnet info` | Show CLI information | |
 | `sfdotnet help blazor` | Show the Blazor command map and package aliases | |
 | `sfdotnet --version` | Show the CLI version | |
@@ -159,4 +148,3 @@ Blazor, .NET MAUI, WPF, WinForms, and WinUI 3. This documentation covers Blazor.
 * [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components)
 * [Get started with Syncfusion Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
 * [Install Syncfusion Blazor NuGet packages](https://blazor.syncfusion.com/documentation/installation/install-nuget-packages)
-* [Syncfusion<sup>®</sup> licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
