@@ -99,20 +99,22 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
     {% endhighlight %}
     {% endtabs %}
 
-2. Reference the Syncfusion theme and script assets through `@Assets[]` in the **~/Components/App.razor** file.
+2. Reference the Syncfusion theme and script assets through `@Assets[]`. Add the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) at the end of the `<head>` section in the **~/Components/App.razor** file.
 
     {% tabs %}
     {% highlight razor tabtitle="App.razor" %}
 
-    <head>
-        ...
-        <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
-    </head>
+    <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
 
-    <body>
-        ...
-        <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
-    </body>
+    {% endhighlight %}
+    {% endtabs %}
+
+    Add the script reference at the end of the `<body>` section in the same file.
+
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
+
+    <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
 
     {% endhighlight %}
     {% endtabs %}
