@@ -74,6 +74,67 @@ N> For a **Blazor Web App** (render mode: Auto) and a **Blazor WebAssembly App**
     </head>
     ```
 
+### Prevent stale cached assets using asset fingerprinting
+
+Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`. After upgrading the Syncfusion Blazor NuGet packages, a browser can continue to use a previously cached script while the server runs the newer Syncfusion assemblies. This version mismatch between the client-side script and the assemblies can cause runtime errors. Reference the Syncfusion scripts and themes through ASP.NET Core asset fingerprinting so that the asset URL changes whenever the file content changes, and browsers always download the latest files after a package upgrade.
+
+Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0#mapstaticassets) and the `@Assets[]` resource collection. Static web assets from Razor class libraries, such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, are included in the fingerprinting process.
+
+1. Call `MapStaticAssets` in the app's **~/Program.cs** file (in the **Server** project for a Blazor Web App).
+
+    ```csharp
+    var app = builder.Build();
+
+    app.UseHttpsRedirection();
+    app.UseAntiforgery();
+
+    app.MapStaticAssets();
+    app.MapRazorComponents<App>()
+        .AddInteractiveServerRenderMode();
+
+    app.Run();
+    ```
+
+2. Wrap the script and theme references with `@Assets[]` in **~/Components/App.razor** (Blazor Web App).
+
+    ```razor
+    <head>
+        ...
+        <link href="@Assets["_content/Syncfusion.Blazor.Themes/bootstrap5.css"]" rel="stylesheet" />
+    </head>
+    <body>
+        ...
+        <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
+    </body>
+    ```
+
+    The rendered URL contains a content-based fingerprint, for example `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.<fingerprint>.js`. Fingerprinted files are served with long-lived cache headers, and the URL changes when the package is upgraded.
+
+N> `MapStaticAssets` replaces `UseStaticFiles` for assets that are fingerprinted. Keep `UseStaticFiles` only when the app serves files that are not part of the static asset manifest.
+
+#### Runtime behavior of fingerprinted Syncfusion assets
+
+* The `syncfusion-blazor.min.js` script does not load additional Syncfusion JavaScript files relative to its own URL. Fingerprinting the script URL does not affect component rendering.
+* Syncfusion theme files, such as `bootstrap5.css`, are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Fingerprinting the stylesheet URL does not break the theme. If a customized stylesheet references additional files through relative URLs, reference those files using `@Assets[]` or absolute paths.
+
+#### Alternative cache-busting approaches
+
+For apps that cannot use `MapStaticAssets`, such as apps targeting earlier .NET versions, use one of the following approaches.
+
+* Use the `asp-append-version` tag helper in Razor Pages or MVC applications. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.razor.infrastructure.ifileversionprovider) to append a hash of the file content to the URL.
+
+    ```html
+    <script src="~/_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" asp-append-version="true"></script>
+    ```
+
+* Append a version query string that is updated on every package upgrade.
+
+    ```html
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
+    ```
+
+N> Asset fingerprinting is the recommended approach because the URL is generated automatically from the file content, so no manual version update is required after upgrading the Syncfusion Blazor packages.
+
 ## Individual component script references
 
 Blazor components provide component-wise scripts that can be referenced externally in the application. If you are using only a few components, you can directly reference the required component scripts from the CDN or static web assets without using the [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator), instead of referencing the single script that includes all components.

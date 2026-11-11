@@ -149,6 +149,18 @@ To reference the optimized (lite) CSS files from the [Syncfusion.Blazor](https:/
 </head>
 ```
 
+### Prevent stale cached themes using asset fingerprinting
+
+Browsers can continue to use a cached theme stylesheet after the Syncfusion Blazor packages are upgraded. To ensure the latest theme is always loaded, call `MapStaticAssets()` in `~/Program.cs` and reference the stylesheet with `@Assets[]`. The generated URL includes a content-based fingerprint that changes when the file changes.
+
+```razor
+<head>
+    <link href="@Assets["_content/Syncfusion.Blazor.Themes/bootstrap5.css"]" rel="stylesheet" />
+</head>
+```
+
+Syncfusion theme files are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering, so fingerprinting the stylesheet URL does not affect theme rendering. For the complete configuration, including the script reference and alternative cache-busting approaches, refer to [Prevent stale cached assets using asset fingerprinting](https://blazor.syncfusion.com/documentation/common/adding-script-references#prevent-stale-cached-assets-using-asset-fingerprinting).
+
 ## CDN reference
 
 Instead of using a local resource on your server, you can reference the theme style sheets from a cloud CDN. CDN stands for **[Content Delivery Network](https://learn.microsoft.com/en-us/microsoft-365/enterprise/content-delivery-networks?view=o365-worldwide)**. It is a network of servers distributed across different locations. CDNs are commonly used to deliver downloadable content such as software, images, videos, and streaming media.
