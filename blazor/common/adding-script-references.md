@@ -163,19 +163,35 @@ The rendered URL contains a fingerprint computed from the file content, so the U
 
 #### Alternative cache-busting approaches
 
-The `@Assets[]` resource collection is available in **Blazor Web App** and **Blazor Server** applications. For applications that cannot use `MapStaticAssets()`, such as applications targeting earlier .NET versions or standalone **Blazor WebAssembly** applications, use one of the following approaches.
+The `@Assets[]` resource collection is available in **Blazor Web App** and **Blazor Server** applications that target .NET 9 or later. For applications that cannot use `MapStaticAssets()`, such as applications targeting earlier .NET versions or standalone **Blazor WebAssembly** applications, use one of the following approaches.
 
-* Use the `asp-append-version` tag helper in Razor Pages or MVC applications. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.viewfeatures.ifileversionprovider?view=aspnetcore-10.0) to append a content-based hash to the URL, ensuring that browsers request the updated file whenever the file content changes.
+**Version query string**
 
-    ```html
-    <script src="~/_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" asp-append-version="true"></script>
-    ```
+Append a version query string to the script and stylesheet references, and update it after each Syncfusion Blazor package upgrade. This approach works in every application type, including a standalone **Blazor WebAssembly** application, where the references are added in the **~/wwwroot/index.html** file. In **index.html**, use the plain `_content/...` path without the `~/` prefix, because `~/` is resolved only by Razor on the server and the browser treats it as a literal path segment, which results in a failed request for the script.
 
-* Append a version query string, and update it after each package upgrade.
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 
-    ```html
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
-    ```
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css?v=35.1.40" rel="stylesheet" />
+
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**The asp-append-version tag helper**
+
+In applications that render **.cshtml** files, such as a Blazor Server application that uses the **~/Pages/_Host.cshtml** host page, use the `asp-append-version` tag helper. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.viewfeatures.ifileversionprovider?view=aspnetcore-10.0) to append a content-based hash to the URL, ensuring that browsers request the updated file whenever the file content changes.
+
+{% tabs %}
+{% highlight cshtml tabtitle="_Host.cshtml" %}
+
+<script src="~/_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" asp-append-version="true"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+The tag helper is processed on the server, so it is not available in static files such as **index.html** in a standalone **Blazor WebAssembly** application or in **.razor** files.
 
 Asset fingerprinting is still the recommended approach when the application supports it. The asset URL is generated automatically from the file content, so no version number needs to be updated manually after upgrading the Syncfusion Blazor packages, and cached client-side assets cannot get out of sync with the upgraded Syncfusion assemblies.
 
