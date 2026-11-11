@@ -165,7 +165,7 @@ The rendered URL contains a fingerprint computed from the file content, so the U
 
 The `@Assets[]` resource collection is available in **Blazor Web App** and **Blazor Server** applications. For applications that cannot use `MapStaticAssets()`, such as applications targeting earlier .NET versions or standalone **Blazor WebAssembly** applications, use one of the following approaches.
 
-* Use the `asp-append-version` tag helper in Razor Pages or MVC applications. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.razor.infrastructure.ifileversionprovider) to append a hash of the file content to the URL.
+* Use the `asp-append-version` tag helper in Razor Pages or MVC applications. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.viewfeatures.ifileversionprovider?view=aspnetcore-10.0) to append a content-based hash to the URL, ensuring that browsers request the updated file whenever the file content changes.
 
     ```html
     <script src="~/_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" asp-append-version="true"></script>
