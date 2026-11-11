@@ -179,7 +179,7 @@ Append a version query string to the script and stylesheet references, and updat
 {% endhighlight %}
 {% endtabs %}
 
-Use a relative path that starts with `_content/` in **index.html**. Do not prefix the path with `~/`, because `~/` is Razor syntax that is resolved only when a **.cshtml** file is rendered on the server. A static HTML file is not processed by Razor, so the browser requests the literal `~/_content/...` path, the script is not found, and the Syncfusion Blazor components are not rendered.
+N> In standalone **Blazor WebAssembly** applications, reference Syncfusion assets using paths that begin with `_content/`. The `~/` prefix is not supported in **wwwroot/index.html** because the file is not processed by Razor.
 
 **The asp-append-version tag helper**
 
