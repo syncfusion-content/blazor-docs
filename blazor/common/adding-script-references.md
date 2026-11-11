@@ -167,7 +167,7 @@ The `@Assets[]` resource collection is available in **Blazor Web App** and **Bla
 
 **Version query string**
 
-Append a version query string to the script and stylesheet references, and update it after each Syncfusion Blazor package upgrade. This approach works in every application type, including a standalone **Blazor WebAssembly** application, where the references are added in the **~/wwwroot/index.html** file. In **index.html**, use the plain `_content/...` path without the `~/` prefix, because `~/` is resolved only by Razor on the server and the browser treats it as a literal path segment, which results in a failed request for the script.
+Append a version query string to the script and stylesheet references, and update it after each Syncfusion Blazor package upgrade. This approach works in all application types. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -178,6 +178,8 @@ Append a version query string to the script and stylesheet references, and updat
 
 {% endhighlight %}
 {% endtabs %}
+
+Use a relative path that starts with `_content/` in **index.html**. Do not prefix the path with `~/`, because `~/` is Razor syntax that is resolved only when a **.cshtml** file is rendered on the server. A static HTML file is not processed by Razor, so the browser requests the literal `~/_content/...` path, the script is not found, and the Syncfusion Blazor components are not rendered.
 
 **The asp-append-version tag helper**
 
@@ -191,7 +193,7 @@ In applications that render **.cshtml** files, such as a Blazor Server applicati
 {% endhighlight %}
 {% endtabs %}
 
-The tag helper is processed on the server, so it is not available in static files such as **index.html** in a standalone **Blazor WebAssembly** application or in **.razor** files.
+The tag helper is processed on the server. Therefore, it cannot be used in static files such as the **index.html** file of a standalone **Blazor WebAssembly** application, or in **.razor** files.
 
 Asset fingerprinting is still the recommended approach when the application supports it. The asset URL is generated automatically from the file content, so no version number needs to be updated manually after upgrading the Syncfusion Blazor packages, and cached client-side assets cannot get out of sync with the upgraded Syncfusion assemblies.
 
