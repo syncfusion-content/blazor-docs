@@ -117,6 +117,41 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
     {% endhighlight %}
     {% endtabs %}
 
+The following table lists where to apply the fingerprinted references for each application type.
+
+<table>
+<thead>
+<tr>
+<th>Application type</th>
+<th>Call <code>MapStaticAssets()</code> in</th>
+<th>Add the references in</th>
+<th>Reference syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blazor Web App (Server, WebAssembly, or Auto render modes)</td>
+<td><strong>~/Program.cs</strong> of the <strong>Server</strong> project</td>
+<td><strong>~/Components/App.razor</strong> of the <strong>Server</strong> project</td>
+<td><code>@Assets["_content/..."]</code></td>
+</tr>
+<tr>
+<td>Blazor Server App</td>
+<td><strong>~/Program.cs</strong></td>
+<td>Host page that contains the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> elements, such as <strong>~/Pages/_Host.cshtml</strong> or <strong>~/Components/App.razor</strong></td>
+<td><code>@Assets["_content/..."]</code></td>
+</tr>
+<tr>
+<td>Blazor WebAssembly standalone App</td>
+<td>Not applicable</td>
+<td><strong>~/wwwroot/index.html</strong></td>
+<td><code>@Assets[]</code> is not available. Use the <a href="#alternative-cache-busting-approaches">alternative cache-busting approaches</a>.</td>
+</tr>
+</tbody>
+</table>
+
+N> The `@Assets[]` resource collection requires .NET 9 or later. The sample above uses the Blazor Web App layout. For a Blazor Server App, apply the same `MapStaticAssets()` call and `@Assets[]` references in the host page listed in the table.
+
 The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
 
 N> `MapStaticAssets()` serves only the assets listed in the static assets manifest that is generated during build and publish. To serve files that are not part of the manifest, call `UseStaticFiles()` along with `MapStaticAssets()`. Refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0) for more information.
