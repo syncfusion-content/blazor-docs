@@ -161,7 +161,7 @@ Browsers can continue to use a cached Syncfusion theme stylesheet after the Sync
 
 Syncfusion theme files are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Serving them through fingerprinted URLs therefore does not affect theme rendering.
 
-For the complete configuration, including script references and alternative cache-busting approaches, refer to [Prevent stale cached assets using asset fingerprinting](https://blazor.syncfusion.com/documentation/common/adding-script-references#prevent-stale-cached-assets-using-asset-fingerprinting).
+For the complete configuration, including script references and alternative cache-busting approaches, refer to [Prevent stale cached assets using asset fingerprinting](../common/adding-script-references#prevent-stale-cached-assets-using-asset-fingerprinting).
 
 ## CDN reference
 
