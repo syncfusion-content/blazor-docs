@@ -76,13 +76,15 @@ N> For a **Blazor Web App** (render mode: Auto) and a **Blazor WebAssembly App**
 
 ### Prevent stale cached assets using asset fingerprinting
 
-Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`. After upgrading the Syncfusion Blazor NuGet packages, a browser can continue to use a previously cached script while the server runs the newer Syncfusion assemblies. This version mismatch between the client-side script and the assemblies can cause runtime errors. Reference the Syncfusion scripts and themes through ASP.NET Core asset fingerprinting so that the asset URL changes whenever the file content changes, and browsers always download the latest files after a package upgrade.
+Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` to improve load times. After the Syncfusion Blazor NuGet packages are upgraded, a browser can continue to use the previously cached script while the server runs the newer Syncfusion assemblies. This version mismatch can cause runtime errors. Asset fingerprinting prevents this issue by generating a unique URL whenever the file content changes, so browsers automatically download the latest assets after an upgrade.
 
 Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0#mapstaticassets) and the `@Assets[]` resource collection. Static web assets from Razor class libraries, such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, are included in the fingerprinting process.
 
-1. Call `MapStaticAssets` in the app's **~/Program.cs** file (in the **Server** project for a Blazor Web App).
+1. Call `MapStaticAssets()` in the **~/Program.cs** file. For a **Blazor Web App**, call it in the **Server** project.
 
-    ```csharp
+    {% tabs %}
+    {% highlight cs tabtitle="Program.cs" hl_lines="6" %}
+
     var app = builder.Build();
 
     app.UseHttpsRedirection();
@@ -93,35 +95,40 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
         .AddInteractiveServerRenderMode();
 
     app.Run();
-    ```
 
-2. Wrap the script and theme references with `@Assets[]` in **~/Components/App.razor** (Blazor Web App).
+    {% endhighlight %}
+    {% endtabs %}
 
-    ```razor
+2. Reference the Syncfusion theme and script assets through `@Assets[]` in the **~/Components/App.razor** file.
+
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
+
     <head>
         ...
-        <link href="@Assets["_content/Syncfusion.Blazor.Themes/bootstrap5.css"]" rel="stylesheet" />
+        <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
     </head>
+
     <body>
         ...
         <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
     </body>
-    ```
 
-    The rendered URL contains a fingerprint computed from the file content, so the URL changes when the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, so browsers can cache them safely without revalidation.
+    {% endhighlight %}
+    {% endtabs %}
 
-N> `MapStaticAssets` serves only the assets listed in the static assets manifest that is generated at build and publish time. Per the Microsoft documentation, `MapStaticAssets` is used in place of `UseStaticFiles` in .NET 9 and later apps, and `UseStaticFiles` can still be combined with it to serve files that are not part of the manifest. Refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0) for details.
+The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
 
-N> The `@Assets[]` syntax is used in the server project of a **Blazor Web App** and in **Blazor Server** apps. A standalone **Blazor WebAssembly App** does not use `@Assets[]`; use the [alternative cache-busting approaches](#alternative-cache-busting-approaches) for such apps.
+N> `MapStaticAssets()` serves only the assets listed in the static assets manifest that is generated during build and publish. To serve files that are not part of the manifest, call `UseStaticFiles()` along with `MapStaticAssets()`. Refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0) for more information.
 
 #### Runtime behavior of fingerprinted Syncfusion assets
 
-* The `syncfusion-blazor.min.js` script does not load additional Syncfusion JavaScript files relative to its own URL. Fingerprinting the script URL does not affect component rendering.
-* Syncfusion theme files, such as `bootstrap5.css`, are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Fingerprinting the stylesheet URL does not break the theme. If a customized stylesheet references additional files through relative URLs, reference those files using `@Assets[]` or absolute paths.
+* The `syncfusion-blazor.min.js` bundle does not load additional Syncfusion JavaScript files relative to its own URL. Serving the script through a fingerprinted URL therefore does not affect component initialization or rendering.
+* Syncfusion theme files, such as `fluent2.css` and `bootstrap5.css`, are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Serving the stylesheet through a fingerprinted URL therefore does not affect theme rendering. If a customized stylesheet references additional assets through relative URLs, reference those assets using `@Assets[]` or absolute paths.
 
 #### Alternative cache-busting approaches
 
-For apps that cannot use `MapStaticAssets`, such as apps targeting earlier .NET versions or standalone Blazor WebAssembly apps, use one of the following approaches.
+The `@Assets[]` resource collection is available in **Blazor Web App** and **Blazor Server** applications. For applications that cannot use `MapStaticAssets()`, such as applications targeting earlier .NET versions or standalone **Blazor WebAssembly** applications, use one of the following approaches.
 
 * Use the `asp-append-version` tag helper in Razor Pages or MVC applications. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.razor.infrastructure.ifileversionprovider) to append a hash of the file content to the URL.
 
@@ -129,13 +136,13 @@ For apps that cannot use `MapStaticAssets`, such as apps targeting earlier .NET 
     <script src="~/_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" asp-append-version="true"></script>
     ```
 
-* Append a version query string that is updated on every package upgrade.
+* Append a version query string, and update it after each package upgrade.
 
     ```html
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
     ```
 
-N> Asset fingerprinting is the recommended approach because the URL is generated automatically from the file content, so no manual version update is required after upgrading the Syncfusion Blazor packages.
+N> Asset fingerprinting is the recommended approach because the asset URL is generated automatically from the file content. This removes the need to update version numbers manually and prevents version mismatches between cached client-side assets and upgraded Syncfusion assemblies.
 
 ## Individual component script references
 

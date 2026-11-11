@@ -151,15 +151,17 @@ To reference the optimized (lite) CSS files from the [Syncfusion.Blazor](https:/
 
 ### Prevent stale cached themes using asset fingerprinting
 
-Browsers can continue to use a cached theme stylesheet after the Syncfusion Blazor packages are upgraded. To ensure the latest theme is always loaded, call `MapStaticAssets()` in `~/Program.cs` and reference the stylesheet with `@Assets[]`. The generated URL includes a content-based fingerprint that changes when the file changes.
+Browsers can continue to use a cached Syncfusion theme stylesheet after the Syncfusion Blazor packages are upgraded. To load the latest theme after an upgrade, call `MapStaticAssets()` in the **~/Program.cs** file and reference the theme stylesheet using `@Assets[]` in the **~/Components/App.razor** file. The generated URL includes a fingerprint that changes whenever the file content changes, so browsers automatically request the updated stylesheet.
 
 ```razor
 <head>
-    <link href="@Assets["_content/Syncfusion.Blazor.Themes/bootstrap5.css"]" rel="stylesheet" />
+    <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
 </head>
 ```
 
-Syncfusion theme files are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering, so fingerprinting the stylesheet URL does not affect theme rendering. For the complete configuration, including the script reference and alternative cache-busting approaches, refer to [Prevent stale cached assets using asset fingerprinting](https://blazor.syncfusion.com/documentation/common/adding-script-references#prevent-stale-cached-assets-using-asset-fingerprinting).
+Syncfusion theme files are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Serving them through fingerprinted URLs therefore does not affect theme rendering.
+
+For the complete configuration, including script references and alternative cache-busting approaches, refer to [Prevent stale cached assets using asset fingerprinting](https://blazor.syncfusion.com/documentation/common/adding-script-references#prevent-stale-cached-assets-using-asset-fingerprinting).
 
 ## CDN reference
 
