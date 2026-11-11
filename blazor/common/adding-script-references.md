@@ -108,9 +108,11 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
     </body>
     ```
 
-    The rendered URL contains a content-based fingerprint, for example `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.<fingerprint>.js`. Fingerprinted files are served with long-lived cache headers, and the URL changes when the package is upgraded.
+    The rendered URL contains a fingerprint computed from the file content, so the URL changes when the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, so browsers can cache them safely without revalidation.
 
-N> `MapStaticAssets` replaces `UseStaticFiles` for assets that are fingerprinted. Keep `UseStaticFiles` only when the app serves files that are not part of the static asset manifest.
+N> `MapStaticAssets` serves only the assets listed in the static assets manifest that is generated at build and publish time. Per the Microsoft documentation, `MapStaticAssets` is used in place of `UseStaticFiles` in .NET 9 and later apps, and `UseStaticFiles` can still be combined with it to serve files that are not part of the manifest. Refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0) for details.
+
+N> The `@Assets[]` syntax is used in the server project of a **Blazor Web App** and in **Blazor Server** apps. A standalone **Blazor WebAssembly App** does not use `@Assets[]`; use the [alternative cache-busting approaches](#alternative-cache-busting-approaches) for such apps.
 
 #### Runtime behavior of fingerprinted Syncfusion assets
 
@@ -119,7 +121,7 @@ N> `MapStaticAssets` replaces `UseStaticFiles` for assets that are fingerprinted
 
 #### Alternative cache-busting approaches
 
-For apps that cannot use `MapStaticAssets`, such as apps targeting earlier .NET versions, use one of the following approaches.
+For apps that cannot use `MapStaticAssets`, such as apps targeting earlier .NET versions or standalone Blazor WebAssembly apps, use one of the following approaches.
 
 * Use the `asp-append-version` tag helper in Razor Pages or MVC applications. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.razor.infrastructure.ifileversionprovider) to append a hash of the file content to the URL.
 
