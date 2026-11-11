@@ -137,6 +137,8 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 ## Document Editor
 
+The Syncfusion&reg; DOCX Editor component exposes WebMCP tools across six categories, giving AI agents full programmatic control over document content, formatting, navigation, and document management operations. Explore the Syncfusion&reg; Blazor DOCX Editor component with WebMCP integration through this [GitHub sample](https://github.com/SyncfusionExamples/Blazor-DOCX-Editor-Examples/tree/master/WebMcp/getting-started).
+
 | Group | Tools |
 | --- | --- |
 | Document | `SaveDocument`, `Print`, `GetPageCount`, `GoToPage` |
