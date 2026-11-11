@@ -117,7 +117,7 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
     {% endhighlight %}
     {% endtabs %}
 
-The following table lists where to apply the fingerprinted references for each application type.
+The `@Assets[]` resource collection requires .NET 9 or later. The following table lists where to apply the fingerprinted references for each application type.
 
 <table>
 <thead>
@@ -150,11 +150,11 @@ The following table lists where to apply the fingerprinted references for each a
 </tbody>
 </table>
 
-N> The `@Assets[]` resource collection requires .NET 9 or later. The sample above uses the Blazor Web App layout. For a Blazor Server App, apply the same `MapStaticAssets()` call and `@Assets[]` references in the host page listed in the table.
+In a Blazor Server App, apply the same `MapStaticAssets()` call and `@Assets[]` references shown in the previous steps to the host page listed in the table.
 
 The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
 
-N> `MapStaticAssets()` serves only the assets listed in the static assets manifest that is generated during build and publish. To serve files that are not part of the manifest, call `UseStaticFiles()` along with `MapStaticAssets()`. Refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0) for more information.
+`MapStaticAssets()` serves only the assets listed in the static assets manifest that is generated during build and publish. To serve files that are not part of the manifest, call `UseStaticFiles()` along with `MapStaticAssets()`. For more information, refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0).
 
 #### Runtime behavior of fingerprinted Syncfusion assets
 
@@ -177,7 +177,7 @@ The `@Assets[]` resource collection is available in **Blazor Web App** and **Bla
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
     ```
 
-N> Asset fingerprinting is the recommended approach because the asset URL is generated automatically from the file content. This removes the need to update version numbers manually and prevents version mismatches between cached client-side assets and upgraded Syncfusion assemblies.
+Asset fingerprinting is still the recommended approach when the application supports it. The asset URL is generated automatically from the file content, so no version number needs to be updated manually after upgrading the Syncfusion Blazor packages, and cached client-side assets cannot get out of sync with the upgraded Syncfusion assemblies.
 
 ## Individual component script references
 
