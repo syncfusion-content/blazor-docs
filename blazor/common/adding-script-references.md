@@ -150,8 +150,6 @@ The `@Assets[]` resource collection requires .NET 9 or later. The following tabl
 </tbody>
 </table>
 
-In a Blazor Server App, apply the same `MapStaticAssets()` call and `@Assets[]` references shown in the previous steps to the host page listed in the table.
-
 The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
 
 `MapStaticAssets()` serves only the assets listed in the static assets manifest that is generated during build and publish. To serve files that are not part of the manifest, call `UseStaticFiles()` along with `MapStaticAssets()`. For more information, refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0).
