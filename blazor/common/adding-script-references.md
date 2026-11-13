@@ -147,7 +147,7 @@ The `@Assets[]` resource collection requires .NET 9 or later. The following tabl
 <td>Blazor WebAssembly standalone App</td>
 <td>Not applicable</td>
 <td><strong>~/wwwroot/index.html</strong></td>
-<td><code>@Assets[]</code> is not available. Use the <a href="#alternative-cache-busting-approaches" aria-label="Alternative cache-busting approaches">alternative cache-busting approaches</a>.</td>
+<td><code>@Assets[]</code> is not available. Use the <a href="#alternative-cache-busting-approaches" aria-label="Alternative cache-busting approaches section">alternative cache-busting approaches</a>.</td>
 </tr>
 </tbody>
 </table>
