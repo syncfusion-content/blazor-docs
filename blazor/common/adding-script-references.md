@@ -74,6 +74,129 @@ N> For a **Blazor Web App** (render mode: Auto) and a **Blazor WebAssembly App**
     </head>
     ```
 
+### Prevent stale cached assets using asset fingerprinting
+
+Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` to improve load times. After the Syncfusion Blazor NuGet packages are upgraded, a browser can continue to use the previously cached script while the server runs the newer Syncfusion assemblies. This version mismatch can cause runtime errors. Asset fingerprinting prevents this issue by generating a unique URL whenever the file content changes, so browsers automatically download the latest assets after an upgrade.
+
+Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0#mapstaticassets) and the `@Assets[]` resource collection. Static web assets from Razor class libraries, such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, are included in the fingerprinting process.
+
+1. Call `MapStaticAssets()` in the **~/Program.cs** file. For a **Blazor Web App**, call it in the **Server** project.
+
+    {% tabs %}
+    {% highlight cs tabtitle="Program.cs" hl_lines="6" %}
+
+    var app = builder.Build();
+
+    app.UseHttpsRedirection();
+    app.UseAntiforgery();
+
+    app.MapStaticAssets();
+    app.MapRazorComponents<App>()
+        .AddInteractiveServerRenderMode();
+
+    app.Run();
+
+    {% endhighlight %}
+    {% endtabs %}
+
+2. Reference the Syncfusion theme and script assets through `@Assets[]`. Add the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) at the end of the `<head>` section in the **~/Components/App.razor** file.
+
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
+
+    <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
+
+    {% endhighlight %}
+    {% endtabs %}
+
+    Add the script reference at the end of the `<body>` section in the same file.
+
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
+
+    <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
+
+    {% endhighlight %}
+    {% endtabs %}
+
+The `@Assets[]` resource collection requires .NET 9 or later. The following table lists where to apply the fingerprinted references for each application type.
+
+<table>
+<thead>
+<tr>
+<th>Application type</th>
+<th>Call <code>MapStaticAssets()</code> in</th>
+<th>Add the references in</th>
+<th>Reference syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blazor Web App (Server, WebAssembly, or Auto render modes)</td>
+<td><strong>~/Program.cs</strong> of the <strong>Server</strong> project</td>
+<td><strong>~/Components/App.razor</strong> of the <strong>Server</strong> project</td>
+<td><code>@Assets["_content/..."]</code></td>
+</tr>
+<tr>
+<td>Blazor Server App</td>
+<td><strong>~/Program.cs</strong></td>
+<td>Host page that contains the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> elements, such as <strong>~/Pages/_Host.cshtml</strong> or <strong>~/Components/App.razor</strong></td>
+<td><code>@Assets["_content/..."]</code></td>
+</tr>
+<tr>
+<td>Blazor WebAssembly standalone App</td>
+<td>Not applicable</td>
+<td><strong>~/wwwroot/index.html</strong></td>
+<td><code>@Assets[]</code> is not available. Use the <a href="#alternative-cache-busting-approaches" aria-label="Alternative cache-busting approaches section">alternative cache-busting approaches</a>.</td>
+</tr>
+</tbody>
+</table>
+
+The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
+
+`MapStaticAssets()` serves only the assets listed in the static assets manifest that is generated during build and publish. To serve files that are not part of the manifest, call `UseStaticFiles()` along with `MapStaticAssets()`. For more information, refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0).
+
+#### Runtime behavior of fingerprinted Syncfusion assets
+
+* The `syncfusion-blazor.min.js` bundle does not load additional Syncfusion JavaScript files relative to its own URL. Serving the script through a fingerprinted URL therefore does not affect component initialization or rendering.
+* Syncfusion theme files, such as `fluent2.css` and `bootstrap5.css`, are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Serving the stylesheet through a fingerprinted URL therefore does not affect theme rendering. If a customized stylesheet references additional assets through relative URLs, reference those assets using `@Assets[]` or absolute paths.
+
+#### Alternative cache-busting approaches
+
+The `@Assets[]` resource collection is available in **Blazor Web App** and **Blazor Server** applications that target .NET 9 or later. For applications that cannot use `MapStaticAssets()`, such as applications targeting earlier .NET versions or standalone **Blazor WebAssembly** applications, use one of the following approaches.
+
+**Version query string**
+
+Append a version query string to the script and stylesheet references, and update it after each Syncfusion Blazor package upgrade. This approach works in all application types. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css?v=35.1.40" rel="stylesheet" />
+
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> In standalone **Blazor WebAssembly** applications, reference Syncfusion assets using paths that begin with `_content/`. The `~/` prefix is not supported in **wwwroot/index.html** because the file is not processed by Razor.
+
+**The asp-append-version tag helper**
+
+In applications that render **.cshtml** files, such as a Blazor Server application that uses the **~/Pages/_Host.cshtml** host page, use the `asp-append-version` tag helper. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.viewfeatures.ifileversionprovider?view=aspnetcore-10.0) to append a content-based hash to the URL, ensuring that browsers request the updated file whenever the file content changes.
+
+{% tabs %}
+{% highlight cshtml tabtitle="_Host.cshtml" %}
+
+<script src="~/_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" asp-append-version="true"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+The tag helper is processed on the server. Therefore, it cannot be used in static files such as the **index.html** file of a standalone **Blazor WebAssembly** application, or in **.razor** files.
+
+Asset fingerprinting is still the recommended approach when the application supports it. The asset URL is generated automatically from the file content, so no version number needs to be updated manually after upgrading the Syncfusion Blazor packages, and cached client-side assets cannot get out of sync with the upgraded Syncfusion assemblies.
+
 ## Individual component script references
 
 Blazor components provide component-wise scripts that can be referenced externally in the application. If you are using only a few components, you can directly reference the required component scripts from the CDN or static web assets without using the [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator), instead of referencing the single script that includes all components.
