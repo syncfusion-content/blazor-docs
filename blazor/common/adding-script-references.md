@@ -99,7 +99,7 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
     {% endhighlight %}
     {% endtabs %}
 
-2. Reference the theme and script assets through **@Assets[]**. Add the theme stylesheet reference as described in the [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) section and place it at the end of the `<head>` section in the **~/Components/App.razor** file.
+2. Reference the theme and script assets through `@Assets[]`. Add the theme stylesheet reference as described in the [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) section and place it at the end of the `<head>` section in the **~/Components/App.razor** file.
 
     {% tabs %}
     {% highlight razor tabtitle="App.razor" %}
@@ -121,36 +121,11 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
 
 The `@Assets[]` resource collection requires .NET 9 or later. The following table lists where to apply the fingerprinted references for each application type.
 
-<table>
-<thead>
-<tr>
-<th>Application type</th>
-<th>Call <code>MapStaticAssets()</code> in</th>
-<th>Add the references in</th>
-<th>Reference syntax</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Blazor Web App (Server, WebAssembly, or Auto render modes)</td>
-<td><strong>~/Program.cs</strong> of the <strong>Server</strong> project</td>
-<td><strong>~/Components/App.razor</strong> of the <strong>Server</strong> project</td>
-<td><code>@Assets["_content/..."]</code></td>
-</tr>
-<tr>
-<td>Blazor Server App</td>
-<td><strong>~/Program.cs</strong></td>
-<td>Host page that contains the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> elements, such as <strong>~/Pages/_Host.cshtml</strong> or <strong>~/Components/App.razor</strong></td>
-<td><code>@Assets["_content/..."]</code></td>
-</tr>
-<tr>
-<td>Blazor WebAssembly standalone App</td>
-<td>Not applicable</td>
-<td><strong>~/wwwroot/index.html</strong></td>
-<td><code>@Assets[]</code> is not available. Use the <a href="#alternative-cache-busting-approaches" aria-label="Alternative cache-busting approaches section">alternative cache-busting approaches</a>.</td>
-</tr>
-</tbody>
-</table>
+| Application type | Call `MapStaticAssets()` in | Add the references in | Reference syntax |
+|---|---|---|---|
+| Blazor Web App (Server, WebAssembly, or Auto render modes) | **~/Program.cs** of the **Server** project | **~/Components/App.razor** of the **Server** project | `@Assets["_content/..."]` |
+| Blazor Server App | **~/Program.cs** | Host page that contains the `<head>` and `<body>` elements, such as **~/Pages/_Host.cshtml** or **~/Components/App.razor** | `@Assets["_content/..."]` |
+| Blazor WebAssembly standalone App | Not applicable | **~/wwwroot/index.html** | `@Assets[]` is not available. Use the [alternative cache-busting approaches](#alternative-cache-busting-approaches). |
 
 The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
 
