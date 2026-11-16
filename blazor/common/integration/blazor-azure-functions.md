@@ -394,6 +394,8 @@ dotnet run
 
 ![Blazor components with Azure Function](./images/azure-functions.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/blazor-azure-functions)
+
 ## See also
 
 * [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started)

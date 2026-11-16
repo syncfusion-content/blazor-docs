@@ -20,7 +20,7 @@ Common package management issues relate to:
 
 N> This guide is intended for Blazor components version 33.2.3 or later. For supported .NET and Blazor package release combinations, see [Version compatibility for Blazor components](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility).
 
-## Issue 1: Installing redundant NuGet packages  
+## Issue 1: Installing redundant NuGet packages
 
 **Symptom**: Builds fail with ambiguous-call or duplicate-type errors when calling APIs, for example:
 
@@ -105,10 +105,10 @@ To check for redundant packages, inspect your project's `.csproj` file for dupli
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-# Remove the comprehensive package if it is present
+// Remove the comprehensive package if it is present
 dotnet remove package Syncfusion.Blazor
 
-# Restore packages after cleanup
+// Restore packages after cleanup
 dotnet restore
 
 {% endhighlight %}
@@ -150,7 +150,7 @@ Check your `.csproj` file for duplicate entries.
     <!-- PROBLEM: Duplicate references with different versions -->
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="32.1.19" />
-    
+
     <!-- SOLUTION: Single reference with consistent version -->
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="33.2.3" />
   </ItemGroup>
@@ -257,7 +257,7 @@ Look for version discrepancies in the output.
 {% highlight bash tabtitle="Output" %}
 
 Project 'YourApp' has the following package references
-   
+
    Top-level Package                    Requested   Resolved
    > Syncfusion.Blazor.Grid             33.2.3      33.2.3
    > Syncfusion.Blazor.Calendars        32.1.19     32.1.19    # Version mismatch
@@ -299,7 +299,7 @@ All Blazor packages should now show the same version.
 {% highlight bash tabtitle="Output" %}
 
 Project 'YourApp' has the following package references
-   
+
    Top-level Package                    Requested   Resolved
    > Syncfusion.Blazor.Grid             33.2.3      33.2.3
    > Syncfusion.Blazor.Calendars        33.2.3      33.2.3

@@ -260,6 +260,8 @@ The app launches and renders the [Blazor DataGrid](https://www.syncfusion.com/bl
 
 ![Blazor DataGrid with PDF Viewer](images/datagrid-with-pdfviewer.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20DataGrid%20with%20PDF%20Viewer/BlazorApp)
+
 **Expected behavior:**
 1. The DataGrid displays 5 sample orders on page load
 2. Clicking any row in the grid triggers the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event

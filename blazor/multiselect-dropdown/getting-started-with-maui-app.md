@@ -226,7 +226,7 @@ To run the Blazor MultiSelect Dropdown in your Blazor MAUI app on an Android emu
 
 N> If you face any issues with the Android emulator, check the [Troubleshooting Android Emulator guide](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for solutions.
 
-![Blazor MultiSelect Dropdown Component](./images/blazing-fast-multiselect-dropdown-blazor.webp)
+![Blazor MultiSelect Dropdown Component](./images/blazor-multiselect-maui-android.webp)
 
 ## Binding data source
 

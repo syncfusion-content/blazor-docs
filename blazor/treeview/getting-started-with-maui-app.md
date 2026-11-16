@@ -279,7 +279,7 @@ To run the Blazor TreeView in your Blazor MAUI app on an Android emulator, follo
 
 N> If you face any issues with the Android emulator, check the [Troubleshooting Android Emulator guide](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting) for solutions.
 
-![Blazor TreeView Component](./images/blazor-treeview.webp)
+![Blazor TreeView Component](./images/blazor-treeview-maui-android.webp)
 
 ## See also
 
