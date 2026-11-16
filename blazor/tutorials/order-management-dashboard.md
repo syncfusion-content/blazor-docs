@@ -2130,6 +2130,8 @@ dotnet run
 
 ![Blazor Order Management Dashboard sample](./images/order-management-dashboard.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/OrderManagementDashboard)
+
 ## See also
 
 * [Build a Blazor Product Catalog App](https://blazor.syncfusion.com/documentation/tutorials/product-catalog)

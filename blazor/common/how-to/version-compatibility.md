@@ -15,7 +15,7 @@ The following table shows the supported .NET and .NET Core versions for Blazor c
 | ------------- | ------------- |
 | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) | 31.2.10 and above |
 | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |
-| [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.1.36 and above |
+| [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.2.4 and above |
 | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) | 20.4.0.38 to 28.2.12 |
 | [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | 19.3.0.43 to 28.2.12 |
 | [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) | 18.4.0.30 to 20.1.0.61  |

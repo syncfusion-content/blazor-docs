@@ -147,10 +147,10 @@ From the solution root directory, run the following commands to create a new tes
 {% tabs %}
 {% highlight bash tabtitle=".NET CLI" %}
 
-# Create the NUnit test project
+// Create the NUnit test project
 dotnet new nunit -o tests/E2E.Tests
 
-# Move into the test project directory
+// Move into the test project directory
 cd tests/E2E.Tests
 
 {% endhighlight %}
@@ -339,6 +339,8 @@ After running the tests, the Blazor application starts automatically, the Playwr
 N> Before running the tests, ensure the projectPath variable in `BlazorPlaywrightTests.cs` is set to the absolute path of your Blazor application.
 
 This approach ensures reliable validation of [Blazor components](https://www.syncfusion.com/blazor-components) and enables early detection of UI regressions through automated end‑to‑end testing.
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20PlayWright)
 
 ## See also
 

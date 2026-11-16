@@ -62,7 +62,8 @@ Use the following key shortcuts to access the Blazor MultiSelect Dropdown withou
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the previous item. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scrolls down one page and sets focus to the first visible item when the popup is open. |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scrolls up one page and sets focus to the first visible item when the popup is open. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item; when closed, opens the popup list. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item; when closed, opens the popup list. In [CheckBox mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_Mode), the focused item is checked using <kbd>Space</kbd> instead of <kbd>Enter</kbd>. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | In [CheckBox mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_Mode), selects (checks) the focused item. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next element in the tab order when the popup is closed; otherwise closes the popup and retains focus on the component. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous element in the tab order when the popup is closed; otherwise closes the popup and retains focus on the component. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup list. |
