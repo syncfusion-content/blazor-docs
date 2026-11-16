@@ -76,7 +76,7 @@ N> For a **Blazor Web App** (render mode: Auto) and a **Blazor WebAssembly App**
 
 ### Prevent stale cached assets using asset fingerprinting
 
-Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` to improve load times. After the Syncfusion Blazor NuGet packages are upgraded, a browser can continue to use the previously cached script while the server runs the newer Syncfusion assemblies. This version mismatch can cause runtime errors. Asset fingerprinting prevents this issue by generating a unique URL whenever the file content changes, so browsers automatically download the latest assets after an upgrade.
+Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` to improve load times. After the Blazor NuGet packages are upgraded, a browser can continue to use the previously cached script while the server runs the newer Blazor assemblies. This version mismatch can cause runtime errors. Asset fingerprinting prevents this issue by generating a unique URL whenever the file content changes, so browsers automatically download the latest assets after an upgrade.
 
 Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0#mapstaticassets) and the `@Assets[]` resource collection. Static web assets from Razor class libraries, such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, are included in the fingerprinting process.
 
@@ -99,7 +99,7 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
     {% endhighlight %}
     {% endtabs %}
 
-2. Reference the Syncfusion theme and script assets through `@Assets[]`. Add the [Syncfusion theme stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) at the end of the `<head>` section in the **~/Components/App.razor** file.
+2. Reference the theme and script assets through **@Assets[]**. Add the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) at the end of the `<head>` section in the **~/Components/App.razor** file.
 
     {% tabs %}
     {% highlight razor tabtitle="App.razor" %}
@@ -156,10 +156,10 @@ The rendered URL contains a fingerprint computed from the file content, so the U
 
 `MapStaticAssets()` serves only the assets listed in the static assets manifest that is generated during build and publish. To serve files that are not part of the manifest, call `UseStaticFiles()` along with `MapStaticAssets()`. For more information, refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0).
 
-#### Runtime behavior of fingerprinted Syncfusion assets
+#### Runtime behavior of fingerprinted Blazor assets
 
-* The `syncfusion-blazor.min.js` bundle does not load additional Syncfusion JavaScript files relative to its own URL. Serving the script through a fingerprinted URL therefore does not affect component initialization or rendering.
-* Syncfusion theme files, such as `fluent2.css` and `bootstrap5.css`, are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Serving the stylesheet through a fingerprinted URL therefore does not affect theme rendering. If a customized stylesheet references additional assets through relative URLs, reference those assets using `@Assets[]` or absolute paths.
+* The `syncfusion-blazor.min.js` bundle does not load additional Blazor JavaScript files relative to its own URL. Serving the script through a fingerprinted URL therefore does not affect component initialization or rendering.
+* Blazor theme files, such as `fluent2.css` and `bootstrap5.css`, are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Serving the stylesheet through a fingerprinted URL therefore does not affect theme rendering. If a customized stylesheet references additional assets through relative URLs, reference those assets using `@Assets[]` or absolute paths.
 
 #### Alternative cache-busting approaches
 
@@ -167,7 +167,7 @@ The `@Assets[]` resource collection is available in **Blazor Web App** and **Bla
 
 **Version query string**
 
-Append a version query string to the script and stylesheet references, and update it after each Syncfusion Blazor package upgrade. This approach works in all application types. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
+Append a version query string to the script and stylesheet references, and update it after each Blazor package upgrade. This approach works in all application types. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -179,7 +179,7 @@ Append a version query string to the script and stylesheet references, and updat
 {% endhighlight %}
 {% endtabs %}
 
-N> In standalone **Blazor WebAssembly** applications, reference Syncfusion assets using paths that begin with `_content/`. The `~/` prefix is not supported in **wwwroot/index.html** because the file is not processed by Razor.
+N> In standalone **Blazor WebAssembly** applications, reference Blazor assets using paths that begin with `_content/`. The `~/` prefix is not supported in **wwwroot/index.html** because the file is not processed by Razor.
 
 **The asp-append-version tag helper**
 
@@ -195,7 +195,7 @@ In applications that render **.cshtml** files, such as a Blazor Server applicati
 
 The tag helper is processed on the server. Therefore, it cannot be used in static files such as the **index.html** file of a standalone **Blazor WebAssembly** application, or in **.razor** files.
 
-Asset fingerprinting is still the recommended approach when the application supports it. The asset URL is generated automatically from the file content, so no version number needs to be updated manually after upgrading the Syncfusion Blazor packages, and cached client-side assets cannot get out of sync with the upgraded Syncfusion assemblies.
+Asset fingerprinting is still the recommended approach when the application supports it. The asset URL is generated automatically from the file content, so no version number needs to be updated manually after upgrading the Blazor packages, and cached client-side assets cannot get out of sync with the upgraded Blazor assemblies.
 
 ## Individual component script references
 
