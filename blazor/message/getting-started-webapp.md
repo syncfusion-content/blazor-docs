@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Message | Syncfusion
+title: Getting Started with Message in Blazor Web App | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Message in a Blazor Web App with installation and setup steps.
 platform: Blazor
 control: Message
 documentation: ug
 ---
 
-# Getting Started with Blazor Message
+# Getting Started with Message in Blazor Web App
 
 
 The Blazor Message component is used to display contextual information, status updates, success confirmations, warnings, and error messages within an application. It helps communicate important information to users in a clear and visually distinct manner without interrupting their workflow.

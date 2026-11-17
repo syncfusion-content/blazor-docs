@@ -254,6 +254,8 @@ Once the compilation is complete, open your browser and navigate to the hosted l
 
 ![Blazor DataGrid Component](../images/angular-blazor-integration.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Angular%20with%20blazor%20server)
+
 ## Troubleshooting tips
 
 ### Angular build fails (Bundle Budget Exceeded)

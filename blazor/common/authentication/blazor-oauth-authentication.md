@@ -214,11 +214,11 @@ Create a new Razor file named `LoginDisplay.razor` under the `Shared` folder ins
 <AuthorizeView>
     <Authorized>
         <div class="d-flex align-items-center">
-            <a class="btn btn-outline-secondary btn-sm" href="/account/logout">Logout</a>
+            <a class="btn btn-outline-secondary btn-sm" href="/account/logout" aria-label="Logout an account">Logout</a>
         </div>
     </Authorized>
     <NotAuthorized>
-        <a class="btn btn-primary btn-sm" href="/account/login?returnUrl=/">Login with GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/account/login?returnUrl=/" aria-label="Login with GitHub account">Login with GitHub</a>
     </NotAuthorized>
 </AuthorizeView>
 
@@ -251,7 +251,7 @@ To make the login and logout actions available throughout the application, add t
     ....
     <main>
         <div class="top-row px-4 d-flex justify-content-between align-items-center">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/aspnet/core/" aria-label="About ASP.NET Core documentation" target="_blank">About</a>
             <LoginDisplay />
         </div>
 
@@ -445,6 +445,8 @@ This example demonstrates how to integrate **GitHub OAuth** into a **Blazor Web 
 After successfully signing in, authenticated users can access protected pages and interact with the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component. 
 
 ![Blazor DataGrid with GitHub OAuth 2.0](images/oauth-datagrid.webp)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/Blazor%20with%20OAuth)
 
 ## See also
 
