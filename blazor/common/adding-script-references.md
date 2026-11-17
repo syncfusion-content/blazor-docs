@@ -99,7 +99,7 @@ Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](
     {% endhighlight %}
     {% endtabs %}
 
-2. Reference the theme and script assets through `@Assets[]`. Add the theme stylesheet reference as described in the [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) section and place it at the end of the `<head>` section in the **~/Components/App.razor** file.
+2. Reference the theme and script assets through the `@Assets` resource collection. Add the theme stylesheet reference as described in the [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) section and place it at the end of the `<head>` section in the **~/Components/App.razor** file.
 
     {% tabs %}
     {% highlight razor tabtitle="App.razor" %}
@@ -125,7 +125,7 @@ The `@Assets[]` resource collection requires .NET 9 or later. The following tabl
 |---|---|---|---|
 | Blazor Web App (Server, WebAssembly, or Auto render modes) | **~/Program.cs** of the **Server** project | **~/Components/App.razor** of the **Server** project | `@Assets["_content/..."]` |
 | Blazor Server App | **~/Program.cs** | Host page that contains the `<head>` and `<body>` elements, such as **~/Pages/_Host.cshtml** or **~/Components/App.razor** | `@Assets["_content/..."]` |
-| Blazor WebAssembly standalone App | Not applicable | **~/wwwroot/index.html** | `@Assets[]` is not available. Use the [alternative cache-busting approaches](#alternative-cache-busting-approaches). |
+| Blazor WebAssembly standalone App | Not applicable | **~/wwwroot/index.html** | The `@Assets` resource collection is not available. Use the [alternative cache-busting approaches](#alternative-cache-busting-approaches). |
 
 The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
 
