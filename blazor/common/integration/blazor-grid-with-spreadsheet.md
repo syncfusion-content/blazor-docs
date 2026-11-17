@@ -164,6 +164,8 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 **Output:**
 ![Blazor DataGrid With Spreadsheet](images/datagrid-with-spreadsheet.webp)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/BlazorSpreadsheet-WebAppServer)
+
 ## Use cases
 
 The integration of the Blazor DataGrid with the Spreadsheet component enables a smooth transition from structured data visualization to flexible, Excel‑like editing. This workflow allows users to review, filter, and select records in the DataGrid and then perform advanced data manipulation in the Spreadsheet without leaving the application.

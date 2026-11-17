@@ -11,10 +11,10 @@ documentation: ug
 
 The size of the TextArea can be adjusted by applying the following classes:
 
-| Property  | Description |
+| CSS class  | Purpose of Class |
 | -- | -- |
-| Small  | Add the `e-small` class to render a smaller TextArea. |
-| Bigger | Add the `e-bigger` class to render a larger TextArea. |
+| e-small  | Renders the TextArea in a smaller size. |
+| e-bigger | Renders the TextArea in a larger size. |
 
 Applying these classes helps align the TextArea with the overall density and visual scale of the application’s design.
 
@@ -76,7 +76,7 @@ Applying these classes helps align the TextArea with the overall density and vis
 
 ## Filled and outline mode
 
-The Filled and Outline modes can be enabled in the Blazor TextArea component by adding the `e-outline` or `e-filled` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_CssClass) API.
+The Filled and Outline modes can be enabled in the Blazor TextArea component by adding the `e-outline` or `e-filled` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) API.
 By adding these classes, users can choose between a filled or outline appearance for the TextArea control, aligning with the design aesthetics of their application. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/default-functionalities?theme=fluent2).
 
 {% tabs %}
@@ -100,11 +100,19 @@ Use `CssClass` to apply custom CSS classes to the TextArea wrapper. This approac
 <SfTextArea Placeholder='Enter your comments' CssClass="custom-textarea" ></SfTextArea>
 
 {% endhighlight %}
+{% highlight cshtml tabtitle="Css"  %}
+
+.e-input-group.custom-textarea,
+.e-input-group.e-control-wrapper.custom-textarea {
+    background-color: #EAF4FF;
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Setting the disabled state
 
-Disable the TextArea using the [Disabled property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Disabled). When set to `true`, the TextArea is non-interactive. For an example, see the TextArea API demo.
+Disable the TextArea using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Disabled) property. When set to `true`, the TextArea is non-interactive. For an example, see the [TextArea API demo](https://blazor.syncfusion.com/demos/textarea/default-functionalities).
 
 {% tabs %}
 {% highlight razor %}
@@ -116,7 +124,7 @@ Disable the TextArea using the [Disabled property](https://help.syncfusion.com/c
 
 ## Set the ReadOnly property
 
-Make the TextArea read-only using the [ReadOnly property](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Readonly). When set to `true`, users cannot edit the content while it remains focusable. For an example, see the TextArea API demo.
+Make the TextArea read-only using the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Readonly) property. When set to `true`, users cannot edit the content while it remains focusable. For an example, see the [TextArea API demo](https://blazor.syncfusion.com/demos/textarea/default-functionalities).
 
 {% tabs %}
 {% highlight razor %}
@@ -128,19 +136,19 @@ Make the TextArea read-only using the [ReadOnly property](https://help.syncfusio
 
 ## Set the rounded corner
 
-Render the TextArea with rounded corners by adding the `e-corner` class to the input’s parent element. This style applies to the boxed input wrapper.
+Render the TextArea with rounded corners by assigning the `e-corner` class to the `CssClass` property.
 
->This rounded corner is visible only in the box model input component.
+> The rounded corner is visible only in the box model TextArea component.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter your comments'  CssClass="e-corner"></SfTextArea>
+<SfTextArea Placeholder='Enter your comments' CssClass="e-corner"></SfTextArea>
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
 
-.e-input-group.e-corner {
+.e-input-group.e-control-wrapper.e-corner{
     border-radius: 4px;
 }
 
@@ -151,7 +159,7 @@ Render the TextArea with rounded corners by adding the `e-corner` class to the i
 
 ## Static Clear Button
 
-Display a static clear button by adding the `e-static-clear` class and enabling `ShowClearButton`. The clear button remains visible at all times for quick content clearing. See the TextArea API demo for a working sample.
+Display a static clear button by adding the `e-static-clear` class and enabling `ShowClearButton`. The clear button remains visible at all times for quick content clearing. See the [TextArea API demo](https://blazor.syncfusion.com/demos/textarea/default-functionalities) for a working sample.
 
 {% tabs %}
 {% highlight razor %}
