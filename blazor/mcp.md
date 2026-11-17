@@ -13,7 +13,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> MCP Server accelerate Blazor ap
 
 These tools speed up development and reinforce best practices for Syncfusion component integration.
 
-> The previously available **Agentic UI Builder** (`#sf_blazor_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](https://blazor.syncfusion.com/documentation/agentic-ui-builder). The **AI Coding Assistant** (#sf_react_assistant) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
+> The previously available **Agentic UI Builder** (`#sf_blazor_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](https://blazor.syncfusion.com/documentation/agentic-ui-builder). The **AI Coding Assistant** (`#sf_blazor_assistant`) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
 
 ## Key Benefits
 
@@ -54,6 +54,8 @@ Create a configuration file in your project folder to install the server for you
 
 **For .NET 10** :
 
+> `dnx` is used in .NET 10 to execute .NET tools directly from NuGet without a prior installation and automatically downloads and starts the Syncfusion MCP server when first used.
+
 {% tabs %}
 {% highlight bash tabtitle="VS Code" %}
 
@@ -73,6 +75,12 @@ Create a configuration file in your project folder to install the server for you
     }
   }
 }
+
+// After creating or updating the file:
+// 1. Save the file.
+// 2. Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on macOS).
+// 3. Run: Developer: Reload Window
+// The MCP client automatically resolves and starts the configured server.
 
 {% endhighlight %}
 {% highlight bash tabtitle="Code Studio" %}
@@ -172,7 +180,57 @@ You can install the Syncfusion Blazor MCP server as a local tool without a globa
     }
     ````
 
-**Verifying Installation** Check your editor's MCP Server list for `sf-blazor-mcp` with a **Connected** status to confirm a successful installation.
+### Verifying Installation
+
+To verify that the MCP server is properly installed and connected in VS Code:
+
+1. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
+2. Run:
+
+    ```text
+    MCP: List Servers
+    ```
+
+    or
+
+    ```text
+    MCP: Show Installed Servers
+    ```
+
+3. Locate `sf-blazor-mcp` in the list and verify that it displays a **Connected** status.
+
+> **Tip:** You can confirm a healthy connection when `sf-blazor-mcp` shows a green **Connected** state in the MCP servers list.
+
+### Handling MCP Permission Prompts
+
+When running an MCP tool like `search_docs` for the first time in a session, your IDE may prompt for permission to execute the tool:
+
+```text
+Allow tool from sf-blazor-mcp?
+
+Options:
+• Allow in this Session
+• Skip
+```
+
+This prompt is expected MCP security behavior. Select **Allow in this Session** to proceed and allow the AI assistant to query Syncfusion documentation.
+
+### Validating MCP Server Functionality
+
+After verifying the connection, validate that the MCP server processes queries and returns accurate Syncfusion guidance:
+
+1. Open your AI assistant chat window in the IDE.
+2. Run the following prompt using the `search_docs` tool:
+
+    ```text
+    #search_docs Create a Syncfusion Blazor Grid with paging, sorting, and filtering enabled.
+    ```
+
+3. Confirm the following expected behavior:
+    - The `search_docs` tool is invoked by the assistant.
+    - An MCP permission prompt appears (if running for the first time); select **Allow in this Session**.
+    - Syncfusion-specific component code, configuration properties, and usage guidance are returned.
+    - Tool activity in the chat confirms that `sf-blazor-mcp` is being actively queried.
 
 ## Common use cases
 
@@ -242,11 +300,29 @@ To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blaz
 
 ## Troubleshooting
 
+### Manual MCP Server Validation
+
+If the MCP server fails to start or connect in your IDE, manually test package restore and startup using `dnx` in your terminal:
+
+```bash
+dnx Syncfusion.Blazor.MCP --yes
+```
+
+Expected startup output:
+
+```text
+Application started. Press Ctrl+C to shut down.
+```
+
+This verifies that the package resolves and downloads from NuGet and that the MCP server executable starts without errors. Press `Ctrl+C` to terminate the process after verification.
+
+### Common Issues and Solutions
+
 The table below lists frequently encountered issues and suggested resolutions to help diagnose and address common setup or usage challenges.
 
 | Issue | Solution |
 |-------|----------|
-| **Server failed to start** | Update to .NET 8 SDK or higher, verify JSON syntax in the config file, and restart your IDE. |
+| **Server failed to start** | Update to .NET 8 SDK or higher, verify JSON syntax in the config file, and restart your IDE. Run `dnx Syncfusion.Blazor.MCP --yes` in a terminal to verify package restore and startup. |
 | **Invalid API key** | Verify your key is active at the [Syncfusion Account Page](https://www.syncfusion.com/account/api-key). |
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • CodeStudio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
