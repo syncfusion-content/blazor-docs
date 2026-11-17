@@ -1075,4 +1075,4 @@ Starting from version `v23.2.4`, customized `Material` and `Tailwind` themes are
 
 ## See also
 
-[How to change background of browser based on Theme in Blazor?](https://blazor.syncfusion.com/documentation/common/dark-mode)
+[How to change background of browser based on Theme in Blazor?](https://blazor.syncfusion.com/documentation/appearance/dynamic-theme-switching)
