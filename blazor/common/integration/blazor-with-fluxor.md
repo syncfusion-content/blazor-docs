@@ -15,7 +15,7 @@ N> Fluxor is a community-maintained state management library for .NET, compatibl
 
 ## Prerequisites
 
-* [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
+* [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) or [.NET 11 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/11.0)
 * [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 
 ## Create and configure the project

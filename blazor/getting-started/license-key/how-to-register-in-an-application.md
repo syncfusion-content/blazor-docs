@@ -67,11 +67,11 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 ## Blazor Web App (Interactive Server)
 
-* For .NET 8, .NET 9, and .NET 10, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
+* For .NET 8, .NET 9, .NET 10, and .NET 11, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" hl_lines="2 3" %}
+{% highlight c# tabtitle=".NET 11, .NET 10, .NET 9 & .NET 8 (~/Program.cs)" hl_lines="2 3" %}
 
 var app = builder.Build();
 // Register the Syncfusion license
@@ -109,7 +109,7 @@ Open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" hl_lines="1 2" %}
+{% highlight c# tabtitle=".NET 11, .NET 10, .NET 9 & .NET 8 (~/Program.cs)" hl_lines="1 2" %}
 
 // Register the Syncfusion license
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");

@@ -22,7 +22,7 @@ Before getting started, ensure you have the following:
 
 ## Configure a development container for .NET 10 and Blazor
 
-To run Blazor applications in GitHub Codespaces, configure a development container with the **[.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)** and support for **ASP.NET Core and Blazor development**.
+To run Blazor applications in GitHub Codespaces, configure a development container with the **[.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)** or **[.NET 11 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/11.0)** and support for **ASP.NET Core and Blazor development**.
 
 ### Prerequisites for dev container setup
 
