@@ -24,7 +24,7 @@ N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be pub
 
 | Tool | Version |
 |------|---------|
-| .NET SDK | .NET 8, .NET 9, or .NET 10 |
+| .NET SDK | .NET 8, .NET 9, .NET 10, or .NET 11 |
 | Visual Studio / VS Code | Latest stable |
 
 ## Create a new Blazor App
