@@ -31,13 +31,13 @@ Blazor Components is an enterprise-grade, native UI components library for creat
 
 ## How it fits into Blazor?
 
-- Works across [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio), [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app), and [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) (.NET 8, .NET 9, and .NET 10) render modes.
+- Works across [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio), [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app), and [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) (.NET 8, .NET 9, .NET 10, and .NET 11) render modes.
 - Plays well with dependency injection, routing, and cascading values.
 - Uses JavaScript interop only where it adds value (DOM/canvas/complex layout), keeping your app primarily in C# and Razor.
 
 ## How to best read this user guide?
 
-* The best way to get started is to read the Getting Started section of the documentation for the component intended for use. The Getting Started section covers the essential concepts to know before writing code. This is the only section recommended to read end-to-end before coding; other topics can be referenced as needed. Ensure the required SDKs and the supported .NET/Blazor versions are installed (Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support .NET 11, .NET 10, .NET 9, and .NET 8).
+* The best way to get started is to read the Getting Started section of the documentation for the component intended for use. The Getting Started section covers the essential concepts to know before writing code. This is the only section recommended to read end-to-end before coding; other topics can be referenced as needed. Ensure the required SDKs and the supported .NET/Blazor versions are installed.
 
 * After becoming familiar with the basics of a component, integrate it into the application. A practical next step is to review the code snippets in the [online sample browser](https://blazor.syncfusion.com/demos/), which contains hundreds of examples. It is likely there is a sample that matches the intended usage scenario.
 
