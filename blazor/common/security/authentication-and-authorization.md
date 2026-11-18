@@ -13,7 +13,7 @@ This guide explains how to secure [Blazor components](https://www.syncfusion.com
 
 ## Prerequisites
 
-* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later (examples in this guide use .NET 10 or .NET 11).
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later (examples in this guide use .NET 10).
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
 
 If you already have a Blazor project, proceed to the package installation section. Otherwise, create one using one of the following Blazor getting started guides.

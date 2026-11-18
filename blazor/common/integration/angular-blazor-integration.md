@@ -15,7 +15,7 @@ A common use case for this integration is when a Blazor application needs to reu
 
 ## Prerequisites
 
-* [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) or [.NET 11 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/11.0) 
+* [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) 
 * [Node.js 18+](https://nodejs.org/en/download)
 * [Angular CLI 18+](https://www.npmjs.com/package/@angular/cli) 
 

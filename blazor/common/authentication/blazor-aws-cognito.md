@@ -13,7 +13,7 @@ This guide demonstrates how to integrate [AWS Cognito authentication](https://do
 
 ## Prerequisites
 
-* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later (examples in this guide target .NET 10 or .NET 11)
+* [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) 8.0 or later (examples in this guide target .NET 10)
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) 2022 or later or [Visual Studio Code](https://code.visualstudio.com/) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension
 * [AWS Account with permission to manage Cognito](https://docs.aws.amazon.com/accounts/latest/reference/getting-started.html)
 
