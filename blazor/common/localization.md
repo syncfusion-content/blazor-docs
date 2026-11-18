@@ -362,7 +362,7 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
     <main>
         <div class="top-row px-4">
             <CultureSwitcher />
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank" aria-label="About ASP.NET documentation">About</a>
         </div>
     </main>
 </div>
@@ -545,7 +545,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
     <main>
         <div class="top-row px-4">
             <CultureSwitcher></CultureSwitcher>
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank" aria-label="About ASP.NET Core documentation">About</a>
         </div>
 
         <article class="content px-4">
@@ -649,7 +649,7 @@ Add the `CultureSwitcher` component to `Layout/MainLayout.razor` to enable the c
 
     <main>
         <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank" aria-label="About ASP.NET Core documentation">About</a>
         </div>
 
         <article class="content px-4">

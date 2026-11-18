@@ -572,7 +572,7 @@ padding-top: 20px;
 
 * If a feature is not available, request it in the [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
 
-* Join the [Syncfusion Blazor forum](https://www.syncfusion.com/forums/blazor-components) to discuss components, ask questions, and share suggestions with other developers and the Syncfusion team.
+* Join the [Syncfusion Community Forum](https://www.syncfusion.com/forums/blazor-components) to discuss components, ask questions, and share suggestions with other developers and the Syncfusion team.
 
 ## Learning Resources
 

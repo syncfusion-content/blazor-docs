@@ -123,7 +123,7 @@ The package is layered so that the framework-agnostic runtime is always reusable
 Two support channels are available while you integrate Syncfusion A2UI for Blazor:
 
 * [Syncfusion Direct-Trac support](https://www.syncfusion.com/support/directtrac/incidents)
-* [Syncfusion community forum](https://www.syncfusion.com/forums/)
+* [Syncfusion community forum](https://www.syncfusion.com/forums/blazor-components)
 
 ## See also
 

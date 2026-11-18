@@ -273,7 +273,7 @@ The following example shows how to set up these features in your Blazor applicat
     <Description>
         <p>
             The <b>Pivot</b>, enhanced with AI, offers features such as <b>Smart Data Aggregation</b>, <b>Predictive Modeling</b>, and <b>Adaptive Filtering</b>. Click the <mark><b>AI Assist</b></mark> option to explore these AI-powered capabilities.
-            Know more <a target="_blank" href="https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/PivotTable/Readme.md">here</a>.
+            For more details, refer to the <a target="_blank" href="https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/PivotTable/Readme.md" aria-label="Smart Pivot Table README on GitHub">Smart Pivot Table sample documentation on GitHub</a>.
         </p>
     </Description>
     <div class="pivot-toast">
