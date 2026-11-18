@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Contextual Tabs in Blazor Ribbon Component | Syncfusion
-description: Checkout and learn about Contextual Tabs in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
-platform: Blazor
+title: Contextual Tabs in Blazor Ribbon | Syncfusion
+description: Learn how to add contextual tabs in the Blazor Ribbon that appear contextually for the selected item, with built-in and custom Ribbon item support.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Contextual tabs in Blazor Ribbon component
+# Contextual Tabs in Blazor Ribbon
 
 The Ribbon Contextual tabs are similar to the Ribbon tabs that are displayed on demand based on their needs, such as an image or a table tabs. It supports adding all built-in and custom Ribbon items to perform specific actions.
 
@@ -115,7 +115,7 @@ You can utilize the `RibbonContextualTabs` tag directive to define contextual ta
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Contextual Tabs](./images/contextual-tabs/contextual-tabs.png)
+![Ribbon Contextual Tabs](./images/contextual-tabs/contextual-tabs.webp)
 
 ## Selected tabs
 
@@ -190,7 +190,7 @@ By using the `IsSelected` property you can control the selected state of each co
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Selected Tabs](./images/contextual-tabs/selected-tabs.png)
+![Ribbon Selected Tabs](./images/contextual-tabs/selected-tabs.webp)
 
 ## Methods
 
@@ -283,4 +283,4 @@ You can use the `HideTabAsync` method allows you to hide the specific contextual
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Show Hide Tabs](./images/contextual-tabs/show-hide-tabs.png)
+![Ribbon Show Hide Tabs](./images/contextual-tabs/show-hide-tabs.webp)

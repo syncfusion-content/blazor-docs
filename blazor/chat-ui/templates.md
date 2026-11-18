@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Templates with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Templates in Blazor Chat UI | Syncfusion®
+description: Customize message rendering in Blazor Chat UI using EmptyChatTemplate, MessageTemplate, and footer templates for tailored UI presentation.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Templates in Blazor Chat UI component
+# Templates in Blazor Chat UI
 
 The Chat UI component provides several templates for customizing the appearance of the empty conversation area, messages, typing indicator, and more. These templates provide flexibility for users to create a unique, personalized chat experience. 
 
@@ -41,7 +41,7 @@ You can use the [EmptyChatTemplate](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor Chat UI EmptyChatTemplate](./images/emptychat.png)
+![Blazor Chat UI EmptyChatTemplate](./images/emptychat.webp)
 
 ## Message template
 
@@ -91,7 +91,7 @@ You can use the [MessageTemplate](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor Chat UI MessageTemplate](./images/messageTemp.png)
+![Blazor Chat UI MessageTemplate](./images/messageTemp.webp)
 
 ## Time break template
 
@@ -132,7 +132,7 @@ You can use the [TimeBreakTemplate](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor Chat UI TimeBreakTemplate](./images/timebreakTemp.png)
+![Blazor Chat UI TimeBreakTemplate](./images/timebreakTemp.webp)
 
 ## Typing indicator template
 
@@ -194,7 +194,7 @@ You can use the [TypingUsersTemplate](https://help.syncfusion.com/cr/blazor/Sync
 
 ```
 
-![Blazor Chat UI TypingUsersTemplate](./images/typinguser-temp.png)
+![Blazor Chat UI TypingUsersTemplate](./images/typinguser-temp.webp)
 
 ## Suggestion template
 
@@ -254,7 +254,7 @@ You can use the [SuggestionTemplate](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```
 
-![Blazor Chat UI SuggestionTemplate](./images/suggesstion-temp.png)
+![Blazor Chat UI SuggestionTemplate](./images/suggesstion-temp.webp)
 
 ## Footer template
 
@@ -320,4 +320,4 @@ You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```
 
-![Blazor Chat UI FooterTemplate](./images/footer-temp.png)
+![Blazor Chat UI FooterTemplate](./images/footer-temp.webp)

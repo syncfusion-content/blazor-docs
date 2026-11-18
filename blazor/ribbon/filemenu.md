@@ -1,13 +1,13 @@
 ---
 layout: post
-title: File Menu in Blazor Ribbon Component | Syncfusion
-description: Checkout and learn about File Menu in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
-platform: Blazor
+title: File Menu in Blazor Ribbon | Syncfusion
+description: Learn how to add a built-in file menu in the Blazor Ribbon with configurable menu items for actions like creating, opening, and saving documents.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# File Menu in Blazor Ribbon component
+# File Menu in Blazor Ribbon
 
 The Ribbon component provides a built-in file menu to include menu items for performing specific actions. The file menu can be configured using the [RibbonFileMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonFileMenuSettings.html) tag directive directly inside [SfRibbon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html).
 
@@ -91,7 +91,7 @@ Menu items can be added to the file menu by binding a collection of menu items t
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Filemenu Items](./images/filemenu/filemenu_items.png)
+![Ribbon Filemenu Items](./images/filemenu/filemenu_items.webp)
 
 ## Open submenu on click
 
@@ -245,7 +245,7 @@ You can define custom header text for the file menu by using the [Text](https://
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Filemenu Items](./images/filemenu/filemenu_customheader.png)
+![Ribbon Filemenu Items](./images/filemenu/filemenu_customheader.webp)
 
 ## Events
 

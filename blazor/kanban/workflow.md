@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Workflow in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about workflow in Syncfusion Blazor Kanban component and much more details.
+description: Learn how the Syncfusion Blazor Kanban workflow restricts card movement between columns and how to disable drag and drop for specific columns.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -56,7 +56,7 @@ Provides restriction on columns when performing drag and drop actions while prov
 
 ```
 
-![Dragging Card between Blazor Kanban Columns](./images/blazor-kanban-drag-card-in-columns.png)
+![Dragging Card between Blazor Kanban Columns](./images/blazor-kanban-drag-card-in-columns.webp)
 
 ## Prevent Drop actions
 
@@ -105,7 +105,7 @@ In the following code, the `Backlog` column will not allow any card drop action 
 
 ```
 
-![Dropping Card in Blazor Kanban Column](./images/blazor-kanban-drop-card-in-column.png)
+![Dropping Card in Blazor Kanban Column](./images/blazor-kanban-drop-card-in-column.webp)
 
 ## Prevent Drag actions
 
@@ -173,4 +173,4 @@ In the following code, the `Done` column will not allow any card drag action wit
 
 ```
 
-![Disabling Drag Card in Blazor Kanban Column](./images/blazor-kanban-disable-drag-action.png)
+![Disabling Drag Card in Blazor Kanban Column](./images/blazor-kanban-disable-drag-action.webp)

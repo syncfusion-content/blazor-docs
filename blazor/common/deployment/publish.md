@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Publish and Deploy in Blazor | AOT | Syncfusion
-description: Learn how to publish and deploy Blazor Web App, Blazor WASM, Blazor Server Apps with Syncfusion Blazor components, including self-contained deployment and AOT.
+title: Publish and Deploy in Blazor | AOT | Syncfusion®
+description: Learn how to publish and deploy Blazor Web App, Blazor WASM, Blazor Server Apps with Blazor components, including self-contained deployment and AOT.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Publish and Deploy in Blazor
 
-This section provides information about publishing and deploying Blazor applications with the Syncfusion Blazor components. 
+This section provides information about publishing and deploying Blazor applications with the Blazor components. 
 
 Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio) topic for more information.
 
@@ -17,19 +17,19 @@ Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us
 
 * Right-click on the project in the `Solution Explorer` and select `Publish`.
 
-![Solution Explorer in Blazor](../images/publish.png)
+![Solution Explorer in Blazor](../images/publish.webp)
 
 * Then, select the `Folder` option and select the publishing target location.
 
-![Publish Location in Blazor](../images/folder.png)
+![Publish Location in Blazor](../images/folder.webp)
 
-* Check the configuration as Release by clicking the `Advanced...` option below the target location.
+* Check the configuration as Release by clicking the `Show all settings` option below the target location.
 
-![Release Configuration in Blazor](../images/config.png)
+![Release Configuration in Blazor](../images/config.webp)
 
 * For `Blazor Server side application`, set Deployment Mode as `Self-Contained`. Because some dependencies are not loaded properly when the published folder is hosted.
 
-![Deploy Mode in Blazor](../images/deploy.png)
+![Deploy Mode in Blazor](../images/deploy.webp)
 
 * Then, click `Save` and `Publish`.
 

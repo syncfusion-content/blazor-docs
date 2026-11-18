@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor TreeView component and much more details.
+title: Sorting in Blazor TreeView | Syncfusion
+description: Sort TreeView nodes in ascending or descending order using the SortOrder property for sort order options.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Sort order in Blazor TreeView Component
+# Sorting in Blazor TreeView
 
 The [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SortOrder) property is used to sort the TreeView nodes in ascending or descending order in the Blazor TreeView component. The default value of `SortOrder` property is none.
 
@@ -114,4 +114,4 @@ In the following example, the `SortOrder` property is dynamically updated on the
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVICtCUhBoSVZoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhnjcWNzrzFPmaA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}

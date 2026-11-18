@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Templates with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Templates in Blazor AI AssistView | Syncfusion®
+description: Customize Blazor AI AssistView with BannerTemplate, PromptTemplate, ResponseTemplate, and SuggestionsTemplate for flexible UI layouts.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Templates in Blazor AI AssistView component
+# Templates in Blazor AI AssistView
 
 The AI AssistView provides several template options to customize the banner, prompt, response, suggestions and footer items.
 
@@ -62,7 +62,7 @@ You can use the [BannerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```
 
-![Blazor AI AssistView banner template](./images/ai-assistview-banner-template.png)
+![Blazor AI AssistView banner template](./images/ai-assistview-banner-template.webp)
 
 ## Prompt item template
 
@@ -132,7 +132,7 @@ You can use the [PromptItemTemplate](https://help.syncfusion.com/cr/blazor/Syncf
 </style>
 ```
 
-![Blazor AI AssistView PromptItemTemplate](./images/ai-assistview-prompt-item-template.png)
+![Blazor AI AssistView PromptItemTemplate](./images/ai-assistview-prompt-item-template.webp)
 
 ## Response item template
 
@@ -203,7 +203,92 @@ You can use the [ResponseItemTemplate](https://help.syncfusion.com/cr/blazor/Syn
 
 ```
 
-![Blazor AI AssistView ResponseItemTemplate](./images/ai-assistview-response-item-template.png)
+![Blazor AI AssistView ResponseItemTemplate](./images/ai-assistview-response-item-template.webp)
+
+## Response animation template
+
+You can use the [ResponseAnimationTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ResponseAnimationTemplate) tag directive to display a custom loading indicator or animation in the AI AssistView while a response is being generated. The animation template is shown in place of the response and removed once the response is added.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView PromptRequested="@PromptRequest">
+                <ResponseAnimationTemplate>
+                    <div class="assistview-loading-status">
+                        <div class="assistview-grid-icon">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="assistview-loading-label">Generating</span>
+                    </div>
+                </ResponseAnimationTemplate>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(2000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+<style>
+    .assistview-loading-status {
+        display: flex;
+        gap: 10px;
+        color: #666;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    .assistview-grid-icon {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
+
+    .assistview-grid-icon span {
+        width: 4px;
+        height: 4px;
+        background: #8a8a8a;
+        border-radius: 1px;
+        opacity: 0.25;
+        animation: assistview-pulse 1.8s ease-in-out infinite;
+    }
+
+    .assistview-grid-icon span:nth-child(1) { animation-delay: 0s; }
+    .assistview-grid-icon span:nth-child(2) { animation-delay: 0.1s; }
+    .assistview-grid-icon span:nth-child(3) { animation-delay: 0.2s; }
+    .assistview-grid-icon span:nth-child(4) { animation-delay: 0.3s; }
+    .assistview-grid-icon span:nth-child(5) { animation-delay: 0.4s; }
+    .assistview-grid-icon span:nth-child(6) { animation-delay: 0.5s; }
+    .assistview-grid-icon span:nth-child(7) { animation-delay: 0.6s; }
+    .assistview-grid-icon span:nth-child(8) { animation-delay: 0.7s; }
+    .assistview-grid-icon span:nth-child(9) { animation-delay: 0.8s; }
+
+    @@keyframes assistview-pulse {
+        0%,
+        100% {
+            opacity: 0.25;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+</style>
+
+```
+
+![Blazor AI AssistView ResponseAnimationTemplate](./images/ai-assistview-response-animation-template.webp)
 
 ## Prompt suggestion item template
 
@@ -265,7 +350,7 @@ You can use the [PromptSuggestionItemTemplate](https://help.syncfusion.com/cr/bl
 </style>
 ```
 
-![Blazor AI AssistView SuggestionItemTemplate](./images/suggestion-item-template.png)
+![Blazor AI AssistView SuggestionItemTemplate](./images/suggestion-item-template.webp)
 
 ## Footer template
 
@@ -330,4 +415,4 @@ You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusio
 </style>
 ```
 
-![Blazor AI AssistView FooterTemplate](./images/assistview-footer-template.png)
+![Blazor AI AssistView FooterTemplate](./images/assistview-footer-template.webp)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor AutoComplete component and more.
+title: Data Binding in Blazor AutoComplete | Syncfusion®
+description: Bind the Blazor AutoComplete to local arrays or remote services using the DataSource property and DataManager with adaptors like WebApi and OData.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Data Binding in AutoComplete
+# Data Binding in Blazor AutoComplete
 
 The AutoComplete loads data from local collections or remote services. Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property to bind local data, or configure remote data using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
@@ -23,7 +23,7 @@ Load data from local sources using the [DataSource](https://help.syncfusion.com/
 
 {% endhighlight %}
 
-![Blazor AutoComplete with local data binding](./images/data-binding/blazor_autocomplete_local-binding.png)
+![Blazor AutoComplete with local data binding](./images/data-binding/blazor_autocomplete_local-binding.webp)
 
 ### DataBound event
 
@@ -39,7 +39,7 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 Bind arrays or lists of primitive types such as `string`, `int`, `double`, and `bool`.
 
-The following example binds an array of strings to the AutoComplete component.
+The following example binds an array of strings to the Blazor AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -47,9 +47,9 @@ The following example binds an array of strings to the AutoComplete component.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Primitive string type](./images/data-binding/blazor_autocomplete_primitive-type-string.png)
+![Blazor AutoComplete with Primitive string type](./images/data-binding/blazor_autocomplete_primitive-type-string.webp)
 
-The following example binds an array of integers to the AutoComplete component.
+The following example binds an array of integers to the Blazor AutoComplete component.
 
 {% highlight cshtml %}
 
@@ -57,7 +57,7 @@ The following example binds an array of integers to the AutoComplete component.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Primitive int type](./images/data-binding/blazor_autocomplete_primitive-type-int.png)
+![Blazor AutoComplete with Primitive int type](./images/data-binding/blazor_autocomplete_primitive-type-int.webp)
 
 ### Complex data type
 
@@ -71,7 +71,7 @@ In the following example, the `Country.CountryID` column is mapped to the [AutoC
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMhCzLUzZpqxv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLHDRisBbvrerTk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Expando object binding
 
@@ -83,7 +83,7 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Expando object binding](./images/data-binding/blazor_autocomplete_expando-object-binding.png)
+![Blazor AutoComplete with Expando object binding](./images/data-binding/blazor_autocomplete_expando-object-binding.webp)
 
 ### Observable collection binding
 
@@ -95,7 +95,7 @@ Bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/commo
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthgsVWzBToAePUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhdNxMWVFbSlkRk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### Dynamic object binding
 
@@ -107,7 +107,7 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Dynamic object binding](./images/data-binding/blazor_autocomplete_dynamic-data-binding.png)
+![Blazor AutoComplete with Dynamic object binding](./images/data-binding/blazor_autocomplete_dynamic-data-binding.webp)
 
 ### Enum data binding
 
@@ -119,7 +119,7 @@ Bind enum values to the AutoComplete. The following example shows how to display
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Enum data binding](./images/data-binding/blazor_AutoComplete_enum-data-binding.png)
+![Blazor AutoComplete with Enum data binding](./images/data-binding/blazor_AutoComplete_enum-data-binding.webp)
 
 ## Binding remote data 
 
@@ -139,7 +139,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKiBsTKmrEVfKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLnjxWWhPuXrDJW?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ### OnActionComplete event
 
@@ -171,7 +171,7 @@ Use the [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adap
 
 {% endhighlight %}
 
-![Blazor AutoComplete with OData v4 Adaptor](./images/data-binding/blazor_autocomplete_odata-v4-services.png)
+![Blazor AutoComplete with OData v4 Adaptor](./images/data-binding/blazor_autocomplete_odata-v4-services.webp)
 
 ### Web API adaptor
 
@@ -183,11 +183,11 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Web API Adaptor](./images/data-binding/blazor_autocomplete_web-api-adaptor.png)
+![Blazor AutoComplete with Web API Adaptor](./images/data-binding/blazor_autocomplete_web-api-adaptor.webp)
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors for manual data operations. Implement a custom adaptor by inheriting from `DataAdaptor` and overriding `Read` or `ReadAsync` to control data retrieval for the AutoComplete.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) supports custom adaptors for manual data operations. Implement a custom adaptor by inheriting from `DataAdaptor` and overriding `Read` or `ReadAsync` to control data retrieval for the AutoComplete.
 
 ```csharp
 public abstract class DataAdaptor
@@ -224,11 +224,11 @@ The following example shows remote data binding with offline mode enabled.
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Offline mode](./images/data-binding/blazor_autocomplete_offline-mode.png)
+![Blazor AutoComplete with Offline mode](./images/data-binding/blazor_autocomplete_offline-mode.webp)
 
 ### Entity Framework
 
-Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the AutoComplete component.
+Follow these steps to consume data from [Entity Framework](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-orm/entityframework) in the Blazor AutoComplete component.
 
 #### Create DBContext class
 
@@ -340,7 +340,7 @@ namespace EFDropDown.Controllers
 }
 ```
 
-### Configure AutoComplete component using Web API adaptor
+### Configure Blazor AutoComplete component using Web API adaptor
 
 Configure the AutoComplete with [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the Web API using the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 

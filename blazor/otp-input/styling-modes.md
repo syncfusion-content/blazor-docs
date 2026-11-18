@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Styling Modes in Blazor OTP Input Component | Syncfusion
-description: Checkout and learn here all about Styling Modes with Syncfusion Blazor OTP Input component in Blazor Server App and Blazor WebAssembly App.
+title: Styling Modes in Blazor OTP Input | Syncfusion
+description: Apply Outlined, Filled, or Underline styling modes to Blazor OTP Input fields to customize appearance.
 platform: Blazor
 control: OTP Input
 documentation: ug
 ---
 
-# Styling Modes in Blazor OTP Input component
+# Styling Modes in Blazor OTP Input
 
-Styling modes specify the visual variants for the input fields in the OTP input component. These modes allow customization of the inputs’ appearance to match application design.
+Styling modes specify the visual variants for the input fields in the Blazor OTP Input component. These modes allow customization of the inputs’ appearance to match application design.
 
 ## Outline mode
 
-Use the outline style by setting the [StylingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_StylingMode) property to [Outlined](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputStyle.html#Syncfusion_Blazor_Inputs_OtpInputStyle_Outlined). The default styling mode is `Outlined`.
+Use the outline style by setting the [StylingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_StylingMode) property to [Outlined](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputStyle.html#Syncfusion_Blazor_Inputs_OtpInputStyle_Outlined). This is the default styling mode.
 
 ```cshtml
 
@@ -23,7 +23,7 @@ Use the outline style by setting the [StylingMode](https://help.syncfusion.com/c
 
 ```
 
-![Blazor OTP input component with outlined mode](images/blazor-otp-outlined.png)
+![Blazor OTP input component with outlined mode](images/blazor-otp-outlined.webp)
 
 ## Filled mode
 
@@ -37,7 +37,7 @@ Use the filled style by setting the [StylingMode](https://help.syncfusion.com/cr
 
 ```
 
-![Blazor OTP input component with filled mode](images/blazor-otp-filled.png)
+![Blazor OTP input component with filled mode](images/blazor-otp-filled.webp)
 
 ## Underline mode
 
@@ -51,4 +51,11 @@ Use the underline style by setting the [StylingMode](https://help.syncfusion.com
 
 ```
 
-![Blazor OTP input component with underlined mode](images/blazor-otp-underlined.png)
+![Blazor OTP input component with underlined mode](images/blazor-otp-underlined.webp)
+
+## See also
+
+* [Appearance in Blazor OTP Input](appearance)
+* [Input types in Blazor OTP Input](input-types)
+* [Events in Blazor OTP Input](events)
+* [Placeholder in Blazor OTP Input](placeholder)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and appearance in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about style and appearance in Syncfusion Blazor Splitter component and more.
+title: Style and Appearance in Blazor Splitter | Syncfusion
+description: Customize Blazor Splitter split bars, panes, and icons using CSS variables and class overrides for branded styling.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Style and appearance in Blazor Splitter Component
+# Style and Appearance in Blazor Splitter
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
@@ -20,13 +20,13 @@ Use the following CSS to customize the split bar properties.
 ```css
 /* default split bar color */
 .e-splitter .e-split-bar.e-split-bar-horizontal{
-   background: blue;
+   border: 1px solid red;
 }
 
 /* split bar color in hover and active state */
 .e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-hover,
 .e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-active {
-   background: green;
+   border: 1px solid yellow;
 }
 ```
 
@@ -35,13 +35,13 @@ Use the following CSS to customize the split bar properties.
 ```css
 /* default split bar color */
 .e-splitter .e-split-bar.e-split-bar-vertical {
-    background: blue;
+    border: 1px solid red;
 }
 
 /* split bar color in hover and active state */
 .e-splitter .e-split-bar.e-split-bar-vertical.e-split-bar-hover,
 .e-splitter .e-split-bar.e-split-bar-vertical.e-split-bar-active {
-    background: green;
+    border: 1px solid yellow;
 }
 ```
 
@@ -109,22 +109,22 @@ Use the following CSS to customize the split bar arrows.
 }
 ```
 
-## To hide the resize handle in Splitter
+## To hide the resize handle in Blazor Splitter
 
 Use the following CSS to hide the resize handler in the split bar
 
-### Hide the horizontal split bar resize arrow
+### Hide the horizontal split bar resize handler
 
 ```CSS
 .e-splitter .e-split-bar.e-split-bar-horizontal .e-resize-handler {
-    display: none;
+    visibility: hidden;
 }
 ```
 
-### Hide the vertical split bar resize arrow
+### Hide the vertical split bar resize handler
 
 ```CSS
 .e-splitter .e-split-bar.e-split-bar-vertical .e-resize-handler {
-    display: none;
+    visibility: hidden;
 }
 ```

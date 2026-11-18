@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Form Validation in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Form Validation in Syncfusion Blazor MultiSelect component and more.
+title: Form Validation in Blazor MultiSelect Dropdown | Syncfusion
+description: Validate Blazor MultiSelect Dropdown inside Blazor EditForm with data annotations and validation messages.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Form Validation in MultiSelect
+# Form Validation in Blazor MultiSelect Dropdown
 
 ## Edit form validation
 
-The MultiSelect component can be used inside an EditForm to build a form that supports selecting multiple values. The `EditForm` component validates data annotation rules via the `DataAnnotationsValidator` component.
+The MultiSelect component can be used inside an `EditForm` to build a form that supports selecting multiple values. The `EditForm` component validates data annotation rules via the `DataAnnotationsValidator` component.
 
 When the MultiSelect input is valid, the form can be submitted. If the input is invalid, a validation message is displayed until a valid value is provided.
 
@@ -27,7 +27,7 @@ When the MultiSelect input is valid, the form can be submitted. If the input is 
 
 {% endhighlight %}
 
-![Blazor MultiSelect inside EditForm](./images/form-validation/blazor_multiselect_inside-editform.png)
+![Blazor MultiSelect Dropdown inside EditForm](./images/form-validation/blazor_multiselect_inside-editform.webp)
 
 ## Selection Limit
 
@@ -41,4 +41,4 @@ In the following example, the selection limit is set to three items, and the Mul
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with limit selection in CheckBox mode](./images/blazor-multiselect-dropdown-limit-selection.png)
+![Blazor MultiSelect Dropdown with limit selection in CheckBox mode](./images/blazor-multiselect-dropdown-limit-selection.webp)

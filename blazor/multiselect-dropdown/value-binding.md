@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Value Binding in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Value Binding in Syncfusion Blazor MultiSelect component and more.
+title: Value Binding in Blazor MultiSelect Dropdown | Syncfusion
+description: Bind single or multiple selected values in Blazor MultiSelect Dropdown using @bind-Value for selection today.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Value Binding in MultiSelect
+# Value Binding in Blazor MultiSelect Dropdown
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values. These are:
 
@@ -26,7 +26,7 @@ Value binding is achieved by using the [@bind-Value](https://help.syncfusion.com
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Bind Value](./images/value-binding/blazor_multiselect_bind-value.png)
+![Blazor MultiSelect Dropdown with Bind Value](./images/value-binding/blazor_multiselect_bind-value.webp)
 
 ## Text and value
 
@@ -40,7 +40,7 @@ The following example demonstrates Text and Value field mapping. For instance, t
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Text and Value](./images/value-binding/blazor_MultiSelect_text-and-value.png)
+![Blazor MultiSelect Dropdown with Text and Value](./images/value-binding/blazor_MultiSelect_text-and-value.webp)
 
 ## Primitive type binding
 
@@ -54,7 +54,7 @@ The following example demonstrates an array of strings as the data source.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Primitive Type as string](./images/value-binding/blazor_MultiSelect_primitive-type-string.png)
+![Blazor MultiSelect Dropdown with Primitive Type as string](./images/value-binding/blazor_MultiSelect_primitive-type-string.webp)
 
 The following example demonstrates an array of integers as the data source.
 
@@ -68,7 +68,7 @@ The following example demonstrates an array of integers as the data source.
 
 Bind object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute and map the value field via [MultiSelectFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Value). Set `TItem` to the data item type and `TValue` to the value field type.
 
-In the following example, the `Name` column is mapped to the Value field.
+In the following example, the `ID` column is mapped to the Value field, and `TValue` is set to the data type of the ID field (`string`).
 
 {% highlight cshtml %}
 
@@ -76,7 +76,7 @@ In the following example, the `Name` column is mapped to the Value field.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with object values](./images/value-binding/blazor_MultiSelect_object-binding.png)
+![Blazor MultiSelect Dropdown with object values](./images/value-binding/blazor_MultiSelect_object-binding.webp)
 
 ## Enum binding
 
@@ -88,7 +88,7 @@ Bind enum values to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endhighlight %}
 
-![Blazor MultiSelect with Enum Data](./images/value-binding/blazor_MultiSelect_enum-binding.png)
+![Blazor MultiSelect Dropdown with Enum Data](./images/value-binding/blazor_MultiSelect_enum-binding.webp)
 
 ## Show or hide clear button
 
@@ -96,7 +96,7 @@ Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 N> If `TValue` is a non-nullable type, the clear button sets the default value of that type (for example, `0` for `int`). If `TValue` is a nullable type (for example, `int?`), the clear button sets the Value to `null`.
 
-The following example uses `string` as `TValue`, so clearing sets the value to `null`.
+The following example uses `int?` as `TValue`, so clearing sets the value to `null`.
 
 {% highlight cshtml %}
 
@@ -104,13 +104,13 @@ The following example uses `string` as `TValue`, so clearing sets the value to `
 
 {% endhighlight %}
 
-![Blazor MultiSelect with clear button](./images/value-binding/blazor_MultiSelect_show-hide-clear-button.png)
+![Blazor MultiSelect Dropdown with clear button](./images/value-binding/blazor_MultiSelect_show-hide-clear-button.webp)
 
 ## Dynamically change TItem
 
 The `TItem` type can be changed dynamically by creating a generic wrapper component using the `@typeparam` directive. The following example shows how to change `TItem` dynamically for different data sources.
 
-### Creating generic MultiSelect component
+### Creating a generic MultiSelect component
 
 Create a `MultiSelect.razor` file as a parent component. Add parameters for the List of `<TItem>` and the bound `TValue[]`.
 
@@ -121,7 +121,7 @@ Create a `MultiSelect.razor` file as a parent component. Add parameters for the 
 @typeparam TValue;
 @typeparam TItem;
 
-<SfMultiSelect TValue="TValue[]" Width="300px" TItem="TItem" @bind-Value="@DDLValue" Placeholder="Please select a value" DataSource="@customData">
+<SfMultiSelect TValue="TValue" Width="300px" TItem="TItem" @bind-Value="@DDLValue" Placeholder="Please select a value" DataSource="@customData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -129,7 +129,7 @@ Create a `MultiSelect.razor` file as a parent component. Add parameters for the 
 [Parameter]
 public List<TItem> customData { get; set; }
 [Parameter]
-public TValue[] DDLValue { get; set; }
+public TValue DDLValue { get; set; }
 [Parameter]
 public EventCallback<TValue> DDLValueChanged { get; set; }
 }
@@ -137,13 +137,13 @@ public EventCallback<TValue> DDLValueChanged { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-### Usage of generic component with different type
+### Usage of the generic component with different types
 
 Render the generic MultiSelect with the required `TValue` and `TItem` in the respective Razor components.
 
-In this example, the MultiSelect is rendered with `TValue` as `string` in `Index.razor` and with `TValue` as `int?` in `Counter.razor`.
+In this example, the MultiSelect is rendered with `TValue` as `string` in `Home.razor` and with `TValue` as `int?` in `Counter.razor`.
 
-**[Index.razor]**
+**[Home.razor]**
 
 {% tabs %}
 {% highlight razor %}
@@ -151,7 +151,7 @@ In this example, the MultiSelect is rendered with `TValue` as `string` in `Index
 <MultiSelect TValue="string[]" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
 </MultiSelect>
 
-@code{
+@code {
     public string[] value { get; set; } = new string[] { "Game1" };
 
     public class Games
@@ -159,7 +159,8 @@ In this example, the MultiSelect is rendered with `TValue` as `string` in `Index
         public string ID { get; set; }
         public string Text { get; set; }
     }
-    List<Games> LocalData = new List<Games> {
+    List<Games> LocalData = new List<Games> 
+    {
         new Games() { ID= "Game1", Text= "American Football" },
         new Games() { ID= "Game2", Text= "Badminton" },
         new Games() { ID= "Game3", Text= "Basketball" },
@@ -184,28 +185,28 @@ In this example, the MultiSelect is rendered with `TValue` as `string` in `Index
 <MultiSelect TValue="int?[]" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
 </MultiSelect>
 
-@code{
+@code {
 
-public int?[] value { get; set; } = new int?[] { 3 };
-public class Games
-{
-    public int? ID { get; set; }
-    public string Text { get; set; }
-}
-List<Games> LocalData = new List<Games> {
-    new Games() { ID= 1, Text= "American Football" },
-    new Games() { ID= 2, Text= "Badminton" },
-    new Games() { ID= 3, Text= "Basketball" },
-    new Games() { ID= 4, Text= "Cricket" },
-    new Games() { ID= 5, Text= "Football" },
-    new Games() { ID= 6, Text= "Golf" },
-    new Games() { ID= 7, Text= "Hockey" },
-    new Games() { ID= 8, Text= "Rugby"},
-    new Games() { ID= 9, Text= "Snooker" },
-    new Games() { ID= 10, Text= "Tennis"},
+    public int?[] value { get; set; } = new int?[] { 3 };
+    public class Games
+    {
+        public int? ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> 
+    {
+        new Games() { ID= 1, Text= "American Football" },
+        new Games() { ID= 2, Text= "Badminton" },
+        new Games() { ID= 3, Text= "Basketball" },
+        new Games() { ID= 4, Text= "Cricket" },
+        new Games() { ID= 5, Text= "Football" },
+        new Games() { ID= 6, Text= "Golf" },
+        new Games() { ID= 7, Text= "Hockey" },
+        new Games() { ID= 8, Text= "Rugby"},
+        new Games() { ID= 9, Text= "Snooker" },
+        new Games() { ID= 10, Text= "Tennis"},
     };
 }
-
 
 {% endhighlight %}
 {% endtabs %}

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Toast component and much more details.
+title: Accessibility in Blazor Toast | Syncfusion
+description: Learn how Blazor Toast supports accessibility with ARIA roles, keyboard navigation, and screen readers.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Accessibility in Blazor Toast Component
+# Accessibility in Blazor Toast
 
-The [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component has been designed with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/practices/) specifications in mind by applying the prompt WAI-ARIA roles, states, and properties with the keyboard support. It helps users who use assistive WAI-ARIA accessibility support, which is achieved using attributes.
+The [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component has been designed with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/practices/) specifications in mind by applying the proper WAI-ARIA roles, states, and properties with the keyboard support. It helps users who use assistive WAI-ARIA accessibility support, which is achieved using attributes.
 
 It provides information about the elements in a document for assistive technology.
 
@@ -21,7 +21,7 @@ The accessibility compliance for the Blazor Toast component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | AA |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
@@ -76,14 +76,14 @@ The Blazor Toast component implements the keyboard navigation support by using t
 
 ```
 
-![Accessibility in Blazor Toast](./images/blazor-toast-accessibility.png)
+![Accessibility in Blazor Toast](./images/blazor-toast-accessibility.webp)
 
 ## Ensuring accessibility
 
 The Blazor Toast component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Toast component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/toast) in a new window to evaluate the accessibility of the Toast component with accessibility tools.
+The accessibility compliance of the Blazor Toast component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/toast) in a new window to evaluate the accessibility of the Blazor Toast component with accessibility tools.
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Validation in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Validation in Syncfusion Blazor TextBox component and much more details.
+title: Validation in Blazor TextBox | Syncfusion
+description: Apply error, warning, or success visual states to Blazor TextBox using CssClass for validation styling.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Validation in Blazor TextBox Component
+# Validation in Blazor TextBox
 
-The TextBox supports three types of validation styles, namely `error`, `warning`, and `success`. These are visual states only and do not implement validation logic. Apply the corresponding classes—`.e-error`, `.e-warning`, or `.e-success`—to the component’s wrapper (added via the CssClass property) to change the appearance based on validation outcome. For more information, see the CssClass API reference.
+The Blazor TextBox supports three types of validation styles, namely `error`, `warning`, and `success`. These are visual states only and do not implement validation logic. Apply the corresponding classes—`.e-error`, `.e-warning`, or `.e-success`—to the component’s wrapper (added via the CssClass property) to change the appearance based on validation outcome. For more information, see the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) API reference.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -24,24 +24,25 @@ The TextBox supports three types of validation styles, namely `error`, `warning`
 <SfTextBox Placeholder="Enter your address" CssClass="e-warning"></SfTextBox>
 ```
 
-![Validation in Blazor TextBox](./images/blazor-textbox-validation.png)
+![Validation in Blazor TextBox](./images/blazor-textbox-validation.webp)
 
-## Limit no of character count
+## Limit the number of characters
 
-Limit the number of characters by setting the `maxlength` attribute using the HtmlAttributes property. This enforces a client-side input limit and complements (but does not replace) server-side or model validation.
+Limit the number of characters by setting the `maxlength` attribute using the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_HtmlAttributes) property. This enforces a client-side input limit and complements (but does not replace) server-side or model validation.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 <SfTextBox Placeholder='First Name' HtmlAttributes="@htmlattribute"></SfTextBox>
 @code {
-   Dictionary<string, object> htmlattribute = new Dictionary<string, object>() 
-    { 
-           { "maxlength", "10" }, 
+   Dictionary<string, object> htmlattribute = new Dictionary<string, object>()
+    {
+           { "maxlength", "10" },
+           { "minlength", "2" },
     };
 }
 ```
 
-TextBox supports to set the attributes directly also.
+Blazor TextBox supports setting the attributes directly as well.
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 <SfTextBox Placeholder='First Name' maxlength="10"></SfTextBox>
@@ -49,4 +50,4 @@ TextBox supports to set the attributes directly also.
 
 ## See also
 
-* [Create Edit Forms with FluentValidation and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components](https://www.syncfusion.com/blogs/post/create-edit-forms-with-fluentvalidation-and-syncfusion-blazor-components.aspx)
+* [Create Edit Forms with FluentValidation and Blazor Components](https://www.syncfusion.com/blogs/post/create-edit-forms-with-fluentvalidation-and-syncfusion-blazor-components)

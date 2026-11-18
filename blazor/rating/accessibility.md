@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Accessibility in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about accessibility and keyboard interaction in Syncfusion Rating component and much more.
+title: Accessibility in Blazor Rating | Syncfusion
+description: Learn how Blazor Rating supports accessibility using ARIA roles, keyboard navigation, and screen reader support for inclusive rating controls.
 platform: Blazor
 control: Rating
 documentation: ug
 ---
 
-# Accessibility in Blazor Rating component
+# Accessibility in Blazor Rating
 
-The Blazor Rating component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Rating component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Rating component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full support"> |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | AA |
 | [Section 508 Support](../common/accessibility#accessibility-standards) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full support"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full support"> |
 | [Right-To-left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Full support"> |
@@ -45,7 +45,7 @@ The Blazor Rating component follows the [WAI-ARIA slider pattern](https://www.w3
 | ------------ | ----------------------- |
 | `role=slider` | Defines an input where the user selects a value from within a specified range. |
 | `role=button` | Indicates that the reset control is clickable and resets the rating to its minimum value. |
-| `aria-label` | Provides an accessible name for the Rating component. |
+| `aria-label` | Provides an accessible name for the Blazor Rating component. |
 | `aria-valuemin` | Defines the minimum rating value. |
 | `aria-valuemax` | Defines the maximum rating value. |
 | `aria-valuenow` | Announces the current rating value. |
@@ -71,4 +71,4 @@ The accessibility compliance of the Blazor Rating component is demonstrated in t
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

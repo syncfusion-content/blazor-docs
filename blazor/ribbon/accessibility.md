@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Ribbon Component | Syncfusion
-description: Checkout and learn about Accessibility in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
-platform: Blazor
+title: Accessibility in Blazor Ribbon | Syncfusion
+description: Learn how the Blazor Ribbon supports accessibility with WCAG 2.2, ADA, and Section 508 standards, including ARIA roles and keyboard navigation.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Accessibility in Blazor Ribbon component
+# Accessibility in Blazor Ribbon
 
 The Ribbon component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -15,7 +15,7 @@ The accessibility compliance for the Ribbon component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | AA |
 | [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> |
 | Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
@@ -116,4 +116,4 @@ The Ribbon component's accessibility levels are ensured through an [accessibilit
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

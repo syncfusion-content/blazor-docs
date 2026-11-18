@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Placeholder and FloatLabel in Syncfusion Blazor MultiSelect component and more.
+title: Blazor MultiSelect Placeholder and Float Label | Syncfusion
+description: Add placeholder hints and floating labels to Blazor MultiSelect Dropdown input fields and form controls.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Placeholder and Float Label in MultiSelect
+# Placeholder and Float Label in Blazor MultiSelect Dropdown
 
 ## Placeholder
 
@@ -19,7 +19,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor MultiSelect with placeholder](./images/placeholder-and-floatlabel/blazor_MultiSelect_placeholder.png)
+![Blazor MultiSelect Dropdown with placeholder](./images/placeholder-and-floatlabel/blazor_MultiSelect_placeholder.webp)
 
 ## Color of the placeholder text
 
@@ -31,9 +31,9 @@ Change the color of the placeholder by targeting its CSS class `input.e-multisel
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with color placeholder](./images/style/blazor_multiselect_placeholder-color.png)
+![Blazor MultiSelect Dropdown with color placeholder](./images/style/blazor_multiselect_placeholder-color.webp)
 
-## Add mandatory indicator using placeholder
+## Add a mandatory indicator using the placeholder
 
 Add a mandatory indicator “*” to the floating label by targeting the `.e-float-text::after` selector and setting the `content` style.
 
@@ -43,13 +43,13 @@ Add a mandatory indicator “*” to the floating label by targeting the `.e-flo
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with mandatory indicator placeholder](./images/style/blazor_multiselect_placeholder-with-mandatory.png)
+![Blazor MultiSelect Dropdown with mandatory indicator placeholder](./images/style/blazor_multiselect_placeholder-with-mandatory.webp)
 
 ## FloatLabel
 
 Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FloatLabelType) property to control the floating label behavior of the MultiSelect. When enabled, the placeholder text moves above the input according to the specified mode. FloatLabelType applies only when a Placeholder is defined. The default value is `Never`.
 
-The floating label supports the types of actions as follow.
+The floating label supports the following types of actions:
 
 Type     | Description
 ------------ | -------------
@@ -67,7 +67,7 @@ The following example demonstrates `FloatLabelType="Auto"`:
 
 ![Blazor MultiSelect Dropdown with FloatLabelType property](./images/style/blazor_multiselect_floatLabelType-property.gif)
 
-## Customizing the float label element’s focusing color
+## Customizing the float label element's focusing color
 
 Customize the component color when it is focused by targeting its CSS class `.e-input-focus::after`, which indicates the input element when it is focused, and set the desired color to the `background` property.
 
@@ -77,4 +77,6 @@ Customize the component color when it is focused by targeting its CSS class `.e-
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown focus color](./images/style/blazor_multiselect_focus-color.png)
+![Blazor MultiSelect Dropdown focus color](./images/style/blazor_multiselect_focus-color.webp)
+
+N> The above example works correctly with the Material3 theme. If you use a different theme, you may need to adjust the CSS classes accordingly.

@@ -25,6 +25,6 @@
   };
     public void OnValueChange(ChangeEventArgs<string, Games> args)
     {
-        Console.WriteLine("The complete data of the selected value is: ", args.ItemData);
+        Console.WriteLine($"Selected - ID: {args.ItemData.ID}, Game: {args.ItemData.Text}");
     }
 }

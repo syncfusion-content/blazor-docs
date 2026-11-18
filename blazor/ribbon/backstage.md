@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Backstage in Blazor Ribbon Component | Syncfusion
-description: Checkout and learn about Backstage in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
-platform: Blazor
+title: Backstage in Blazor Ribbon | Syncfusion
+description: Learn how to add a Backstage view in the Blazor Ribbon to display application-level information and settings like user details and options pages.
 control: Ribbon
+platform: Blazor
 documentation: ug
 ---
 
-# Backstage in Blazor Ribbon component
+# Backstage in Blazor Ribbon
 
 The Ribbon component supports a backstage view as an enhancement to the traditional file menu. Backstage view can be used to display options like application settings, user details, and more. It can be configured using the [RibbonBackstageMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonBackstageMenuSettings.html) tag directive.
 
@@ -205,7 +205,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Items](./images/backstage/backstage_items.png)
+![Ribbon Backstage Items](./images/backstage/backstage_items.webp)
 
 ## Adding footer items
 
@@ -409,7 +409,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Footer Items](./images/backstage/backstage_footer.png)
+![Ribbon Backstage Footer Items](./images/backstage/backstage_footer.webp)
 
 ## Adding separator
 
@@ -614,7 +614,7 @@ RenderFragment RenderWrapperContent(string icon, string name, string description
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Separator](./images/backstage/backstage_separator.png)
+![Ribbon Backstage Separator](./images/backstage/backstage_separator.webp)
 
 ## Back button
 
@@ -761,7 +761,7 @@ You can use the [BackButtonSettings](https://help.syncfusion.com/cr/blazor/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Backbutton](./images/backstage/backstage_backbutton.png)
+![Ribbon Backstage Backbutton](./images/backstage/backstage_backbutton.webp)
 
 ## Template
 
@@ -1002,7 +1002,7 @@ You can customize the backstage menu items and their content using the [Template
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Backstage Template](./images/backstage/backstage_template.png)
+![Ribbon Backstage Template](./images/backstage/backstage_template.webp)
 
 ## Setting width and height
 

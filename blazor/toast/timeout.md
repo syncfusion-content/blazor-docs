@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Timeout in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about timeout in Syncfusion Blazor Toast component and much more details.
+title: Timeout in Blazor Toast | Syncfusion
+description: Set Blazor Toast display duration with Timeout and ExtendedTimeOut, or close manually with ShowCloseButton.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Timeout in Blazor Toast Component
+# Timeout in Blazor Toast
 
 The toast can be expired based on the `Timeout` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.
 
@@ -84,7 +84,7 @@ N> The process can be terminated by using the `ShowCloseButton` property for des
 
 ```
 
-![TimeOut in Blazor Toast](./images/blazor-toast-timeout.png)
+![TimeOut in Blazor Toast](./images/blazor-toast-timeout.webp)
 
 ## Static toast
 
@@ -125,4 +125,4 @@ Auto hiding can be prevented in a toast as visible like static by setting zero (
 
 ```
 
-![TimeOut in Blazor Static Toast](./images/blazor-static-toast-timeout.png)
+![TimeOut in Blazor Static Toast](./images/blazor-static-toast-timeout.webp)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about tooltip in Syncfusion Blazor Kanban component and much more details.
+description: Explore tooltip support in the Syncfusion Blazor Kanban component, including enabling tooltips and customizing card tooltip content with templates.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -71,4 +71,4 @@ N> To display tooltips on custom elements within the Kanban board, assign the `e
 
 ```
 
-![Tooltip displayed on Blazor Kanban card showing task summary](./images/blazor-kanban-tooltip.png)
+![Tooltip displayed on Blazor Kanban card showing task summary](./images/blazor-kanban-tooltip.webp)

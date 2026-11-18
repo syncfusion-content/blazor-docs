@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Setting in Blazor DropDownList Component | Syncfusion
-description: Checkout and learn here all about Popup Setting in Syncfusion Blazor DropDown List component and much more.
+title: Popup Setting in Blazor Dropdown List | Syncfusion®
+description: Customize Blazor Dropdown List popup dimensions, resize behavior, z-index, text overflow, and open-close behavior.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Popup Setting in Dropdown List
+# Popup Setting in Blazor Dropdown List
 
 ## Popup resize
 
@@ -33,9 +33,9 @@ In the following sample, `PopupWidth` is set to `300px`.
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized popup width](./images/popup-setting/blazor_dropdown_popup-width.png)
+![Blazor DropDownList with customized popup width](./images/popup-setting/blazor_dropdown_popup-width.webp)
 
-## Handling TextOverflow 
+## Handling text overflow
 
 When the popup width is smaller than the item text, the `text-overflow: ellipsis` style is applied automatically to truncate long text with an ellipsis.
 
@@ -47,7 +47,7 @@ In the following sample, `PopupWidth` is set to `100px`, so ellipsis is automati
 
 {% endhighlight %}
 
-![Text overflow handling in Blazor DropDownList](./images/popup-setting/blazor_dropdown_text-overflow.png)
+![Text overflow handling in Blazor DropDownList](./images/popup-setting/blazor_dropdown_text-overflow.webp)
 
 ## Change the popup height
 
@@ -59,7 +59,7 @@ Customize the height of the popup using the [PopupHeight](https://help.syncfusio
 
 {% endhighlight %}
 
-![Blazor DropDownList with customized popup height](./images/popup-setting/blazor_dropdown_popup-height.png)
+![Blazor DropDownList with customized popup height](./images/popup-setting/blazor_dropdown_popup-height.webp)
 
 ## Change the popup z-index
 
@@ -75,7 +75,7 @@ Show the popup on initial render by invoking [ShowPopupAsync()](https://help.syn
 
 {% endhighlight %}
 
-![Blazor DropDownList with popup shown on initial loading](./images/popup-setting/blazor_dropdown_popup-initial-loading.png)
+![Blazor DropDownList with popup shown on initial loading](./images/popup-setting/blazor_dropdown_popup-initial-loading.webp)
 
 ## Preventing opening and closing
 
@@ -87,7 +87,7 @@ Prevent the popup from opening or closing by setting the event argument’s canc
 
 {% endhighlight %}
 
-![Blazor DropDownList with prevented opening and closing](./images/popup-setting/blazor_dropdown_preventing-opening-closing.png)
+![Blazor DropDownList with prevented opening and closing](./images/popup-setting/blazor_dropdown_preventing-opening-closing.webp)
 
 The following events are used to trigger when opening and closing popup.
 
@@ -142,7 +142,7 @@ Adjust the popup height based on available viewport space by handling the window
 {% endhighlight %}
 
 {% tabs %}
-{% highlight razor tabtitle="Layout.razor" %}
+{% highlight razor tabtitle="App.razor" %}
 
 <script>
     window.addEventListener("resize", function (e) {
@@ -174,3 +174,45 @@ You can programmatically open and close the popup by accessing the `ShowPopupAsy
 {% endhighlight %} 
 
 ![Show or hide popup programmatically in Blazor DropDownList](./images/popup-setting/blazor_dropdown_show-or-hide-popup.gif)
+
+## Render popup in a custom container
+
+Use the `AppendTo` property to render the DropDownList popup inside a specific container instead of the default `document.body`. This is useful when the component is placed inside dialogs, side panels, containers with overflow restrictions, or custom stacking contexts.
+
+Specify a valid CSS selector in the `AppendTo` property. When the selector matches an element, the popup is appended to that element. If the selector is null, empty, or no matching element is found, the popup is rendered in the default location.
+
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.DropDowns
+
+<div id="popupHost">
+    <SfDropDownList TValue="string"
+                    TItem="GameFields"
+                    DataSource="@Games"
+                    AppendTo="@AppendTarget"
+                    Placeholder="Select a game">
+        <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+    </SfDropDownList>
+</div>
+
+@code {
+    private string AppendTarget = "#popupHost";
+
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    private List<GameFields> Games = new()
+    {
+        new() { ID = "Game1", Text = "American Football" },
+        new() { ID = "Game2", Text = "Badminton" },
+        new() { ID = "Game3", Text = "Basketball" },
+        new() { ID = "Game4", Text = "Cricket" }
+    };
+}
+
+{% endhighlight %}
+
+N> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup element will be appended to `document.body`.

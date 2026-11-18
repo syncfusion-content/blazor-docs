@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adaptors in Blazor DataManager Component | Syncfusion
+title: Adaptors in Blazor DataManager Component | Syncfusion®
 description: Checkout and learn here all about Adaptors in Syncfusion Blazor DataManager component and much more.
 platform: Blazor
 control: DataManager
@@ -48,7 +48,7 @@ To configure the `UrlAdaptor`, set the [Adaptor](https://help.syncfusion.com/cr/
 @using Syncfusion.Blazor.Grids
 
 <SfGrid TValue="EmployeeData" ID="Grid" AllowPaging="true">
-    <SfDataManager Url="https://blazor.syncfusion.com/services/development/api/gridurldata" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/gridurldata" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridColumns>
         <GridColumn Field="@nameof(EmployeeData.EmployeeID)" HeaderText="Employee ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field="@nameof(EmployeeData.EmployeeName)" HeaderText="First Name" Width="130"></GridColumn>
@@ -349,7 +349,7 @@ The `GraphQLAdaptor` translates DataManager operations into a GraphQL request us
 
 ### Performing CRUD operation using mutation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid integrates with GraphQL services through `GraphQLAdaptor` to perform **Create**, **Update**, **Delete**, and optional **Batch** operations. Mutations are defined in `GraphQLAdaptorOptions.Mutation` and invoked automatically by Grid editing. The server must expose resolvers that accept mutation variables and return a JSON formatted response with properties representing the updated entity or collection.
+The Blazor DataGrid integrates with GraphQL services through `GraphQLAdaptor` to perform **Create**, **Update**, **Delete**, and optional **Batch** operations. Mutations are defined in `GraphQLAdaptorOptions.Mutation` and invoked automatically by Grid editing. The server must expose resolvers that accept mutation variables and return a JSON formatted response with properties representing the updated entity or collection.
 
 **Mutation Queries**
 

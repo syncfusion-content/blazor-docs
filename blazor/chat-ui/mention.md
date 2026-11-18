@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Mention Integration in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Mention Integration with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Mention Integration in Blazor Chat UI | Syncfusion®
+description: Enable user mentions in Blazor Chat UI with customizable MentionChar trigger (@) using the MentionUsers property for tagged user references.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Mention Integration in Blazor Chat UI component
+# Mention Integration in Blazor Chat UI
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Chat UI allows users to mention others in messages using the `@` character, which displays a dropdown for selecting users. The following sections explain how to configure mentions.
+The Chat UI allows users to mention others in messages using the `@` character, which displays a dropdown for selecting users. The following sections explain how to configure mentions.
 
 ## Configure Mention Users
 
@@ -42,7 +42,7 @@ Use the [MentionUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor Chat UI MentionUsers](./images/MentionUsers.png)
+![Blazor Chat UI MentionUsers](./images/MentionUsers.webp)
 
 ## Customize the Mention trigger character
 
@@ -76,7 +76,7 @@ Use the [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 
 ```
 
-![Blazor Chat UI MentionCharacter](./images/MentionCharacter.png)
+![Blazor Chat UI MentionCharacter](./images/MentionCharacter.webp)
 
 ## Predefined Mentions in Messages
 
@@ -110,7 +110,7 @@ Use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Interacti
 
 ```
 
-![Blazor Chat UI MentionMessage](./images/MentionMessage.png)
+![Blazor Chat UI MentionMessage](./images/MentionMessage.webp)
 
 ## Configure mentionSelect
 

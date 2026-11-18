@@ -1,13 +1,13 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about CheckBox in Syncfusion Blazor TreeView component and much more details.
+title: CheckBox in Blazor TreeView | Syncfusion
+description: Show checkboxes and enable parent-child auto check states in Blazor TreeView with built-in properties.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# CheckBox in Blazor TreeView Component
+# CheckBox in Blazor TreeView
 
 The Blazor TreeView component enables multiple node selection through checkboxes by activating the [`ShowCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. When this property is enabled, a checkbox appears before the text of each TreeView node.
 
@@ -101,11 +101,11 @@ For independent checked states, allowing child nodes to be checked or unchecked 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhSitCBUvmzMcKy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBHZcithchWCBHV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.webp)" %}
 
 ## Check Nodes through Data Binding
 
-A specific node is checked by setting the [`IsChecked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldSettings-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldSettings_1_IsChecked) field to `true` for the corresponding node in the data source. This field specifies the checked state of the TreeView node.
+A specific node is checked by setting the [`IsChecked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_IsChecked) field to `true` for the corresponding node in the data source. This field specifies the checked state of the TreeView node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -186,7 +186,7 @@ A specific node is checked by setting the [`IsChecked`](https://help.syncfusion.
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZreMtWrAblXlpWM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLxXcMDrmVPWYpE?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Check nodes using CheckedNodes property
 
@@ -275,7 +275,7 @@ The Blazor TreeView component enables checking specific nodes upon initial rende
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBSMZsVqvvPrMXI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/checkednodes.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBHDmiXVmqDyUJA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView](./images/checkednodes.webp)" %}
 
 ## Check and Uncheck All Nodes
 
@@ -380,7 +380,7 @@ The example demonstrates the usage of these methods within the context of a butt
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrICXiVgusUIOKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView](./images/check-uncheck.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVxjciZLQQZCPrg?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView](./images/check-uncheck.webp)" %}
 
 ## Get Checked Nodes
 
@@ -535,7 +535,7 @@ The Blazor TreeView component provides the capability to pre-select specific nod
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVyCtMrKkBdTNdz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Get checked nodes](./images/blazor-treeview-get-checked-nodes.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBdNQiZBclsgJfJ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Get checked nodes](./images/blazor-treeview-get-checked-nodes.webp)" %}
 
 ## Single Selection with CheckBox
 
@@ -633,7 +633,7 @@ The Blazor TreeView component facilitates single selection of nodes with checkbo
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIiNCBAEUoTLhN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrxjwWNrvtzsgPk?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Hide CheckBox for Parent Nodes
 
@@ -740,11 +740,11 @@ The Blazor TreeView component can render checkboxes before each node when [`Show
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLosZWBgaTqlQtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Hide CheckBox for parent nodes](./images/blazor-treeview-remove-parent-checkbox.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrdZmMZBFjGvZPz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Hide CheckBox for parent nodes](./images/blazor-treeview-remove-parent-checkbox.webp)" %}
 
 ## Cancel the Check Action
 
-The Blazor TreeView component offers the ability to cancel the check action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeCheckEventArgs.html#Syncfusion_Blazor_Navigations_NodeCheckEventArgs_Cancel) argument value as true within the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event. This will prevent the check action from occurring within the TreeView component.
+The Blazor TreeView component offers the ability to cancel the check action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeCheckEventArgs.html#Syncfusion_Blazor_Navigations_NodeCheckEventArgs_Cancel) argument value as true within the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event. This will prevent the check action from occurring within the Blazor TreeView component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

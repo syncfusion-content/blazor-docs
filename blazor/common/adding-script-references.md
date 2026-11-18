@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Reference script files for Syncfusion Blazor
-description: Add Syncfusion Blazor script references via CDN, static web assets, or the Custom Resource Generator (CRG).
+title: Reference script files for Blazor | Syncfusion®
+description: Add Blazor script references via CDN, static web assets, or the Custom Resource Generator (CRG) and much more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,18 +9,18 @@ documentation: ug
 
 # Reference scripts in Blazor applications
 
-This page explains script isolation and how to reference Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts from the CDN, static web assets, and the Custom Resource Generator (CRG).
+This page explains script isolation and how to reference Blazor scripts from the CDN, static web assets, and the Custom Resource Generator (CRG).
 
 N> JavaScript interop files are required for features that cannot be implemented natively in Blazor.
 
 ## CDN reference
 
-You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts using the CDN resources.
+You can refer the Blazor scripts using the CDN resources.
 
 * For **.NET 8, .NET 9, .NET 10, and .NET 11** Blazor Web App (any render mode: Server, WebAssembly, or Auto), add scripts in `~/Components/App.razor`.
 * For a **Blazor WebAssembly (standalone) App**, add scripts in `~/wwwroot/index.html`.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on the CDN per version. Ensure the version in the URLs matches the NuGet package version used in the application.
+Blazor components are available on the CDN per version. Ensure that the version in the URLs matches the NuGet package version used in the application.
 
 <table>
 <tr>
@@ -29,7 +29,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available
 </tr>
 
 <tr>
-<td><p>All components except PDF Viewer (Classic), PDF Viewer & Document Editor</p></td>
+<td><p>All Blazor UI Components</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -38,95 +38,30 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min
 
 </td>
 </tr>
-
-<tr>
-<td><p>PDF Viewer (Classic)</p></td>
-<td>
-
-{% highlight cshtml %}
-https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js
-{% endhighlight %}
-
-</td>
-</tr>
-
-<tr>
-<td><p>Document Editor</p></td>
-<td>
-
-{% highlight cshtml %}
-https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js
-{% endhighlight %}
-
-</td>
-</tr>
-
-<tr>
-<td><p>PDF Viewer</p></td>
-<td>
-
-{% highlight cshtml %}
-https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfpdfviewer.min.js
-{% endhighlight %}
-
-</td>
-</tr>
-
-<tr>
-<td><p>Smart PDF Viewer</p></td>
-<td>
-
-{% highlight cshtml %}
-https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfsmartpdfviewer.min.js
-{% endhighlight %}
-
-</td>
-</tr>
 </table>
 
 ```html
 <head>
-    ....
+    ...
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
 
-If you are using `PDF Viewer (Classic)`,`PDF Viewer`, `Smart PDF Viewer` or `DocumentEditor`, ensure to add additional script references as follows,
-
-```html
-<head>
-    ....
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
-</head>
-```
-
-Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
+Additionally, Blazor components provide the latest scripts on the CDN without versioning. You can use this in a development environment if you want to always use the latest version of the scripts. It is not recommended to use this in a production environment.
 
 | Component | CDN Script Reference |
 | --- | --- |
-|  All components except PDF Viewer (Classic), PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
-| PDF Viewer (Classic)| https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
-| Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
-| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
-| Smart PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfsmartpdfviewer.min.js |
-
-
-N> To add custom PDF Viewer script file in your application, refer [How to refer SfPdfViewer script file in application](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/how-to/refer-sfpdfviewer-script-in-application).
-
-N> To add custom Smart PDF Viewer script file in your application, refer [How to refer SfSmartPdfViewer script file in application](https://help.syncfusion.com/document-processing/pdf/smart-pdf-viewer/blazor/how-to/refer-sfsmartpdfviewer-script-in-application).
+| All Blazor UI Components | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
 
 ## Static web assets
 
-You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts from NuGet packages using static web assets.
+You can refer to the Blazor scripts from NuGet packages by using static web assets.
 
 ### Enable static web assets usage
 
-To use static web assets, call [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-9.0) in the app's **~/Program.cs** file.
+To use static web assets, call [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-10.0) in the app's **~/Program.cs** file.
 
-N> For a **Blazor Web App** (interaction mode: Auto) and **Blazor WebAssembly App**, call `UseStaticFiles` in the **Server** project.
+N> For a **Blazor Web App** (render mode: Auto) and a **Blazor WebAssembly App**, call `UseStaticFiles` in the **Server** project.
 
 ### Reference scripts from static web assets
 
@@ -135,29 +70,113 @@ N> For a **Blazor Web App** (interaction mode: Auto) and **Blazor WebAssembly Ap
     ```html
     <head>
         ...
-        <script  src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>
+        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
 
-* If using the **PDF Viewer (Classic)**, **PDF Viewer**, **Smart PDF Viewer**, or **Document Editor** components, use the code below to reference scripts from static web assets.
+### Prevent stale cached assets using asset fingerprinting
 
-    ```html
-    <head>
-        ...
-       <script  src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
-       <script  src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
-       <script  src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js"  type="text/javascript"></script>
-       <script  src="_content/Syncfusion.Blazor.SfSmartPdfViewer/scripts/syncfusion-blazor-sfsmartpdfviewer.min.js" type="text/javascript"></script>
-    </head>
-    ```
+Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` to improve load times. After the Blazor NuGet packages are upgraded, a browser can continue to use the previously cached script while the server runs the newer Blazor assemblies. This version mismatch can cause runtime errors. Asset fingerprinting prevents this issue by generating a unique URL whenever the file content changes, so browsers automatically download the latest assets after an upgrade.
 
-    N> The PDF Viewer and Document Editor component scripts are available in static web assets starting from version 19.3.*.
+Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0#mapstaticassets) and the `@Assets[]` resource collection. Static web assets from Razor class libraries, such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, are included in the fingerprinting process.
+
+1. Call `MapStaticAssets()` in the **~/Program.cs** file. For a **Blazor Web App**, call it in the **Server** project.
+
+    {% tabs %}
+    {% highlight cs tabtitle="Program.cs" hl_lines="6" %}
+
+    var app = builder.Build();
+
+    app.UseHttpsRedirection();
+    app.UseAntiforgery();
+
+    app.MapStaticAssets();
+    app.MapRazorComponents<App>()
+        .AddInteractiveServerRenderMode();
+
+    app.Run();
+
+    {% endhighlight %}
+    {% endtabs %}
+
+2. Reference the theme and script assets through the `@Assets` resource collection. Add the theme stylesheet reference as described in the [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) section and place it at the end of the `<head>` section in the **~/Components/App.razor** file.
+
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
+
+    <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
+
+    {% endhighlight %}
+    {% endtabs %}
+
+    Add the script reference at the end of the `<body>` section in the same file.
+
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
+
+    <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
+
+    {% endhighlight %}
+    {% endtabs %}
+
+The `@Assets[]` resource collection requires .NET 9 or later. The following table lists where to apply the fingerprinted references for each application type.
+
+| Application type | Call `MapStaticAssets()` in | Add the references in | Reference syntax |
+|---|---|---|---|
+| Blazor Web App (Server, WebAssembly, or Auto render modes) | **~/Program.cs** of the **Server** project | **~/Components/App.razor** of the **Server** project | `@Assets["_content/..."]` |
+| Blazor Server App | **~/Program.cs** | Host page that contains the `<head>` and `<body>` elements, such as **~/Pages/_Host.cshtml** or **~/Components/App.razor** | `@Assets["_content/..."]` |
+| Blazor WebAssembly standalone App | Not applicable | **~/wwwroot/index.html** | The `@Assets` resource collection is not available. Use the [alternative cache-busting approaches](#alternative-cache-busting-approaches). |
+
+The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
+
+`MapStaticAssets()` serves only the assets listed in the static assets manifest that is generated during build and publish. To serve files that are not part of the manifest, call `UseStaticFiles()` along with `MapStaticAssets()`. For more information, refer to [Static files in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0).
+
+#### Runtime behavior of fingerprinted Blazor assets
+
+* The `syncfusion-blazor.min.js` bundle does not load additional Blazor JavaScript files relative to its own URL. Serving the script through a fingerprinted URL therefore does not affect component initialization or rendering.
+* Blazor theme files, such as `fluent2.css` and `bootstrap5.css`, are self-contained and do not depend on external fonts or images referenced through relative URLs for normal rendering. Serving the stylesheet through a fingerprinted URL therefore does not affect theme rendering. If a customized stylesheet references additional assets through relative URLs, reference those assets using `@Assets[]` or absolute paths.
+
+#### Alternative cache-busting approaches
+
+The `@Assets[]` resource collection is available in **Blazor Web App** and **Blazor Server** applications that target .NET 9 or later. For applications that cannot use `MapStaticAssets()`, such as applications targeting earlier .NET versions or standalone **Blazor WebAssembly** applications, use one of the following approaches.
+
+**Version query string**
+
+Append a version query string to the script and stylesheet references, and update it after each Blazor package upgrade. This approach works in all application types. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css?v=35.1.40" rel="stylesheet" />
+
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> In standalone **Blazor WebAssembly** applications, reference Blazor assets using paths that begin with `_content/`. The `~/` prefix is not supported in **wwwroot/index.html** because the file is not processed by Razor.
+
+**The asp-append-version tag helper**
+
+In applications that render **.cshtml** files, such as a Blazor Server application that uses the **~/Pages/_Host.cshtml** host page, use the `asp-append-version` tag helper. It uses [IFileVersionProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.viewfeatures.ifileversionprovider?view=aspnetcore-10.0) to append a content-based hash to the URL, ensuring that browsers request the updated file whenever the file content changes.
+
+{% tabs %}
+{% highlight cshtml tabtitle="_Host.cshtml" %}
+
+<script src="~/_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" asp-append-version="true"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+The tag helper is processed on the server. Therefore, it cannot be used in static files such as the **index.html** file of a standalone **Blazor WebAssembly** application, or in **.razor** files.
+
+Asset fingerprinting is still the recommended approach when the application supports it. The asset URL is generated automatically from the file content, so no version number needs to be updated manually after upgrading the Blazor packages, and cached client-side assets cannot get out of sync with the upgraded Blazor assemblies.
 
 ## Individual component script references
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides component-wise scripts which can be referenced externally in application. If you are using minimal components, then you can import the selected components scripts via CDN or Static web assets directly without using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) instead of referencing single script with all components.
+Blazor components provide component-wise scripts that can be referenced externally in the application. If you are using only a few components, you can directly reference the required component scripts from the CDN or static web assets without using the [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator), instead of referencing the single script that includes all components.
 
-You can add a component script reference in one of the following ways based on usage,
+You can add a component script reference in one of the following ways based on usage:
 
 <table>
 <tr>
@@ -166,7 +185,7 @@ You can add a component script reference in one of the following ways based on u
 </tr>
 
 <tr>
-<td><p>Refer from Static web assets</p></td>
+<td><p>Refer from static web assets</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -181,7 +200,7 @@ You can add a component script reference in one of the following ways based on u
 </tr>
 
 <tr>
-<td><p>Refer scripts from CDN</p></td>
+<td><p>Refer from CDN</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -196,7 +215,7 @@ You can add a component script reference in one of the following ways based on u
 </tr>
 </table>
 
-The following table lists components and their script file names.
+The following table lists the components and their script file names.
 
 <table>
     <tr>
@@ -208,16 +227,32 @@ The following table lists components and their script file names.
         <td>sf-textbox.min.js</td>
     </tr>
     <tr>
-        <td>NumericTextBox</td>
+        <td>TextArea</td>
+        <td>sf-textarea.min.js</td>
+    </tr>
+    <tr>
+        <td>Toggle Switch Button</td>
+        <td>sf-switch.min.js</td>
+    </tr>
+    <tr>
+        <td>Numeric TextBox</td>
         <td>sf-numerictextbox.min.js</td>
     </tr>
     <tr>
-        <td>MaskedTextBox</td>
+        <td>Input Mask</td>
         <td>sf-maskedtextbox.min.js</td>
     </tr>
     <tr>
-        <td>Uploader</td>
+        <td>OTP Input</td>
+        <td>sf-otp-input.min.js</td>
+    </tr>
+    <tr>
+        <td>File Upload</td>
         <td>sf-uploader.min.js</td>
+    </tr>
+    <tr>
+        <td>Range Slider</td>
+        <td>sf-slider.min.js</td>
     </tr>
     <tr>
         <td>Calendar</td>
@@ -228,16 +263,12 @@ The following table lists components and their script file names.
         <td>sf-datepicker.min.js</td>
     </tr>
     <tr>
-        <td>DateTimePicker</td>
+        <td>DateTime Picker</td>
         <td>sf-datepicker.min.js</td>
     </tr>
     <tr>
         <td>DateRangePicker</td>
         <td>sf-daterangepicker.min.js</td>
-    </tr>
-    <tr>
-        <td>DiagramComponent</td>
-        <td>sf-diagramcomponent.min.js</td>
     </tr>
     <tr>
         <td>TimePicker</td>
@@ -252,23 +283,31 @@ The following table lists components and their script file names.
         <td>sf-dropdownlist.min.js</td>
     </tr>
     <tr>
-        <td>DropDownList</td>
+        <td>Dropdown List</td>
         <td>sf-dropdownlist.min.js</td>
     </tr>
     <tr>
-        <td>MultiSelect</td>
+        <td>Multicolumn ComboBox</td>
+        <td>sf-multicolumncombobox.min.js</td>
+    </tr>
+    <tr>
+        <td>MultiSelect Dropdown</td>
         <td>sf-multiselect.min.js</td>
     </tr>
     <tr>
-        <td>DropDownButton</td>
+        <td>Mention</td>
+        <td>sf-mention.min.js</td>
+    </tr>
+    <tr>
+        <td>Dropdown Menu</td>
         <td>sf-drop-down-button.min.js</td>
     </tr>
     <tr>
-        <td>SplitButton</td>
+        <td>Split Button</td>
         <td>sf-drop-down-button.min.js</td>
     </tr>
     <tr>
-        <td>ProgressButton</td>
+        <td>Progress Button</td>
         <td>sf-spinner.min.js</td>
     </tr>
     <tr>
@@ -276,7 +315,7 @@ The following table lists components and their script file names.
         <td>sf-listbox.min.js</td>
     </tr>
     <tr>
-        <td>ColorPicker</td>
+        <td>Color Picker</td>
         <td>sf-colorpicker.min.js</td>
     </tr>
     <tr>
@@ -284,11 +323,19 @@ The following table lists components and their script file names.
         <td>sf-signature.min.js</td>
     </tr>
     <tr>
-        <td>ContextMenu</td>
+        <td>Rating</td>
+        <td>sf-rating.min.js</td>
+    </tr>
+    <tr>
+        <td>Speech to Text</td>
+        <td>sf-speechtotext.min.js</td>
+    </tr>
+    <tr>
+        <td>Context Menu</td>
         <td>sf-contextmenu.min.js</td>
     </tr>
     <tr>
-        <td>Menu</td>
+        <td>Menu Bar</td>
         <td>sf-menu.min.js</td>
     </tr>
     <tr>
@@ -296,7 +343,19 @@ The following table lists components and their script file names.
         <td>sf-breadcrumb.min.js</td>
     </tr>
     <tr>
-        <td>QueryBuilder</td>
+        <td>Carousel</td>
+        <td>sf-carousel.min.js</td>
+    </tr>
+    <tr>
+        <td>Dropdown Tree</td>
+        <td>sf-dropdowntree.min.js</td>
+    </tr>
+    <tr>
+        <td>Stepper</td>
+        <td>sf-stepper.min.js</td>
+    </tr>
+    <tr>
+        <td>Query Builder</td>
         <td>sf-querybuilder.min.js</td>
     </tr>
     <tr>
@@ -308,7 +367,7 @@ The following table lists components and their script file names.
         <td>sf-accordion.min.js</td>
     </tr>
     <tr>
-        <td>Tab</td>
+        <td>Tabs</td>
         <td>sf-tab.min.js</td>
     </tr>
     <tr>
@@ -316,11 +375,11 @@ The following table lists components and their script file names.
         <td>sf-toolbar.min.js</td>
     </tr>
     <tr>
-        <td>Schedule</td>
+        <td>Scheduler</td>
         <td>sf-schedule.min.js</td>
     </tr>
     <tr>
-        <td>BarcodeGenerator</td>
+        <td>Barcode Generator</td>
         <td>sf-barcode.min.js</td>
     </tr>
     <tr>
@@ -328,36 +387,52 @@ The following table lists components and their script file names.
         <td>sf-maps.min.js</td>
     </tr>
     <tr>
-        <td>CircularGauge</td>
+        <td>Circular Gauge</td>
         <td>sf-circulargauge.min.js</td>
     </tr>
     <tr>
-        <td>LinearGauge</td>
+        <td>Linear Gauge</td>
         <td>sf-lineargauge.min.js</td>
+    </tr>
+    <tr>
+        <td>HeatMap</td>
+        <td>sf-heatmap.min.js</td>
     </tr>
     <tr>
         <td>Chart</td>
         <td>sf-chart.min.js</td>
     </tr>
     <tr>
+        <td>3D Chart</td>
+        <td>sf-chart3d.min.js</td>
+    </tr>
+    <tr>
+        <td>Chart Wizard</td>
+        <td>sf-chart-wizard.min.js</td>
+    </tr>
+    <tr>
         <td>CheckBox</td>
         <td>sf-checkbox.min.js</td>
     </tr>
     <tr>
-        <td>AccumulationChart</td>
+        <td>Accumulation Chart</td>
         <td>sf-accumulation-chart.min.js</td>
     </tr>
     <tr>
-        <td>StockChart</td>
+        <td>Stock Chart</td>
         <td>sf-stock-chart.min.js</td>
     </tr>
     <tr>
-        <td>BulletChart</td>
+        <td>Bullet Chart</td>
         <td>sf-bullet-chart.min.js</td>
     </tr>
     <tr>
         <td>Sparkline</td>
         <td>sf-sparkline.min.js</td>
+    </tr>
+    <tr>
+        <td>Sunburst Chart</td>
+        <td>sf-sunburst-chart.min.js</td>
     </tr>
     <tr>
         <td>TreeMap</td>
@@ -368,24 +443,20 @@ The following table lists components and their script file names.
         <td>sf-progressbar.min.js</td>
     </tr>
     <tr>
-        <td>SmithChart</td>
+        <td>Smith Chart</td>
         <td>sf-smith-chart.min.js</td>
     </tr>
     <tr>
-        <td>RangeNavigator</td>
+        <td>Range Selector</td>
         <td>sf-range-navigator.min.js</td>
     </tr>
     <tr>
-        <td>HeatMap</td>
-        <td>sf-heatmap.min.js</td>
+        <td>Sankey</td>
+        <td>sf-sankey.min.js</td>
     </tr>
     <tr>
-        <td>FileManager</td>
+        <td>File Manager</td>
         <td>sf-filemanager.min.js</td>
-    </tr>
-    <tr>
-        <td>Slider</td>
-        <td>sf-slider.min.js</td>
     </tr>
     <tr>
         <td>Tooltip</td>
@@ -396,7 +467,7 @@ The following table lists components and their script file names.
         <td>sf-listview.min.js</td>
     </tr>
     <tr>
-        <td>DashboardLayout</td>
+        <td>Dashboard Layout</td>
         <td>sf-dashboard-layout.min.js</td>
     </tr>
     <tr>
@@ -408,7 +479,7 @@ The following table lists components and their script file names.
         <td>sf-treeview.min.js</td>
     </tr>
     <tr>
-        <td>PivotView</td>
+        <td>Pivot Table</td>
         <td>sf-pivotview.min.js</td>
     </tr>
     <tr>
@@ -424,8 +495,12 @@ The following table lists components and their script file names.
         <td>sf-splitter.min.js</td>
     </tr>
     <tr>
-        <td>Switch</td>
-        <td>sf-switch.min.js</td>
+        <td>Floating Action Button</td>
+        <td>sf-floating-action-button.min.js</td>
+    </tr>
+    <tr>
+        <td>Speed Dial</td>
+        <td>sf-speeddial.min.js</td>
     </tr>
     <tr>
         <td>Toast</td>
@@ -436,11 +511,7 @@ The following table lists components and their script file names.
         <td>sf-dialog.min.js</td>
     </tr>
     <tr>
-        <td>RichTextEditor</td>
-        <td>sf-richtexteditor.min.js</td>
-    </tr>
-    <tr>
-        <td>InPlaceEditor</td>
+        <td>In-Place Editor</td>
         <td>sf-inplaceeditor.min.js</td>
     </tr>
     <tr>
@@ -448,30 +519,46 @@ The following table lists components and their script file names.
         <td>sf-kanban.min.js</td>
     </tr>
     <tr>
-        <td>Gantt</td>
-        <td>sf-gantt.min.js</td>
-    </tr>
-    <tr>
-        <td>PdfViewer</td>
-        <td>sf-pdfviewer.min.js</td>
-    </tr>
-    <tr>
-        <td>ImageEditor</td>
+        <td>Image Editor</td>
         <td>sf-image-editor.min.js</td>
-    </tr>
-    <tr>
-        <td>DocumentEditor</td>
-        <td>sf-documenteditor.min.js</td>
     </tr>
     <tr>
         <td>Pager</td>
         <td>sf-pager.min.js</td>
     </tr>
+    <tr>
+        <td>Diagram</td>
+        <td>sf-diagramcomponent.min.js</td>
+    </tr>
+    <tr>
+        <td>Gantt Chart</td>
+        <td>sf-gantt.min.js</td>
+    </tr>
+    <tr>
+        <td>Ribbon</td>
+        <td>sf-ribbon.min.js</td>
+    </tr>
+    <tr>
+        <td>Rich Text Editor</td>
+        <td>sf-richtexteditor.min.js</td>
+    </tr>
+    <tr>
+        <td>Block Editor</td>
+        <td>sf-blockeditor.min.js</td>
+    </tr>
+    <tr>
+        <td>AI AssistView</td>
+        <td>sf-ai-assistview.min.js</td>
+    </tr>
+    <tr>
+        <td>Chat UI</td>
+        <td>sf-chat-ui.min.js</td>
+    </tr>
 </table>
 
 ## Custom Resource Generator
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides an option to generate component interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+Blazor provides an option to generate component interop scripts by using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) tool. Learn how to [generate component-wise scripts using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 ## See also
 

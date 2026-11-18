@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy a Blazor Web App to IIS | Syncfusion
-description: Learn here all about deploying the Blazor application with Syncfusion Blazor Components to IIS server.
+title: Deploy a Blazor Web App to IIS | Syncfusion®
+description: Learn here all the features about deploying the Blazor application with Blazor Components to IIS server.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Deploy Blazor Web App to IIS server
 
-This section provides information about deploying a Blazor Web applications with the Syncfusion Blazor components to IIS server.
+This section provides information about deploying a Blazor Web applications with the Blazor components to IIS server.
 
 Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio) topic for more information.
 
@@ -23,23 +23,23 @@ Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us
 
 * Open Internet Information Services (IIS) Manager and then right-click on "Sites," followed by selecting "Add Website."
 
-![Add site in IIS](../images/add-site.png)
+![Add site in IIS](../images/add-site.webp)
 
 * In the Add Website dialog, fill in the required field values such as site name, physical path and customized port value and then click OK.
 
 Set the physical path to the location where your sample application is developed.
 
-![Add Website in IIS](../images/add-website.png)
+![Add Website in IIS](../images/add-website.webp)
 
 ## Run the Published Application
 
 * Open Internet Information Services (IIS) Manager. Expand the `Sites` node to verify that the published application is running. Click `Browse` to open the application in your browser.
 
-![Browse application](../images/browser-website.png)
+![Browse application](../images/browser-website.webp)
 
 * Now, application runs in the specified browser port(8080).
 
-![Output-IIS](../images/iis-output.png)
+![Output-IIS](../images/iis-output.webp)
 
 ## See also
 

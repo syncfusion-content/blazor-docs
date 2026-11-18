@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Customization in Blazor DropDown List | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor DropDown List component and much more.
+title: Customization in Blazor Dropdown List | Syncfusion®
+description: Explore Blazor Dropdown List customization options such as opening the popup on focus and other tailored behaviors.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Customization in Blazor DropDown List
+# Customization in Blazor Dropdown List
 
 ## Open Dropdown list dropdown on focus
 
-Automatically open the dropdown by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) method on [Focus](https://blazor.syncfusion.com/documentation/dropdown-list/events#focus) event. The `ShowPopupAsync()` method opens the popup that displays the list of items.
+Automatically open the dropdown by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) method on [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Focus) event. The `ShowPopupAsync()` method opens the popup that displays the list of items.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -43,4 +43,4 @@ Automatically open the dropdown by using [ShowPopupAsync()](https://help.syncfus
 }
 ```
 
-![Blazor Dropdown List Customization](./images/blazor-dropdownlist-customization.png)
+![Blazor Dropdown List Customization](./images/blazor-dropdownlist-customization.webp)

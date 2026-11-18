@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Integration Toolbar with Blazor Signature Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+title: How to integrate Blazor Signature with Toolbar | Syncfusion
+description: Integrate Blazor Signature with Toolbar to enable undo, redo, save, clear, and color actions for a comprehensive editing experience.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# Integration Signature with Toolbar
+# How to integrate Blazor Signature with Toolbar
 
-The Signature component integrates with the toolbar and the interaction performed using the `Changed` event of the toolbar. In that, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) methods were used to enable/disable undo, redo, and clear buttons by checking the undo collection.
+The Blazor Signature component integrates with the toolbar and updates the toolbar button state using the [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Changed) event of the Blazor Signature component. In this integration, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync), and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) methods are used to enable or disable the undo, redo, and clear buttons based on the current state of the signature.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -38,9 +38,9 @@ The Signature component integrates with the toolbar and the interaction performe
                         <SfSplitButton Content="Save" IconCss="e-sign-icons e-save" Disabled="saveDisabled">
                             <SplitButtonEvents Clicked="onSaveClicked" ItemSelected="onSaveType" />
                             <DropDownMenuItems>
-                                <DropDownMenuItem Text="PNG" />
-                                <DropDownMenuItem Text="JPEG" />
-                                <DropDownMenuItem Text="SVG" />
+                                <DropDownMenuItem Text="Png" />
+                                <DropDownMenuItem Text="Jpeg" />
+                                <DropDownMenuItem Text="Svg" />
                             </DropDownMenuItems>
                         </SfSplitButton>
                     </Template>
@@ -174,25 +174,25 @@ The Signature component integrates with the toolbar and the interaction performe
     {
         disabled = args.Checked;
     }
-    private void onSaveClicked(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
+    private async Task onSaveClicked(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
     {
-        signature.SaveAsync();
+        await signature.SaveAsync();
     }
-    private void onSaveType(MenuEventArgs args)
+    private async Task onSaveType(MenuEventArgs args)
     {
         switch (args.Item.Text)
         {
-            case "PNG":
+            case "Png":
                 type = SignatureFileType.Png;
                 break;
-            case "JPEG":
+            case "Jpeg":
                 type = SignatureFileType.Jpeg;
                 break;
-            case "SVG":
+            case "Svg":
                 type = SignatureFileType.Svg;
                 break;
         }
-        signature.SaveAsync(type, "Signature");
+        await signature.SaveAsync(type, "Signature");
     }
 }
 <style>
@@ -364,4 +364,4 @@ The Signature component integrates with the toolbar and the interaction performe
 </style>
 ```
 
-![Blazor Signature Component](../images/blazor-signature-toolbar.PNG)
+![Blazor Signature Component](../images/blazor-signature-toolbar.webp)

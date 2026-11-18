@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Size and Color with Blazor AppBar Component | Syncfusion
-description: Check out and learn about Size and Color with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
+title: Size and Color in Blazor AppBar | Syncfusion®
+description: Set the Blazor AppBar size with the Mode property (Regular, Prominent, or Dense) and choose its color scheme with ColorMode.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Size and Color with Blazor AppBar Component
+# Size and Color in Blazor AppBar
 
 ## Size
 
-The size of the AppBar can be set using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property. The available types of the Blazor AppBar are as follows:
+The size of the Blazor AppBar can be set using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property. By default, the `Mode` property is set to `AppBarMode.Regular`. The [AppBarMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarMode.html) enum exposes three values:
 
 * Regular AppBar
 * Prominent AppBar
@@ -41,7 +41,7 @@ This mode is the default one in which the AppBar is displayed with the default h
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAiVWfLtaWPHyq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Regular Size](./images/regular_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrxtdWWLymgXJjV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Regular Size](./images/regular_appbar.webp)" %}
 
 ### Prominent AppBar
 
@@ -83,15 +83,15 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
     .control-container .prominent-appbar .e-inherit.e-btn:active,
     .control-container .prominent-appbar .e-inherit.e-btn.e-active,
     .control-container .prominent-appbar .e-inherit.e-css.e-btn:hover,
-    .control-container .prominent-appbar .e-inherit.e-css.e-btn:focus
-    .control-container .prominent-appbar .e-inherit.e-css.e-btn:active
+    .control-container .prominent-appbar .e-inherit.e-css.e-btn:focus,
+    .control-container .prominent-appbar .e-inherit.e-css.e-btn:active,
     .control-container .prominent-appbar .e-inherit.e-css.e-btn.e-active {
         background: rgba(255, 255, 255, .08);
     }
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLUChipVCDBzbVE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Prominent Size](./images/prominent_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLxNHWMVIQcoNhC?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Prominent Size](./images/prominent_appbar.webp)" %}
 
 ### Dense AppBar
 
@@ -117,7 +117,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthKirWTrCLzRlMA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Dense Size](./images/dense_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLRtnsWLHmcqcJo?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Dense Size](./images/dense_appbar.webp)" %}
 
 ## Color
 
@@ -157,7 +157,7 @@ This color mode is the default one in which the AppBar can be displayed with a l
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqsrMpVMqGpFYy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Light Color](./images/light_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVRXnWChdvsdJLn?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Light Color](./images/light_appbar.webp)" %}
 
 ### Dark AppBar
 
@@ -187,7 +187,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the pr
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBgMBCpBMfsnjes?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Dark Color](./images/dark_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLHXRCCrxlHLAkz?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Dark Color](./images/dark_appbar.webp)" %}
 
 ### Primary AppBar
 
@@ -217,7 +217,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBAChsTrifpmere?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Primary Color](./images/primary_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLRjdMMrHFknIeA?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Primary Color](./images/primary_appbar.webp)" %}
 
 ### Inherit AppBar
 
@@ -229,7 +229,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Inherit">
-         <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="Syncfusion blazor components">
+         <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="blazor components">
             <div class="syncfusion-logo"></div>
          </a>
         <AppBarSpacer></AppBarSpacer>
@@ -248,4 +248,12 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLgWrWJrsJagjCw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AppBar with Inherit Color](./images/inherit_appbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVxDdMiBxOKpSGv?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor AppBar with Inherit Color](./images/inherit_appbar.webp)" %}
+
+## See Also
+
+* [Getting Started with Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/getting-started)
+* [Positioning in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/position)
+* [Designing the User Interface in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/design)
+* [Styles and Appearances in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/style-and-appearance)
+* [Accessibility in Blazor AppBar](https://blazor.syncfusion.com/documentation/appbar/accessibility)

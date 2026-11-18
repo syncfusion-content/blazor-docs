@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Popup Setting in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Popup Setting in Syncfusion BlazorComboBox component and much more.
+title: Popup Setting in Blazor ComboBox | Syncfusion®
+description: Configure the Blazor ComboBox popup with resizing, custom width and height, z-index, and showPopupOnFocus behavior, plus open and close events.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Popup Setting in ComboBox
+# Popup Setting in Blazor ComboBox
 
 ## Popup resize
 
-Dynamically adjust the size of the popup by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowResize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions are preserved while the component instance remains active.
+Dynamically adjust the size of the popup by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowResize) property. When enabled, users can resize the popup to improve visibility and control. The resized dimensions are preserved while the component instance remains active.
 
 {% highlight Razor %}
 
@@ -23,7 +23,7 @@ Dynamically adjust the size of the popup by using the [AllowResize](https://help
 
 ## Change the popup width
 
-Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the ComboBox component.
+Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the Blazor ComboBox component.
 
 In the following sample, `PopupWidth` is set to `300px`.
 
@@ -33,7 +33,7 @@ In the following sample, `PopupWidth` is set to `300px`.
 
 {% endhighlight %}
 
-![Blazor ComboBox with customizing popup width](./images/popup-setting/blazor_ComboBox_popup-width.png)
+![Blazor ComboBox with customizing popup width](./images/popup-setting/blazor_ComboBox_popup-width.webp)
 
 ## Change the popup height
 
@@ -47,7 +47,7 @@ In the following sample, `PopupHeight` is set to `500px`.
 
 {% endhighlight %}
 
-![Blazor ComboBox with customizing popup height](./images/popup-setting/blazor_ComboBox_popup-height.png)
+![Blazor ComboBox with customizing popup height](./images/popup-setting/blazor_ComboBox_popup-height.webp)
 
 ## Change the popup z-index
 
@@ -65,7 +65,7 @@ Show the popup when the component is initialized by calling [ShowPopupAsync()](h
 
 {% endhighlight %}
 
-![Blazor ComboBox with Show popup on initial loading](./images/popup-setting/blazor_ComboBox_popup-initial-loading.png)
+![Blazor ComboBox with Show popup on initial loading](./images/popup-setting/blazor_ComboBox_popup-initial-loading.webp)
 
 ## Preventing opening and closing
 
@@ -77,7 +77,7 @@ Prevent the popup from opening or closing by setting [BeforeOpenEventArgs.Cancel
 
 {% endhighlight %}
 
-![Blazor ComboBox with preventing opening and closing](./images/popup-setting/blazor_ComboBox_preventing-opening-closing.png)
+![Blazor ComboBox with preventing opening and closing](./images/popup-setting/blazor_ComboBox_preventing-opening-closing.webp)
 
 The following events are used when opening and closing the popup.
 
@@ -146,3 +146,45 @@ Adjust the popup height based on the available viewport space by handling the wi
 {% endtabs %}
 
 ![Popup height based on available space in Blazor ComboBox](./images/popup-setting/blazor_combobox_popup_resize.gif)
+
+## Render popup in a custom container
+
+Use the `AppendTo` property to render the ComboBox popup inside a specific container instead of the default `document.body`. This is useful when the component is placed inside dialogs, side panels, containers with overflow restrictions, or custom stacking contexts. 
+
+Specify a valid CSS selector in the `AppendTo` property. When the selector matches an element, the popup is appended to that element. If the selector is null, empty, or no matching element is found, the popup is rendered in the default location.
+
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.DropDowns
+
+<div id="popupHost">
+    <SfComboBox TValue="string"
+                TItem="GameFields"
+                DataSource="@Games"
+                AppendTo="@AppendTarget"
+                Placeholder="Select a game">
+        <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
+    </SfComboBox>
+</div>
+
+@code {
+    private string AppendTarget = "#popupHost";
+
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    private List<GameFields> Games = new()
+    {
+        new() { ID = "Game1", Text = "American Football" },
+        new() { ID = "Game2", Text = "Badminton" },
+        new() { ID = "Game3", Text = "Basketball" },
+        new() { ID = "Game4", Text = "Cricket" }
+    };
+}
+
+{% endhighlight %}
+
+> The `AppendTo` property accepts a CSS selector such as `#elementId` or `.container`. If the specified element is not found, the popup element will be appended to `document.body`.

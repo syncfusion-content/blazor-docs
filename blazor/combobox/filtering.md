@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Filtering in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Filtering in the Syncfusion Blazor ComboBox component and much more.
+title: Filtering in Blazor ComboBox | Syncfusion®
+description: Filter Blazor ComboBox suggestions as the user types using StartsWith, EndsWith, or Contains match modes, with case sensitivity and diacritic options.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Filtering in Blazor ComboBox Component
+# Filtering in Blazor ComboBox
 
-The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowFiltering) is enabled. The filter operation starts as soon as characters are typed in the input. The default value of AllowFiltering is `false`.
+The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as characters are typed in the input. The default value of AllowFiltering is `false`.
 
 ## Local data
 
-The following code demonstrates the filtering functionality with local data in the ComboBox component.
+The following code demonstrates the filtering functionality with local data in the Blazor ComboBox component.
 
 {% highlight cshtml %}
 
@@ -21,13 +21,13 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-![Blazor ComboBox with local data filtering](images/filtering/blazor-combobox-with-local-data-filtering.png)
+![Blazor ComboBox with local data filtering](images/filtering/blazor-combobox-with-local-data-filtering.webp)
 
 ## Remote data
 
 For remote data, each key press sends a filter request to the server when using DataManager with filtering enabled.
 
-The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the ComboBox component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the Blazor ComboBox component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 {% highlight cshtml %}
 
@@ -37,7 +37,7 @@ The below code demonstrates the filtering functionality with [ODataAdaptor](http
 
 ## Debounce delay
 
-Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_DebounceDelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+Use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_DebounceDelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 {% highlight cshtml %}
 
@@ -65,7 +65,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 
 {% endhighlight %}
 
-![Blazor ComboBox with Filter Type](images/filtering/blazor-combobox-filter-type.png)
+![Blazor ComboBox with Filter Type](images/filtering/blazor-combobox-filter-type.webp)
 
 ## Minimum filter length
 
@@ -83,7 +83,7 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Multi column filtering 
 
-In the built-in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme files, support for multi column layout can be enabled by adding the `e-multi-column` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_CssClass) property.
+In the built-in Blazor theme files, support for multi column layout can be enabled by adding the `e-multi-column` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
 
 {% highlight cshtml %}
 
@@ -91,7 +91,7 @@ In the built-in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme fi
 
 {% endhighlight %}
 
-![Blazor ComboBox with Multi Column filtering.](images/filtering/blazor-combobox-multi-column.png)
+![Blazor ComboBox with Multi Column filtering.](images/filtering/blazor-combobox-multi-column.webp)
 
 Achieve multiple column(field) filtering by passing the list of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
 
@@ -117,9 +117,9 @@ The following example shows how to perform case-sensitive filtering.
 
 ## Custom filtering
 
-ComboBox component filter queries can be customized using the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Filtering) event. You can also filter text across multiple columns in the data source by composing predicates.
+Blazor ComboBox component filter queries can be customized using the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Filtering) event. You can also filter text across multiple columns in the data source by composing predicates.
 
-In the below sample demonstration, the data is filtered using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) is used with `or` condition for filtering both fields. 
+In the below sample demonstration, the data is filtered using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) is used with `or` condition for filtering both fields. 
 
 For instance, the data source item consists of `FirstName` as `Nancy` and `LastName` as `Davalio`. You can filter the data by typing `N` or `D`, and it will display `Nancy` (FirstName field) in the popup.
 
@@ -129,7 +129,7 @@ For instance, the data source item consists of `FirstName` as `Nancy` and `LastN
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKsLVmKwTcWkyh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhxNHrAhsLxHtkd?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 ## Prevent popup opening when filtering
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Positioning in the Predefined Dialog in Blazor | Syncfusion
-description: Check out and learn here all about positioning in predefined dialogs in blazor and much more details.
+title: Positioning in Predefined Dialogs in Blazor | Syncfusion®
+description: Learn how to customize dialog position using Position property with X and Y values to control where predefined dialogs appear in Blazor.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
@@ -35,12 +35,12 @@ Use the following code snippets for **alert.razor**, **confirm.razor**, and **pr
 
 **Alert**
 
-![Alert dialog positioned at top center](./images/blazor-alert-position.png)
+![Alert dialog positioned at top center](./images/blazor-alert-position.webp)
 
 **Confirm**
 
-![Confirm dialog positioned at top center](./images/blazor-confirm-position.png)
+![Confirm dialog positioned at top center](./images/blazor-confirm-position.webp)
 
 **Prompt**
 
-![Prompt dialog positioned at top center](./images/blazor-prompt-position.png)
+![Prompt dialog positioned at top center](./images/blazor-prompt-position.webp)

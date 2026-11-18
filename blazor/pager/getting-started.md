@@ -1,58 +1,75 @@
 ---
 layout: post
-title: Getting Started with Blazor Pager Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Pager component in Blazor WebAssembly Application.
+title: Getting Started with Blazor Pager in Blazor WASM App | Syncfusion
+description: Check out and learn about getting started with Blazor Pager component in Blazor WebAssembly Application.
 platform: Blazor
 control: Pager
 documentation: ug
 ---
 
-# Getting Started with Blazor Pager Component
+# Getting Started with Blazor Pager in Blazor WASM App
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component enables navigation through large collections by dividing content into multiple pages. This guide explains how to integrate the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor WebAssembly** application using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+The [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component enables navigation through large collections by dividing content into multiple pages. This guide explains how to include [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in a **Blazor WebAssembly App** using [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/), and the [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+
+## Create a new Blazor WebAssembly App
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Prerequisites
+Create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vs) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). For detailed instructions, refer to the [Blazor WebAssembly App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) documentation.
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+{% endtabcontent %}
 
-## Create a new Blazor App in Visual Studio
+{% tabcontent Visual Studio Code %}
 
-A **Blazor WebAssembly App** can be created using **Visual Studio** with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
-
-1. Open **Visual Studio 2022** (v17.8 or later).
-2. Select **Create a new project**.
-3. Choose **Blazor WebAssembly Standalone App** from the list of templates and click **Next**.
-4. Configure the **project name**, **location**, and **solution settings**, then click **Next**.
-5. Select the **target framework** as **.NET 8.0 or later** (choose the latest installed version available on the system).
-6. Click **Create** to generate the project.
-
-![Blazor WASM Create Project Template](images/blazor-wasm-app-template.png)
-
-N> For detailed steps, refer to [Microsoft Blazor tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-9.0&pivots=vs).
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet Packages
-
-To integrate the Blazor Pager component, install the required NuGet packages in the **Blazor WebAssembly** project:
-
-1. Open **NuGet Package Manager** in Visual Studio:
-
-    *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
-
-2. Search and install the following packages:
-
-    - [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/)
-    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-
-3. For projects using **WebAssembly** or **Auto** interactive render modes, ensure these packages are installed in the **Client** project.
-
-4. Alternatively, use the **Package Manager Console**:
+Run the following command to create a new Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
+{% highlight razor tabtitle="Terminal" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+Alternatively, create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc), the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+Run the following command to create a new Blazor WebAssembly App.
+
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Install the required Blazor packages
+
+Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. All Syncfusion Blazor packages are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). See the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for details.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+1. Go to *Tools → NuGet Package Manager → Manage NuGet Packages for Solution*.
+2. Search the required NuGet packages (`Syncfusion.Blazor.Navigations` and `Syncfusion.Blazor.Themes`) and install them.
+
+Alternatively, you can install the same packages using the Package Manager Console with the following commands.
+
+{% tabs %}
+{% highlight razor tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
@@ -60,114 +77,46 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). For a complete list of packages, refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
-
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-## Create a new Blazor App in Visual Studio Code
-
-A **Blazor WebAssembly App** can be created using **Visual Studio Code** with the built-in [Microsoft templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-10.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
-
-1. Open **Visual Studio Code**.
-2. Open the **integrated terminal** (**Ctrl + `**).
-3. Run the following commands to create a new **Blazor WebAssembly** project:
+Open the terminal and run the following commands.
 
 {% tabs %}
-
-{% highlight c# tabtitle="Blazor WASM App" %}
-
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-
-{% endtabs %}
-
-4. Open the **project folder** in **Visual Studio Code**.
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet Packages in Visual Studio Code
-
-1. Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
-2. Ensure the terminal is in the project root directory where the **.csproj** file is located.
-3. Run the following commands to install the required NuGet packages:
-    - [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations)
-    - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-
-{% tabs %}
-
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight razor tabtitle="Terminal" %}
 
 dotnet add package Syncfusion.Blazor.Navigations -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet restore
 
 {% endhighlight %}
-
 {% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). For a complete list of packages, refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 {% endtabcontent %}
 
 {% tabcontent .NET CLI %}
 
-## Prerequisites
-
-Install the latest version of [.NET SDK](https://dotnet.microsoft.com/en-us/download). If the .NET SDK is already installed, determine the installed version by running the following command in a command prompt (Windows), terminal (macOS), or command shell (Linux).
+Open the command prompt and run the following commands.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
+{% highlight razor tabtitle="Command Prompt" %}
 
-dotnet --version
+dotnet add package Syncfusion.Blazor.Navigations -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
-
-## Create a Blazor WebAssembly App using .NET CLI
-
-Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to [this Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazorwasm -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
-{% endtabs %}
-
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
-
-To add the **Blazor Pager** component to the application, run the following commands in a command prompt (Windows), command shell (Linux), or terminal (macOS) to install the [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) for more details.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet add package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for the available NuGet packages list with component details.
 
 {% endtabcontent %}
 
 {% endtabcontents %}
 
-## Add Import Namespaces
+## Add import namespaces
 
-Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
+After the packages are installed, open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespaces.
 
 {% tabs %}
-{% highlight C# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
@@ -175,67 +124,62 @@ Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Register the Blazor service
 
-Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of the Blazor WebAssembly App.
+Open the **Program.cs** file in Blazor WebAssembly App and register the Blazor service and include the required namespace reference `using Syncfusion.Blazor;` at the top.
 
 {% tabs %}
-{% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
-
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Syncfusion.Blazor;
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
-
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+{% highlight C# tabtitle="Program.cs" %}
 
 builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
-....
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet and script references within the `<head>` section of the **~/index.html** file.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the [stylesheet](https://blazor.syncfusion.com/documentation/appearance/themes) at the end of the `<head>` section in the **~wwwroot/index.html** file.
 
-```html
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
 
-N>
-* Refer to [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) for various methods to reference themes in a Blazor application:
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
 
-    * [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets)
-    * [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference)
-    * [Custom Resource Generator (CRG)](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
+{% endhighlight %}
+{% endtabs %}
 
-* For script reference options, see [Adding Script References](https://blazor.syncfusion.com/documentation/common/adding-script-references).
+Include the required [script references](https://blazor.syncfusion.com/documentation/common/adding-script-references) at the end of the `<body>` section in the **~wwwroot/index.html** file to enable Pager functionality.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Blazor Pager component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pager component can be integrated with other components to provide page navigation for large datasets. This example demonstrates integrating the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) with the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component.
+Open a Razor file located in the **~/Pages/Home.razor** and add the [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component inside the razor file.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
 @using Syncfusion.Blazor.Navigations
 
 <SfPager PageSize="5" NumericItemsCount="4" TotalItemsCount="25">
 </SfPager>
-```
 
-**1. Render ListView Component**
+{% endhighlight %}
+{% endtabs %}
 
-Add the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component in the **Pages/Index.razor** file and bind it to a collection:
+**1. Render ListView component**
 
-```cshtml
+Add the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component in the **Pages/Home.razor** file and bind it to a collection:
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Lists
 
@@ -281,22 +225,28 @@ Add the [ListView](https://blazor.syncfusion.com/documentation/listview/getting-
         public string Id { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 **2. Add Pager component**
 
-Add the `Pager` component in the same file (**Pages/Index.razor**) below the **ListView**. Configure the essential properties:
+Add the [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html) component in the same file **~/Pages/*.razor** (for example, **Home.razor**) below the **ListView**. Configure the essential properties:
 
 * [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) – defines the number of items displayed per page.
 * [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemsCount) – specifies the count of numeric pager buttons.
 * [TotalItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_TotalItemsCount) – indicates the total number of records in the data source.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
 @using Syncfusion.Blazor.Navigations
 
 <SfPager PageSize=5 NumericItemsCount=4 TotalItemsCount=25>
 </SfPager>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > For additional properties of [Pager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html), refer to the API Reference.
 
@@ -306,13 +256,15 @@ To enable paging functionality, bind the **ListView** data for the current page 
 
 The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event is triggered when a pager item is clicked. This event updates the **Skip** and **Take** values dynamically according to the selected page, ensuring that the correct subset of data is displayed in the ListView.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Lists
 
 <div class="col-lg-12 control-section sb-property-border">
- @{
+ @ {
     var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
     <SfListView @ref="@List" DataSource="@listData" TValue="DataModel" HeaderTitle="Contacts" ShowHeader="true">
         <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
@@ -369,12 +321,55 @@ The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigati
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-**4. Run the Application**
+## Run the application
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The **Pager** component will render and enable navigation through the collection.
+{% tabcontents %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrpjCqNBJBSbqWn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)" %}
+{% tabcontent Visual Studio %}
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The [Blazor Pager](https://www.syncfusion.com/blazor-components/blazor-pager) component will render in your default web browser.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Open the terminal and run the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Terminal" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent .NET CLI %}
+
+Open the command prompt and run the following command.
+
+{% tabs %}
+{% highlight razor tabtitle="Command Prompt" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrxXcNliGRGCzNL?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Pager with ListView](./images/blazor-pager-with-list-view.webp)" %}
 
 N> [View Sample on GitHub.](https://github.com/SyncfusionExamples/blazor-pager-component)
+
+## See also
+
+1. [Getting Started with Blazor WebAssembly Standalone App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+2. [Getting Started with Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+3. [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

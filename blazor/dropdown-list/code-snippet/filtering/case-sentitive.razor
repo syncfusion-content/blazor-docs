@@ -11,7 +11,6 @@
     SfDropDownList<string, OrderDetails> ddlObj;
     public Query Query = new Query().Select(new List<string> { "FirstName", "LastName" }).Take(7).RequiresCount();
 
-    SfDropDownList<string, Countries> ddlObj { get; set; }
     public class OrderDetails
     {
         public int? EmployeeID { get; set; }

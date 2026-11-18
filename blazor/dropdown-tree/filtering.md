@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Filtering in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor Dropdown Tree component and much more.
+title: Filtering in Blazor Dropdown Tree | Syncfusion®
+description: Filter Blazor Dropdown Tree nodes dynamically as users type using local or remote data sources today.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Filtering in Dropdown Tree
+# Filtering in Blazor Dropdown Tree
 
 The Dropdown Tree has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.  Default value of [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) is `false`.
 
 ## List data
 
-The following code demonstrates the filtering functionality with local data in the Dropdown Tree component.
+The following code demonstrates the filtering functionality with local data in the Blazor Dropdown Tree component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -49,11 +49,11 @@ The following code demonstrates the filtering functionality with local data in t
 }
 ```
 
-![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-local-filter.png)
+![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-local-filter.webp)
 
 ## Remote data
 
-The following code demonstrates the filtering functionality with remote data in the Dropdown Tree component.
+The following code demonstrates the filtering functionality with remote data in the Blazor Dropdown Tree component.
 
 ```cshtml
 
@@ -137,7 +137,7 @@ The Data items can be filtered with or without case sensitivity using the [Ignor
 
 You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox. `FilterBarPlaceholder` is applicable when [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) is used as `true`. `FilterBarPlaceholder` is depends on [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering) property.
 
-![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-placeholder.png)
+![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-placeholder.webp)
 
 ## Minimum filter length
 

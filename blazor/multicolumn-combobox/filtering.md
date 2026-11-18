@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Filtering in Blazor MultiColumn ComboBox Component | Syncfusion
-description: Checkout and learn here all about Filtering in the Syncfusion Blazor MultiColumn ComboBox component and much more.
+title: Filtering in Blazor MultiColumn ComboBox | Syncfusion
+description: Filter Blazor MultiColumn ComboBox data items interactively as users type with AllowFiltering enabled today easily.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
 ---
 
-# Filtering in Blazor MultiColumn ComboBox Component
+# Filtering in Blazor MultiColumn ComboBox
 
-The MultiColumn ComboBox offers built-in functionality for filtering data items when the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowFiltering) option is enabled. Filtering begins as the user types in the input field. By default, the AllowFiltering property is set to `false`.
+The Blazor MultiColumn ComboBox offers built-in functionality for filtering data items when the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowFiltering) option is enabled. Filtering begins as the user types in the input field. By default, the AllowFiltering property is set to `false`.
 
 ## Local data
 
@@ -21,13 +21,13 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLpXkVggODahmWg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with local data filtering](./images/filtering/blazor_combobox_local-data.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLpXkVggODahmWg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with local data filtering](./images/filtering/blazor_combobox_local-data.webp)" %}
 
 ## Remote data
 
-For remote data, every key press and filter action request is processed on the server side.
+For remote data, each keystroke triggers a server-side filter request that returns only matching records.
 
-The following code illustrates the filtering capabilities using the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the MultiColumn ComboBox component, utilizing the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+The following code illustrates the filtering capabilities using the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the Blazor MultiColumn ComboBox component, utilizing the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 {% highlight cshtml %}
 
@@ -55,11 +55,11 @@ In the following example, the `EndsWith` filter type is assigned to the `FilterT
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpjaVqKYrUJqyJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Filter Type](./images/filtering/blazor_combobox_filter-type.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpjaVqKYrUJqyJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Filter Type](./images/filtering/blazor_combobox_filter-type.webp)" %}
 
 <!-- ## Minimum filter length
 
-When filtering list items, you can specify a character count limit to trigger a remote request and retrieve filtered data for the DropDownList. This can be achieved through manual validation using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilteringEventArgs.html) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event handler.
+When filtering list items, you can specify a character count limit to trigger a remote request and retrieve filtered data for the Blazor Dropdown List. This can be achieved through manual validation using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilteringEventArgs.html) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event handler.
 
 In the following example, the remote request does not fetch the search data until the search key contains three characters.
 
@@ -71,7 +71,7 @@ In the following example, the remote request does not fetch the search data unti
 
 <!-- ## Multi column filtering
 
-To enable multi-column support in the built-in Syncfusion Blazor theme files, simply add the `e-multi-column` class to the [CssClass]() property.
+To enable multi-column support in the built-in Blazor theme files, simply add the `e-multi-column` class to the [CssClass]() property.
 
 {% highlight cshtml %}
 
@@ -102,7 +102,7 @@ The following example shows how to perform case-sensitive filter.
 
 ## Custom filtering
 
-The MultiColumn ComboBox allows you to customize filter queries using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event. Multiple-column filtering can be implemented by composing predicates and applying them with the `FilterAsync` method in combination with the `Filtering` event.
+The Blazor MultiColumn ComboBox allows you to customize filter queries using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event. Multiple-column filtering can be implemented by composing predicates and applying them with the `FilterAsync` method in combination with the `Filtering` event.
 
 In the following example, the filter is configured to search based on both the `Name` and `Category` fields. The `Filtering` event uses a [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) with an `or` condition to allow filtering across these fields.
 
@@ -120,7 +120,7 @@ For instance, if a data source item has a `Name` of "Smartwatch" and a `Category
 
 ## Prevent popup opening when filtering
 
-To prevent the MultiColumn ComboBox popup from opening while filtering is in progress, use the [PopupOpeningEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupOpeningEventArgs_Cancel) argument exposed in the [PopupOpeningEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#properties). Set `Cancel` to `true` to stop the popup from opening, or `false` to allow it.
+To prevent the Blazor MultiColumn ComboBox popup from opening while filtering is in progress, use the [PopupOpeningEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupOpeningEventArgs_Cancel) argument exposed in the [PopupOpeningEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#properties). Set `Cancel` to `true` to stop the popup from opening, or `false` to allow it.
 
 In the following example, the `isTyped` flag tracks whether filtering is occurring. The `OnFiltering` method sets the flag to `true` when filtering starts, and the popup-opening handler (for example, `OnBeforeOpen`) cancels opening if the flag is `true`. The handler then resets the flag to `false` for the next interaction.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Localization in Syncfusion Blazor ComboBox component and much more.
+title: Localization in Blazor ComboBox | Syncfusion®
+description: Localize the Blazor ComboBox UI strings and enable globalization options such as right-to-left rendering for languages that require RTL layout.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Localization and Globalization in Blazor ComboBox Component
+# Localization in Blazor ComboBox
 
 ## Localization
 
@@ -27,4 +27,4 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor ComboBox with RTL enabled](./images/localization/blazor_combobox_enableRtl.png)
+![Blazor ComboBox with RTL enabled](./images/localization/blazor_combobox_enableRtl.webp)

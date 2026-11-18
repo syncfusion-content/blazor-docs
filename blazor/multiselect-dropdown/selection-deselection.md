@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about the Selection feature in Syncfusion Blazor MultiSelect component and more.
+title: Selection and Deselection in Blazor MultiSelect Dropdown | Syncfusion
+description: Retrieve selected values from Blazor MultiSelect Dropdown using the ValueChange event and event arguments.
 platform: Blazor
-control: MultiSelect
+control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Selection and deselection in MultiSelect
+# Selection and Deselection in Blazor MultiSelect Dropdown
 
 ## Get selected value
 
@@ -19,9 +19,9 @@ Get the selected values of the MultiSelect component in the [ValueChange](https:
 
 {% endhighlight %}
 
-## Preselected value on OnInitializedAsync
+## Preselected value with OnInitializedAsync
 
-Bind the pre-selected value to the MultiSelect component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute. Assign the value property inside the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The following sample shows how to bind the value on the initial rendering of the component.
+Bind the pre-selected value to the MultiSelect component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute. Assign the value property inside the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0#component-initialization-oninitializedasync) lifecycle. The following sample shows how to bind the value on the initial rendering of the component.
 
 {% highlight cshtml %}
 
@@ -29,11 +29,11 @@ Bind the pre-selected value to the MultiSelect component using the [@bind-Value]
 
 {% endhighlight %}
 
-![Blazor MultiSelect with pre-select value](./images/selection/blazor_MultiSelect_preselect-value.png)
+![Blazor MultiSelect Dropdown with pre-select value](./images/selection/blazor_MultiSelect_preselect-value.webp)
 
 ## Programmatically change the selected value
 
-Change the component’s value programmatically by referencing the component instance via the [@ref](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute. The following example updates the value in a button click handler.
+Change the component's value programmatically by updating the bound property. Use the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) attribute to bind the value property, then modify the property in a button click handler or other event to update the selection.
 
 {% highlight cshtml %}
 
@@ -41,7 +41,7 @@ Change the component’s value programmatically by referencing the component ins
 
 {% endhighlight %}
 
-![Blazor MultiSelect with pre-select value before](./images/selection/blazor_MultiSelect_changing-selected-value.gif)
+![Blazor MultiSelect Dropdown with pre-select value before](./images/selection/blazor_MultiSelect_changing-selected-value.gif)
 
 ### ValueChange event
 
@@ -85,7 +85,9 @@ Programmatically set focus by using the [FocusAsync](https://help.syncfusion.com
 
 ## Programmatically clear the selected value
 
-Clear the MultiSelect selection by using [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ClearAsync). This removes the selected values and sets [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) to `null`.
+Clear the MultiSelect selection by using [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ClearAsync). This removes the selected values and resets [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) based on the TValue type:
+- For non-nullable types (e.g., `int`, `string`): resets to the default value (`0` for `int`, empty string for `string`)
+- For nullable types (e.g., `int?`, `string?`): sets to `null`
 
 {% highlight cshtml %}
 
@@ -103,7 +105,7 @@ When the MultiSelect is used inside a form, prevent page reloads by setting the 
 
 {% endhighlight %}
 
-## Programmatically trigger onChange event
+## Programmatically trigger ValueChange event
 
 Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_ValueChange) event manually by using the instance (taken from @ref attribute) of the [MultiSelectEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html). In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
 
@@ -123,7 +125,7 @@ Use buttons to invoke the `FocusAsync()` and `FocusOutAsync()` methods on the Mu
 
 {% endhighlight %}
 
-While focusing and focus out the following event get triggered.
+When the component receives or loses focus, the following events are triggered:
 
 ### Focus event
 

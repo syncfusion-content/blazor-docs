@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Accessibility in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor MultiSelect Dropdown component and more.
+title: Accessibility in Blazor MultiSelect Dropdown | Syncfusion
+description: Learn how Blazor MultiSelect Dropdown supports accessibility with ARIA roles, states, and full keyboard interaction.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Accessibility in Blazor MultiSelect Dropdown Component
+# Accessibility in Blazor MultiSelect Dropdown
 
 The [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component is designed in accordance with WAI-ARIA specifications and applies appropriate roles, states, and properties along with full keyboard support. It offers complete keyboard interaction and ARIA support to ensure usability for people who use assistive technologies or rely on keyboard navigation.
 
-The Blazor MultiSelect Dropdown component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor MultiSelect Dropdown component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor MultiSelect Dropdown component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | AA |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Right-to-left support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
@@ -62,7 +62,8 @@ Use the following key shortcuts to access the Blazor MultiSelect Dropdown withou
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the previous item. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scrolls down one page and sets focus to the first visible item when the popup is open. |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scrolls up one page and sets focus to the first visible item when the popup is open. |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item; when closed, opens the popup list. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item; when closed, opens the popup list. In [CheckBox mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_Mode), the focused item is checked using <kbd>Space</kbd> instead of <kbd>Enter</kbd>. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | In [CheckBox mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_Mode), selects (checks) the focused item. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus to the next element in the tab order when the popup is closed; otherwise closes the popup and retains focus on the component. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus to the previous element in the tab order when the popup is closed; otherwise closes the popup and retains focus on the component. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup list. |
@@ -79,4 +80,4 @@ The accessibility compliance of the MultiSelect Dropdown component is shown in t
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)
+* [Accessibility in Blazor components](../common/accessibility)

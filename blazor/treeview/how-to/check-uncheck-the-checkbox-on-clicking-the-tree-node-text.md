@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Check/uncheck on clicking the tree node text in TreeView | Syncfusion
-description: Learn here all about how to check and uncheck the checkbox on clicking the tree node text in Syncfusion Blazor TreeView component and more.
+title: Toggle Checkbox on Node Click in Blazor TreeView | Syncfusion
+description: Toggle checkboxes by clicking tree node text in Blazor TreeView for interactive and accessible selection support.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Check/uncheck on clicking the tree node text in Blazor TreeView
+# How to toggle checkbox on node text click in Blazor TreeView
 
 Checkboxes in the TreeView can be checked and unchecked by clicking the tree node's text, utilizing the [`NodeClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeClicked) event.
 
@@ -190,4 +190,4 @@ Checkboxes in the TreeView can be checked and unchecked by clicking the tree nod
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLesXsrAwEkrazW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Checking or Unchecking CheckBox in Blazor TreeView](../images/blazor-treeview-checkbox.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBRXwCXVSXvbpxQ?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Checking or Unchecking CheckBox in Blazor TreeView](../images/blazor-treeview-checkbox.webp)" %}

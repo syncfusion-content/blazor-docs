@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Template in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Template in Syncfusion Blazor TreeView component and much more details.
+title: Template in Blazor TreeView | Syncfusion
+description: Customize node UI with NodeTemplate and CssClass in Blazor TreeView for custom item rendering templates.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Template in Blazor TreeView Component
+# Template in Blazor TreeView
 
 The Blazor TreeView component allows to customize the look of TreeView nodes using the `NodeTemplate` property. The [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag is nested inside the TreeViewTemplates tag, where the custom structure for TreeView can be defined. Inside the NodeTemplate tag, a generic type context property is used to access the tree node details.
 
@@ -163,7 +163,7 @@ In the following sample, employee information such as employee photo, name, and 
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrICtCABhRfFWww?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Template](./images/blazor-treeview-template.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBdDcsXJhIHvGVD?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView with Template](./images/blazor-treeview-template.webp)" %}
 
 ## Apply Template to Header
 
@@ -324,4 +324,4 @@ The Blazor TreeView component provides the ability to customize the appearance o
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htheCZiqVVQMJDpI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeView with Header Template](./images/blazor-treeview-template-header.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVHXwMjJBRUzbfK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor TreeView with Header Template](./images/blazor-treeview-template-header.webp)" %}

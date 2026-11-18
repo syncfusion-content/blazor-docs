@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Source in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about data source in Syncfusion Blazor MultiSelect Dropdown component and more.
+title: Data Source in Blazor MultiSelect Dropdown | Syncfusion
+description: Load data into Blazor MultiSelect Dropdown from local collections or remote services including OData and Web API.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Data Source in Blazor MultiSelect Dropdown Component
+# Data Source in Blazor MultiSelect Dropdown
 
 The MultiSelect loads data from local collections or remote services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Local data can be an array, list, or any IEnumerable. Remote data is bound via [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
@@ -24,13 +24,13 @@ N> When binding complex data to the MultiSelect, fields must be mapped correctly
 
 ## Binding local data
 
-Local data can be represented in two ways as described below.
+Local data can be represented in the following ways:
 
 ### Array of object
 
-The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html) property.
 
-In the following example, `Name` column from complex data have been mapped to the `Value` field.
+In the following example, the `Name` column from the complex data is mapped to the `Value` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -73,13 +73,13 @@ In the following example, `Name` column from complex data have been mapped to th
 }
 ```
 
-![Binding Blazor MultiSelect Dropdown items](./images/blazor-multiselect-dropdown-binding-items.png)
+![Binding Blazor MultiSelect Dropdown items](./images/blazor-multiselect-dropdown-binding-items.webp)
 
 ### Array of complex object
 
 The MultiSelect can generate its list items from an array of complex data. Map the appropriate fields to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html) property.
 
-In the following example, the `Code.ID` field and `Country.CountryID` field from complex data are mapped to the `Value` and `Text` fields, respectively.
+In the following example, the `Code.ID` field and the `Country.CountryID` field from the complex data are mapped to the `Value` and `Text` fields, respectively.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -120,7 +120,7 @@ public List<Complex> LocalData { get; set; } = new Complex().GetData();
 }
 ```
 
-![Binding complex items with Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-complex-item.png)
+![Binding complex items with Blazor MultiSelect Dropdown](./images/blazor-multiselect-dropdown-complex-item.webp)
 
 ## Binding remote data
 
@@ -129,6 +129,7 @@ The MultiSelect supports retrieving data from remote services by using the `Data
 The following sample displays the first six orders from the `Orders` table of the `Northwind` OData v4 service.
 
 ```cshtml
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -157,7 +158,7 @@ The following sample displays the first six orders from the `Orders` table of th
 }
 ```
 
-![Blazor MultiSelect Dropdown with data binding](./images/blazor-multiselect-dropdown-with-data-binding.png)
+![Blazor MultiSelect Dropdown with data binding](./images/blazor-multiselect-dropdown-with-data-binding.webp)
 
 ### Web API Adaptor
 
@@ -166,8 +167,9 @@ Use the `WebApiAdaptor` to bind the MultiSelect with Web API endpoints that foll
 ```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
 
-<SfMultiSelect TValue="string[]" Placeholder="Select a Employee" Query="@Query">
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
     <MultiSelectFieldSettings Text="FirstName" Value="EmployeeID"></MultiSelectFieldSettings>
 </SfMultiSelect>
@@ -185,7 +187,7 @@ Use the `WebApiAdaptor` to bind the MultiSelect with Web API endpoints that foll
 }
 ```
 
-![Blazor MultiSelect Dropdown with Web API data](./images/blazor-multiselect-dropdown-web-api-data.png)
+![Blazor MultiSelect Dropdown with Web API data](./images/blazor-multiselect-dropdown-web-api-data.webp)
 
 ### Custom Adaptor
 
@@ -271,6 +273,7 @@ To avoid a postback for every action, load all data during initialization and pr
 ```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
 
 <SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true Offline=true></SfDataManager>
@@ -290,11 +293,11 @@ To avoid a postback for every action, load all data during initialization and pr
 }
 ```
 
-![Blazor MultiSelect Dropdown in offline mode](./images/blazor-multiselect-dropdown-web-api-data.png)
+![Blazor MultiSelect Dropdown in offline mode](./images/blazor-multiselect-dropdown-web-api-data.webp)
 
 ### ValueTuple data binding
 
-Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the MultiSelect component. The following code shows how to get a string value from enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
+Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0) data to the MultiSelect component. The following code shows how to get a string value from enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-10.0).
 
 ```csharp
 
@@ -307,11 +310,11 @@ Bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple
 
 ```
 
-![Blazor MultiSelect Dropdown ValueTuple data](./images/blazor-multiselect-dropdown-valuetuple.png)
+![Blazor MultiSelect Dropdown ValueTuple data](./images/blazor-multiselect-dropdown-valuetuple.webp)
 
 ## Binding ExpandoObject
 
-Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the MultiSelect component. In the following example, `ExpandoObject` is bound to a collection of vehicles.
+Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-10.0) data to the MultiSelect component. In the following example, `ExpandoObject` is bound to a collection of vehicles.
 
 ```csharp
 
@@ -338,11 +341,11 @@ Bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor MultiSelect with ExpandoObject data binding](./images/blazor_multiselect_expando-object.png)
+![Blazor MultiSelect Dropdown with ExpandoObject data binding](./images/blazor_multiselect_expando-object.webp)
 
 ## Binding DynamicObject
 
-Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the MultiSelect component. In the following example, `DynamicObject` is bound to a collection of customers.
+Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-10.0) data to the MultiSelect component. In the following example, `DynamicObject` is bound to a collection of customers.
 
 ```csharp
 
@@ -388,11 +391,11 @@ Bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic
 
 ```
 
-![Blazor MultiSelect with dynamic object data binding](./images/blazor_multiselect_dynamic-object.png)
+![Blazor MultiSelect Dropdown with dynamic object data binding](./images/blazor_multiselect_dynamic-object.webp)
 
 ## Binding ObservableCollection
 
-Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the MultiSelect component. The following example `Observable Data` is bound to a collection of colors data.
+Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-10.0) data to the MultiSelect component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 
@@ -431,7 +434,7 @@ Bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-![Blazor MultiSelect with observable collection data binding](./images/blazor_multiselect_observable-collection.png)
+![Blazor MultiSelect Dropdown with observable collection data binding](./images/blazor_multiselect_observable-collection.webp)
 
 ## Entity Framework
 

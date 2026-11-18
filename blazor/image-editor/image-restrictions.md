@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Image Restrictions with Blazor Image Editor Component | Syncfusion
-description: Explore image extension and file size restrictions in the Blazor Image Editor for Blazor Server and WebAssembly applications.
+title: Image Restrictions in Blazor Image Editor | Syncfusion
+description: Restrict image uploads in Blazor Image Editor by file extension, minimum size, and maximum size with validation alerts.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Image Restrictions in the Blazor Image Editor component
+# Image Restrictions in Blazor Image Editor
 
 The Image Editor supports restricting image uploads by file extension and by minimum and maximum file size using the [ImageEditorUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorUploadSettings.html) property. When an uploaded image does not meet the configured criteria, the component displays an alert to guide the end user and maintain a smooth workflow.
 
@@ -42,7 +42,7 @@ Here is an example of configuring image restrictions using the `ImageEditorUploa
 }
 ```
 
-![Blazor Image Editor with Image file type restriction](./images/blazor-image-editor-file-type-restrict.jpg)
+![Blazor Image Editor with Image file type restriction](./images/blazor-image-editor-file-type-restrict.webp)
 
 ## Minimum and maximum image size
 
@@ -74,4 +74,4 @@ Here is an example of configuring image restrictions using the `ImageEditorUploa
 }
 ```
 
-![Blazor Image Editor with Image file size restriction](./images/blazor-image-editor-file-size-restrict.jpg)
+![Blazor Image Editor with Image file size restriction](./images/blazor-image-editor-file-size-restrict.webp)

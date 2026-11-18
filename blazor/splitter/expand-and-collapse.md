@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Expand and Collapse in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about how to expand and collapse in Syncfusion Blazor Splitter component and more.
+title: Expand and Collapse in Blazor Splitter | Syncfusion
+description: Enable Collapsible on Blazor Splitter panes and expand or collapse them using built-in icons and events.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Expand and Collapse in Blazor Splitter Component
+# Expand and Collapse in Blazor Splitter
 
 ## Collapsible panes
 
-The Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the `Collapsible` behavior in the SplitterPane property to show or hide the expand or collapse icons in the panes. The panes can be dynamically expanded and collapsed by the corresponding icons.
+The Blazor Splitter panes can be configured with built-in expand and collapse functionalities. By default, the collapsible behavior is disabled. Enable the `Collapsible` behavior on the `SplitterPane` to show or hide the expand or collapse icons in the panes. The panes can be dynamically expanded and collapsed by the corresponding icons.
 
 The following code shows how to enable collapsible behavior.
 
@@ -62,11 +62,11 @@ The following code shows how to enable collapsible behavior.
 
 ```
 
-![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse.png)
+![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse.webp)
 
 ## Programmatically control the expand and collapse action
 
-The Splitter provides public method to control the expand and collapse behavior programmatically using the `Expand` and `Collapse` methods.
+The Blazor Splitter provides public method to control the expand and collapse behavior programmatically using the `Expand` and `Collapse` methods.
 
 ```cshtml
 
@@ -139,7 +139,7 @@ The Splitter provides public method to control the expand and collapse behavior 
 
 ```
 
-![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse-dynamic.png)
+![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse-dynamic.webp)
 
 ## Specify initial state to panes
 
@@ -198,7 +198,7 @@ Specific panes can be rendered with collapsed state on page load. Specify a Bool
 
 ```
 
-![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse-initial.png)
+![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse-initial.webp)
 
 ## See Also
 

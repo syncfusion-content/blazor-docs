@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor DropDownList component | Syncfusion
-description: Checkout and learn here all about the Selection feature in Syncfusion Blazor DropDownList component and more.
+title: Selection in Blazor Dropdown List | Syncfusion®
+description: Get, set, and handle selected values in Blazor Dropdown List using value binding, index binding, and selection events.
 platform: Blazor
 control: DropDownList
 documentation: ug
 ---
 
-# Selection in Dropdown List
+# Selection in Blazor Dropdown List
 
 ## Get selected value
 
@@ -29,7 +29,7 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 ## Preselected value on OnInitializedAsync
 
-Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value in the [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle method. The following sample binds the value during initial rendering.
+Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value in the [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-10.0#component-initialization-oninitializedasync) lifecycle method. The following sample binds the value during initial rendering.
 
 {% highlight cshtml %}
 
@@ -37,11 +37,11 @@ Bind a preselected value to the `DropDownList` using the [`@bind-Value`](https:/
 
 {% endhighlight %}
 
-![Blazor DropDownList with preselected value](./images/selection/blazor_dropdown_preselect-value.png)
+![Blazor Dropdown List with preselected value](./images/selection/blazor_dropdown_preselect-value.webp)
 
 ## Programmatically change the selected value
 
-Change the component value programmatically by referencing the component instance via the [`@ref`](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute. The following sample changes the value from a button click handler.
+Change the selected value programmatically using two-way binding with [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value). Updating the bound field in any event handler (like a button click) will immediately reflect in the SfDropDownList.
 
 {% highlight cshtml %}
 
@@ -49,7 +49,7 @@ Change the component value programmatically by referencing the component instanc
 
 {% endhighlight %}
 
-![Blazor DropDownList with programmatic value change](./images/selection/blazor_dropdown_changing-selected-value.gif)
+![Blazor Dropdown List with programmatic value change](./images/selection/blazor_dropdown_changing-selected-value.gif)
 
 When the value changes through user action or programmatically, the following events are raised.
 
@@ -87,7 +87,7 @@ The following sample binds the index during initial rendering.
 
 {% endhighlight %}
 
-![Blazor DropDownList with index-based preselection](./images/selection/blazor_dropdown_preselect-value-index.png)
+![Blazor Dropdown List with index-based preselection](./images/selection/blazor_dropdown_preselect-value-index.webp)
 
 ## Get selected item by value
 
@@ -109,7 +109,7 @@ Programmatically move focus using the [FocusAsync](https://help.syncfusion.com/c
 
 {% endhighlight %}
 
-## Programmatically trigger onChange event
+## Programmatically trigger ValueChange event
 
 The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event can be invoked manually using the `DropDownListEvents` instance (obtained via `@ref`). In the following example, `ValueChange` is invoked inside the `Created` event handler to demonstrate manual triggering.
 
@@ -129,7 +129,7 @@ In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the i
 
 {% endhighlight %}
 
-![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
+![Blazor Dropdown List with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
 
 When focusing and blurring, the following events are raised.
 
@@ -153,7 +153,7 @@ The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Dro
 
 {% endhighlight %}
 
-## Get Data by value
+## Get data by value
 
 Retrieve the selected data by invoking the `GetDataByValue(TValue)` method on the `DropDownList` instance (accessed via `@ref`). For example, bind a button click to call `GetDataByValue(TValue)` and process the returned item.
 
@@ -163,7 +163,7 @@ Retrieve the selected data by invoking the `GetDataByValue(TValue)` method on th
 
 {% endhighlight %} 
 
-## Get List Item
+## Get list items
 
 Retrieve the list items by calling the `GetItemsAsync()` method on the `DropDownList` instance. For example, bind a button click to invoke `GetItemsAsync()` and use the returned items for further processing.
 

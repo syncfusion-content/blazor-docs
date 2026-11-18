@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Scaffolding in Blazor Applications | Syncfusion
-description: Learn how to use the Syncfusion Blazor extension for Visual Studio to scaffold pages and code, accelerating data-driven development. Explore to more details.
+title: Scaffolding in Blazor Applications | Syncfusion®
+description: Learn how to use the Blazor extension for Visual Studio to scaffold pages and code, accelerating data-driven development. Explore to more details.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,103 +9,112 @@ documentation: ug
 
 # Syncfusion® Blazor scaffolding
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> provides Visual Studio scaffolding for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor platform to quickly add code that interacts with data models, reducing development time for data operations. Scaffolding simplifies creating Razor pages and controller action methods for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer.
+Use the Syncfusion<sup style="font-size:70%">&reg;</sup> Scaffolder to quickly create data-driven pages and services for Blazor. The Scaffolder generates controller/service classes and Razor pages wired to your project's data model and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components saving time on routine tasks like data binding, CRUD wiring, and component configuration.
 
-N> Ensure that at least one Entity Framework Core model exists and that the application has been built once. If a model does not exist, see the Microsoft documentation for creating an [Entity Framework Core model](https://learn.microsoft.com/en-us/ef/core/modeling/). After adding the model, verify that the required DbContext and properties are present. Build the application before running scaffolding. If model properties change, rebuild the application before scaffolding again.
+## Prerequisites
 
-<!-- markdownlint-disable MD026 -->
+- Visual Studio 2022 or 2026 with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio extension installed. See [download and installation](download-and-installation) if it is not installed.
+- .NET 8.0, .NET 9.0, or .NET 10.0 SDK.
+- A Blazor project that targets a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package version compatible with the current Visual Studio extension.
 
-N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scaffolder is available from `v17.4.0.39` for Blazor Server applications and includes support for Blazor WebAssembly (client) applications starting with `v18.4.0.39`.
+N> Ensure your project includes at least one Entity Framework Core model and that the solution builds successfully. If you do not have a model, see [Microsoft's EF Core documentation](https://learn.microsoft.com/en-us/ef/core/) for creating models. After adding or modifying model properties, rebuild the project before running scaffolding.
+
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Scaffolder requires Essential Studio<sup style="font-size:70%">&reg;</sup> v17.4.0.39 or later for Blazor Server projects and v18.4.0.39 or later for Blazor WebAssembly (client) projects.
 
 ## Add a scaffolded item
 
-The following steps describe how to add a scaffolded item to a Blazor application.
+Follow these steps to add a scaffolded item to a Blazor application using the Visual Studio extension.
 
-N> Before using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scaffolding, verify that the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio extension is installed in Visual Studio (Extensions -> Manage Extensions -> Installed). If it is not installed, follow the steps in the [download and installation](download-and-installation) topic.
+N> Verify that the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio extension is installed in Visual Studio (Extensions → Manage Extensions → Installed). See the [download and installation](download-and-installation) topic if it is not installed.
 
-1. For a **Blazor Server** application, right-click the **Pages** folder in Solution Explorer, select **Add**, and then choose **New Scaffolded Item...**
+1. Open the appropriate folder for your project type in Solution Explorer, right-click it, and choose **Add → New Scaffolded Item...**:
 
-    ![Scaffolded add-in from server project](images/Add_scaffold_Serverside.png)
+     - **Blazor Web App**: right-click the **Components/Pages** folder.
+     - **Blazor Server App**: right-click the **Pages** folder.
 
-    If the application type is **Blazor Hosted**, right-click the **Controllers** folder from **{Project Name}.Server** application in the Solution Explorer, click **Add**, and then select **New Scaffolded Item...**.
+     ![Scaffolded add-in from server project](images/add_scaffold_Serverside.webp)
 
-    ![Scaffolded add-in from the hosted project](images/Add_scaffold_hosted.png)
+     - **Blazor Hosted (ASP.NET Core) WebAssembly App**: right-click the **Controllers** folder under **{Project Name}.Server**.
 
-2. In the **Add New Scaffolded Item** dialog, select **Syncfusion Blazor Scaffolder** and then click **Add**.
+     ![Scaffolded add-in from the hosted project](images/add_scaffold_hosted.webp)
 
-    ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/Syncfusion_scaffolder.png)
+2. In the **Add New Scaffolded Item** dialog, choose **Syncfusion Blazor Scaffolder** and click **Add**.
 
-3. In the Syncfusion<sup style="font-size:70%">&reg;</sup> UI Scaffolder dialog, select the desired component to scaffold, and then click **Next**.
+     ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/syncfusion_scaffolder.webp)
 
-    ![Choose required control](images/Control_Window.png)
+3. In the Syncfusion<sup style="font-size:70%">&reg;</sup> UI Scaffolder dialog, pick the control you want to scaffold and click **Next**.
 
-4. The Syncfusion<sup style="font-size:70%">&reg;</sup> UI Scaffolder dialog for the selected component appears. Follow these steps to configure the application.
+     ![Choose required control](images/control_window.webp)
 
-    **Select Data Source Type**
-    
-    1. Local data (default)
+4. Configure the data source and code generation options.
 
-        To use local data, enter the **Controller/Service name** and the **Razor page name**. Then select the required **Model class** and the corresponding **Data context class**. Click **Next** to continue.
+     Select Data Source Type:
 
-        ![Choose required Model](images/Model_Window_Local.png)
+     - Local data (default)
+
+         Enter **Controller/Service name** and **Razor page name**, then select the **Model class** and **DbContext**. Click **Next** to continue.
+
+         ![Choose required Model](images/model_window_local.webp)
 
         N> Adaptor types are available in Blazor scaffolding for remote data.
 
-    2. Remote data
+     - Remote data
 
-        To use remote data, enter the **Razor page name**, choose an **Adaptor type**, and provide a valid **URL**. Then specify the **TValue**. Click **Next** to continue.
+         - Enter the **Razor page name**.
+         - Choose an **Adaptor type** (for example, `UrlAdaptor`, `WebApiAdaptor`, `ODataAdaptor`).
+         - Provide a valid **URL** to your data endpoint.
+         - Specify the **TValue** (the model type, for example `Order`).
+         - Click **Next** to continue.
 
-        N> In the DataGrid and TreeGrid controls, when selecting the **URL adaptor** in the **Adaptor type**, an additional **Remote service** option will appear. You need to select either the **Localhost URL** or **API URL**. If you select the Localhost URL, enter the **Controller/Service** name. Then, select the required Model class for the active application and choose the relevant **Data context class**. Finally, click **Next** to continue. If you select the **API URL**, enter the valid **URL**. Next, enter the **TValue**. Finally, click **Next** to continue.
+         ![Choose required Model](images/model_window_remote.webp)
 
-        ![Choose required Model](images/Model_Window_Remote.png)
+         When you choose the URL adaptor for DataGrid or TreeGrid, a **Remote service** option appears. Select either:
 
-        When using adaptor types in Blazor scaffolding, it's important to note that we provide default adaptor links for sample purposes only. These default links are intended to help you understand how the adaptors work, but they do not perform CRUD (Add, Edit, Update, Delete) operations. Instead, these default links act as placeholders to demonstrate the integration process.
+         - **Localhost URL** — provide a controller or service name and a model and DbContext.
+         - **API URL** — enter a valid endpoint and `TValue`.
 
-        To help you implement CRUD operations, we will provide sample code for reference. This code will guide you through the necessary steps to enable CRUD functionality in your application. You can modify and integrate this sample code to fit your specific requirements.
+         The Scaffolder provides sample adaptor links for demonstration only; these placeholders do not perform CRUD operations. To enable real CRUD, supply a working backend endpoint that implements the required operations.
 
-        However, if you wish to perform CRUD operations, you need to provide a valid link that handles these operations. This link should point to an endpoint or service capable of managing the database operations required by your application. By providing this link, you ensure that your application can effectively interact with the back-end service to perform CRUD operations.
+5. In the feature dialog for the selected control, choose the fields and options you want, then click **Add**. The available fields and options vary by control; refer to the control-specific user guide for details.
 
-    For a **Blazor Server** application, both local data and remote data types are available.
+     ![Choose required selected control features for the hosted project](images/fetaure_window_hosted_feature.webp)
 
-    ![Choose required selected control features for the serverside project](images/Feature_Window_serverside.png)
+6. The Scaffolder generates the controller or service and the corresponding Razor files based on your selections.
 
-    For a **Hosted Application**, only the remote data type is available.
+     - For Local data, both service and Razor files are added:
 
-    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted.png)
+         ![Required Controller and Razor files added in the project for the selected control](images/files_for_local_data.webp)
 
-5. In the Syncfusion<sup style="font-size:70%">&reg;</sup> UI Scaffolder, the dialog for the selected component features opens. Choose the required features, update the necessary data fields, and then click **Add**.
+     - For Remote data using Localhost URL, the controller and Razor files are added:
 
-    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted_feature.png)
+         ![Required Controller and Razor files added in the project for the selected control](images/files_for_remote_data.webp)
 
-6. Based on the selected features, the **Controller/Service** file and the corresponding **Razor** files are generated.
+     - For Remote data with a Web API adaptor, the Razor page is added (the API must be present to enable full CRUD):
 
-    If **Local data** is selected, the service file and Razor file are added to the application.
+         ![Required Controller and Razor files added in the project for the selected control](images/files_for_remote_data_adaptor.webp)
 
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_local_data.png)
+7. Add navigation to the generated Razor page so it is reachable from your app's UI. For example, open `NavMenu.razor` (Blazor Server/Web App) or `NavMenu.razor` in the **Layout** folder (Blazor WebAssembly) and add a `<NavLink>` entry that points to the new page route.
 
-    If **Remote data with Localhost URL** is selected, the controller file and Razor file are added to the application.
-
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data.png)
-
-    If **Remote data with Web API adaptor** is selected, the Razor file is added to the application.
-
-    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data_adaptor.png)
-
-7. Then, add navigation to the created razor file based on your requirement to open on the webpage.
-
-8. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) post for understanding the licensing changes introduced in Essential Studio®.
+8. Licensing: If you used trial installers or NuGet packages from nuget.org, register your Syncfusion® license key. Licensing was introduced in Essential Studio® 2018 Volume 2 (v16.2.0.41). See the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the key. For background on the licensing change, see this [blog post](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2).
 
 ## Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor command-line scaffolding
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor command-line scaffolding helps quickly add code that interacts with data models, reducing the time required to develop data operations. It simplifies creating view files and controller action methods for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components such as DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer.
 
-N> Verify that at least one Entity Framework model exists. If your application lacks an Entity Framework model, use this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to create one. After you've added the model file, double-check that the necessary DBContext and properties have been added. Now, build the application and experiment with scaffolding. If any changes made in the model properties, rebuild the application once before perform scaffolding.
+### Prerequisites
+
+- .NET 8.0, .NET 9.0, or .NET 10.0 SDK installed.
+- A Blazor project with a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package referenced.
+
+N> Verify that at least one Entity Framework model exists. If your application lacks an Entity Framework model, see [Microsoft's EF Core documentation](https://learn.microsoft.com/en-us/ef/core/) to create one. After you add the model file, double-check that the necessary DbContext and properties are present. Build the application before running scaffolding. If you change model properties, rebuild the application before performing scaffolding.
 
 ## Install command-line scaffolding
 
 Install the **syncfusion.scaffolding** tool globally using the following command.
 
    ```dotnet tool install -g syncfusion.scaffolding```
+
+Verify the installation by running `dotnet tool list -g` and confirming that `syncfusion.scaffolding` appears in the list.
 
 ## Update command-line scaffolding
 
@@ -123,7 +132,7 @@ N> Before adding a scaffolded item from the command line, verify that the **dotn
 
     **syncfusion_scaffold**
 
-    ![CommandLine Scaffold Available Controls](images/AvailableControl.png)
+    ![CommandLine Scaffold Available Controls](images/availableControl.webp)
 
 2. To add a scaffolded item from the command line, use the following syntax.
 
@@ -136,9 +145,9 @@ N> Before adding a scaffolded item from the command line, verify that the **dotn
     | -vname&#124;--view-filename       | Name of view file to be added in project.                                     | All Controls        |
     | -m&#124;--model                   | Database model name with namespace (example: WebApplication1.Models.Tasks).   | All Controls        |
     | -dc&#124;--db-context             | DbContext name with namespace (example: WebApplication1.Models.TasksContext). | All Controls        |
-    | -pkey&#124;--primary-key          | Set Feature name/column name as primary key.                                  | Data Grid/Tree Grid |
-    | -tid&#124;--treegrid-id           | Id of Tasks.                                                                  | Tree Grid           |
-    | -pid&#124;--parent-id             | Parent Id value                                                               | Tree Grid/Diagram   |
+    | -pkey&#124;--primary-key          | Name of the column to use as the primary key (for example, `TaskId`).         | Data Grid/Tree Grid |
+    | -tid&#124;--treegrid-id           | Name of the column that uniquely identifies a node (for example, `TaskId`).   | Tree Grid           |
+    | -pid&#124;--parent-id             | Name of the column that holds the parent reference (for example, `ParentId`). | Tree Grid/Diagram   |
     | -x&#124;--x-axis                  | X-axis of Chart                                                               | Charts              |
     | -Y&#124;--Y-axis                  | Y-axis of Chart                                                               | Charts              |
     | -sid&#124;--scheduler-id          | Id of Scheduler Event.                                                        | Scheduler           |
@@ -149,26 +158,26 @@ N> Before adding a scaffolded item from the command line, verify that the **dotn
 
 3. Running `syncfusion_scaffold [control]` displays the available parameters for the specified component.
 
-    ![control parameter details](images/controlparameter.png)
+    ![control parameter details](images/controlparameter.webp)
 
 4. Run the following command to generate controller and view files from the command line by passing the required arguments for the specified component.
 
-    ```syncfusion_scaffold {controlName} --project "{projectFileNamewithPath}" --model {model} -dc {dbContext} -cname {controllerName} -vname {viewName} [controlMantoryParameter] [controlMantatoryParameterValue]```
+    ```syncfusion_scaffold {controlName} --project "{projectFileNamewithPath}" --model {model} -dc {dbContext} -cname {controllerName} -vname {viewName} [controlMandatoryParameter] [controlMandatoryParameterValue]```
 
-    ![CommandLine Scaffold](images/commandline.png)
+    ![CommandLine Scaffold](images/commandline.webp)
 
 5. After generation, the controller and view files are created successfully, and the required Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages and styles are added to render the component.
 
-    ![Blazor added Files](images/blazorfile.png)
+    ![Blazor added Files](images/blazorfile.webp)
 
-    ![Blazor Service Changes](images/blazorstyle.png)
-
-<!-- markdownlint-disable MD026 -->
+    ![Blazor Service Changes](images/blazorstyle.webp)
 
 ## How to render a Syncfusion<sup style="font-size:70%">&reg;</sup> component
 
+<!-- markdownlint-disable MD026 -->
+
 Refer to the following user guide links to render a Syncfusion<sup style="font-size:70%">&reg;</sup> component after scaffolding:
 
-Blazor WebAssembly App: [Configure Blazor components using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet package](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-
-Blazor Server App: [Configure Blazor components using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet package](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+- Blazor WebAssembly App: [Configure Blazor components using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet package](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+- Blazor Server App: [Configure Blazor components using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet package](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+- Blazor Web App: [Configure Blazor components using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component NuGet package](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)

@@ -1,0 +1,198 @@
+---
+layout: post
+title: Blazor Spreadsheet and DataGrid Integration | Syncfusion®
+description: Complete step-by-step guide to integrate Blazor DataGrid and Spreadsheet components for seamless data handling and interactive web applications.
+platform: Blazor
+control: Common
+documentation: ug
+
+---
+
+# Integrating Blazor DataGrid with Spreadsheet
+
+This guide demonstrates how to integrate the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) with the [Blazor Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component to enable a data workflow within a Blazor application.
+
+The workflow includes exporting grid data to an Excel file, opening the file through Spreadsheet UI, and performing interactive editing.
+
+If you haven't created your Blazor app yet, follow the [Blazor getting started guide](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create a project.
+
+## Install required packages
+
+To add the Blazor DataGrid and Spreadsheet components to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), then search for and install the NuGet packages listed below.
+
+* [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet)
+* [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid)
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+
+## Add required namespaces
+
+Open the `~Components/_Imports.razor` file and import the `Syncfusion.Blazor`, `Syncfusion.Blazor.Grids`, `Syncfusion.Blazor.Spreadsheet` namespaces.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Spreadsheet
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register Blazor service
+
+Add Blazor service to the `~/Program.cs` file to enable Blazor components in the application.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Program.cs" hl_lines="1 6" %}
+
+using Syncfusion.Blazor;
+...
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddSyncfusionBlazor();
+...
+var app = builder.Build();
+app.Run();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add stylesheet and script resources
+
+Add theme CSS and required scripts to the `~/Components/App.razor` file. The Spreadsheet requires its specific script in addition to the core script. 
+
+{% tabs %}
+{% highlight html  %}
+
+<head>
+     <!-- Blazor theme style sheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/fluent2.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Blazor DataGrid component's script reference -->
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"></script>
+    <!-- Blazor Spreadsheet component's script reference-->
+    <script src="_content/Syncfusion.Blazor.Spreadsheet/scripts/syncfusion-blazor-spreadsheet.min.js"></script>
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Integrating DataGrid and Spreadsheet
+
+Add Spreadsheet and DataGrid component into the any `.razor` file.  
+
+The following example displays a **DataGrid** with sample data, exports to Excel, and lets users open the exported file in **Spreadsheet** via the ribbon (File → Open). 
+
+{% tabs %}
+{% highlight razor %}
+
+@page "/"
+@rendermode InteractiveServer
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Spreadsheet
+
+<h3>Blazor DataGrid ➜ Spreadsheet Preview</h3>
+<div class="mb-2">
+    <SfButton CssClass="e-primary" @onclick="PreviewGridInSpreadsheet">Export Grid in Excel</SfButton>
+    <span class="ms-3 text-muted">(Use Spreadsheet Ribbon → File to Open/Save as XLSX/CSV)</span>
+</div>
+
+<h5>DataGrid</h5>
+<SfGrid TItem="Order" @ref="GridRef" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" />
+    <GridColumns>
+        <GridColumn Field="@nameof(Order.OrderID)" HeaderText="Order ID" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field="@nameof(Order.CustomerID)" HeaderText="Customer" Width="150" />
+        <GridColumn Field="@nameof(Order.Freight)" HeaderText="Freight" Width="120" Format="C2" />
+        <GridColumn Field="@nameof(Order.ShipCity)" HeaderText="Ship City" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+<h5>Spreadsheet</h5>
+<div class="mt-3">
+    <SfSpreadsheet AllowNumberFormatting="true" AllowCellFormatting="true" AllowAutofill="true"
+                   Height="250px"  Width="auto">
+        <SpreadsheetRibbon></SpreadsheetRibbon>
+    </SfSpreadsheet>
+</div>
+
+@code {
+    private SfGrid<Order>? GridRef;
+    private List<Order> Orders = new()
+    {
+        new() { OrderID = 10001, CustomerID = "ALFKI", Freight = 2.30, ShipCity = "Denmark" },
+        new() { OrderID = 10002, CustomerID = "ANATR", Freight = 3.30, ShipCity = "Brazil" },
+        new() { OrderID = 10003, CustomerID = "ANTON", Freight = 4.30, ShipCity = "Germany" },
+        new() { OrderID = 10004, CustomerID = "BLONP", Freight = 5.30, ShipCity = "USA" },
+        new() { OrderID = 10005, CustomerID = "BOLID", Freight = 6.30, ShipCity = "Brazil" }
+    };
+    
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; } = "";
+        public double Freight { get; set; }
+        public string ShipCity { get; set; } = "";
+    }
+
+    private async Task PreviewGridInSpreadsheet()
+    {
+        if (GridRef is not null)
+        {
+            await GridRef.ExportToExcelAsync();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This renders the Blazor DataGrid, Spreadsheet components in the default web browser.
+
+**Expected behavior**
+* DataGrid renders with sample records.
+* Clicking **Export Grid to Excel** downloads an `.xlsx` file.
+* In the Spreadsheet, open it via **Ribbon → File → Open**.
+* Spreadsheet displays the workbook for editing.
+
+**Output:**
+![Blazor DataGrid With Spreadsheet](images/datagrid-with-spreadsheet.webp)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-integrations-common/tree/master/BlazorSpreadsheet-WebAppServer)
+
+## Use cases
+
+The integration of the Blazor DataGrid with the Spreadsheet component enables a smooth transition from structured data visualization to flexible, Excel‑like editing. This workflow allows users to review, filter, and select records in the DataGrid and then perform advanced data manipulation in the Spreadsheet without leaving the application.
+
+### Financial adjustments and calculations
+
+Present financial datasets such as budgets, forecasts, or transaction records in the DataGrid for efficient filtering and review. Users can export selected or filtered data to the Spreadsheet to apply formulas, perform adjustments, and run calculations using built‑in spreadsheet features before finalizing the data.
+
+### Bulk data correction and updates
+
+Use the DataGrid to display large datasets with sorting and filtering to identify records that require correction. Once identified, users can export the data to the Spreadsheet to perform bulk edits, validate values, and make uniform updates, improving accuracy and reducing manual effort.
+
+### Inventory management and updates
+
+Display inventory information such as item name, SKU, quantity, and warehouse location in the DataGrid. Users can export inventory data to the Spreadsheet to update stock quantities, adjust reorder levels, or apply formula‑based calculations, simplifying inventory maintenance workflows.
+
+### Shipment and logistics tracking
+
+Render shipment data in the DataGrid with details such as shipment ID, destination, status, and delivery date. Users can export the data to the Spreadsheet to update shipment statuses, modify schedules, or apply batch changes, enabling efficient operational updates.
+
+### Data preparation for reporting
+
+Allow users to filter and organize business data in the DataGrid before exporting it to the Spreadsheet for final preparation. In the Spreadsheet, users can format data, apply formulas, and restructure datasets to prepare them for reporting or Excel export.
+
+## See also
+
+* [Getting started with Blazor DataGrid](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-server-app)
+* [Getting started with Blazor Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started-webapp)
+
+ 

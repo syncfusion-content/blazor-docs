@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Importing and Exporting in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about importing and exporting in Syncfusion Blazor QueryBuilder component and more.
+title: Importing and Exporting in Blazor Query Builder | Syncfusion
+description: Import and export Blazor Query Builder rules in JSON, SQL, or MongoDB formats for persistence, migration, and integration with external systems.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Importing and Exporting in Blazor QueryBuilder Component
+# Importing and Exporting in Blazor Query Builder
 
 Import rules to view or edit predefined conditions from JSON, SQL, or MongoDB query formats, and export the rules built in the Query Builder back to JSON, SQL, or MongoDB queries. These operations map to the Query Builder’s rule model and require that fields and operators used in the imported content exist in the configured columns.
 
@@ -67,8 +67,7 @@ To apply conditions during initial render, define rules in `QueryBuilderRule` us
     }
 }
 ```
-
-![Blazor Query Builder with a data Binding](./images/blazor-querybuilder-binding-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVHtQDYhYjNXPDb?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Query Builder with a data Binding](./images/blazor-querybuilder-data-binding.webp)" %}
 
 #### Post rendering
 
@@ -126,8 +125,7 @@ Provide an inline SQL string and parse it into rules using the [`SetRulesFromSql
     }
 }
 ```
-
-![Importing from Inline SQL in Blazor Query Builder](./images/blazor-querybuilder-import-from-sql.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLHDmZkBErmkKid?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Importing from Inline SQL in Blazor Query Builder](./images/blazor-querybuilder-import-from-sql.webp)" %}
 
 #### Importing from Parameter SQL Query
 
@@ -182,8 +180,7 @@ Importing from Parameter SQL involves integrating SQL queries with parameters di
     }
 }
 ```
-
-![Importing from Parameter SQL in Blazor Query Builder](./images/import-parameter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrxjQZuBunyquHs?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Importing from Parameter SQL in Blazor Query Builder](./images/import-parameter.webp)" %}
 
 #### Importing from Named Parameter SQL Query
 
@@ -238,8 +235,7 @@ Importing from Named Parameter SQL involves integrating SQL queries with named p
     }
 }
 ```
-
-![Importing from Named Parameter SQL in Blazor Query Builder](./images/import-named-parameter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBnXcXkrEFhwLLV?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Importing from Named Parameter SQL in Blazor Query Builder](./images/import-named-parameter.webp)" %}
 
 ### Importing from MongoDB Query
 
@@ -291,7 +287,7 @@ Import MongoDB queries directly and parse them into the rule model using the [`S
 }
 ```
 
-![Importing from MongoDB in Blazor Query Builder](./images/import-mongo.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBdtwNkLuaNJnjT?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Importing from MongoDB in Blazor Query Builder](./images/import-mongo.webp)" %}
 
 ## Exporting
 
@@ -337,6 +333,7 @@ Convert the current rules to a structured JSON object using the [`GetRules`](htt
 
     private void Get() {
         rule = JsonConvert.SerializeObject(QueryBuilderObj.GetRules());
+        Console.WriteLine(rule);
     }
 
     private void Set() {
@@ -346,6 +343,7 @@ Convert the current rules to a structured JSON object using the [`GetRules`](htt
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrHjQDkUZjxPkIO?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" backgroundimage "[Blazor Query Builder with a data Binding](./images/exporting-json.webp)" %}
 
 ### Exporting to SQL Query
 
@@ -515,7 +513,7 @@ Generate SQL with named parameters using [`GetNamedParameterSql`](https://help.s
 
 ### Exporting to MongoDB Query
 
-Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetMongoQuery_Syncfusion_Blazor_QueryBuilder_RuleModel_). Ensure date and number formats match expectations of the target database.
+Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetMongoQuery_Syncfusion_Blazor_QueryBuilder_RuleModel_). Ensure date and number formats match the expectations of the target database.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -567,4 +565,4 @@ Convert the current rules to MongoDB query syntax using [`GetMongoQuery`](https:
 
 ```
 
-N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
+N> Explore the [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=fluent2) to know how to render and configure the query builder.

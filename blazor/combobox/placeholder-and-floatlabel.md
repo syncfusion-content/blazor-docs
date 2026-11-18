@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Placeholder and FloatLabel in Syncfusion Blazor ComboBox component and more.
+title: Placeholder and Float Label in Blazor ComboBox | Syncfusion®
+description: Configure the Blazor ComboBox Placeholder and choose Auto, Always, or Never float label behavior with custom CSS styling.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Placeholder and Float Label in ComboBox
+# Placeholder and Float Label in Blazor ComboBox
 
 ## Placeholder
 
-Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Placeholder) property to display a hint describing the expected value in the input. In the following example, “Select a game” is set as the placeholder, which applies the corresponding attribute to the input element in the DOM.
+Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display a hint describing the expected value in the input. In the following example, “Select a game” is set as the placeholder, which applies the corresponding attribute to the input element in the DOM.
 
 {% highlight cshtml %}
 
@@ -19,7 +19,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 {% endhighlight %}
 
-![Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)
+![Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.webp)
 
 ## Color of the placeholder text
 
@@ -31,7 +31,7 @@ Change the color of the placeholder by targeting its CSS class `input.e-input::p
 
 {% endhighlight %}
 
-![Blazor ComboBox with color placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-color.png)
+![Blazor ComboBox with color placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-color.webp)
 
 ## Add mandatory indicator using placeholder
 
@@ -43,7 +43,7 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 {% endhighlight %}
 
-![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png)
+![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.webp)
 
 ## FloatLabel
 
@@ -77,4 +77,4 @@ Change the text color of the floating label when it is focused by targeting its 
 
 {% endhighlight %}
 
-![Blazor ComboBox with float label focusing color](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel-focusing-color.png)
+![Blazor ComboBox with float label focusing color](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel-focusing-color.webp)

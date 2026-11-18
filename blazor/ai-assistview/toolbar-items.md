@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar items in Blazor AI AssistView Component | Syncfusion
-description: Checkout and learn here all about Toolbar items with Syncfusion Blazor AI AssistView component in Blazor Server App and Blazor WebAssembly App.
+title: Toolbar Items in Blazor AI AssistView | Syncfusion®
+description: Configure Blazor AI AssistView toolbar items using AssistViewToolbarItem, PromptToolbarItem, and ResponseToolbarItem directives with position control.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Toolbar items in Blazor AI AssistView component
+# Toolbar Items in Blazor AI AssistView
 
 You can render the AI AssistView toolbar items by using the [AssistViewToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewToolbarItem.html), [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.PromptToolbarItem.html), [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) & `AssistViewFooterToolbar` tag directives.
 
@@ -39,7 +39,7 @@ In the following example, AI AssistView component rendered with footer toolbar i
     }
 }
 ```
-![Blazor AI AssistView Attachment Enable](./images/enableAttachment.png)
+![Blazor AI AssistView Attachment Enable](./images/enableAttachment.webp)
 
 ### Toolbar positioning
 
@@ -86,7 +86,7 @@ By setting ToolbarPosition as `Bottom`, footer items will be rendered at the bot
 
 ```
 
-![Blazor AI AssistView Footer Toolbar Position](./images/footer-toolbar-position.png)
+![Blazor AI AssistView Footer Toolbar Position](./images/footer-toolbar-position.webp)
 
 ### Adding custom items
 
@@ -122,7 +122,7 @@ You can use the [AssistViewFooterToolbarItem](https://help.syncfusion.com/cr/bla
 
 ```
 
-![Blazor AI AssistView Footer Toolbar custom item](./images/footer-toolbar-item.png)
+![Blazor AI AssistView Footer Toolbar custom item](./images/footer-toolbar-item.webp)
 
 ### Item click
 The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewFooterToolbar.html#Syncfusion_Blazor_InteractiveChat_AssistViewFooterToolbar_ItemClick) event is triggered when the footer toolbar item is clicked.
@@ -194,7 +194,7 @@ You can customize the toolbar icons by using the [IconCss](https://help.syncfusi
 
 ```
 
-![Blazor AI AssistView toolbar iconCss](./images/header-toolbar-item-type.png)
+![Blazor AI AssistView toolbar iconCss](./images/header-toolbar-item-type.webp)
 
 #### Setting item type
 
@@ -228,7 +228,7 @@ In the following example, toolbar item type is set as `Button`.
 
 ```
 
-![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.png)
+![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.webp)
 
 #### Setting text
 
@@ -259,7 +259,7 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor AI AssistView toolbar item Text](./images/assistview-toolbar-item-text.png)
+![Blazor AI AssistView toolbar item Text](./images/assistview-toolbar-item-text.webp)
 
 #### Show or hide toolbar item
 
@@ -291,7 +291,7 @@ You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Blazor AI AssistView toolbar item Visible](./images/assistview-toolbar-item-visible.png)
+![Blazor AI AssistView toolbar item Visible](./images/assistview-toolbar-item-visible.webp)
 
 #### Setting disabled
 
@@ -324,7 +324,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor AI AssistView toolbar item Disabled](./images/assistview-toolbar-item-disable.png)
+![Blazor AI AssistView toolbar item Disabled](./images/assistview-toolbar-item-disable.webp)
 
 #### Setting tooltip text
 
@@ -394,7 +394,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor AI AssistView toolbar item CssClass](./images/assistview-toolbar-item-css.png)
+![Blazor AI AssistView toolbar item CssClass](./images/assistview-toolbar-item-css.webp)
 
 #### Enabling tab key navigation in toolbar
 
@@ -485,7 +485,7 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor AI AssistView toolbar ItemTemplate](./images/assistview-toolbar-item-template.png)
+![Blazor AI AssistView toolbar ItemTemplate](./images/assistview-toolbar-item-template.webp)
 
 ### Item clicked
 
@@ -551,7 +551,7 @@ In the following example, AI AssistView component rendered with built-in toolbar
 
 ```
 
-![Blazor AI AssistView Prompts](./images/ai-assistview-prompt-built-icon.png)
+![Blazor AI AssistView Prompts](./images/assistview-prompts.webp)
 
 #### Setting width
 
@@ -647,7 +647,7 @@ In the following example, AI AssistView renders with built-in toolbar items.
 
 ```
 
-![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
+![Blazor AI AssistView Prompts](./images/assistview-prompts.webp)
 
 #### Setting width
 
@@ -678,6 +678,106 @@ You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
+### Regenerate responses
+
+The AI AssistView allows users to `regenerate` responses to request a new response for the same prompt. The navigation buttons with `previous` and `next` buttons are rendered along with a response index indicator (e.g., `1 / 3`) allowing users to navigate between all regenerated responses for the prompt.
+
+> The navigation UI appears automatically once more than one response is available for a prompt either regenerated or preloaded using the `RegeneratedResponses` property in the [Prompts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Prompts) collection.
+
+#### Adding regenerate item
+
+You can enable the regenerate button by adding the `e-assist-regenerate` icon to the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbarItem.html) tag directive within the [ResponseToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ResponseToolbar.html).
+
+#### Adding regenerated response
+
+When regenerated, it triggers the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event with the existing prompt, enabling you to call your preferred AI service again and update the response using the `Response` property of the event args.
+
+In the following example, AI AssistView component rendered with the built-in `regenerate` toolbar item in the response toolbar.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView Prompts="@prompts" PromptRequested="@PromptRequest">
+        <ResponseToolbar>
+            <ResponseToolbarItem IconCss="e-icons e-assist-copy" Tooltip="Copy"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-like" Tooltip="Like"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-dislike" Tooltip="Need Improvement"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-regenerate" Tooltip="Regenerate"></ResponseToolbarItem>
+        </ResponseToolbar>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private List<AssistViewPrompt> prompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt() { Prompt = "What is AI?", Response = "AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making." }
+    };
+    private List<string> regenerateResponses = new List<string>()
+    {
+        "AI, or Artificial Intelligence, refers to the simulation of human intelligence in machines programmed to think and learn like humans.",
+        "Artificial Intelligence is the development of computer systems capable of performing tasks that typically require human intelligence.",
+        "AI is a branch of computer science focused on building machines that can perform tasks requiring human-like intelligence."
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var isRegenerate = prompts.Any(p => p.Prompt == args.Prompt);
+        args.Response = isRegenerate
+            ? regenerateResponses[new Random().Next(regenerateResponses.Count)]
+            : "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+    }
+}
+```
+
+![Blazor AI AssistView Regenerate Response](./images/assistview-regenerate-response.webp)
+
+#### Pre-loading regenerated responses
+
+You can use the [RegeneratedResponses](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistViewPrompt.html#Syncfusion_Blazor_InteractiveChat_AssistViewPrompt_RegeneratedResponses) property in the [Prompts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Prompts) collection to pre-load multiple responses for a prompt at the initial render, without requiring the user to trigger the regenerate action. Users can navigate between the pre-loaded responses using the `previous` and `next` buttons in the response navigation UI.
+
+In the following example, the `RegeneratedResponses` property is used to pre-load multiple responses for a prompt.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView Prompts="@prompts" PromptRequested="@PromptRequest">
+        <ResponseToolbar>
+            <ResponseToolbarItem IconCss="e-icons e-assist-copy" Tooltip="Copy"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-like" Tooltip="Like"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-dislike" Tooltip="Need Improvement"></ResponseToolbarItem>
+            <ResponseToolbarItem IconCss="e-icons e-assist-regenerate" Tooltip="Regenerate"></ResponseToolbarItem>
+        </ResponseToolbar>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private List<AssistViewPrompt> prompts = new List<AssistViewPrompt>()
+    {
+        new AssistViewPrompt()
+        {
+            Prompt = "What is AI?",
+            Response = "AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making.",
+            RegeneratedResponses = new List<string>()
+            {
+                "AI, or Artificial Intelligence, refers to the simulation of human intelligence in machines programmed to think and learn like humans.",
+                "Artificial Intelligence is the development of computer systems capable of performing tasks that typically require human intelligence.",
+                "AI is a branch of computer science focused on building machines that can perform tasks requiring human-like intelligence."
+            }
+        }
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        args.Response = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+    }
+}
+```
+
+![Blazor AI AssistView Regenerate Preload](./images/assistview-regenerate-preload.webp)
 
 #### Item clicked
 
@@ -751,7 +851,7 @@ You can use the [PromptToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Blazor AI AssistView PromptToolbarItem](./images/assistview-prompt-toolbar-item.png)
+![Blazor AI AssistView PromptToolbarItem](./images/assistview-prompt-toolbar-item.webp)
 
 ### Response
 
@@ -790,7 +890,7 @@ You can use the [ResponseToolbarItem](https://help.syncfusion.com/cr/blazor/Sync
 
 ```
 
-![Blazor AI AssistView ResponseToolbarItem](./images/assistview-response-toolbar-item.png)
+![Blazor AI AssistView ResponseToolbarItem](./images/assistview-response-toolbar-item.webp)
 
 #### Item clicked
 

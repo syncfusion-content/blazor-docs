@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about templates in Syncfusion Blazor MultiSelect Dropdown component and more.
+title: Templates in Blazor MultiSelect Dropdown | Syncfusion
+description: Customize Blazor MultiSelect Dropdown list items, selected values, headers, footers, and group headers with templates.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Templates in Blazor MultiSelect Dropdown Component
+# Templates in Blazor MultiSelect Dropdown
 
 The MultiSelect provides template options to customize the selected value, list items, group headers, header, and footer elements.
 
@@ -18,7 +18,7 @@ To get started quickly with templates in the Blazor MultiSelect Dropdown compone
 
 Customize how the currently selected value is displayed in the input by using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_ValueTemplate) property.
 
-In the following sample, the selected value displays combined text from `FirstName` and `Designation`, separated by a hyphen.
+In the following sample, the selected value displays combined text from `FirstName` and `Designation` separated by a hyphen.
 
 {% highlight cshtml %}
 
@@ -26,7 +26,7 @@ In the following sample, the selected value displays combined text from `FirstNa
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with value template](./images/blazor-multiselect-dropdown-value-template.png)
+![Blazor MultiSelect Dropdown with value template](./images/blazor-multiselect-dropdown-value-template.webp)
 
 ## Item template
 
@@ -40,7 +40,7 @@ In the following sample, each list item is split into two columns to display rel
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with item template](./images/blazor-multiselect-dropdown-item-template.png)
+![Blazor MultiSelect Dropdown with item template](./images/blazor-multiselect-dropdown-item-template.webp)
 
 ## Group template
 
@@ -54,7 +54,7 @@ In the following sample, employees are grouped by city.
 
 {% endhighlight %}
 
-![Blazor MultiSelect with GroupTemplate](./images/template/blazor-multiselect-group-template.png)
+![Blazor MultiSelect Dropdown with GroupTemplate](./images/template/blazor-multiselect-group-template.webp)
 
 ## Header template
 
@@ -68,7 +68,7 @@ In the following sample, the header and list items are presented in two columns 
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with header template](./images/blazor-multiselect-dropdown-header-template.png)
+![Blazor MultiSelect Dropdown with header template](./images/blazor-multiselect-dropdown-header-template.webp)
 
 ## Footer template
 
@@ -82,7 +82,7 @@ In the following sample, the footer displays the total number of list items.
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with footer template](./images/blazor-multiselect-dropdown-footer-template.png)
+![Blazor MultiSelect Dropdown with footer template](./images/blazor-multiselect-dropdown-footer-template.webp)
 
 ## No records template
 
@@ -96,7 +96,7 @@ In the following sample, the popup displays a “no data available” message.
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown without data](./images/blazor-multiselect-dropdown-without-data.png)
+![Blazor MultiSelect Dropdown without data](./images/blazor-multiselect-dropdown-without-data.webp)
 
 ## Action failure template
 
@@ -110,4 +110,4 @@ In the following sample, the component shows a notification when data retrieval 
 
 {% endhighlight %}
 
-![Blazor MultiSelect Dropdown with action failure template](./images/blazor-multiselect-dropdown-action-template.png)
+![Blazor MultiSelect Dropdown with action failure template](./images/blazor-multiselect-dropdown-action-template.webp)

@@ -68,11 +68,11 @@ To confirm whether your application is referencing licensed or trial assemblies:
 
     * If the File description includes "LR", it is a trial version.
 
-        ![Trial DLL properties example](images/trial.png)
+        ![Trial DLL properties example](images/trial.webp)
 
     * If it does not include "LR", it is a licensed version.
 
-        ![Licensed DLL properties example](images/licensed.png)
+        ![Licensed DLL properties example](images/licensed.webp)
 
 
 If trial assemblies are detected in your application, follow these steps to ensure a clean and licensed setup:

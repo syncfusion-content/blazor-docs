@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resizing with Blazor Image Editor Component | Syncfusion
-description: Explore the resizing support in the Blazor Image Editor component for Blazor Server and WebAssembly applications.
+title: Resize in Blazor Image Editor | Syncfusion
+description: Resize images in Blazor Image Editor with custom width and height, with option to preserve the original aspect ratio.
 platform: Blazor
 control: Image Editor
 documentation: ug
 ---
 
-# Resize in the Blazor Image Editor component
+# Resize in Blazor Image Editor
 
 The resize feature adjusts the size or dimensions of an image to match specific requirements for printing, web display, or other use cases.
 
@@ -60,7 +60,7 @@ Here is an example of resizing the image using the `ImageResizeAsync` method.
 }
 ```
 
-![Blazor Image Editor with a resized image](./images/blazor-image-editor-resize.jpg)
+![Blazor Image Editor with a resized image](./images/blazor-image-editor-resize.webp)
 
 ## Resizing event
 

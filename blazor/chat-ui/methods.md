@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Methods with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Methods in Blazor Chat UI | Syncfusion®
+description: Use Blazor Chat UI methods like UpdateMessageAsync to edit messages and ScrollToBottomAsync to navigate to the latest message in conversations.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Methods in Blazor Chat UI component
+# Methods in Blazor Chat UI
 
 ## Edit message
 
@@ -40,7 +40,7 @@ You can use the [UpdateMessageAsync](https://help.syncfusion.com/cr/blazor/Syn
 
 ```
 
-![Blazor Chat UI UpdateMessage](./images/update-msg.png)
+![Blazor Chat UI UpdateMessage](./images/update-msg.webp)
 
 ## Scroll to bottom
 
@@ -78,4 +78,4 @@ You can use [ScrollToBottomAsync](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor Chat UI ScrollToBottom](./images/scroll-bottom.png)
+![Blazor Chat UI ScrollToBottom](./images/scroll-bottom.webp)

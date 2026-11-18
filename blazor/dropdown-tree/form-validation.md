@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Form validtion in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Form Validation in Syncfusion Blazor Dropdown Tree component and much more.
+title: Form Validation in Blazor Dropdown Tree | Syncfusion®
+description: Use Blazor Dropdown Tree inside EditForm with data annotations, validation messages, and submit handling.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Form Validation in Dropdown Tree
+# Form Validation in Blazor Dropdown Tree
 
 This demonstrates the creation of a form that includes a Dropdown Tree, allowing the user to select an option from a list of items. The form also includes validation, which verifies that all required fields are filled out before the form can be submitted.
 
 ## Dropdown Tree inside edit form
 
-The Dropdown Tree component can be used inside an EditForm to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.
+The Blazor Dropdown Tree component can be used inside an EditForm to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.
 
 When the Dropdown Tree input is valid, the form is ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
 
@@ -167,4 +167,4 @@ When the Dropdown Tree input is valid, the form is ready to be submitted. If the
 }
 ```
 
-![Blazor Dropdown Tree inside editform](./images/blazor-dropdowntree-component-validation.PNG)
+![Blazor Dropdown Tree inside editform](./images/blazor-dropdowntree-component-validation.webp)

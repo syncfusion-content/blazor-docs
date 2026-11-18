@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Popup Items in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn here all about Popup Items in Syncfusion Blazor Dropdown Menu component and more.
+title: Popup Items in Blazor Dropdown Menu | Syncfusion®
+description: Configure the Blazor Dropdown Menu popup items with text, icons, URLs, separators, and child items for hierarchical actions.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Popup Items in Blazor Dropdown Menu Component
+# Popup Items in Blazor Dropdown Menu
 
 ## Icons
 
-Popup action items can display an icon or image to visually represent the action. To add an icon to a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the popup action item.
+Popup action items can display an icon or image to visually represent the action. To add an icon to a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon appears on the left of the popup action item.
 
 In the following sample, the icons for edit, delete, mark as read and like message menu items are added using the `IconCss` property.
 
@@ -47,7 +47,7 @@ In the following sample, the icons for edit, delete, mark as read and like messa
 
 ```
 
-![Blazor dropdown menu shows icons in popup items](./images/blazor-dropdownmenu-with-popup-icon.png)
+![Blazor dropdown menu shows icons in popup items](./images/blazor-dropdownmenu-with-popup-icon.webp)
 
 ## Separator
 
@@ -72,9 +72,9 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 ```
 
-![Blazor dropdown menu with separator](./images/blazor-dropdownmenu-separator.png)
+![Blazor dropdown menu with separator](./images/blazor-dropdownmenu-separator.webp)
 
-## Navigations
+## Navigation
 
 Actions in Dropdown Menu can navigate to another web page when an action item is clicked. This can be achieved by providing a link to the action item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Url) property.
 
@@ -102,7 +102,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ```
 
-![Blazor dropdown menu items with navigation links](./images/blazor-dropdownmenu-navigation.png)
+![Blazor dropdown menu items with navigation links](./images/blazor-dropdownmenu-navigation.webp)
 
 ## Template
 
@@ -132,7 +132,7 @@ Popup items can be customized using the [CssClass](https://help.syncfusion.com/c
 
 ```
 
-![Blazor dropdown menu with customized popup items](./images/blazor-dropdownmenu-with-popup-items.png)
+![Blazor dropdown menu with customized popup items](./images/blazor-dropdownmenu-with-popup-items.webp)
 
 ## Populate multilevel sub menu items
 
@@ -220,6 +220,6 @@ Populate multilevel submenu items in the Dropdown Menu by hosting a Context Menu
 
 ```
 
-![Blazor dropdown menu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.png)
+![Blazor dropdown menu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.webp)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Populate-multilevel-sub-menu-items-in-Blazor-Dropdown-Menu)

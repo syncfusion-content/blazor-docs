@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Draggable in the Predefined Dialogs in Blazor | Syncfusion
-description: Learn how to enable draggable behavior for predefined dialogs in Blazor, including alert, confirm, and prompt dialog examples.
+title: Draggable in Predefined Dialogs in Blazor | Syncfusion®
+description: Learn how to enable and configure draggable behavior for predefined dialogs in Blazor, allowing users to reposition dialogs by dragging the header.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug

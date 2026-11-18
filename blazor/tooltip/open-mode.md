@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open Mode in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about open mode in Syncfusion Blazor Tooltip component and much more details.
+title: Open Mode in Blazor Tooltip | Syncfusion
+description: Control how Blazor Tooltip opens on hover, focus, click, or custom interactions using the OpensOn property.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Open Mode in Blazor Tooltip Component
+# Open Mode in Blazor Tooltip
 
 The mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements can be decided.
 
@@ -44,7 +44,7 @@ N> `Auto` value cannot be used with any combination for multiple values.
 
 @code
 {
-    string Content="Tooltip content";
+    string Content = "Tooltip content";
 }
 
 <style>
@@ -90,7 +90,7 @@ N> `Auto` value cannot be used with any combination for multiple values.
 </style>
 ```
 
-![Blazor Tooltip in Open Mode](images/blazor-tooltip-in-open-mode.gif)
+![Blazor Tooltip in Open Mode](images/blazor-tooltip-in-open-mode.webp)
 
 ## Sticky mode
 
@@ -122,7 +122,7 @@ With this mode set to `true`, Tooltips can be made to show up on the screen as l
 
 ```
 
-![Blazor Tooltip in Sticky Mode](images/blazor-tooltip-sticky-mode.gif)
+![Blazor Tooltip in Sticky Mode](images/blazor-tooltip-sticky-mode.webp)
 
 ## Open or Close Tooltip with delay
 
@@ -153,4 +153,4 @@ The Tooltips can be opened or closed after some delay by using the [`OpenDelay`]
 </style>
 ```
 
-![Blazor Tooltip with Delay](images/blazor-tooltip-delay.gif)
+![Blazor Tooltip with Delay](images/blazor-tooltip-delay.webp)

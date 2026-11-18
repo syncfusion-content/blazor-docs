@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Check list in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about check list in Syncfusion Blazor ListView component and much more details.
+title: Check List in Blazor ListView | Syncfusion
+description: Enable checkboxes in Blazor ListView with ShowCheckBox and position them on the left or right of list items.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Check list in Blazor ListView Component
+# Check List in Blazor ListView
 
 The [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the [`ShowCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowCheckBox) property.
 
@@ -46,7 +46,7 @@ private DataModel[] Data = {
 }
 ```
 
-![Blazor ListView with Checklist](./images/list/blazor-listview-with-checklist.png)
+![Blazor ListView with Checklist](./images/list/blazor-listview-with-checklist.webp)
 
 ## Checkbox Position
 
@@ -83,4 +83,4 @@ private DataModel[] Data = {
 }
 ```
 
-![Changing Checklist Position in Blazor ListView](./images/list/blazor-listview-checklist-position.png)
+![Changing Checklist Position in Blazor ListView](./images/list/blazor-listview-checklist-position.webp)

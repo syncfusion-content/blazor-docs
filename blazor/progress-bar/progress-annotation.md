@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotations and Label in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about annotations and label in Syncfusion Blazor ProgressBar component and more.
+title: Blazor ProgressBar Annotations and Label Examples | Syncfusion®
+description: Learn how to add annotations and labels in Syncfusion Blazor ProgressBar using ProgressBarAnnotations collection and ContentTemplate.
 platform: Blazor
-control: Progress Bar 
+control: ProgressBar
 documentation: ug
 ---
 
-# Annotations and Label in Blazor ProgressBar Component
+# Blazor ProgressBar Annotations and Label
 
 ## Annotations
 
@@ -33,7 +33,7 @@ The annotations are used to add text, shapes, or images to the track area in the
 </SfProgressBar>
 ```
 
-![Blazor ProgressBar with Annotation](images/blazor-progressbar-annotation.png)
+![Blazor ProgressBar with Annotation](images/blazor-progressbar-annotation.webp)
 
 ## Label
 
@@ -56,7 +56,7 @@ When the [ShowProgressValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-![Blazor ProgressBar with Label](images/blazor-progressbar-with-label.png)
+![Blazor ProgressBar with Label](images/blazor-progressbar-with-label.webp)
 
 ## See Also
 

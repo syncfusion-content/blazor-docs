@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native events in Blazor AutoComplete component | Syncfusion
-description: Check out how to use native events with the Syncfusion Blazor AutoComplete component, including @on{event} binding and passing event argument data.
+title: Native Events in Blazor AutoComplete | Syncfusion®
+description: Attach native DOM events to the Blazor AutoComplete using the @on{event} directive and pass event argument data into the handler.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Native Events in Blazor AutoComplete Component
+# Native Events in Blazor AutoComplete
 
 The following section explains how to include native DOM events and pass data to an event handler in the [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component. Native events are bound using the `@on{event}` attribute syntax, and the attribute value is the event handler.
 
@@ -44,7 +44,7 @@ In the following example, the `KeyPressed` method is called each time a key is p
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVUMrifgyJMzUUB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthHXdsiKvplRtfK?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 The same behavior can be written using a lambda expression. The following example prints a message when a key is pressed.
 
@@ -94,7 +94,7 @@ In the following example, the keypress handler receives `KeyboardEventArgs`. The
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgCVWTAdxsbIip?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrHZdsiKbeUmifq?appbar=false&editor=false&result=true&errorlist=false&theme=fluent2" %}
 
 Lambda expressions can also pass event data to the event handler as shown above. Native events can be used alongside Syncfusion component events (such as `ValueChange`), depending on the use case.
 
@@ -105,6 +105,6 @@ Common native events that can be bound to the component include:
 | List of Native events |  |  | |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
-| onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
+| onmousemove | onmouseover | onmouseout | onmousedown |
 | ondblclick | onkeydown | onkeyup | onkeypress |
 | ontouchend | onfocusin | onmouseup | ontouchstart |

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Timestamp in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Timestamp with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Timestamp in Blazor Chat UI | Syncfusion®
+description: Display message timestamps in Blazor Chat UI with configurable formatting via ShowTimestamp and TimestampFormat properties for conversation tracking.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Timestamp in Blazor Chat UI component
+# Timestamp in Blazor Chat UI
 
 ## Show or hide timestamp
 
@@ -37,7 +37,7 @@ You can use the [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Blazor Chat UI Timestamp](./images/timestamp.png)
+![Blazor Chat UI Timestamp](./images/timestamp.webp)
 
 ## Setting timestamp format
 
@@ -65,4 +65,4 @@ You can use the [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor Chat UI TimestampFormat](./images/timestampformat.png)
+![Blazor Chat UI TimestampFormat](./images/timestampformat.webp)
