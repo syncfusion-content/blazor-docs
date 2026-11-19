@@ -13,7 +13,7 @@ Use the following checklist to upgrade Blazor components safely and consistently
 
 ## Compatible .NET version
 
-Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Blazor components and .NET SDK.
+Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) or [.NET 11.0](https://dotnet.microsoft.com/en-us/download/dotnet/11.0). Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Blazor components and .NET SDK.
 
 ## Client resource file references
 

@@ -16,7 +16,7 @@ The Syncfusion® Blazor extension for Visual Studio streamlines working with Syn
 ## Prerequisites
 
 - Visual Studio 2022 or Visual Studio 2026 (Community, Professional, or Enterprise)
-- .NET 8.0, .NET 9.0, or .NET 10.0 SDK
+- .NET 8.0, .NET 9.0, .NET 10.0, or .NET 11.0 SDK
 - An active internet connection for installing the extension and downloading NuGet packages
 
 ## Add-in summary

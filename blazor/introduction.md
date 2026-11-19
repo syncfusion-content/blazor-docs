@@ -31,7 +31,7 @@ Blazor Components is an enterprise-grade, native UI components library for creat
 
 ## How it fits into Blazor?
 
-- Works across [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio), [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app), and [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) (.NET 8, .NET 9, and .NET 10) render modes.
+- Works across [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio), [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app), and [Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) (.NET 8, .NET 9, .NET 10, and .NET 11) render modes.
 - Plays well with dependency injection, routing, and cascading values.
 - Uses JavaScript interop only where it adds value (DOM/canvas/complex layout), keeping your app primarily in C# and Razor.
 
