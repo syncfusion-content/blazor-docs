@@ -15,7 +15,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Migration add-in for
 
 - Visual Studio 2022 or 2026 with the Syncfusion® Blazor Template Studio extension installed.
 - An existing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor project that references the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages.
-- .NET 8.0, .NET 9.0, or .NET 10.0 SDK.
+- .NET 8.0, .NET 9.0, .NET 10.0, or .NET 11.0 SDK.
 - An active internet connection to load the available Syncfusion® Blazor versions from NuGet.org.
 
 ## Supported application types

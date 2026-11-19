@@ -33,7 +33,7 @@ This guide explains how to create a Razor Class Library (RCL) that includes Blaz
 
     ![razor class project configuration](images/VS2022/razor-class-template.webp)
 
-4. Select the target Framework **.NET 8** or **.NET 9** or **.NET 10** at the top of the application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
+4. Select the target Framework **.NET 8**, **.NET 9**, **.NET 10**, or **.NET 11** at the top of the application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
 
     ![select framework](images/VS2022/blazor-select-template-rcl.webp)
 

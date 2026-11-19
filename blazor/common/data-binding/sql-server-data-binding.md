@@ -413,7 +413,7 @@ Themes provide life to components. Blazor has different themes. They are:
 
 In this demo application, the latest theme will be used.
 
-  * For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto),  refer stylesheet inside the `<head>` of **~/Components/App.razor** .
+  * For **.NET 8, .NET 9, .NET 10, and .NET 11** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto),  refer stylesheet inside the `<head>` of **~/Components/App.razor** .
 
   * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
 

@@ -14,7 +14,7 @@ This guide explains how to convert an existing Blazor application into a Syncfus
 ## Prerequisites
 
 - Visual Studio 2022 or 2026 with the Syncfusion® Blazor Template Studio extension installed. See [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) if it is not installed.
-- .NET 8.0, .NET 9.0, or .NET 10.0 SDK matching the target Syncfusion® Blazor version.
+- .NET 8.0, .NET 9.0, .NET 10.0, or .NET 11.0 SDK matching the target Syncfusion® Blazor version.
 - An active internet connection to load the available Syncfusion® Blazor versions from NuGet.org.
 - If you are behind a proxy or firewall, ensure that `nuget.org` is reachable.
 

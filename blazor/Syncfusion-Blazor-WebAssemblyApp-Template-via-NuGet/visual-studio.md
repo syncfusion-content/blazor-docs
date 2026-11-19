@@ -35,7 +35,7 @@ The steps below will assist you to create your **Syncfusion® Blazor Application
 
     | .NET SDK version | Supported Syncfusion Blazor Application Type |
     | ---------------- | -------------------------------------------- |
-    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor WebAssembly App |
+    | [.NET 11.0](https://dotnet.microsoft.com/en-us/download/dotnet/11.0), [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor WebAssembly App |
 
      In the **Syncfusion Blazor WebAssembly App** application type, you can choose Progressive Web Application.
      
