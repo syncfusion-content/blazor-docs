@@ -17,7 +17,7 @@ To enable the ripple effect for all components by setting the [EnableRippleEffec
 
 ### Blazor Web App
 
-For **.NET 8, .NET 9, .NET 10, and .NET 11** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), set the [EnableRippleEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRippleEffect) property to `true` using the `AddSyncfusionBlazor` service method in the `~/Program.cs` file.
+For **.NET 8, .NET 9 and .NET 10** Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), set the [EnableRippleEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRippleEffect) property to `true` using the `AddSyncfusionBlazor` service method in the `~/Program.cs` file.
 
 {% tabs %}
 
@@ -38,7 +38,7 @@ For Blazor WebAssembly Standalone apps, set the [EnableRippleEffect](https://hel
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 11, .NET 10, .NET 9 & .NET 8 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 10, .NET 9 & .NET 8 (~/Program.cs)" %}
 
 using Syncfusion.Blazor;
 
