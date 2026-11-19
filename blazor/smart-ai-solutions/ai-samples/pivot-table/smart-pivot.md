@@ -59,7 +59,7 @@ Install-Package OllamaSharp  # For Ollama
 Include the theme stylesheet and script via [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) in the `<head>` of your main page:
 
 - For **.NET 6** Blazor Server apps, add to **~/Pages/_Layout.cshtml**.
-- For **.NET 8 or .NET 9 or .NET 10** Blazor Server apps, add to **~/Components/App.razor**.
+- For **.NET 8, .NET 9, .NET 10, or .NET 11** Blazor Server apps, add to **~/Components/App.razor**.
 
 ```html
 <head>
@@ -273,7 +273,7 @@ The following example shows how to set up these features in your Blazor applicat
     <Description>
         <p>
             The <b>Pivot</b>, enhanced with AI, offers features such as <b>Smart Data Aggregation</b>, <b>Predictive Modeling</b>, and <b>Adaptive Filtering</b>. Click the <mark><b>AI Assist</b></mark> option to explore these AI-powered capabilities.
-            Know more <a target="_blank" href="https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/PivotTable/Readme.md">here</a>.
+            Know more in the <a target="_blank" aria-label="Smart Pivot Table sample Readme on GitHub" href="https://github.com/syncfusion/smart-ai-samples/blob/master/blazor/SyncfusionAISamples/Components/Pages/PivotTable/Readme.md">Smart Pivot Table sample Readme</a>.
         </p>
     </Description>
     <div class="pivot-toast">
