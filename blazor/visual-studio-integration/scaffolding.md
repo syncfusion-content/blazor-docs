@@ -14,7 +14,7 @@ Use the Syncfusion<sup style="font-size:70%">&reg;</sup> Scaffolder to quickly c
 ## Prerequisites
 
 - Visual Studio 2022 or 2026 with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Template Studio extension installed. See [download and installation](download-and-installation) if it is not installed.
-- .NET 8.0, .NET 9.0, or .NET 10.0 SDK.
+- .NET 8.0, .NET 9.0, .NET 10.0, or .NET 11.0 SDK.
 - A Blazor project that targets a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package version compatible with the current Visual Studio extension.
 
 N> Ensure your project includes at least one Entity Framework Core model and that the solution builds successfully. If you do not have a model, see [Microsoft's EF Core documentation](https://learn.microsoft.com/en-us/ef/core/) for creating models. After adding or modifying model properties, rebuild the project before running scaffolding.
@@ -103,7 +103,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor command-line scaffol
 
 ### Prerequisites
 
-- .NET 8.0, .NET 9.0, or .NET 10.0 SDK installed.
+- .NET 8.0, .NET 9.0, .NET 10.0, or .NET 11.0 SDK installed.
 - A Blazor project with a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package referenced.
 
 N> Verify that at least one Entity Framework model exists. If your application lacks an Entity Framework model, see [Microsoft's EF Core documentation](https://learn.microsoft.com/en-us/ef/core/) to create one. After you add the model file, double-check that the necessary DbContext and properties are present. Build the application before running scaffolding. If you change model properties, rebuild the application before performing scaffolding.

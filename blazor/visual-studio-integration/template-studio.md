@@ -39,8 +39,8 @@ N> The Syncfusion® Blazor extensions for Visual Studio require Essential Studio
 
     | .NET SDK version | Application type |
     | ---------------- | ---------------- |
-    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Blazor Web App |
-    | [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Blazor WebAssembly App |
+    | [.NET 11.0](https://dotnet.microsoft.com/en-us/download/dotnet/11.0), [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Blazor Web App |
+    | [.NET 11.0](https://dotnet.microsoft.com/en-us/download/dotnet/11.0), [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Blazor WebAssembly App |
 
     For the Blazor Web App type you can set Interactivity type (Server, WebAssembly, Auto) and Interactivity location (Global or per page/component).
 
@@ -290,7 +290,7 @@ N> **Note:** The culture combo box is enabled in the sample output only if the *
 
 #### Blazor Web App
 
-##### Apply database migrations and user registration in .NET 8.0, .NET 9.0, and .NET 10 Blazor Web App
+##### Apply database migrations and user registration in .NET 8.0, .NET 9.0, .NET 10, and .NET 11 Blazor Web App
 
 ###### Apply database migrations
 

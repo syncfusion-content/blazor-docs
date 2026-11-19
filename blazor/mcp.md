@@ -52,7 +52,7 @@ Generate the Syncfusion<sup style="font-size:70%">&reg;</sup> API key from the [
 
 Create a configuration file in your project folder to configure the server for your workspace. **Replace `YOUR_API_KEY_FILE_PATH` with the path to your API key file.** The tabs below show a working configuration for each supported MCP client.
 
-**For .NET 10** :
+**For .NET 10 and .NET 11** :
 
 > `dnx` is used in .NET 10 to execute .NET tools directly from NuGet without requiring a prior installation. It automatically downloads and starts the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncfusion.Blazor.MCP) NuGet package when first used.
 
