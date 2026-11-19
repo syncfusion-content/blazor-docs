@@ -21,18 +21,19 @@ The following tools and runtime are required to build and run an A2UI-integrated
 
 | Tool | Version |
 |------|---------|
-| .NET SDK | .NET 8, .NET 9, or .NET 10 |
+| .NET SDK | .NET 8, .NET 9, .NET 10, or .NET 11 |
 | Visual Studio / VS Code | Latest stable |
 
 ### Supported .NET versions
 
-Both `Syncfusion.A2UI.Core` and `Syncfusion.Blazor.A2UI` multi-target the same three TFMs, so the host application can stay on whatever LTS / current track it already targets:
+Both `Syncfusion.A2UI.Core` and `Syncfusion.Blazor.A2UI` multi-target the same TFMs, so the host application can stay on whatever LTS / current track it already targets:
 
 | .NET version | `Syncfusion.A2UI.Core` | `Syncfusion.Blazor.A2UI` |
 |--------------|-----------------------|--------------------------|
 | .NET 8 (`net8.0`) | ✅ Supported | ✅ Supported |
 | .NET 9 (`net9.0`) | ✅ Supported | ✅ Supported |
 | .NET 10 (`net10.0`) | ✅ Supported | ✅ Supported |
+| .NET 11 (`net11.0`) | ✅ Supported | ✅ Supported |
 
 You also need:
 

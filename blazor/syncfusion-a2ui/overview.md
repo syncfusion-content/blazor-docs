@@ -25,9 +25,9 @@ N> Syncfusion A2UI for Blazor is currently in **preview (beta)** and will be pub
 
 Before installing Syncfusion A2UI for Blazor, ensure you have:
 
-- An existing **Blazor Web App** (Server, WebAssembly, or Auto interactive render mode) running on **.NET 8, .NET 9, or .NET 10**. Both packages multi-target the same three TFMs (`net8.0`, `net9.0`, `net10.0`):
-  - `Syncfusion.A2UI.Core` — framework-agnostic protocol engine. Supports `net8.0`, `net9.0`, `net10.0`; works in Blazor, MAUI, WPF, WinForms, or ASP.NET Core MVC hosts.
-  - `Syncfusion.Blazor.A2UI` — Blazor renderer that depends on `Microsoft.AspNetCore.Components`. Supports `net8.0`, `net9.0`, `net10.0`.
+- An existing **Blazor Web App** (Server, WebAssembly, or Auto interactive render mode) running on **.NET 8, .NET 9, .NET 10, or .NET 11**. Both packages multi-target the same TFMs (`net8.0`, `net9.0`, `net10.0`, `net11.0`):
+  - `Syncfusion.A2UI.Core` — framework-agnostic protocol engine. Supports `net8.0`, `net9.0`, `net10.0`, `net11.0`; works in Blazor, MAUI, WPF, WinForms, or ASP.NET Core MVC hosts.
+  - `Syncfusion.Blazor.A2UI` — Blazor renderer that depends on `Microsoft.AspNetCore.Components`. Supports `net8.0`, `net9.0`, `net10.0`, `net11.0`.
 - Syncfusion Blazor components installed for the widget families the agent is expected to render (`Syncfusion.Blazor.Grid`, `Syncfusion.Blazor.Charts`, `Syncfusion.Blazor.Schedule`, etc.). The set of component packages you need is determined by which A2UI adapters you plan to use — see [Supported Components](./supported-components).
 - An [A2UI v0.9-compatible agent](https://a2ui.org/specification/v0.9-a2ui/) that emits messages conforming to the four-message lifecycle (`createSurface`, `updateComponents`, `updateDataModel`, `deleteSurface`).
 - A registered Syncfusion license key.
