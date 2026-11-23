@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AI Coding Assistants connect AI-powered development tools to Blazor product knowledge. The assistants use this knowledge to answer questions about components, generate code, and build user interfaces with Blazor components.
 
-This page introduces each experience and directs you to the documentation for setup and usage.
+This page introduces each capability and directs you to the documentation for setup and usage.
 
 ## Why use AI coding assistants with Blazor
 
