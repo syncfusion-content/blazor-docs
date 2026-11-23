@@ -92,5 +92,5 @@ You can also use the [Syncfusion .NET CLI](https://blazor.syncfusion.com/documen
 
 ## See also
 
-* [Blazor API reference](https://help.syncfusion.com/cr/blazor)
-* [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
+* [WebMCP for Blazor Components](https://blazor.syncfusion.com/documentation/webmcp/overview)
+* [Blazor AI Library](https://blazor.syncfusion.com/documentation/smart-ai-solutions/ai/overview)
