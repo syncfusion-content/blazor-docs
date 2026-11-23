@@ -16,7 +16,7 @@ This page introduces each experience and directs you to the documentation for se
 
 ## Why use AI coding assistants with Syncfusion® Blazor
 
-A general-purpose AI model generates code from its training data. That data might not reflect the current Syncfusion® Blazor APIs, so generated code can contain invalid parameters or missing configuration. Syncfusion® AI Coding Assistants address this by supplying the assistant with Syncfusion®-specific guidance:
+Generic AI suggestions are not based on Syncfusion® product knowledge. Syncfusion® AI Coding Assistants give the AI agent access to Syncfusion®-specific guidance on component usage, APIs, and supported features:
 
 * The [MCP Server](https://blazor.syncfusion.com/documentation/mcp) provides documentation, component guidance, and code snippets on request.
 * [Skills](https://blazor.syncfusion.com/documentation/skills) provide component usage, API, and theming guidance as files that the assistant reads.
@@ -31,7 +31,7 @@ The [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/get
 #search_docs How do I enable paging and sorting in the Blazor Grid?
 ```
 
-The MCP Server runs from the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncfusion.Blazor.MCP) NuGet package. On .NET 10 and later, the `dnx` command downloads the NuGet package and runs the server from NuGet. On .NET 8 and .NET 9, you install the NuGet package as a local .NET tool. The server requires a Syncfusion® [API key](https://www.syncfusion.com/account/api-key) and an active Syncfusion® license. The tools do not access your project files, and your prompts are not stored or used to train models.
+The MCP Server is distributed as the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncfusion.Blazor.MCP) NuGet package and requires a Syncfusion® [API key](https://www.syncfusion.com/account/api-key). The tools do not access your project files, and your prompts are not stored or used to train models. For prerequisites and client configuration, see the [MCP Server documentation](https://blazor.syncfusion.com/documentation/mcp).
 
 ## Available experiences
 
