@@ -1,171 +1,98 @@
 ---
 layout: post
-title: AI Coding Assistants for Syncfusion Blazor Components | Syncfusion®
-description: Learn how Skills, the MCP Server, the Prompt Library, the Agentic UI Builder, and WebMCP help AI assistants generate accurate Syncfusion Blazor code.
+title: Overview of Syncfusion Blazor AI Coding Assistants | Syncfusion®
+description: Learn about Syncfusion Blazor AI Coding Assistants, including the MCP Server, Skills, the Agentic UI Builder, and WebMCP, and find the right documentation to get started.
 control: AI Coding Assistants Overview
 platform: Blazor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# AI Coding Assistants for Syncfusion® Blazor Components
+# Overview of Syncfusion® Blazor AI Coding Assistants
 
-AI assistants can speed up Syncfusion® Blazor development. Without product context, however, they can suggest code that looks correct but uses outdated APIs, invalid parameters, or missing configuration. Examples include a component feature that needs a setup step the assistant did not know about, or a parameter name from an older version.
+Syncfusion® Blazor AI Coding Assistants connect AI-powered development tools to Syncfusion® Blazor product knowledge. The assistants use this knowledge to answer questions about components, generate code, and build user interfaces with Syncfusion® Blazor components.
 
-Syncfusion® AI Coding Assistants reduce these problems by giving the assistant access to current Syncfusion® Blazor guidance. The guidance comes either from documentation retrieved through the MCP Server or from skill files stored in your project.
+This page introduces each experience and directs you to the documentation for setup and usage.
 
-This page explains:
+## Why use AI coding assistants with Syncfusion® Blazor
 
-* Which AI Coding Assistant experiences are available for Blazor.
-* How each experience improves the accuracy of generated code.
-* Which experience to choose for a given task.
+A general-purpose AI model generates code from its training data. That data might not reflect the current Syncfusion® Blazor APIs, so generated code can contain invalid parameters or missing configuration. Syncfusion® AI Coding Assistants address this by supplying the assistant with Syncfusion®-specific guidance:
 
-## Available experiences
+* The [MCP Server](https://blazor.syncfusion.com/documentation/mcp) provides documentation, component guidance, and code snippets on request.
+* [Skills](https://blazor.syncfusion.com/documentation/skills) provide component usage, API, and theming guidance as files that the assistant reads.
 
-| Experience | What it provides | Learn more |
-|---|---|---|
-| **Skills** | Component usage, API, and theming guidance stored as skill files that your AI assistant reads while generating code. | [Blazor Agent Skills](https://blazor.syncfusion.com/documentation/skills) |
-| **MCP Server** | A [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) server that gives your IDE access to Syncfusion® Blazor documentation and code guidance through the `search_docs` tool. | [Syncfusion Blazor MCP Server](https://blazor.syncfusion.com/documentation/mcp) |
-| **Prompt Library** | Ready-to-use prompts for common component tasks. | [Prompt Library](./prompt-library) |
-| **Agentic UI Builder** | An agent skill that turns natural-language UI requirements into Blazor components, layouts, and themes. | [Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder) |
-| **WebMCP** | Lets a browser-based AI agent operate a running Syncfusion® Blazor component through tools that the component registers with the browser. | [WebMCP](https://blazor.syncfusion.com/documentation/webmcp/overview) |
+The final code is produced by the AI model that you select. Always review AI-generated code before you use it in production.
 
-N> The Agentic UI Builder was previously part of the MCP Server as `#sf_blazor_ui_builder`. It is now an agent skill-based experience and is no longer part of the MCP Server. The documentation tool was renamed from `#sf_blazor_assistant` to `#search_docs`. See the [release notes](https://blazor.syncfusion.com/documentation/ai-tools/release-notes) for details.
+## Role of MCP
 
-### Skills
-
-Skills are curated reference files that the assistant loads on demand. The assistant first reads only the skill names and descriptions, then loads the skill and reference files that match your request. Blazor Skills cover component usage and APIs, recommended patterns such as data binding, and theming guidance. Skills install with the Skills CLI, so you can keep them in your project or install them globally. Skills are also available through the [Syncfusion® .NET CLI](https://blazor.syncfusion.com/documentation/dotnet-cli/install-skills).
-
-Skills are published in the [Syncfusion Blazor component skills repository](https://github.com/syncfusion/blazor-ui-components-skills).
-
-### MCP Server
-
-The Syncfusion® Blazor MCP Server runs from the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncfusion.Blazor.MCP) NuGet package. On .NET 10 and later, the `dnx` command downloads the NuGet package and runs the server directly from NuGet. On .NET 8 and .NET 9, install it as a local .NET tool by using `dotnet tool install Syncfusion.Blazor.MCP`. For more information about running .NET tools, see [dotnet tool exec](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-exec) and [local tools](https://learn.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use) in the Microsoft documentation.
-
-The server requires a Syncfusion® [API key](https://www.syncfusion.com/account/api-key) and an active Syncfusion® license. A commercial license, the Free Community License, or a free trial is accepted. Once connected, the `search_docs` tool provides component documentation, code snippets, and configuration examples. Your assistant can call it automatically, or you can call it directly in a prompt:
+The [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) is an open protocol that connects AI applications to external tools and data sources. The Syncfusion® Blazor MCP Server uses MCP to connect an MCP-compatible IDE to Syncfusion® Blazor knowledge. When you ask a question, the assistant calls the `search_docs` tool, which returns component documentation, code snippets, and configuration examples. You can also call the tool directly in a prompt:
 
 ```
 #search_docs How do I enable paging and sorting in the Blazor Grid?
 ```
 
-You can also configure the MCP Server with the [Syncfusion® .NET CLI](https://blazor.syncfusion.com/documentation/dotnet-cli/configure-mcp).
+The MCP Server runs from the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncfusion.Blazor.MCP) NuGet package. On .NET 10 and later, the `dnx` command downloads the NuGet package and runs the server from NuGet. On .NET 8 and .NET 9, you install the NuGet package as a local .NET tool. The server requires a Syncfusion® [API key](https://www.syncfusion.com/account/api-key) and an active Syncfusion® license. The tools do not access your project files, and your prompts are not stored or used to train models.
 
-### Prompt Library
+## Available experiences
 
-The [Prompt Library](./prompt-library) contains short prompts for common tasks, such as enabling paging and sorting, exporting data, and troubleshooting a component. Copy a prompt, adjust it for your scenario, and run it through the MCP Server.
+| Experience | Description | Documentation |
+|---|---|---|
+| **MCP Server** | Gives your IDE access to Syncfusion® Blazor documentation and code guidance through the `search_docs` tool. | [MCP Server](https://blazor.syncfusion.com/documentation/mcp) |
+| **Skills** | Provides Blazor component usage, API, and theming guidance as skill files that AI agents load when they are relevant to a request. | [Skills](https://blazor.syncfusion.com/documentation/skills) |
+| **Agentic UI Builder** | Transforms natural-language UI requirements into Blazor components by using an agent skill. | [Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder) |
+| **WebMCP** | Lets a browser-based AI agent operate a running Syncfusion® Blazor component through tools that the component registers with the browser. | [WebMCP](https://blazor.syncfusion.com/documentation/webmcp/overview) |
 
-### Agentic UI Builder
+N> The Agentic UI Builder (`#sf_blazor_ui_builder`) is no longer part of the MCP Server. It is now an agent skill-based experience. The MCP tool for documentation is named `search_docs`. See the [release notes](https://blazor.syncfusion.com/documentation/ai-tools/release-notes) for version-specific changes.
 
-The Agentic UI Builder generates complete pages and dashboards from a description of the interface. It selects suitable Syncfusion® components, applies a theme such as Tailwind 3, Bootstrap 5.3, Material 3, or Fluent 2, and asks for confirmation before it inserts code into your project. It installs through the Agent Package Manager (APM). See the [Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder) documentation for prerequisites and installation steps.
+## Choose an experience
 
-### WebMCP
-
-WebMCP serves a different purpose from the other experiences. The MCP Server and Skills help an assistant **write** code in your IDE. WebMCP lets an agent in the browser **operate** a component that is already running in your application. It is built on an experimental browser API and currently works only in Chromium-based browsers. For more information, see [Getting started with WebMCP](https://blazor.syncfusion.com/documentation/webmcp/getting-started) and [Security and best practices](https://blazor.syncfusion.com/documentation/webmcp/security).
-
-## Benefits
-
-* **Documentation grounding.** The MCP Server and Skills supply Syncfusion® specific guidance, which reduces suggestions based on outdated or generic information.
-* **Component and API discovery.** Ask the assistant about components, features, and events in plain language instead of searching the documentation manually.
-* **Consistent guidance.** Skills stored in your project give every developer on the team the same patterns.
-* **Faster UI creation.** The Agentic UI Builder produces complete layouts, which you can then refine.
-* **No usage limits.** Syncfusion® provides unlimited access to the MCP Server with no limits on requests, tools, queries, or duration.
-* **Privacy.** The MCP Server tools do not access your project files, and your prompts are not stored or used to train models.
-
-N> The final code is produced by the AI model that you select. Always review AI-generated code before you use it in production.
-
-## Choose a workflow
-
-| Goal | Recommended experience |
+| Goal | Experience |
 |---|---|
-| Ask how to use a component, feature, or event | MCP Server (`search_docs`) |
-| Troubleshoot a component in your project | MCP Server (`search_docs`) |
-| Start from a tested prompt for a common task | Prompt Library |
-| Give your whole team the same implementation patterns | Skills |
-| Generate a full page, dashboard, or form | Agentic UI Builder |
-| Let a browser agent operate a running component | WebMCP |
+| Ask how to use a component, feature, or event | MCP Server |
+| Troubleshoot a component in your project | MCP Server |
+| Give the AI agent Syncfusion® Blazor component guidance stored with your project | Skills |
+| Generate pages, dashboards, or forms from a description | Agentic UI Builder |
+| Let an agent in the browser operate a component that is running | WebMCP |
 
-### How the experiences work together
+The MCP Server and Skills are separate installations. You can install both in the same IDE. The Agentic UI Builder documentation also recommends retrying a generation with the specific component skill when a generated component does not render.
 
-* **Skills and the MCP Server.** Skills provide patterns that are stored with your project. The MCP Server provides documentation retrieved when you ask. You can use both in the same IDE.
-* **Agentic UI Builder and Skills.** The Agentic UI Builder works with Syncfusion® Blazor component skills. If a generated component does not render correctly, the Agentic UI Builder documentation recommends retrying the generation with the specific component skill.
-* **Prompt Library and the MCP Server.** The prompts in the library are written for use with the MCP Server.
+WebMCP differs from the other experiences. The MCP Server, Skills, and Agentic UI Builder help an AI agent write code in your IDE. WebMCP lets an agent operate a component in the browser. It uses an experimental browser API and currently works only in Chromium-based browsers.
 
-## Practical examples
+## Supported IDEs and AI tools
 
-### Ask about a component feature
+The MCP Server works with MCP-compatible clients. The [MCP Server documentation](https://blazor.syncfusion.com/documentation/mcp) provides configuration for VS Code, Syncfusion® Code Studio, Cursor, and JetBrains. Skills work with agents and IDEs that load local skill files, such as VS Code, Cursor, and Code Studio. The Agentic UI Builder installs for GitHub Copilot, Cursor, Codex, and Claude through the Agent Package Manager (APM).
 
-With the MCP Server connected, describe the task and name the component:
-
-```
-#search_docs Create a Syncfusion Blazor Grid with paging, sorting, and filtering enabled.
-```
-
-### Add a feature to an existing component
-
-```
-#search_docs How can I add PDF and Excel export options to my existing Grid's toolbar?
-```
-
-### Troubleshoot an issue
-
-```
-#search_docs Why aren't my Schedule events displaying or saving correctly?
-```
-
-### Generate a complete interface
-
-After you install the Agentic UI Builder, select the `syncfusion-blazor-ui-builder` agent in your IDE and describe the interface:
-
-```
-Create a login page with the Tailwind 3 theme using a centered card layout containing email and password input fields with validation. Include a "Remember Me" checkbox, a forgot password link, and a primary login button.
-```
-
-### Use skills for everyday tasks
-
-After you install Skills, prompts such as the following load the matching skill automatically:
-
-```
-Add a DataGrid with paging, sorting, and filtering.
-```
+You can also use the [Syncfusion® .NET CLI](https://blazor.syncfusion.com/documentation/dotnet-cli/overview) to [configure the MCP Server](https://blazor.syncfusion.com/documentation/dotnet-cli/configure-mcp) and [install Skills](https://blazor.syncfusion.com/documentation/dotnet-cli/install-skills).
 
 ## Get accurate results
 
-* **Be specific.** Include the platform and the component, for example "Create a Syncfusion Blazor Grid with paging and filtering".
-* **Provide context.** Include the versions, expected behavior, and constraints that apply.
-* **Use descriptive prompts.** Avoid short or ambiguous requests.
-* **Start a new chat for a new topic.** This keeps the context clean.
-* **Limit active MCP tools.** Fewer active tools in your IDE reduce tool-selection ambiguity.
-* **Use a capable model.** The documentation recommends Claude Sonnet 4.5 or higher for the MCP Server. Other compatible models include GPT-5 and Gemini 3 Pro. For the Agentic UI Builder, the documentation recommends Claude Sonnet 4.6 or higher.
-* **Check the API reference.** Verify generated property and event names in the [Syncfusion Blazor API reference](https://help.syncfusion.com/cr/blazor).
+* Include the platform and the component in your prompt, for example "Create a Syncfusion Blazor Grid with paging and filtering".
+* Include the versions, expected behavior, and constraints that apply.
+* Start a new chat when you change to a different component or task.
+* Limit the number of active MCP tools in your IDE to avoid ambiguity in tool selection.
+* Use a high-capability AI model. The MCP Server documentation recommends Claude Sonnet 4.5 or higher, and also lists GPT-5 and Gemini 3 Pro as compatible models. The Agentic UI Builder documentation recommends Claude Sonnet 4.6 or higher.
+* Verify property and event names in the [Syncfusion Blazor API reference](https://help.syncfusion.com/cr/blazor).
 
-## Troubleshooting
+## Documentation structure
 
-| Issue | Solution |
+| Topic | Description |
 |---|---|
-| MCP server failed to start | Verify that .NET SDK 8.0 or later is installed, check the JSON syntax of the configuration file, and restart your IDE. |
-| Invalid API key | Verify that your key is active on the [API Key page](https://www.syncfusion.com/account/api-key). |
-| Incorrect API key configuration | If you use a file path, verify the file location and content. If you use an inline key, verify that the key is correct. |
-| Wrong configuration file location | Use `.vscode/mcp.json` for VS Code, `.codestudio/mcp.json` for Code Studio, and `.cursor/mcp.json` for Cursor, all in the workspace root. |
-| Cannot find the cause of an MCP error | Open the Output panel and select **MCP** in VS Code or Code Studio. In Cursor, open the Developer Console. |
-| Agentic UI Builder skills do not load | Confirm that the `.agent/` and `.github/agents/` folders exist and that APM installed the skill. Confirm that the correct agent is selected in your IDE. |
-| Syncfusion® license banner appears in generated applications | Use the licensing skill to register and validate your Syncfusion® license key. |
-| WebMCP tools are not registered | See the [WebMCP FAQ](https://blazor.syncfusion.com/documentation/webmcp/faq). |
+| [MCP Server](https://blazor.syncfusion.com/documentation/mcp) | Prerequisites, API key setup, client configuration, usage examples, best practices, and troubleshooting. |
+| [Skills](https://blazor.syncfusion.com/documentation/skills) | Install, list, update, and remove Blazor component skills. |
+| [Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder) | Install the skill with APM and generate user interfaces. |
+| [WebMCP](https://blazor.syncfusion.com/documentation/webmcp/overview) | Enable WebMCP, configure tools, and review [security guidance](https://blazor.syncfusion.com/documentation/webmcp/security), [supported components](https://blazor.syncfusion.com/documentation/webmcp/components), and the [FAQ](https://blazor.syncfusion.com/documentation/webmcp/faq). |
+| [Syncfusion® .NET CLI](https://blazor.syncfusion.com/documentation/dotnet-cli/overview) | Configure the MCP Server and install Skills from the command line. |
+| [Release notes](https://blazor.syncfusion.com/documentation/ai-tools/release-notes) | Changes to the MCP Server, Skills, and Agentic UI Builder. |
 
-## Quick reference
+## Next steps
 
-| If you want to | Use | Start here |
-|---|---|---|
-| Get answers and code for a component | MCP Server | [MCP Server](https://blazor.syncfusion.com/documentation/mcp) |
-| Keep Syncfusion® patterns in your project | Skills | [Skills](https://blazor.syncfusion.com/documentation/skills) |
-| Reuse proven prompts | Prompt Library | [Prompt Library](./prompt-library) |
-| Build a full UI from a description | Agentic UI Builder | [Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder) |
-| Let a browser agent operate a component | WebMCP | [WebMCP](https://blazor.syncfusion.com/documentation/webmcp/overview) |
-| Set up with a command-line tool | Syncfusion® .NET CLI | [Syncfusion® .NET CLI](https://blazor.syncfusion.com/documentation/dotnet-cli/overview) |
-| Track changes to these tools | Release notes | [Release notes](https://blazor.syncfusion.com/documentation/ai-tools/release-notes) |
+1. Install the [MCP Server](https://blazor.syncfusion.com/documentation/mcp) or [Skills](https://blazor.syncfusion.com/documentation/skills) in your IDE.
+2. Ask a question about a component and review the response against the [Syncfusion Blazor documentation](https://blazor.syncfusion.com/documentation/introduction).
+3. Use the [Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder) when you need a complete page or dashboard.
+
+If you need help, [create a support ticket](https://support.syncfusion.com/support/tickets/create).
 
 ## See also
 
-* [Getting Started with the AI Coding Assistant](./getting-started)
-* [Syncfusion Blazor components documentation](https://blazor.syncfusion.com/documentation/introduction)
 * [Syncfusion Blazor API reference](https://help.syncfusion.com/cr/blazor)
 * [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
