@@ -60,7 +60,7 @@ WebMCP differs from the other experiences. The MCP Server, Skills, and Agentic U
 
 ## Supported IDEs and AI tools
 
-The MCP Server works with MCP-compatible clients. The [MCP Server documentation](https://blazor.syncfusion.com/documentation/mcp) provides configuration for VS Code, Code Studio, Cursor, and JetBrains. Skills work with agents and IDEs that load local skill files, such as VS Code, Cursor, and Code Studio. The Agentic UI Builder installs for GitHub Copilot, Cursor, Codex, and Claude through the Agent Package Manager (APM).
+The MCP Server works with MCP-compatible clients. The [MCP Server documentation](https://blazor.syncfusion.com/documentation/mcp) provides configuration for VS Code, Cursor, and JetBrains. Skills work with agents and IDEs that load local skill files, such as VS Code, and Cursor. The Agentic UI Builder installs for GitHub Copilot, Cursor, Codex, and Claude through the Agent Package Manager (APM).
 
 You can also use the [Syncfusion .NET CLI](https://blazor.syncfusion.com/documentation/dotnet-cli/overview) to [configure the MCP Server](https://blazor.syncfusion.com/documentation/dotnet-cli/configure-mcp) and [install Skills](https://blazor.syncfusion.com/documentation/dotnet-cli/install-skills).
 
@@ -71,7 +71,7 @@ You can also use the [Syncfusion .NET CLI](https://blazor.syncfusion.com/documen
 * Start a new chat when you change to a different component or task.
 * Limit the number of active MCP tools in your IDE to avoid ambiguity in tool selection.
 * Use a high-capability AI model. The MCP Server documentation recommends Claude Sonnet 4.5 or higher, and also lists GPT-5 and Gemini 3 Pro as compatible models. The Agentic UI Builder documentation recommends Claude Sonnet 4.6 or higher.
-* Verify property and event names in the [Syncfusion Blazor API reference](https://help.syncfusion.com/cr/blazor).
+* Verify property and event names in the [Blazor API reference](https://help.syncfusion.com/cr/blazor).
 
 ## Documentation structure
 
@@ -87,12 +87,10 @@ You can also use the [Syncfusion .NET CLI](https://blazor.syncfusion.com/documen
 ## Next steps
 
 1. Install the [MCP Server](https://blazor.syncfusion.com/documentation/mcp) or [Skills](https://blazor.syncfusion.com/documentation/skills) in your IDE.
-2. Ask a question about a component and review the response against the [Syncfusion Blazor documentation](https://blazor.syncfusion.com/documentation/introduction).
+2. Ask a question about a component and review the response against the [Blazor documentation](https://blazor.syncfusion.com/documentation/introduction).
 3. Use the [Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder) when you need a complete page or dashboard.
-
-If you need help, [create a support ticket](https://support.syncfusion.com/support/tickets/create).
 
 ## See also
 
-* [Syncfusion Blazor API reference](https://help.syncfusion.com/cr/blazor)
+* [Blazor API reference](https://help.syncfusion.com/cr/blazor)
 * [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
