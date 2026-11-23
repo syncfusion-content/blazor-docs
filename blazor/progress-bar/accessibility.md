@@ -36,6 +36,17 @@ The accessibility compliance for the Blazor ProgressBar component is outlined be
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## WAI-ARIA attributes
+
+The Blazor ProgressBar uses WAI-ARIA roles and attributes to expose its current state and value to assistive technologies.
+
+| ProgressBar element | Attribute | Usage |
+|---|---|---|
+| ProgressBar root | `role="progressbar"` | Identifies the component as a progress indicator. |
+|  | `aria-label` | Provides an accessible name for the ProgressBar. |
+|  | `aria-valuemin` | Exposes the minimum value in determinate mode. |
+|  | `aria-valuemax` | Exposes the maximum value in determinate mode. |
+|  | `aria-valuenow` | Exposes the current value in determinate mode. |
 
 ## Keyboard interaction
 
