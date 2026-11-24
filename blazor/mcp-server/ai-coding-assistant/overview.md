@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Blazor AI Coding Assistants | Syncfusion®
-description: Learn about Syncfusion Blazor AI Coding Assistants, including the MCP Server, Skills, the Agentic UI Builder, and WebMCP, and find the right documentation to get started.
+description: Explore Syncfusion Blazor AI Coding Assistants, including MCP Server, Skills, Agentic UI Builder, and WebMCP, with setup, usage, and integration guidance.
 control: AI Coding Assistants Overview
 platform: Blazor
 documentation: ug
