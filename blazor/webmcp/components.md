@@ -18,7 +18,7 @@ The components below support WebMCP. Each one uses the same settings, tools, and
 | Chart | `ChartWebMcpToolCommand` | 37 |
 | Gantt | `GanttWebMcpToolCommand` | 64 |
 | Diagram | `DiagramWebMcpToolCommand` | 18 |
-| File Manager | `FileManagerWebMcpToolCommand` | 19 |
+| File Manager | `FileManagerWebMcpToolCommand` | 17 |
 | Rich Text Editor | `RichTextEditorWebMcpToolCommand` | 20 |
 | PDF Viewer | `PdfViewerWebMcpToolCommand` | 32 |
 | Document Editor | `DocumentEditorWebMcpToolCommand` | 61 |
@@ -103,12 +103,12 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 ## File Manager
 
-The Syncfusion® File Manager component exposes **19 tools** that enable AI agents to browse files, manage file operations, control the user interface, perform folder navigation, and automate common file management workflows. Explore the Syncfusion Blazor File Manager component with WebMCP integration through this [demo](https://blazor.syncfusion.com/products/blazor/filemanager/webmcp).
+The Syncfusion® File Manager component exposes **17 tools** that enable AI agents to browse files, manage file operations, control the user interface, perform folder navigation, and automate common file management workflows. Explore the Syncfusion Blazor File Manager component with WebMCP integration through this [demo](https://blazor.syncfusion.com/products/blazor/filemanager/webmcp).
 
 | Group | Tools |
 | --- | --- |
-| Read and select | `GetSelectedFiles`, `GetAllFiles`, `SelectAll`, `ClearSelection`, `FilterFiles` |
-| Navigate | `OpenFile`, `TraverseBackward`, `GoToPage`, `RefreshFiles`, `RefreshLayout` |
+| Read and select | `GetSelectedFiles`, `SelectAll`, `ClearSelection`, `FilterFiles` |
+| Navigate | `OpenFile`, `TraverseBackward`, `RefreshFiles`, `RefreshLayout` |
 | File operations | `CreateFolder`, `RenameFile`, `DeleteFiles`, `UploadFiles`, `DownloadFiles` |
 | Menu and toolbar | `EnableMenuItems`, `DisableMenuItems`, `EnableToolbarItems`, `DisableToolbarItems` |
 
