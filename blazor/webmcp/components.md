@@ -123,7 +123,7 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 ## PDF Viewer
 
-The Syncfusion® PDF Viewer component exposes 32 tools that enable AI agents to navigate pages, search and extract text, inspect page metadata, manage form fields, inspect bookmarks, handle annotations, manage redactions, adjust viewing/zoom, print, download, and automate PDF document workflows. Explore the Syncfusion® Blazor PDF Viewer component with WebMCP integration through this [demo](https://blazor.syncfusion.com/products/blazor/pdfviewer/webmcp).
+The Syncfusion® PDF Viewer component exposes 32 tools that enable AI agents to navigate pages, search and extract text, retrieve page and document information, manage form fields, inspect bookmarks, handle annotations, adjust viewing and zoom, manipulate pages, print, download, and automate PDF document workflows. Explore the Syncfusion® Blazor PDF Viewer component with WebMCP integration through this [demo](https://blazor.syncfusion.com/products/blazor/pdfviewer/webmcp).
 
 | Group | Tools |
 | --- | --- |
