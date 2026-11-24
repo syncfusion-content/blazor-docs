@@ -159,7 +159,7 @@ You can install the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncf
     dotnet new tool-manifest
     ````
 
-    This generates a `.config/dotnet-tools.json` file that tracks local .NET tools for the workspace.
+    This generates a `dotnet-tools.json` file that tracks local .NET tools for the workspace.
 
 2. Install the `Syncfusion.Blazor.MCP` NuGet package locally:
 
@@ -349,7 +349,5 @@ The MCP Server acts purely as a knowledge bridge, connecting your AI model with 
 
 ## See Also
 
-- [Model Context Protocol Documentation](https://modelcontextprotocol.io/)
-- [Syncfusion Blazor Components](https://www.syncfusion.com/blazor-components)
-- [Syncfusion Blazor Documentation](https://blazor.syncfusion.com/documentation/introduction)
-- [Syncfusion.Blazor.MCP on NuGet](https://www.nuget.org/packages/Syncfusion.Blazor.MCP)
+- [Blazor Agent Skills for AI Assistants](https://blazor.syncfusion.com/documentation/skills)
+- [Agentic Blazor UI Builder Skill for AI Assistants](https://blazor.syncfusion.com/documentation/agentic-ui-builder)
