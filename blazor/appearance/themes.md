@@ -153,7 +153,7 @@ To reference the optimized (lite) CSS files from the [Syncfusion.Blazor](https:/
 
 Browsers can continue to use a cached Blazor theme stylesheet after the Blazor packages are upgraded. To load the latest theme after an upgrade, call `MapStaticAssets()` in the **~/Program.cs** file and reference the theme stylesheet using `@Assets[]` in the **~/Components/App.razor** file. The generated URL includes a fingerprint that changes whenever the file content changes, so browsers automatically request the updated stylesheet.
 
-```razor
+```html
 <head>
     <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
 </head>
