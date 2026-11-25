@@ -76,55 +76,54 @@ N> For a **Blazor Web App** (render mode: Auto) and a **Blazor WebAssembly App**
 
 ### Prevent stale cached assets using asset fingerprinting
 
-Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` to improve load times. After the Blazor NuGet packages are upgraded, a browser can continue to use the previously cached script while the server runs the newer Blazor assemblies. This version mismatch can cause runtime errors. Asset fingerprinting prevents this issue by generating a unique URL whenever the file content changes, so browsers automatically download the latest assets after an upgrade.
+Browsers cache static web assets such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js` to improve load times. After the Blazor NuGet packages are upgraded, a browser can continue to use a previously cached script while the server runs newer Blazor assemblies. This version mismatch can cause runtime errors. Asset fingerprinting prevents this issue by generating a unique URL whenever the file content changes, so browsers automatically download the latest assets after an upgrade.
 
-Asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0#mapstaticassets) and the `@Assets[]` resource collection. Static web assets from Razor class libraries, such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, are included in the fingerprinting process.
+ASP.NET Core asset fingerprinting is available in .NET 9 and later through [MapStaticAssets](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-10.0#mapstaticassets). In Blazor Web App applications, fingerprinted asset URLs can be resolved through the `@Assets[]` resource collection. Static web assets from Razor class libraries, such as `_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js`, are included in the fingerprinting process.
 
 1. Call `MapStaticAssets()` in the **~/Program.cs** file. For a **Blazor Web App**, call it in the **Server** project.
 
-    {% tabs %}
-    {% highlight cs tabtitle="Program.cs" hl_lines="6" %}
+{% tabs %}
+{% highlight cs tabtitle="Program.cs" hl_lines="6" %}
 
-    var app = builder.Build();
+var app = builder.Build();
 
-    app.UseHttpsRedirection();
-    app.UseAntiforgery();
+app.UseHttpsRedirection();
+app.UseAntiforgery();
 
-    app.MapStaticAssets();
-    app.MapRazorComponents<App>()
-        .AddInteractiveServerRenderMode();
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
 
-    app.Run();
+app.Run();
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 2. Reference the theme and script assets through the `@Assets` resource collection. Add the theme stylesheet reference as described in the [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) section and place it at the end of the `<head>` section in the **~/Components/App.razor** file.
 
-    {% tabs %}
-    {% highlight razor tabtitle="App.razor" %}
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
 
-    <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
+<link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
-    Add the script reference at the end of the `<body>` section in the same file.
+Add the script reference at the end of the `<body>` section in the same file.
 
-    {% tabs %}
-    {% highlight razor tabtitle="App.razor" %}
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
 
-    <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
+<script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
-The `@Assets[]` resource collection requires .NET 9 or later. The following table lists where to apply the fingerprinted references for each application type.
+The `@Assets[]` resource collection requires .NET 9 or later. The following table lists where to apply fingerprinted asset references for each application type.
 
 | Application type | Call `MapStaticAssets()` in | Add the references in | Reference syntax |
 |---|---|---|---|
 | Blazor Web App (Server, WebAssembly, or Auto render modes) | **~/Program.cs** of the **Server** project | **~/Components/App.razor** of the **Server** project | `@Assets["_content/..."]` |
-| Blazor Server App | **~/Program.cs** | Host page that contains the `<head>` and `<body>` elements, such as **~/Pages/_Host.cshtml** or **~/Components/App.razor** | `@Assets["_content/..."]` |
 | Blazor WebAssembly standalone App | Not applicable | **~/wwwroot/index.html** | The `@Assets` resource collection is not available. Use the [alternative cache-busting approaches](#alternative-cache-busting-approaches). |
 
 The rendered URL contains a fingerprint computed from the file content, so the URL changes whenever the file changes after a package upgrade. Fingerprinted assets are served with the `immutable` cache directive, which allows browsers to cache them safely while still receiving updated files when the content changes.
@@ -138,11 +137,11 @@ The rendered URL contains a fingerprint computed from the file content, so the U
 
 #### Alternative cache-busting approaches
 
-The `@Assets[]` resource collection is available in **Blazor Web App** and **Blazor Server** applications that target .NET 9 or later. For applications that cannot use `MapStaticAssets()`, such as applications targeting earlier .NET versions or standalone **Blazor WebAssembly** applications, use one of the following approaches.
+The `@Assets[]` resource collection is available in Blazor Web App applications that target .NET 9 or later. For applications that cannot use `MapStaticAssets()`, such as applications targeting earlier .NET versions or standalone **Blazor WebAssembly** applications, use one of the following approaches.
 
 **Version query string**
 
-Append a version query string to the script and stylesheet references, and update it after each Blazor package upgrade. This approach works in all application types. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
+Append a version query string to the script and stylesheet references, and update the value whenever the referenced asset changes. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -170,7 +169,7 @@ In applications that render **.cshtml** files, such as a Blazor Server applicati
 
 The tag helper is processed on the server. Therefore, it cannot be used in static files such as the **index.html** file of a standalone **Blazor WebAssembly** application, or in **.razor** files.
 
-Asset fingerprinting is still the recommended approach when the application supports it. The asset URL is generated automatically from the file content, so no version number needs to be updated manually after upgrading the Blazor packages, and cached client-side assets cannot get out of sync with the upgraded Blazor assemblies.
+Asset fingerprinting automatically generates a content-based URL for each asset. Because the URL changes when the asset content changes, browsers can cache assets while still requesting updated versions of modified files.
 
 ## Individual component script references
 
