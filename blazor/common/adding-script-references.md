@@ -141,7 +141,7 @@ The `@Assets[]` resource collection is available in Blazor Web App applications 
 
 **Version query string**
 
-Append a version query string to the script and stylesheet references, and update the value whenever the referenced asset changes. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
+Append a version query string to the script and stylesheet references, and update the value after each Blazor package upgrade. In a standalone **Blazor WebAssembly** application, add the references to the **~/wwwroot/index.html** file, as shown in the following code snippet.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
