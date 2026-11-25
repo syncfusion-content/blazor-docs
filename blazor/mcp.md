@@ -107,7 +107,7 @@ Create a configuration file in your project folder to configure the server for y
 {% endhighlight %}
 {% highlight bash tabtitle="Cursor" %}
 
-// Create a `.cursor/mcp.json` file in the project root (the folder you open in Cursor).
+// Create a `.cursor/mcp.json` file in your project. The project root is the folder that contains the `.cursor` folder.
 // To make the server available in every project, create `~/.cursor/mcp.json` in your home directory instead.
 
 {
@@ -191,11 +191,11 @@ You can install the [Syncfusion.Blazor.MCP](https://www.nuget.org/packages/Syncf
 
 ### Verifying Server Discovery
 
-**Cursor:** Cursor reads `.cursor/mcp.json` from the folder opened as the project, so open the folder that contains the `.cursor` folder. If the server does not appear, a configuration in a parent or child folder is not used. To verify the server and activate it when required:
+**Cursor:** Discovery and activation are separate stages. Cursor reads `.cursor/mcp.json` from your project, lists `sf-blazor-mcp` in **Customize**, and loads the server and its tools only when the server is enabled. To verify each stage:
 
-1. Open **Customize** in the Cursor sidebar and locate `sf-blazor-mcp` in the MCP servers list.
+1. Open **Customize** in the Cursor sidebar and locate `sf-blazor-mcp` in the MCP servers list. If it is missing, see [Troubleshooting](#troubleshooting).
 2. If the server is turned off, enable it using its toggle. Disabled servers do not load or appear in chat.
-3. Confirm that the server is enabled and that its `search_docs` tool is listed under its available tools. Tools are listed only after the server is active.
+3. Confirm that `search_docs` is available for the enabled server.
 
 **VS Code:** To verify that the MCP server is recognized by VS Code:
 
@@ -342,11 +342,11 @@ The table below lists frequently encountered issues and suggested resolutions to
 | **Server failed to start** | Update to .NET 8 SDK or higher, verify JSON syntax in the config file, and restart your IDE. Run `dnx Syncfusion.Blazor.MCP --yes` in a terminal to verify NuGet package restore and startup. |
 | **Invalid API key** | Verify your key is active at the [Syncfusion Account Page](https://www.syncfusion.com/account/api-key). |
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
-| **Wrong config file location** | VS Code: `.vscode/mcp.json` • CodeStudio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the project root (the folder opened in Cursor), or `~/.cursor/mcp.json` for all projects. |
-| **Cursor does not list `sf-blazor-mcp`** | Confirm that `.cursor/mcp.json` is in the opened folder, the JSON is valid, and the server is named `sf-blazor-mcp` under `mcpServers`. Reopen the folder or restart Cursor, then check **Customize** again. |
+| **Wrong config file location** | VS Code: `.vscode/mcp.json` • CodeStudio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in your project, or `~/.cursor/mcp.json` in your home directory for all projects. |
+| **Cursor does not list `sf-blazor-mcp`** | Confirm that `.cursor/mcp.json` is in your project, the JSON is valid, and `sf-blazor-mcp` is defined under `mcpServers`. Restart Cursor, then check **Customize** again. |
 | **Cursor lists the server but it is not active** | In **Customize**, turn on the toggle for `sf-blazor-mcp`. If it still does not start, run `dnx Syncfusion.Blazor.MCP --yes` in a terminal and check the MCP logs. |
-| **Cursor shows no `search_docs` tool** | Tools load only after the server is enabled and running. Enable the server, then check its tools in **Customize**. |
-| **Tool does not run in Cursor** | Cursor asks for approval before running MCP tools by default. Approve the pending `search_docs` call in the chat. If no tool call appears, include `#search_docs` in the prompt. |
+| **Cursor shows no `search_docs` tool** | Disabled servers do not load or appear in chat. Enable the server in **Customize**. If tools are still unavailable, check the MCP logs and run `dnx Syncfusion.Blazor.MCP --yes` in a terminal. |
+| **Tool does not run in Cursor** | Cursor asks for approval before running MCP tools by default. Approve the pending `search_docs` call in the chat. If no tool call appears, ask for the tool by name, for example by starting the prompt with `#search_docs`. |
 | **Check IDE logs** | VS Code / CodeStudio: Output panel → "MCP" • Cursor: Output panel (`Ctrl+Shift+U` or `Cmd+Shift+U`) → "MCP Logs". |
 
 ## Privacy & Security
