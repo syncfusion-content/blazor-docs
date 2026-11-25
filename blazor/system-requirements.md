@@ -41,6 +41,7 @@ N> Not sure which SDK to download? See [recommended downloads for the latest ver
 
 If using Visual Studio to develop Blazor applications:
 
+* .NET 11.0 requires Visual Studio 2025 18.12.1 or later.
 * .NET 10.0 requires Visual Studio 2026 18.0.0 or later.
 * .NET 9.0 requires Visual Studio 2022 17.12.0 or later.
 * .NET 8.0 requires Visual Studio 2022 17.8.0 or later.
