@@ -105,12 +105,13 @@ Select a built-in tool with its command enum, for example `Command="GridWebMcpTo
 
 The Syncfusion® File Manager component exposes **19 tools** that enable AI agents to browse files, manage file operations, control the user interface, perform folder navigation, and automate common file management workflows. Explore the Syncfusion Blazor File Manager component with WebMCP integration through this [demo](https://blazor.syncfusion.com/products/blazor/filemanager/webmcp).
 
-| Group | Tools |
-| --- | --- |
-| Read and select | `GetSelectedFiles`, `GetAllFiles`, `SelectAll`, `ClearSelection`, `FilterFiles` |
-| Navigate | `OpenFile`, `TraverseBackward`, `GoToPage`, `RefreshFiles`, `RefreshLayout` |
-| File operations | `CreateFolder`, `RenameFile`, `DeleteFiles`, `UploadFiles`, `DownloadFiles` |
-| Menu and toolbar | `EnableMenuItems`, `DisableMenuItems`, `EnableToolbarItems`, `DisableToolbarItems` |
+| Group | Tools | Count |
+| --- | --- | ---: |
+| Read and selection | `GetAllFiles`, `GetSelectedFiles`, `SelectAll`, `ClearSelection`, `FilterFiles` | 5 |
+| Navigation and layout | `OpenFile`, `TraverseBackward`, `GoToPage`, `RefreshFiles`, `RefreshLayout` | 5 |
+| File operations | `CreateFolder`, `RenameFile`, `DeleteFiles`, `UploadFiles`, `DownloadFiles` | 5 |
+| Menu and toolbar | `EnableMenuItems`, `DisableMenuItems`, `EnableToolbarItems`, `DisableToolbarItems` | 4 |
+| **Total** |  | **19** |
 
 
 ## Rich Text Editor
