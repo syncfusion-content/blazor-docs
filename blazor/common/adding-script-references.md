@@ -146,9 +146,9 @@ Append a version query string to the script and stylesheet references, and updat
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css?v=35.1.40" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css?v={{ site.releaseversion }}" rel="stylesheet" />
 
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v={{ site.releaseversion }}" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
