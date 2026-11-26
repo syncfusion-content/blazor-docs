@@ -82,42 +82,42 @@ ASP.NET Core asset fingerprinting is available in .NET 9 and later through [MapS
 
 1. Call `MapStaticAssets()` in the **~/Program.cs** file. For a **Blazor Web App**, call it in the **Server** project.
 
-{% tabs %}
-{% highlight cs tabtitle="Program.cs" hl_lines="6" %}
+    {% tabs %}
+    {% highlight cs tabtitle="Program.cs" hl_lines="6" %}
 
-var app = builder.Build();
+    var app = builder.Build();
 
-app.UseHttpsRedirection();
-app.UseAntiforgery();
+    app.UseHttpsRedirection();
+    app.UseAntiforgery();
 
-app.MapStaticAssets();
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+    app.MapStaticAssets();
+    app.MapRazorComponents<App>()
+        .AddInteractiveServerRenderMode();
 
-app.Run();
+    app.Run();
 
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
 2. Reference the theme and script assets through the `@Assets` resource collection. Add the theme stylesheet reference as described in the [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) section and place it at the end of the `<head>` section in the **~/Components/App.razor** file.
 
-{% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
 
-<link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
+    <link href="@Assets["_content/Syncfusion.Blazor.Themes/fluent2.css"]" rel="stylesheet" />
 
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
-Add the script reference at the end of the `<body>` section in the same file.
+    Add the script reference at the end of the `<body>` section in the same file.
 
-{% tabs %}
-{% highlight razor tabtitle="App.razor" %}
+    {% tabs %}
+    {% highlight razor tabtitle="App.razor" %}
 
-<script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
+    <script src="@Assets["_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"]" type="text/javascript"></script>
 
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
 The `@Assets[]` resource collection requires .NET 9 or later. The following table lists where to apply fingerprinted asset references for each application type.
 
@@ -146,9 +146,9 @@ Append a version query string to the script and stylesheet references, and updat
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<link href="_content/Syncfusion.Blazor.Themes/fluent2.css?v=35.1.40" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/fluent2.css?v={{ site.releaseversion }}" rel="stylesheet" />
 
-<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v=35.1.40" type="text/javascript"></script>
+<script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js?v={{ site.releaseversion }}" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -168,8 +168,6 @@ In applications that render **.cshtml** files, such as a Blazor Server applicati
 {% endtabs %}
 
 The tag helper is processed on the server. Therefore, it cannot be used in static files such as the **index.html** file of a standalone **Blazor WebAssembly** application, or in **.razor** files.
-
-Asset fingerprinting automatically generates a content-based URL for each asset. Because the URL changes when the asset content changes, browsers can cache assets while still requesting updated versions of modified files.
 
 ## Individual component script references
 
