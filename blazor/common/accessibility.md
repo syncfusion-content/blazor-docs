@@ -49,7 +49,14 @@ In addition to the methodologies mentioned above, Blazor components are construc
 
 ### Screen reader support
 
-Blazor components follow [WAI-ARIA](https://www.w3.org/WAI/ARIA/) to work properly with screen readers such as [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [VoiceOver](https://support.apple.com/guide/voiceover/vo2706/mac) for macOS.
+Blazor components are designed with accessibility and implement [WAI-ARIA](https://www.w3.org/WAI/ARIA/) guidelines to ensure compatibility with widely used assistive technologies. This enables users who rely on screen readers to effectively navigate, understand, and interact with application content.
+
+The following screen readers are supported and validated with Blazor components:
+
+[JAWS](https://www.freedomscientific.com/training/jaws/getting-started/) for Windows
+[NVDA](https://download.nvaccess.org/documentation/userGuide.html#Introduction) for Windows
+[Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows
+[VoiceOver](https://support.apple.com/guide/voiceover/vo2706/mac) for macOS and iOS
 
 ### Right-to-left support
 
