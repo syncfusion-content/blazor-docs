@@ -169,8 +169,6 @@ In applications that render **.cshtml** files, such as a Blazor Server applicati
 
 The tag helper is processed on the server. Therefore, it cannot be used in static files such as the **index.html** file of a standalone **Blazor WebAssembly** application, or in **.razor** files.
 
-Asset fingerprinting automatically generates a content-based URL for each asset. Because the URL changes when the asset content changes, browsers can cache assets while still requesting updated versions of modified files.
-
 ## Individual component script references
 
 Blazor components provide component-wise scripts that can be referenced externally in the application. If you are using only a few components, you can directly reference the required component scripts from the CDN or static web assets without using the [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator), instead of referencing the single script that includes all components.
