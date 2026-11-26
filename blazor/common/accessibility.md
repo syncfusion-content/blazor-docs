@@ -53,7 +53,7 @@ Blazor components are designed with accessibility and implement [WAI-ARIA](https
 
 The following screen readers are supported and validated with Blazor components:
 
-[JAWS](https://www.freedomscientific.com/training/jaws/getting-started/) for Windows
+[JAWS](https://www.freedomscientific.com/training/jaws/) for Windows
 [NVDA](https://download.nvaccess.org/documentation/userGuide.html#Introduction) for Windows
 [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows
 [VoiceOver](https://support.apple.com/guide/voiceover/vo2706/mac) for macOS and iOS
