@@ -88,6 +88,6 @@ N> License keys are validated offline during application execution and do not re
 
 ## Getting Started
 
-- [Getting Started with a Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-- [Getting Started with a Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-- [Getting Started with a standalone Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+- [Getting Started with a Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code)
+- [Getting Started with a Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code)
+- [Getting Started with a standalone Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code)
