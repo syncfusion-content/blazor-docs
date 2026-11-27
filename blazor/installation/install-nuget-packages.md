@@ -9,29 +9,37 @@ documentation: ug
 
 # Install Syncfusion® Blazor NuGet packages
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> publishes all Blazor components as NuGet packages on [nuget.org](https://www.nuget.org/packages?q=Tag%3A%22Blazor%22+Syncfusion). You can use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in your Blazor application without installing the Syncfusion<sup style="font-size:70%">&reg;</sup> installer. The sections below describe three ways to add the packages to your project: Package Manager UI, .NET CLI, and Package Manager Console.
+Syncfusion<sup style="font-size:70%">&reg;</sup> publishes all Blazor components as NuGet packages on [nuget.org](https://www.nuget.org/packages?q=Tag%3A%22Blazor%22+Syncfusion). You can use the Syncfusion Blazor NuGet packages in your Blazor application without installing the Syncfusion installer. This article describes several ways to add Syncfusion Blazor NuGet packages to your project:
+
+- Package Manager UI (Visual Studio)
+- Package Manager Console (Visual Studio)
+- .NET CLI
+- Visual Studio Code
+- Command Prompt
 
 ## Prerequisites
 
 Before you begin, confirm the following:
 
-* Visual Studio 2019 or later, or the .NET SDK, is installed and available on `PATH`.
+* Visual Studio 2022 or later, or the .NET SDK, is installed and available on `PATH`.
 * A Blazor project is created. See [Get started with ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor) for details.
 * The `nuget.org` feed is configured in your environment. See [Microsoft package sources documentation](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) for details.
-* A valid Syncfusion<sup style="font-size:70%">&reg;</sup> license key is available for development. See the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
+* A valid Syncfusion license key is available for development. See the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) for details.
 
 ## Overview
 
 NuGet is a package management system for Visual Studio and the .NET SDK. It makes it easy to add, update, and remove external libraries in your application.
 
-N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package, which contains all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a single package, is available beginning with v17.4.0.39 (Essential Studio<sup style="font-size:70%">&reg;</sup> 2019 Volume 4). 
->The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are also available separately as [Individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) beginning with v18.4.0.30 (Essential Studio<sup style="font-size:70%">&reg;</sup> 2020 Volume 4). The NuGet packages are segregated based on the component usage and its namespace.
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package, which contains all Syncfusion Blazor components in a single package, is available beginning with v17.4.0.39 (Essential Studio<sup style="font-size:70%">&reg;</sup> 2019 Volume 4).
+>The Syncfusion Blazor UI components are also available separately as [Individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) beginning with v18.4.0.30 (Essential Studio 2020 Volume 4). The NuGet packages are segregated based on the component usage and its namespace.
+
+For more information, see [Individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 ## Installation using Package Manager UI
 
 The NuGet **Package Manager UI** allows you to search, install, uninstall, and update Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages in your applications and solutions.
 
-Follow the steps below to locate and install the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet packages into a Blazor application:
+Follow the steps below to locate and install the Syncfusion Blazor NuGet packages into a Blazor application:
 
 1. Right-click on the Blazor application or solution in **Solution Explorer** and select **Manage NuGet Packages...** from the context menu.
 
@@ -39,9 +47,9 @@ Follow the steps below to locate and install the Syncfusion<sup style="font-size
 
    Alternatively, open the NuGet package manager in Visual Studio by selecting **Tools → NuGet Package Manager → Manage NuGet Packages for Solution...**.
 
-2. In the **Manage NuGet Packages** window, go to the **Browse** tab and type **Syncfusion.Blazor** in the search field. The window displays all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package options. Select the appropriate package based on the component requirements.
+2. In the **Manage NuGet Packages** window, go to the **Browse** tab and type **Syncfusion.Blazor** in the search field. The window displays all Syncfusion Blazor NuGet package options. Select the appropriate package based on the component requirements.
 
-   N> By default, the [nuget.org](https://api.nuget.org/v3/index.json) package source is configured in Visual Studio. If `nuget.org` is not available, see the [Microsoft package sources documentation](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to configure the `nuget.org` feed URL.
+   N> By default, the [nuget.org](https://api.nuget.org/v3/index.json) package source is configured in Visual Studio. If `nuget.org` is not available, see the [Microsoft package sources documentation](https://learn.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to configure the `nuget.org` feed URL.
 
    ![Search for Syncfusion Blazor packages in the Browse tab](images/nugetsearch.webp)
 
@@ -51,7 +59,7 @@ Follow the steps below to locate and install the Syncfusion<sup style="font-size
 
    ![Install a Syncfusion Blazor package from the Package Manager UI](images/installnuget.webp)
 
-5. After installation, the required Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies are available in your application. Build and run the application to start developing with the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://www.syncfusion.com/blazor-components). See the [Blazor documentation](https://blazor.syncfusion.com/documentation/introduction) for further development assistance.
+5. After installation, the required Syncfusion assemblies are available in your application. Build and run the application to start developing with the [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). See the [Blazor documentation](https://blazor.syncfusion.com/documentation/introduction) for further development assistance.
 
 ## Installation using the .NET CLI
 
