@@ -25,7 +25,7 @@ Before installing Blazor Agent Skills, make sure you have the following:
 
 Install [Blazor components skills](https://github.com/syncfusion/blazor-ui-components-skills) using the Skills CLI. You can also browse the available skills in the [Syncfusion<sup style="font-size:70%">&reg;</sup> listing on skills.sh](https://www.skills.sh/syncfusion).
 
-If you use the Syncfusion<sup style="font-size:70%">&reg;</sup> .NET CLI, you can install the same skills with the `sfdotnet skills install` command. For details, see [Install AI component skills](https://blazor.syncfusion.com/documentation/dotnet-cli/install-skills).
+If you use the Syncfusion<sup style="font-size:70%">&reg;</sup> .NET CLI, you can install the same skills directly through the CLI. For more information, see [Install AI component skills](https://blazor.syncfusion.com/documentation/dotnet-cli/install-skills).
 
 ### Install all skills
 
