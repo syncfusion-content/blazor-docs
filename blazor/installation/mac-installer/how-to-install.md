@@ -9,7 +9,7 @@ documentation: ug
 
 # Install the Syncfusion® Blazor Mac installer
 
-The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer installs the Blazor product on macOS (DMG) and integrates with Visual Studio or Visual Studio Code. The steps below cover Gatekeeper prompts, installation, and license key registration for sample projects.
+The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer installs the Blazor product on macOS (DMG) and integrates with Visual Studio Code. The steps below cover Gatekeeper prompts, installation, and license key registration for sample projects.
 
 ## Prerequisites
 
@@ -19,10 +19,7 @@ Before installing, verify the following:
 * The [.NET SDK](https://dotnet.microsoft.com/en-us/download) required by the target Syncfusion Blazor package version. Verify the installation by running `dotnet --version`.
 * You have administrator rights on the Mac to install applications and modify security settings.
 * The downloaded Blazor Mac installer DMG is available locally. If you have not downloaded it yet, see [Download the Blazor Mac installer](https://blazor.syncfusion.com/documentation/installation/mac-installer/how-to-download).
-* If you intend to open and run the included sample projects, ensure that one of the supported development environments is installed:
-  - [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/#visual-studio-professional-2026)
-  - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2022-and-other-products)
-  - [Visual Studio Code](https://code.visualstudio.com/download)
+* Visual Studio Code is installed, if you intend to open and run the included sample projects. For more information, see Install [Visual Studio Code](https://code.visualstudio.com/download).
 
 N> Do not use [Visual Studio for Mac](https://learn.microsoft.com/en-us/previous-versions/visualstudio/mac/installation?view=vsmac-2022) as a prerequisite or setup option. Visual Studio for Mac was retired, and Visual Studio Code or the .NET CLI is recommended for macOS development.
 
