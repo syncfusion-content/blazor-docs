@@ -126,6 +126,8 @@ The Syncfusion® File Manager component exposes **19 tools** that enable AI agen
 
 ## PDF Viewer
 
+The Syncfusion® PDF Viewer component exposes 32 tools that enable AI agents to navigate pages, search and extract text, retrieve page and document information, manage form fields, inspect bookmarks, handle annotations, adjust viewing and zoom, manipulate pages, print, download, and automate PDF document workflows. Explore the Syncfusion® Blazor PDF Viewer component with WebMCP integration through this [demo](https://blazor.syncfusion.com/products/blazor/pdfviewer/webmcp).
+
 | Group | Tools |
 | --- | --- |
 | Read state | `GetViewerState`, `GetPageDetails`, `GetDocumentInfo` |
@@ -139,6 +141,8 @@ The Syncfusion® File Manager component exposes **19 tools** that enable AI agen
 
 
 ## Document Editor
+
+The Syncfusion&reg; DOCX Editor component exposes WebMCP tools across six categories, giving AI agents full programmatic control over document content, formatting, navigation, and document management operations. Explore the Syncfusion&reg; Blazor DOCX Editor component with WebMCP integration through this [GitHub sample](https://blazor.syncfusion.com/products/blazor/wordprocessor/WebMCP).
 
 | Group | Tools |
 | --- | --- |
