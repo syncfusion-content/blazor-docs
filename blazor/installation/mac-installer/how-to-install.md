@@ -9,7 +9,7 @@ documentation: ug
 
 # Install the Syncfusion® Blazor Mac installer
 
-The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer installs the Blazor product on macOS (DMG) and integrates with Visual Studio for Mac. The steps below cover Gatekeeper prompts, installation, and license key registration for sample projects.
+The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer installs the Blazor product on macOS (DMG) and integrates with Visual Studio or Visual Studio Code. The steps below cover Gatekeeper prompts, installation, and license key registration for sample projects.
 
 ## Prerequisites
 
