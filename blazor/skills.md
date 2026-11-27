@@ -9,15 +9,15 @@ documentation: ug
 
 # Blazor Agent Skills for AI Assistants
 
-This guide introduces **Blazor Skills**, a knowledge package that enables AI assistants such as Visual Studio Code, Cursor, and Code Studio to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code using official APIs, patterns, and theming guidelines.
+This guide introduces **Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Agent Skills**, a knowledge package that enables AI assistants such as Visual Studio Code, Cursor, and Code Studio to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code using official APIs, patterns, and theming guidelines.
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> component usage patterns, API structures, supported features, and project‑specific configuration.
+Blazor Agent Skills reduce common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> component usage patterns, API structures, supported features, and project-specific configuration.
 
 ## Prerequisites
 
-Before installing Blazor Agent Skills, ensure the following:
+Before installing Blazor Agent Skills, make sure you have the following:
 
-- [Node.js](https://nodejs.org/en/) 22.20 or later, which is required by the [Skills CLI](https://github.com/vercel-labs/skills).
+- [Node.js](https://nodejs.org/en/) 22.20 or later. The [Skills CLI](https://github.com/vercel-labs/skills) requires it to run the `npx skills` commands.
 - A Blazor application, either existing or new. To create one, see [Getting Started with Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app).
 - An AI agent or IDE that supports Agent Skills, such as [Visual Studio Code](https://code.visualstudio.com/docs/agent-customization/agent-skills), [Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), or [Cursor](https://cursor.com/docs/skills).
 
@@ -147,7 +147,7 @@ N> The activity text depends on the agent and its version. Installing a skill ma
 
 ## How Syncfusion<sup style="font-size:70%">&reg;</sup> Agent Skills Work
 
-1. **Reads relevant Skill files based on queries**, retrieving component usage patterns, APIs, and best‑practice guidance from the installed Blazor Skills. The assistant initially loads only skill names and descriptions, then dynamically loads the required skill and reference files as needed to provide accurate Syncfusion guidance.
+1. **Reads relevant skill files based on queries**, retrieving component usage patterns, APIs, and best‑practice guidance from the installed Blazor Agent Skills. The assistant initially loads only skill names and descriptions, then dynamically loads the required skill and reference files as needed to provide accurate Syncfusion guidance.
 2. **Enforces Syncfusion<sup style="font-size:70%">&reg;</sup> best practices**, including:
 
    - Using the required [NuGet packages](https://www.nuget.org/profiles/Syncfusion) for each component, for example, [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid) for the DataGrid.
@@ -166,6 +166,10 @@ Once skills are installed, the assistant can be used to generate and update Sync
 - "Build a rich text editor with custom toolbar tools."
 - "Add a calendar with event scheduling."
 - "Apply a theme and enable dark mode."
+
+### Skills, MCP Server, and Agentic UI Builder
+
+Blazor Agent Skills are local skill files that your AI assistant reads. The [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MCP Server](https://blazor.syncfusion.com/documentation/mcp) is a separate offering that provides documentation, API references, and code-generation tools through the Model Context Protocol. The [Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder) is also a skill-based experience, but it is installed separately and is no longer part of the MCP Server.
 
 ## Skills CLI Commands
 
