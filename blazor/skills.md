@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Agent Skills for AI Assistants
 
-This guide introduces **Blazor Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, Code Studio, etc.) to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code using official APIs, patterns, and theming guidelines.
+This guide introduces **Blazor Skills**, a knowledge package that enables AI assistants such as Visual Studio Code, Cursor, and Code Studio to understand and generate accurate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor code using official APIs, patterns, and theming guidelines.
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion<sup style="font-size:70%">&reg;</sup> component usage patterns, API structures, supported features, and project‑specific configuration.
 
@@ -107,9 +107,7 @@ Choose the installation scope, then confirm to complete the installation. Projec
 {% endhighlight %}
 {% endtabs %}
 
-After installation, your AI assistant can load the skills in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/agent-customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
-
-For more information, see the [Skills CLI documentation](https://www.skills.sh/docs).
+After installation, your AI assistant can discover the skills and load them when a request matches. To confirm this, see [Verify the installation](#verify-the-installation).
 
 ## Verify the installation
 
@@ -128,7 +126,7 @@ Confirm that the skills are installed and that your AI assistant uses them.
    The output includes the `syncfusion-blazor-*` skills you selected. Use `npx skills list -g` to list global skills.
 
 2. Open the AI assistant in your IDE and confirm that the skills are discovered. In Visual Studio Code, type `/` in the chat input to see the available skills. For details, see [Use skills as slash commands](https://code.visualstudio.com/docs/agent-customization/agent-skills).
-3. Ask a question that matches a skill, for example, "Add a Syncfusion Blazor Scheduler with week view." Agents load a skill when the request matches its description.
+3. Ask a question that matches a skill, for example, "Add a Syncfusion Blazor Scheduler with week view." Agents can load a skill when the request matches its description.
 4. Review the agent activity in the chat. Some agents, such as GitHub Copilot in Agent mode, show entries similar to the following when a skill is loaded:
 
    {% tabs %}
@@ -201,7 +199,7 @@ Replace `<skill-name>` with the name of the skill you want to remove (for exampl
 
 ### Check for Updates
 
-Check whether updates are available for your installed skills. According to the [Skills CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md#skills-check), this command checks for updates without reinstalling skills. It also reports skills whose files differ from the entry in `skills-lock.json`.
+Check whether updates are available for your installed skills. As described in the [Skills CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md#skills-check), this command checks for updates without reinstalling skills. It also reports project skills whose files differ from the entry in `skills-lock.json`.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -213,7 +211,7 @@ npx skills check
 
 ### Update All Skills
 
-Update all installed skills to their latest versions. The CLI asks for the scope unless you use the `-g` (global), `-p` (project), or `-y` (auto-detect scope) option. To update a single skill, pass its name, for example, `npx skills update syncfusion-blazor-datagrid`:
+Update all installed skills to their latest versions. The CLI asks for the scope unless you use the `-g` (global), `-p` (project), or `-y` (detect the scope automatically) option:
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -222,6 +220,8 @@ npx skills update
 
 {% endhighlight %}
 {% endtabs %}
+
+To update a single skill, pass its name, for example, `npx skills update syncfusion-blazor-datagrid`.
 
 N> After you run `npx skills remove`, confirm the result with `npx skills list`. A removed skill no longer appears in the list.
 
@@ -233,7 +233,7 @@ Any agent or IDE that supports Agent Skills and loads local skill files, such as
 
 **Are skills loaded automatically?**
 
-Yes. Supported agents read the skill names and descriptions and load a skill when your request matches its description. No additional configuration is required. To confirm that a skill was used, see [Verify the installation](#verify-the-installation).
+Generally yes. Supported agents read the skill names and descriptions and load a skill when your request matches its description. No additional configuration is required. To confirm that a skill was used, see [Verify the installation](#verify-the-installation).
 
 **Skills are not being loaded**
 
@@ -241,7 +241,7 @@ Try the following steps:
 
 1. Run `npx skills list` and confirm that the skill is installed in the expected scope, project or global.
 2. Confirm that the skill is installed in the directory of the agent you use.
-3. Confirm that the agent supports skill files and that skills are enabled in its settings.
+3. Confirm that the agent supports Agent Skills. See the documentation of your agent for the supported skill directories.
 4. Restart the IDE.
 5. Mention the component by name in your prompt, for example, "Syncfusion Blazor DataGrid".
 
@@ -251,9 +251,7 @@ Check the installed Node.js version with `node --version`. The Skills CLI requir
 
 ## See also
 
-- [Blazor UI Components Skills repository](https://github.com/syncfusion/blazor-ui-components-skills)
 - [Syncfusion Blazor Agentic UI Builder](https://blazor.syncfusion.com/documentation/agentic-ui-builder)
 - [Syncfusion Blazor MCP Server](https://blazor.syncfusion.com/documentation/mcp)
-- [Install AI component skills with the .NET CLI](https://blazor.syncfusion.com/documentation/dotnet-cli/install-skills)
 - [Agent Skills Standards](https://agentskills.io/home)
-- [Skills CLI](https://www.skills.sh/docs)
+- [Skills CLI documentation](https://www.skills.sh/docs)
