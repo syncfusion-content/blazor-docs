@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Install the Blazor Mac installer | Syncfusion®
-description: Learn here about how to install the Blazor Mac installer (DMG), handle macOS Gatekeeper prompts, and register license keys in sample projects.
+description: Learn how to install the Blazor Mac installer (DMG), respond to macOS Gatekeeper prompts, and register license keys in sample projects.
 platform: Blazor
 control: Common
 documentation: ug
@@ -16,12 +16,10 @@ The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer 
 Before installing, verify the following:
 
 * A supported version of macOS is installed. See the [.NET supported OS list](https://learn.microsoft.com/en-us/dotnet/core/install/macos) for details.
-* The [.NET SDK](https://dotnet.microsoft.com/en-us/download) required by the target Syncfusion Blazor package version. Verify the installation by running `dotnet --version`.
+* Install the [.NET SDK](https://dotnet.microsoft.com/en-us/download) version required by your Syncfusion Blazor release version. Verify the installed version by running `dotnet --version`.
 * You have administrator rights on the Mac to install applications and modify security settings.
 * The downloaded Blazor Mac installer DMG is available locally. If you have not downloaded it yet, see [Download the Blazor Mac installer](https://blazor.syncfusion.com/documentation/installation/mac-installer/how-to-download).
-* Visual Studio Code is installed, if you intend to open and run the included sample projects. For more information, see Install [Visual Studio Code](https://code.visualstudio.com/download).
-
-N> Do not use [Visual Studio for Mac](https://learn.microsoft.com/en-us/previous-versions/visualstudio/mac/installation?view=vsmac-2022) as a prerequisite or setup option. Visual Studio for Mac was retired, and Visual Studio Code or the .NET CLI is recommended for macOS development.
+* To open the included sample projects in Visual Studio Code, install [Visual Studio Code](https://code.visualstudio.com/download). You can also build and run them with the .NET CLI.
 
 ## Resolve the macOS Gatekeeper prompt
 
@@ -38,40 +36,37 @@ If this appears, follow these steps:
 
 3. Select **Open** to mount the DMG and continue.
 
-> macOS will not allow the installer to run unless the downloaded file passes the system's signing and security checks. If the warning continues, review the macOS privacy and security settings before opening the file.
-
 ## Install on macOS
 
 1. Locate the downloaded DMG file and double-click it to open.
 
    ![Open the downloaded Blazor DMG](images/Mac_Installer1.webp)
 
-2. The disk image is mounts and a virtual drive appears on the desktop or in the Finder sidebar.
+2. The disk image mounts, and a virtual drive appears on the desktop or in the Finder sidebar.
 
    ![Mounted DMG drive visible in Finder](images/Mac_Installer2.webp)
 
-3. Copy the installer file from the mounted disk image.
+3. In Finder, right-click the mounted **Syncfusion® Blazor [version]** volume and select **Copy**.
 
    ![Copy the installer file from the mounted disk](images/Mac_Installer3.webp)
 
    N> An unlock key is not required to install the Essential Studio® Blazor Mac installer.
 
-4. Paste the copied file into the **Applications** folder.
+4. Open the **Applications** folder and paste the copied item.
 
-5. Open **Applications** folder and launch the installer app.
+5. In **Applications**, open **Syncfusion® Blazor [version]** > **Syncfusion** > **[version]** > **Blazor**. Open **Samples** to access the included sample projects.
 
-   ![Launch the Blazor installer app from Applications](images/Mac_Installer5.webp)
-
-6. Complete the installer prompts and wait for the installation to finish.
-7. Verify that the installer application and included demo source are available in the installed location.
-
-After installation, eject the mounted DMG by right-clicking the virtual drive in Finder or on the desktop and selecting **Eject**. Move the downloaded DMG to the Trash only if you no longer need it.
+   ![Open the Blazor folder and view its contents](images/Mac_Installer5.webp)
+   
+6. When you are finished, eject the mounted DMG by right-clicking its volume in Finder or on the desktop and selecting **Eject**. Move the downloaded DMG to the Trash if you no longer need it.
 
 ![Eject the mounted DMG from Finder](images/Mac_Installer6.webp)
 
 ## Register the license key in sample projects
 
-After installation, a license key is required to register the demo source included in the Mac installer. The license key is applied in the entry point of your Blazor application.
+Register a Syncfusion license key in each sample application before initializing Syncfusion components. For project-specific instructions, see [Register a Syncfusion license key in a Blazor application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
+
+N> License keys are validated offline during application execution and do not require an internet connection at runtime.
 
 Place the license key according to the project type:
 
