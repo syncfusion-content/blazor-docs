@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Install the Blazor Mac installer | Syncfusion®
-description: Learn here about how to install the Blazor Mac installer (DMG), handle macOS Gatekeeper prompts, and register license keys in sample projects.
+description: Learn how to install the Blazor Mac installer (DMG), respond to macOS Gatekeeper prompts, and register license keys in sample projects.
 platform: Blazor
 control: Common
 documentation: ug
@@ -9,73 +9,80 @@ documentation: ug
 
 # Install the Syncfusion® Blazor Mac installer
 
-The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer installs the Blazor product on macOS (DMG) and integrates with Visual Studio for Mac. The steps below cover Gatekeeper prompts, installation, and license key registration for sample projects.
+The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer installs the Blazor product on macOS (DMG) and integrates with Visual Studio Code. The steps below cover Gatekeeper prompts, installation, and license key registration for sample projects.
 
 ## Prerequisites
 
-Before you begin, confirm the following:
+Before installing, verify the following:
 
 * A supported version of macOS is installed. See the [.NET supported OS list](https://learn.microsoft.com/en-us/dotnet/core/install/macos) for details.
-* The .NET SDK that matches the target Syncfusion Blazor version is installed and available on `PATH`. Verify with `dotnet --version`.
+* Install the [.NET SDK](https://dotnet.microsoft.com/en-us/download) version required by your Syncfusion Blazor release version. Verify the installed version by running `dotnet --version`.
 * You have administrator rights on the Mac to install applications and modify security settings.
 * The downloaded Blazor Mac installer DMG is available locally. If you have not downloaded it yet, see [Download the Blazor Mac installer](https://blazor.syncfusion.com/documentation/installation/mac-installer/how-to-download).
-* Visual Studio for Mac is installed if you intend to open the included sample projects. See [Install Visual Studio for Mac](https://learn.microsoft.com/en-us/visualstudio/mac/installation) for details.
+* To open the included sample projects in Visual Studio Code, install [Visual Studio Code](https://code.visualstudio.com/download). You can also build and run them with the .NET CLI.
 
-## Resolve the Gatekeeper warning on macOS Catalina or later
+## Resolve the macOS Gatekeeper prompt
 
-When running the installer on macOS Catalina or later, a Gatekeeper alert may appear.
+macOS Gatekeeper may display a security warning when you open the downloaded DMG. This behavior can vary by macOS version and security settings.
 
 ![macOS Gatekeeper alert for the DMG](images/Mac_Catalina_MacOS_Alert1.webp)
 
 If this appears, follow these steps:
 
-1. Right‑click the downloaded DMG file.
+1. Right-click the downloaded `.dmg` file.
 2. Select **Open** and choose **DiskImageMounter (Default)**. The following prompt appears.
-
+   
    ![macOS prompt to open the DMG with DiskImageMounter](images/Mac_Catalina_MacOS_Alert2.webp)
 
 3. Select **Open** to mount the DMG and continue.
 
 ## Install on macOS
 
-1. Locate the downloaded DMG file and double‑click it to open.
+1. Locate the downloaded DMG file and double-click it to open.
 
    ![Open the downloaded Blazor DMG](images/Mac_Installer1.webp)
 
-2. The disk image mounts and a virtual drive appears on the desktop or in the Finder sidebar.
+2. The disk image mounts, and a virtual drive appears on the desktop or in the Finder sidebar.
 
    ![Mounted DMG drive visible in Finder](images/Mac_Installer2.webp)
 
-3. Copy the mounted disk file.
+3. In Finder, right-click the mounted **Syncfusion® Blazor [version]** volume and select **Copy**.
 
-   ![Drag the app to Applications](images/Mac_Installer3.webp)
+   ![Copy the installer file from the mounted disk](images/Mac_Installer3.webp)
 
-   N> An unlock key is not required to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
+   N> An unlock key is not required to install the Essential Studio® Blazor Mac installer.
 
-4. Paste the copied file into the **Applications** folder.
+4. Open the **Applications** folder and paste the copied item.
 
-   ![Copying the app into the Applications folder](images/Mac_Installer4.webp)
+5. In **Applications**, open **Syncfusion® Blazor [version]** > **Syncfusion** > **[version]** > **Blazor**. Open **Samples** to access the included sample projects.
 
-5. Open the **Applications** folder and launch the installer app.
+   ![Open the Blazor folder and view its contents](images/Mac_Installer5.webp)
+   
+6. When you are finished, eject the mounted DMG by right-clicking its volume in Finder or on the desktop and selecting **Eject**. Move the downloaded DMG to the Trash if you no longer need it.
 
-   ![Launch the Blazor installer app from Applications](images/Mac_Installer5.webp)
-
-6. Eject the mounted DMG by right‑clicking the virtual drive (on the desktop or in the Finder sidebar) and selecting **Eject**. Then delete the installer file from the **Applications** folder if you do not need it.
-
-   ![Eject the mounted DMG from Finder](images/Mac_Installer6.webp)
+![Eject the mounted DMG from Finder](images/Mac_Installer6.webp)
 
 ## Register the license key in sample projects
 
-After installation, a license key is required to register the demo source included in the Mac installer. The license key is applied in the entry point of your Blazor application.
+Register a Syncfusion license key in each sample application before initializing Syncfusion components. For project-specific instructions, see [Register a Syncfusion license key in a Blazor application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
 
-* **Blazor Server App**: Register the license key in the `Configure` method of [Startup.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-server-app).
-* **Blazor WebAssembly App**: Register the license key in the `Main` method of [Program.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-webassembly-app).
+N> License keys are validated offline during application execution and do not require an internet connection at runtime.
 
-For the complete registration steps, see [Register the license key in an application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
+Place the license key according to the project type:
+
+| Blazor project type | Project to update | File |
+|---|---|---|
+| Blazor Web App, Interactive Server | Server project | `Program.cs` |
+| Blazor Web App, Interactive WebAssembly | Server and client projects | `Server/Program.cs` and `Client/Program.cs` |
+| Blazor Web App, Interactive Auto | Server and client projects | `Server/Program.cs` and `Client/Program.cs` |
+| Standalone Blazor WebAssembly app | Client project | `Program.cs` |
+
+For the complete registration steps, see [Register a Syncfusion license key in a Blazor application](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application).
+
+N> License keys are validated offline during application execution and do not require an internet connection at runtime.
 
 ## Getting Started
 
-To learn how to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in your application on macOS, refer to the following getting started topics:
-
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a [Blazor Server app](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) using Visual Studio for Mac.
-* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in a [Blazor WebAssembly app](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app) using Visual Studio for Mac.
+- [Getting Started with a Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio?tabcontent=visual-studio-code)
+- [Getting Started with a Blazor Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code)
+- [Getting Started with a standalone Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=visual-studio-code)
